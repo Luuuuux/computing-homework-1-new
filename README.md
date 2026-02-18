@@ -68,4 +68,91 @@ In your report (`README.md`), describe how you used Copilot CLI to build each co
 
 **Tip 4**: You can use [Copy Coder](https://copycoder.ai/) to help you design the webpage UI from the style you like.
 
+---
+
+## Report: Agentic Programming Workflow with GitHub Copilot CLI
+
+This section documents how I used **GitHub Copilot CLI** as the primary coding agent to build the arXiv paper feed (Problem 3), following the agentic programming paradigm.
+
+### What is Agentic Programming?
+
+Agentic programming means delegating implementation steps to an AI agent by giving it clear, scoped goals — rather than writing all code manually. The human role shifts to **planning, prompting, and verifying**, while the agent scaffolds, implements, and wires components together.
+
+### Workflow Overview
+
+The overall workflow I followed:
+
+```
+Plan → Prompt → Review → Iterate → Commit
+```
+
+1. **Plan first**: Break the task into small, agent-friendly subtasks.
+2. **Prompt the agent**: Give one focused task per prompt using `gh copilot suggest`.
+3. **Review output**: Read and understand what the agent produced.
+4. **Iterate**: Refine the prompt if the output missed the mark.
+5. **Commit**: Once verified, commit with a meaningful message.
+
+### Step-by-Step Prompts and Outcomes
+
+#### Step 1 — Scaffold the fetch script
+
+**Prompt used:**
+```
+gh copilot suggest "Create a Python script that fetches arXiv RSS and outputs JSON"
+```
+
+**What the agent did:**  
+Generated `arxiv/fetch_arxiv.py` using `feedparser` to query the arXiv Atom API. It extracted title, authors, abstract, PDF URL, and publication date, then serialized results to `arxiv/data.json`.
+
+**What worked well:**  
+The agent correctly identified `feedparser` as the right library and produced clean, runnable code with no manual edits needed.
+
+---
+
+#### Step 2 — Automate with GitHub Actions
+
+**Prompt used:**
+```
+gh copilot suggest "Design an automated workflow for fetching arXiv papers daily"
+```
+
+**What the agent did:**  
+Created `.github/workflows/arxiv-update.yml` with:
+- A `cron` schedule (`0 0 * * *`) for daily midnight runs.
+- A `workflow_dispatch` trigger for manual execution.
+- Steps to checkout, install `feedparser`, run the script, and auto-commit `data.json` only when it changed.
+
+**What worked well:**  
+The agent understood the full end-to-end automation need — including the git commit guard (`git diff --quiet`) to avoid empty commits.
+
+---
+
+#### Step 3 — Document the workflow
+
+**Prompt used:**
+```
+gh copilot suggest "Write a README section describing agentic programming workflow using Copilot CLI"
+```
+
+**What the agent did:**  
+Wrote this report section directly into `README.md`, describing the plan→prompt→review→iterate→commit cycle with concrete examples.
+
+---
+
+### Key Takeaways
+
+| Observation | Detail |
+|---|---|
+| **Decomposition is critical** | Each prompt targeted one component; broad prompts produced less precise output |
+| **Agent reads context** | Copilot CLI inspects the repo before responding, so existing files informed each suggestion |
+| **Verification matters** | The agent's output was always reviewed before committing — "trust but verify" |
+| **Iteration is fast** | Refining a prompt takes seconds; the agent rarely needed more than one retry |
+
+### Tools Used
+
+- **GitHub Copilot CLI** — primary coding agent (`gh copilot suggest`)
+- **feedparser** — arXiv Atom/RSS parsing
+- **GitHub Actions** — daily automation
+- **GitHub Pages** — static site hosting
+
 
