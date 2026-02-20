@@ -1,75 +1,77 @@
 [
   {
-    "title": "Ensemble-size-dependence of deep-learning post-processing methods that minimize an (un)fair score: motivating examples and a proof-of-concept solution",
+    "title": "One Hand to Rule Them All: Canonical Representations for Unified Dexterous Manipulation",
     "authors": [
-      "Christopher David Roberts"
+      "Zhenyu Wei",
+      "Yunchao Yao",
+      "Mingyu Ding"
     ],
-    "abstract": "Fair scores reward ensemble forecast members that behave like samples from the same distribution as the verifying observations. They are therefore an attractive choice as loss functions to train data-driven ensemble forecasts or post-processing methods when large training ensembles are either unavailable or computationally prohibitive. The adjusted continuous ranked probability score (aCRPS) is fair and unbiased with respect to ensemble size, provided forecast members are exchangeable and interpretable as conditionally independent draws from an underlying predictive distribution. However, distribution-aware post-processing methods that introduce structural dependency between members can violate this assumption, rendering aCRPS unfair. We demonstrate this effect using two approaches designed to minimize the expected aCRPS of a finite ensemble: (1) a linear member-by-member calibration, which couples members through a common dependency on the sample ensemble mean, and (2) a deep-learning method, which couples members via transformer self-attention across the ensemble dimension. In both cases, the results are sensitive to ensemble size and apparent gains in aCRPS can correspond to systematic unreliability characterized by over-dispersion. We introduce trajectory transformers as a proof-of-concept that ensemble-size independence can be achieved. This approach is an adaptation of the Post-processing Ensembles with Transformers (PoET) framework and applies self-attention over lead time while preserving the conditional independence required by aCRPS. When applied to weekly mean $T_{2m}$ forecasts from the ECMWF subseasonal forecasting system, this approach successfully reduces systematic model biases whilst also improving or maintaining forecast reliability regardless of the ensemble size used in training (3 vs 9 members) or real-time forecasts (9 vs 100 members).",
-    "pdf_url": "https://arxiv.org/pdf/2602.15830v1",
-    "published": "2026-02-17T18:59:55Z",
-    "fetched_at": "2026-02-19T00:40:44.558403"
+    "abstract": "Dexterous manipulation policies today largely assume fixed hand designs, severely restricting their generalization to new embodiments with varied kinematic and structural layouts. To overcome this limitation, we introduce a parameterized canonical representation that unifies a broad spectrum of dexterous hand architectures. It comprises a unified parameter space and a canonical URDF format, offering three key advantages. 1) The parameter space captures essential morphological and kinematic variations for effective conditioning in learning algorithms. 2) A structured latent manifold can be learned over our space, where interpolations between embodiments yield smooth and physically meaningful morphology transitions. 3) The canonical URDF standardizes the action space while preserving dynamic and functional properties of the original URDFs, enabling efficient and reliable cross-embodiment policy learning. We validate these advantages through extensive analysis and experiments, including grasp policy replay, VAE latent encoding, and cross-embodiment zero-shot transfer. Specifically, we train a VAE on the unified representation to obtain a compact, semantically rich latent embedding, and develop a grasping policy conditioned on the canonical representation that generalizes across dexterous hands. We demonstrate, through simulation and real-world tasks on unseen morphologies (e.g., 81.9% zero-shot success rate on 3-finger LEAP Hand), that our framework unifies both the representational and action spaces of structurally diverse hands, providing a scalable foundation for cross-hand learning toward universal dexterous manipulation.",
+    "pdf_url": "https://arxiv.org/pdf/2602.16712v1",
+    "published": "2026-02-18T18:59:57Z",
+    "fetched_at": "2026-02-20T00:37:20.673653"
   },
   {
-    "title": "Operationalising the Superficial Alignment Hypothesis via Task Complexity",
+    "title": "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data",
     "authors": [
-      "Tomás Vergara-Browne",
-      "Darshan Patil",
-      "Ivan Titov",
-      "Siva Reddy",
-      "Tiago Pimentel",
-      "Marius Mosbach"
+      "Ruijie Zheng",
+      "Dantong Niu",
+      "Yuqi Xie",
+      "Jing Wang",
+      "Mengda Xu",
+      "Yunfan Jiang",
+      "Fernando Castañeda",
+      "Fengyuan Hu",
+      "You Liang Tan",
+      "Letian Fu",
+      "Trevor Darrell",
+      "Furong Huang",
+      "Yuke Zhu",
+      "Danfei Xu",
+      "Linxi Fan"
     ],
-    "abstract": "The superficial alignment hypothesis (SAH) posits that large language models learn most of their knowledge during pre-training, and that post-training merely surfaces this knowledge. The SAH, however, lacks a precise definition, which has led to (i) different and seemingly orthogonal arguments supporting it, and (ii) important critiques to it. We propose a new metric called task complexity: the length of the shortest program that achieves a target performance on a task. In this framework, the SAH simply claims that pre-trained models drastically reduce the complexity of achieving high performance on many tasks. Our definition unifies prior arguments supporting the SAH, interpreting them as different strategies to find such short programs. Experimentally, we estimate the task complexity of mathematical reasoning, machine translation, and instruction following; we then show that these complexities can be remarkably low when conditioned on a pre-trained model. Further, we find that pre-training enables access to strong performances on our tasks, but it can require programs of gigabytes of length to access them. Post-training, on the other hand, collapses the complexity of reaching this same performance by several orders of magnitude. Overall, our results highlight that task adaptation often requires surprisingly little information -- often just a few kilobytes.",
-    "pdf_url": "https://arxiv.org/pdf/2602.15829v1",
-    "published": "2026-02-17T18:59:39Z",
-    "fetched_at": "2026-02-19T00:40:44.558427"
+    "abstract": "Human behavior is among the most scalable sources of data for learning physical intelligence, yet how to effectively leverage it for dexterous manipulation remains unclear. While prior work demonstrates human to robot transfer in constrained settings, it is unclear whether large scale human data can support fine grained, high degree of freedom dexterous manipulation. We present EgoScale, a human to dexterous manipulation transfer framework built on large scale egocentric human data. We train a Vision Language Action (VLA) model on over 20,854 hours of action labeled egocentric human video, more than 20 times larger than prior efforts, and uncover a log linear scaling law between human data scale and validation loss. This validation loss strongly correlates with downstream real robot performance, establishing large scale human data as a predictable supervision source. Beyond scale, we introduce a simple two stage transfer recipe: large scale human pretraining followed by lightweight aligned human robot mid training. This enables strong long horizon dexterous manipulation and one shot task adaptation with minimal robot supervision. Our final policy improves average success rate by 54% over a no pretraining baseline using a 22 DoF dexterous robotic hand, and transfers effectively to robots with lower DoF hands, indicating that large scale human motion provides a reusable, embodiment agnostic motor prior.",
+    "pdf_url": "https://arxiv.org/pdf/2602.16710v1",
+    "published": "2026-02-18T18:59:05Z",
+    "fetched_at": "2026-02-20T00:37:20.673686"
   },
   {
-    "title": "Dex4D: Task-Agnostic Point Track Policy for Sim-to-Real Dexterous Manipulation",
+    "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
     "authors": [
-      "Yuxuan Kuang",
-      "Sungjae Park",
-      "Katerina Fragkiadaki",
-      "Shubham Tulsiani"
+      "Weijing Tang",
+      "Ming Yuan",
+      "Zongqi Xia",
+      "Tianxi Cai"
     ],
-    "abstract": "Learning generalist policies capable of accomplishing a plethora of everyday tasks remains an open challenge in dexterous manipulation. In particular, collecting large-scale manipulation data via real-world teleoperation is expensive and difficult to scale. While learning in simulation provides a feasible alternative, designing multiple task-specific environments and rewards for training is similarly challenging. We propose Dex4D, a framework that instead leverages simulation for learning task-agnostic dexterous skills that can be flexibly recomposed to perform diverse real-world manipulation tasks. Specifically, Dex4D learns a domain-agnostic 3D point track conditioned policy capable of manipulating any object to any desired pose. We train this 'Anypose-to-Anypose' policy in simulation across thousands of objects with diverse pose configurations, covering a broad space of robot-object interactions that can be composed at test time. At deployment, this policy can be zero-shot transferred to real-world tasks without finetuning, simply by prompting it with desired object-centric point tracks extracted from generated videos. During execution, Dex4D uses online point tracking for closed-loop perception and control. Extensive experiments in simulation and on real robots show that our method enables zero-shot deployment for diverse dexterous manipulation tasks and yields consistent improvements over prior baselines. Furthermore, we demonstrate strong generalization to novel objects, scene layouts, backgrounds, and trajectories, highlighting the robustness and scalability of the proposed framework.",
-    "pdf_url": "https://arxiv.org/pdf/2602.15828v1",
-    "published": "2026-02-17T18:59:31Z",
-    "fetched_at": "2026-02-19T00:40:44.558441"
+    "abstract": "Latent space models are widely used for analyzing high-dimensional discrete data matrices, such as patient-feature matrices in electronic health records (EHRs), by capturing complex dependence structures through low-dimensional embeddings. However, estimation becomes challenging in the imbalanced regime, where one matrix dimension is much larger than the other. In EHR applications, cohort sizes are often limited by disease prevalence or data availability, whereas the feature space remains extremely large due to the breadth of medical coding system. Motivated by the increasing availability of external semantic embeddings, such as pre-trained embeddings of clinical concepts in EHRs, we propose a knowledge-embedded latent projection model that leverages semantic side information to regularize representation learning. Specifically, we model column embeddings as smooth functions of semantic embeddings via a mapping in a reproducing kernel Hilbert space. We develop a computationally efficient two-step estimation procedure that combines semantically guided subspace construction via kernel principal component analysis with scalable projected gradient descent. We establish estimation error bounds that characterize the trade-off between statistical error and approximation error induced by the kernel projection. Furthermore, we provide local convergence guarantees for our non-convex optimization procedure. Extensive simulation studies and a real-world EHR application demonstrate the effectiveness of the proposed method.",
+    "pdf_url": "https://arxiv.org/pdf/2602.16709v1",
+    "published": "2026-02-18T18:58:16Z",
+    "fetched_at": "2026-02-20T00:37:20.673700"
   },
   {
-    "title": "Perceptive Humanoid Parkour: Chaining Dynamic Human Skills via Motion Matching",
+    "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
     "authors": [
-      "Zhen Wu",
-      "Xiaoyu Huang",
-      "Lujie Yang",
-      "Yuanhang Zhang",
-      "Koushil Sreenath",
-      "Xi Chen",
-      "Pieter Abbeel",
-      "Rocky Duan",
-      "Angjoo Kanazawa",
-      "Carmelo Sferrazza",
-      "Guanya Shi",
-      "C. Karen Liu"
+      "Runpei Dong",
+      "Ziyan Li",
+      "Xialin He",
+      "Saurabh Gupta"
     ],
-    "abstract": "While recent advances in humanoid locomotion have achieved stable walking on varied terrains, capturing the agility and adaptivity of highly dynamic human motions remains an open challenge. In particular, agile parkour in complex environments demands not only low-level robustness, but also human-like motion expressiveness, long-horizon skill composition, and perception-driven decision-making. In this paper, we present Perceptive Humanoid Parkour (PHP), a modular framework that enables humanoid robots to autonomously perform long-horizon, vision-based parkour across challenging obstacle courses. Our approach first leverages motion matching, formulated as nearest-neighbor search in a feature space, to compose retargeted atomic human skills into long-horizon kinematic trajectories. This framework enables the flexible composition and smooth transition of complex skill chains while preserving the elegance and fluidity of dynamic human motions. Next, we train motion-tracking reinforcement learning (RL) expert policies for these composed motions, and distill them into a single depth-based, multi-skill student policy, using a combination of DAgger and RL. Crucially, the combination of perception and skill composition enables autonomous, context-aware decision-making: using only onboard depth sensing and a discrete 2D velocity command, the robot selects and executes whether to step over, climb onto, vault or roll off obstacles of varying geometries and heights. We validate our framework with extensive real-world experiments on a Unitree G1 humanoid robot, demonstrating highly dynamic parkour skills such as climbing tall obstacles up to 1.25m (96% robot height), as well as long-horizon multi-obstacle traversal with closed-loop adaptation to real-time obstacle perturbations.",
-    "pdf_url": "https://arxiv.org/pdf/2602.15827v1",
-    "published": "2026-02-17T18:59:11Z",
-    "fetched_at": "2026-02-19T00:40:44.558461"
+    "abstract": "Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.",
+    "pdf_url": "https://arxiv.org/pdf/2602.16705v1",
+    "published": "2026-02-18T18:55:02Z",
+    "fetched_at": "2026-02-20T00:37:20.673714"
   },
   {
-    "title": "CrispEdit: Low-Curvature Projections for Scalable Non-Destructive LLM Editing",
+    "title": "Reinforced Fast Weights with Next-Sequence Prediction",
     "authors": [
-      "Zarif Ikram",
-      "Arad Firouzkouhi",
-      "Stephen Tu",
-      "Mahdi Soltanolkotabi",
-      "Paria Rashidinejad"
+      "Hee Seung Hwang",
+      "Xindi Wu",
+      "Sanghyuk Chun",
+      "Olga Russakovsky"
     ],
-    "abstract": "A central challenge in large language model (LLM) editing is capability preservation: methods that successfully change targeted behavior can quietly game the editing proxy and corrupt general capabilities, producing degenerate behaviors reminiscent of proxy/reward hacking. We present CrispEdit, a scalable and principled second-order editing algorithm that treats capability preservation as an explicit constraint, unifying and generalizing several existing editing approaches. CrispEdit formulates editing as constrained optimization and enforces the constraint by projecting edit updates onto the low-curvature subspace of the capability-loss landscape. At the crux of CrispEdit is expressing capability constraint via Bregman divergence, whose quadratic form yields the Gauss-Newton Hessian exactly and even when the base model is not trained to convergence. We make this second-order procedure efficient at the LLM scale using Kronecker-factored approximate curvature (K-FAC) and a novel matrix-free projector that exploits Kronecker structure to avoid constructing massive projection matrices. Across standard model-editing benchmarks, CrispEdit achieves high edit success while keeping capability degradation below 1% on average across datasets, significantly improving over prior editors.",
-    "pdf_url": "https://arxiv.org/pdf/2602.15823v1",
-    "published": "2026-02-17T18:58:04Z",
-    "fetched_at": "2026-02-19T00:40:44.558476"
+    "abstract": "Fast weight architectures offer a promising alternative to attention-based transformers for long-context modeling by maintaining constant memory overhead regardless of context length. However, their potential is limited by the next-token prediction (NTP) training paradigm. NTP optimizes single-token predictions and ignores semantic coherence across multiple tokens following a prefix. Consequently, fast weight models, which dynamically update their parameters to store contextual information, learn suboptimal representations that fail to capture long-range dependencies. We introduce REFINE (Reinforced Fast weIghts with Next sEquence prediction), a reinforcement learning framework that trains fast weight models under the next-sequence prediction (NSP) objective. REFINE selects informative token positions based on prediction entropy, generates multi-token rollouts, assigns self-supervised sequence-level rewards, and optimizes the model with group relative policy optimization (GRPO). REFINE is applicable throughout the training lifecycle of pre-trained language models: mid-training, post-training, and test-time training. Our experiments on LaCT-760M and DeltaNet-1.3B demonstrate that REFINE consistently outperforms supervised fine-tuning with NTP across needle-in-a-haystack retrieval, long-context question answering, and diverse tasks in LongBench. REFINE provides an effective and versatile framework for improving long-context modeling in fast weight architectures.",
+    "pdf_url": "https://arxiv.org/pdf/2602.16704v1",
+    "published": "2026-02-18T18:53:18Z",
+    "fetched_at": "2026-02-20T00:37:20.673728"
   }
 ]
