@@ -1,77 +1,78 @@
 [
   {
-    "title": "One Hand to Rule Them All: Canonical Representations for Unified Dexterous Manipulation",
+    "title": "OpenEarthAgent: A Unified Framework for Tool-Augmented Geospatial Agents",
     "authors": [
+      "Akashah Shabbir",
+      "Muhammad Umer Sheikh",
+      "Muhammad Akhtar Munir",
+      "Hiyam Debary",
+      "Mustansar Fiaz",
+      "Muhammad Zaigham Zaheer",
+      "Paolo Fraccaro",
+      "Fahad Shahbaz Khan",
+      "Muhammad Haris Khan",
+      "Xiao Xiang Zhu",
+      "Salman Khan"
+    ],
+    "abstract": "Recent progress in multimodal reasoning has enabled agents that can interpret imagery, connect it with language, and perform structured analytical tasks. Extending such capabilities to the remote sensing domain remains challenging, as models must reason over spatial scale, geographic structures, and multispectral indices while maintaining coherent multi-step logic. To bridge this gap, OpenEarthAgent introduces a unified framework for developing tool-augmented geospatial agents trained on satellite imagery, natural-language queries, and detailed reasoning traces. The training pipeline relies on supervised fine-tuning over structured reasoning trajectories, aligning the model with verified multistep tool interactions across diverse analytical contexts. The accompanying corpus comprises 14,538 training and 1,169 evaluation instances, with more than 100K reasoning steps in the training split and over 7K reasoning steps in the evaluation split. It spans urban, environmental, disaster, and infrastructure domains, and incorporates GIS-based operations alongside index analyses such as NDVI, NBR, and NDBI. Grounded in explicit reasoning traces, the learned agent demonstrates structured reasoning, stable spatial understanding, and interpretable behaviour through tool-driven geospatial interactions across diverse conditions. We report consistent improvements over a strong baseline and competitive performance relative to recent open and closed-source models.",
+    "pdf_url": "https://arxiv.org/pdf/2602.17665v1",
+    "published": "2026-02-19T18:59:54Z",
+    "fetched_at": "2026-02-21T00:37:32.147918"
+  },
+  {
+    "title": "Sink-Aware Pruning for Diffusion Language Models",
+    "authors": [
+      "Aidar Myrzakhan",
+      "Tianyi Li",
+      "Bowei Guo",
+      "Shengkun Tang",
+      "Zhiqiang Shen"
+    ],
+    "abstract": "Diffusion Language Models (DLMs) incur high inference cost due to iterative denoising, motivating efficient pruning. Existing pruning heuristics largely inherited from autoregressive (AR) LLMs, typically preserve attention sink tokens because AR sinks serve as stable global anchors. We show that this assumption does not hold for DLMs: the attention-sink position exhibits substantially higher variance over the full generation trajectory (measured by how the dominant sink locations shift across timesteps), indicating that sinks are often transient and less structurally essential than in AR models. Based on this observation, we propose ${\\bf \\texttt{Sink-Aware Pruning}}$, which automatically identifies and prunes unstable sinks in DLMs (prior studies usually keep sinks for AR LLMs). Without retraining, our method achieves a better quality-efficiency trade-off and outperforms strong prior pruning baselines under matched compute. Our code is available at https://github.com/VILA-Lab/Sink-Aware-Pruning.",
+    "pdf_url": "https://arxiv.org/pdf/2602.17664v1",
+    "published": "2026-02-19T18:59:50Z",
+    "fetched_at": "2026-02-21T00:37:32.147941"
+  },
+  {
+    "title": "When Vision Overrides Language: Evaluating and Mitigating Counterfactual Failures in VLAs",
+    "authors": [
+      "Yu Fang",
+      "Yuchun Feng",
+      "Dong Jing",
+      "Jiaqi Liu",
+      "Yue Yang",
       "Zhenyu Wei",
-      "Yunchao Yao",
+      "Daniel Szafir",
       "Mingyu Ding"
     ],
-    "abstract": "Dexterous manipulation policies today largely assume fixed hand designs, severely restricting their generalization to new embodiments with varied kinematic and structural layouts. To overcome this limitation, we introduce a parameterized canonical representation that unifies a broad spectrum of dexterous hand architectures. It comprises a unified parameter space and a canonical URDF format, offering three key advantages. 1) The parameter space captures essential morphological and kinematic variations for effective conditioning in learning algorithms. 2) A structured latent manifold can be learned over our space, where interpolations between embodiments yield smooth and physically meaningful morphology transitions. 3) The canonical URDF standardizes the action space while preserving dynamic and functional properties of the original URDFs, enabling efficient and reliable cross-embodiment policy learning. We validate these advantages through extensive analysis and experiments, including grasp policy replay, VAE latent encoding, and cross-embodiment zero-shot transfer. Specifically, we train a VAE on the unified representation to obtain a compact, semantically rich latent embedding, and develop a grasping policy conditioned on the canonical representation that generalizes across dexterous hands. We demonstrate, through simulation and real-world tasks on unseen morphologies (e.g., 81.9% zero-shot success rate on 3-finger LEAP Hand), that our framework unifies both the representational and action spaces of structurally diverse hands, providing a scalable foundation for cross-hand learning toward universal dexterous manipulation.",
-    "pdf_url": "https://arxiv.org/pdf/2602.16712v1",
-    "published": "2026-02-18T18:59:57Z",
-    "fetched_at": "2026-02-20T00:37:20.673653"
+    "abstract": "Vision-Language-Action models (VLAs) promise to ground language instructions in robot control, yet in practice often fail to faithfully follow language. When presented with instructions that lack strong scene-specific supervision, VLAs suffer from counterfactual failures: they act based on vision shortcuts induced by dataset biases, repeatedly executing well-learned behaviors and selecting objects frequently seen during training regardless of language intent. To systematically study it, we introduce LIBERO-CF, the first counterfactual benchmark for VLAs that evaluates language following capability by assigning alternative instructions under visually plausible LIBERO layouts. Our evaluation reveals that counterfactual failures are prevalent yet underexplored across state-of-the-art VLAs. We propose Counterfactual Action Guidance (CAG), a simple yet effective dual-branch inference scheme that explicitly regularizes language conditioning in VLAs. CAG combines a standard VLA policy with a language-unconditioned Vision-Action (VA) module, enabling counterfactual comparison during action selection. This design reduces reliance on visual shortcuts, improves robustness on under-observed tasks, and requires neither additional demonstrations nor modifications to existing architectures or pretrained models. Extensive experiments demonstrate its plug-and-play integration across diverse VLAs and consistent improvements. For example, on LIBERO-CF, CAG improves $π_{0.5}$ by 9.7% in language following accuracy and 3.6% in task success on under-observed tasks using a training-free strategy, with further gains of 15.5% and 8.5%, respectively, when paired with a VA model. In real-world evaluations, CAG reduces counterfactual failures of 9.4% and improves task success by 17.2% on average.",
+    "pdf_url": "https://arxiv.org/pdf/2602.17659v1",
+    "published": "2026-02-19T18:59:20Z",
+    "fetched_at": "2026-02-21T00:37:32.147959"
   },
   {
-    "title": "EgoScale: Scaling Dexterous Manipulation with Diverse Egocentric Human Data",
+    "title": "MARS: Margin-Aware Reward-Modeling with Self-Refinement",
     "authors": [
-      "Ruijie Zheng",
-      "Dantong Niu",
-      "Yuqi Xie",
-      "Jing Wang",
-      "Mengda Xu",
-      "Yunfan Jiang",
-      "Fernando Castañeda",
-      "Fengyuan Hu",
-      "You Liang Tan",
-      "Letian Fu",
-      "Trevor Darrell",
-      "Furong Huang",
-      "Yuke Zhu",
-      "Danfei Xu",
-      "Linxi Fan"
+      "Payel Bhattacharjee",
+      "Osvaldo Simeone",
+      "Ravi Tandon"
     ],
-    "abstract": "Human behavior is among the most scalable sources of data for learning physical intelligence, yet how to effectively leverage it for dexterous manipulation remains unclear. While prior work demonstrates human to robot transfer in constrained settings, it is unclear whether large scale human data can support fine grained, high degree of freedom dexterous manipulation. We present EgoScale, a human to dexterous manipulation transfer framework built on large scale egocentric human data. We train a Vision Language Action (VLA) model on over 20,854 hours of action labeled egocentric human video, more than 20 times larger than prior efforts, and uncover a log linear scaling law between human data scale and validation loss. This validation loss strongly correlates with downstream real robot performance, establishing large scale human data as a predictable supervision source. Beyond scale, we introduce a simple two stage transfer recipe: large scale human pretraining followed by lightweight aligned human robot mid training. This enables strong long horizon dexterous manipulation and one shot task adaptation with minimal robot supervision. Our final policy improves average success rate by 54% over a no pretraining baseline using a 22 DoF dexterous robotic hand, and transfers effectively to robots with lower DoF hands, indicating that large scale human motion provides a reusable, embodiment agnostic motor prior.",
-    "pdf_url": "https://arxiv.org/pdf/2602.16710v1",
-    "published": "2026-02-18T18:59:05Z",
-    "fetched_at": "2026-02-20T00:37:20.673686"
+    "abstract": "Reward modeling is a core component of modern alignment pipelines including RLHF and RLAIF, underpinning policy optimization methods including PPO and TRPO. However, training reliable reward models relies heavily on human-labeled preference data, which is costly and limited, motivating the use of data augmentation. Existing augmentation approaches typically operate at the representation or semantic level and remain agnostic to the reward model's estimation difficulty. In this paper, we propose MARS, an adaptive, margin-aware augmentation and sampling strategy that explicitly targets ambiguous and failure modes of the reward model. Our proposed framework, MARS, concentrates augmentation on low-margin (ambiguous) preference pairs where the reward model is most uncertain, and iteratively refines the training distribution via hard-sample augmentation. We provide theoretical guarantees showing that this strategy increases the average curvature of the loss function hence enhance information and improves conditioning, along with empirical results demonstrating consistent gains over uniform augmentation for robust reward modeling.",
+    "pdf_url": "https://arxiv.org/pdf/2602.17658v1",
+    "published": "2026-02-19T18:59:03Z",
+    "fetched_at": "2026-02-21T00:37:32.147971"
   },
   {
-    "title": "Knowledge-Embedded Latent Projection for Robust Representation Learning",
+    "title": "What Language is This? Ask Your Tokenizer",
     "authors": [
-      "Weijing Tang",
-      "Ming Yuan",
-      "Zongqi Xia",
-      "Tianxi Cai"
+      "Clara Meister",
+      "Ahmetcan Yavuz",
+      "Pietro Lesci",
+      "Tiago Pimentel"
     ],
-    "abstract": "Latent space models are widely used for analyzing high-dimensional discrete data matrices, such as patient-feature matrices in electronic health records (EHRs), by capturing complex dependence structures through low-dimensional embeddings. However, estimation becomes challenging in the imbalanced regime, where one matrix dimension is much larger than the other. In EHR applications, cohort sizes are often limited by disease prevalence or data availability, whereas the feature space remains extremely large due to the breadth of medical coding system. Motivated by the increasing availability of external semantic embeddings, such as pre-trained embeddings of clinical concepts in EHRs, we propose a knowledge-embedded latent projection model that leverages semantic side information to regularize representation learning. Specifically, we model column embeddings as smooth functions of semantic embeddings via a mapping in a reproducing kernel Hilbert space. We develop a computationally efficient two-step estimation procedure that combines semantically guided subspace construction via kernel principal component analysis with scalable projected gradient descent. We establish estimation error bounds that characterize the trade-off between statistical error and approximation error induced by the kernel projection. Furthermore, we provide local convergence guarantees for our non-convex optimization procedure. Extensive simulation studies and a real-world EHR application demonstrate the effectiveness of the proposed method.",
-    "pdf_url": "https://arxiv.org/pdf/2602.16709v1",
-    "published": "2026-02-18T18:58:16Z",
-    "fetched_at": "2026-02-20T00:37:20.673700"
-  },
-  {
-    "title": "Learning Humanoid End-Effector Control for Open-Vocabulary Visual Loco-Manipulation",
-    "authors": [
-      "Runpei Dong",
-      "Ziyan Li",
-      "Xialin He",
-      "Saurabh Gupta"
-    ],
-    "abstract": "Visual loco-manipulation of arbitrary objects in the wild with humanoid robots requires accurate end-effector (EE) control and a generalizable understanding of the scene via visual inputs (e.g., RGB-D images). Existing approaches are based on real-world imitation learning and exhibit limited generalization due to the difficulty in collecting large-scale training datasets. This paper presents a new paradigm, HERO, for object loco-manipulation with humanoid robots that combines the strong generalization and open-vocabulary understanding of large vision models with strong control performance from simulated training. We achieve this by designing an accurate residual-aware EE tracking policy. This EE tracking policy combines classical robotics with machine learning. It uses a) inverse kinematics to convert residual end-effector targets into reference trajectories, b) a learned neural forward model for accurate forward kinematics, c) goal adjustment, and d) replanning. Together, these innovations help us cut down the end-effector tracking error by 3.2x. We use this accurate end-effector tracker to build a modular system for loco-manipulation, where we use open-vocabulary large vision models for strong visual generalization. Our system is able to operate in diverse real-world environments, from offices to coffee shops, where the robot is able to reliably manipulate various everyday objects (e.g., mugs, apples, toys) on surfaces ranging from 43cm to 92cm in height. Systematic modular and end-to-end tests in simulation and the real world demonstrate the effectiveness of our proposed design. We believe the advances in this paper can open up new ways of training humanoid robots to interact with daily objects.",
-    "pdf_url": "https://arxiv.org/pdf/2602.16705v1",
-    "published": "2026-02-18T18:55:02Z",
-    "fetched_at": "2026-02-20T00:37:20.673714"
-  },
-  {
-    "title": "Reinforced Fast Weights with Next-Sequence Prediction",
-    "authors": [
-      "Hee Seung Hwang",
-      "Xindi Wu",
-      "Sanghyuk Chun",
-      "Olga Russakovsky"
-    ],
-    "abstract": "Fast weight architectures offer a promising alternative to attention-based transformers for long-context modeling by maintaining constant memory overhead regardless of context length. However, their potential is limited by the next-token prediction (NTP) training paradigm. NTP optimizes single-token predictions and ignores semantic coherence across multiple tokens following a prefix. Consequently, fast weight models, which dynamically update their parameters to store contextual information, learn suboptimal representations that fail to capture long-range dependencies. We introduce REFINE (Reinforced Fast weIghts with Next sEquence prediction), a reinforcement learning framework that trains fast weight models under the next-sequence prediction (NSP) objective. REFINE selects informative token positions based on prediction entropy, generates multi-token rollouts, assigns self-supervised sequence-level rewards, and optimizes the model with group relative policy optimization (GRPO). REFINE is applicable throughout the training lifecycle of pre-trained language models: mid-training, post-training, and test-time training. Our experiments on LaCT-760M and DeltaNet-1.3B demonstrate that REFINE consistently outperforms supervised fine-tuning with NTP across needle-in-a-haystack retrieval, long-context question answering, and diverse tasks in LongBench. REFINE provides an effective and versatile framework for improving long-context modeling in fast weight architectures.",
-    "pdf_url": "https://arxiv.org/pdf/2602.16704v1",
-    "published": "2026-02-18T18:53:18Z",
-    "fetched_at": "2026-02-20T00:37:20.673728"
+    "abstract": "Language Identification (LID) is an important component of many multilingual natural language processing pipelines, where it facilitates corpus curation, training data analysis, and cross-lingual evaluation of large language models. Despite near-perfect performance on high-resource languages, existing systems remain brittle in low-resource and closely related language settings. We introduce UniLID, a simple and efficient LID method based on the UnigramLM tokenization algorithm, leveraging its probabilistic framing, parameter estimation technique and inference strategy. In short, we learn language-conditional unigram distributions over a shared tokenizer vocabulary but treat segmentation as a language-specific phenomenon. Our formulation is data- and compute-efficient, supports incremental addition of new languages without retraining existing models, and can naturally be integrated into existing language model tokenization pipelines. Empirical evaluations against widely used baselines, including fastText, GlotLID, and CLD3, show that UniLID achieves competitive performance on standard benchmarks, substantially improves sample efficiency in low-resource settings - surpassing 70% accuracy with as few as five labeled samples per language - and delivers large gains on fine-grained dialect identification.",
+    "pdf_url": "https://arxiv.org/pdf/2602.17655v1",
+    "published": "2026-02-19T18:58:39Z",
+    "fetched_at": "2026-02-21T00:37:32.147985"
   }
 ]
