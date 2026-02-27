@@ -1,81 +1,69 @@
 [
   {
-    "title": "Test-Time Training with KV Binding Is Secretly Linear Attention",
+    "title": "Neu-PiG: Neural Preconditioned Grids for Fast Dynamic Surface Reconstruction on Long Sequences",
     "authors": [
-      "Junchen Liu",
-      "Sven Elflein",
-      "Or Litany",
-      "Zan Gojcic",
-      "Ruilong Li"
+      "Julian Kaltheuner",
+      "Hannah Dröge",
+      "Markus Plack",
+      "Patrick Stotko",
+      "Reinhard Klein"
     ],
-    "abstract": "Test-time training (TTT) with KV binding as sequence modeling layer is commonly interpreted as a form of online meta-learning that memorizes a key-value mapping at test time. However, our analysis reveals multiple phenomena that contradict this memorization-based interpretation. Motivated by these findings, we revisit the formulation of TTT and show that a broad class of TTT architectures can be expressed as a form of learned linear attention operator. Beyond explaining previously puzzling model behaviors, this perspective yields multiple practical benefits: it enables principled architectural simplifications, admits fully parallel formulations that preserve performance while improving efficiency, and provides a systematic reduction of diverse TTT variants to a standard linear attention form. Overall, our results reframe TTT not as test-time memorization, but as learned linear attention with enhanced representational capacity.",
-    "pdf_url": "https://arxiv.org/pdf/2602.21204v1",
-    "published": "2026-02-24T18:59:30Z",
-    "fetched_at": "2026-02-26T00:37:01.501732"
+    "abstract": "Temporally consistent surface reconstruction of dynamic 3D objects from unstructured point cloud data remains challenging, especially for very long sequences. Existing methods either optimize deformations incrementally, risking drift and requiring long runtimes, or rely on complex learned models that demand category-specific training. We present Neu-PiG, a fast deformation optimization method based on a novel preconditioned latent-grid encoding that distributes spatial features parameterized on the position and normal direction of a keyframe surface. Our method encodes entire deformations across all time steps at various spatial scales into a multi-resolution latent grid, parameterized by the position and normal direction of a reference surface from a single keyframe. This latent representation is then augmented for time modulation and decoded into per-frame 6-DoF deformations via a lightweight multilayer perceptron (MLP). To achieve high-fidelity, drift-free surface reconstructions in seconds, we employ Sobolev preconditioning during gradient-based training of the latent space, completely avoiding the need for any explicit correspondences or further priors. Experiments across diverse human and animal datasets demonstrate that Neu-PiG outperforms state-the-art approaches, offering both superior accuracy and scalability to long sequences while running at least 60x faster than existing training-free methods and achieving inference speeds on the same order as heavy pretrained models.",
+    "pdf_url": "https://arxiv.org/pdf/2602.22212v1",
+    "published": "2026-02-25T18:59:53Z",
+    "fetched_at": "2026-02-27T00:39:24.484104"
   },
   {
-    "title": "Squint: Fast Visual Reinforcement Learning for Sim-to-Real Robotics",
+    "title": "WHOLE: World-Grounded Hand-Object Lifted from Egocentric Videos",
     "authors": [
-      "Abdulaziz Almuzairee",
-      "Henrik I. Christensen"
+      "Yufei Ye",
+      "Jiaman Li",
+      "Ryan Rong",
+      "C. Karen Liu"
     ],
-    "abstract": "Visual reinforcement learning is appealing for robotics but expensive -- off-policy methods are sample-efficient yet slow; on-policy methods parallelize well but waste samples. Recent work has shown that off-policy methods can train faster than on-policy methods in wall-clock time for state-based control. Extending this to vision remains challenging, where high-dimensional input images complicate training dynamics and introduce substantial storage and encoding overhead. To address these challenges, we introduce Squint, a visual Soft Actor Critic method that achieves faster wall-clock training than prior visual off-policy and on-policy methods. Squint achieves this via parallel simulation, a distributional critic, resolution squinting, layer normalization, a tuned update-to-data ratio, and an optimized implementation. We evaluate on the SO-101 Task Set, a new suite of eight manipulation tasks in ManiSkill3 with heavy domain randomization, and demonstrate sim-to-real transfer to a real SO-101 robot. We train policies for 15 minutes on a single RTX 3090 GPU, with most tasks converging in under 6 minutes.",
-    "pdf_url": "https://arxiv.org/pdf/2602.21203v1",
-    "published": "2026-02-24T18:58:11Z",
-    "fetched_at": "2026-02-26T00:37:01.501751"
+    "abstract": "Egocentric manipulation videos are highly challenging due to severe occlusions during interactions and frequent object entries and exits from the camera view as the person moves. Current methods typically focus on recovering either hand or object pose in isolation, but both struggle during interactions and fail to handle out-of-sight cases. Moreover, their independent predictions often lead to inconsistent hand-object relations. We introduce WHOLE, a method that holistically reconstructs hand and object motion in world space from egocentric videos given object templates. Our key insight is to learn a generative prior over hand-object motion to jointly reason about their interactions. At test time, the pretrained prior is guided to generate trajectories that conform to the video observations. This joint generative reconstruction substantially outperforms approaches that process hands and objects separately followed by post-processing. WHOLE achieves state-of-the-art performance on hand motion estimation, 6D object pose estimation, and their relative interaction reconstruction. Project website: https://judyye.github.io/whole-www",
+    "pdf_url": "https://arxiv.org/pdf/2602.22209v1",
+    "published": "2026-02-25T18:59:10Z",
+    "fetched_at": "2026-02-27T00:39:24.484126"
   },
   {
-    "title": "Aletheia tackles FirstProof autonomously",
+    "title": "Recovered in Translation: Efficient Pipeline for Automated Translation of Benchmarks and Datasets",
     "authors": [
-      "Tony Feng",
-      "Junehyuk Jung",
-      "Sang-hyun Kim",
-      "Carlo Pagano",
-      "Sergei Gukov",
-      "Chiang-Chiang Tsai",
-      "David Woodruff",
-      "Adel Javanmard",
-      "Aryan Mokhtari",
-      "Dawsen Hwang",
-      "Yuri Chervonyi",
-      "Jonathan N. Lee",
-      "Garrett Bingham",
-      "Trieu H. Trinh",
-      "Vahab Mirrokni",
-      "Quoc V. Le",
-      "Thang Luong"
+      "Hanna Yukhymenko",
+      "Anton Alexandrov",
+      "Martin Vechev"
     ],
-    "abstract": "We report the performance of Aletheia (Feng et al., 2026b), a mathematics research agent powered by Gemini 3 Deep Think, on the inaugural FirstProof challenge. Within the allowed timeframe of the challenge, Aletheia autonomously solved 6 problems (2, 5, 7, 8, 9, 10) out of 10 according to majority expert assessments; we note that experts were not unanimous on Problem 8 (only). For full transparency, we explain our interpretation of FirstProof and disclose details about our experiments as well as our evaluation. Raw prompts and outputs are available at https://github.com/google-deepmind/superhuman/tree/main/aletheia.",
-    "pdf_url": "https://arxiv.org/pdf/2602.21201v1",
-    "published": "2026-02-24T18:56:10Z",
-    "fetched_at": "2026-02-26T00:37:01.501780"
+    "abstract": "The reliability of multilingual Large Language Model (LLM) evaluation is currently compromised by the inconsistent quality of translated benchmarks. Existing resources often suffer from semantic drift and context loss, which can lead to misleading performance metrics. In this work, we present a fully automated framework designed to address these challenges by enabling scalable, high-quality translation of datasets and benchmarks. We demonstrate that adapting test-time compute scaling strategies, specifically Universal Self-Improvement (USI) and our proposed multi-round ranking method, T-RANK, allows for significantly higher quality outputs compared to traditional pipelines. Our framework ensures that benchmarks preserve their original task structure and linguistic nuances during localization. We apply this approach to translate popular benchmarks and datasets into eight Eastern and Southern European languages (Ukrainian, Bulgarian, Slovak, Romanian, Lithuanian, Estonian, Turkish, Greek). Evaluations using both reference-based metrics and LLM-as-a-judge show that our translations surpass existing resources, resulting in more accurate downstream model assessment. We release both the framework and the improved benchmarks to facilitate robust and reproducible multilingual AI development.",
+    "pdf_url": "https://arxiv.org/pdf/2602.22207v1",
+    "published": "2026-02-25T18:58:25Z",
+    "fetched_at": "2026-02-27T00:39:24.484139"
   },
   {
-    "title": "Learning from Trials and Errors: Reflective Test-Time Planning for Embodied LLMs",
+    "title": "SumTablets: A Transliteration Dataset of Sumerian Tablets",
     "authors": [
-      "Yining Hong",
-      "Huang Huang",
-      "Manling Li",
-      "Li Fei-Fei",
-      "Jiajun Wu",
-      "Yejin Choi"
+      "Cole Simmons",
+      "Richard Diehl Martinez",
+      "Dan Jurafsky"
     ],
-    "abstract": "Embodied LLMs endow robots with high-level task reasoning, but they cannot reflect on what went wrong or why, turning deployment into a sequence of independent trials where mistakes repeat rather than accumulate into experience. Drawing upon human reflective practitioners, we introduce Reflective Test-Time Planning, which integrates two modes of reflection: \\textit{reflection-in-action}, where the agent uses test-time scaling to generate and score multiple candidate actions using internal reflections before execution; and \\textit{reflection-on-action}, which uses test-time training to update both its internal reflection model and its action policy based on external reflections after execution. We also include retrospective reflection, allowing the agent to re-evaluate earlier decisions and perform model updates with hindsight for proper long-horizon credit assignment. Experiments on our newly-designed Long-Horizon Household benchmark and MuJoCo Cupboard Fitting benchmark show significant gains over baseline models, with ablative studies validating the complementary roles of reflection-in-action and reflection-on-action. Qualitative analyses, including real-robot trials, highlight behavioral correction through reflection.",
-    "pdf_url": "https://arxiv.org/pdf/2602.21198v1",
-    "published": "2026-02-24T18:55:18Z",
-    "fetched_at": "2026-02-26T00:37:01.501796"
+    "abstract": "Sumerian transliteration is a conventional system for representing a scholar's interpretation of a tablet in the Latin script. Thanks to visionary digital Assyriology projects such as ETCSL, CDLI, and Oracc, a large number of Sumerian transliterations have been published online, and these data are well-structured for a variety of search and analysis tasks. However, the absence of a comprehensive, accessible dataset pairing transliterations with a digital representation of the tablet's cuneiform glyphs has prevented the application of modern Natural Language Processing (NLP) methods to the task of Sumerian transliteration.\n  To address this gap, we present SumTablets, a dataset pairing Unicode representations of 91,606 Sumerian cuneiform tablets (totaling 6,970,407 glyphs) with the associated transliterations published by Oracc. We construct SumTablets by first preprocessing and standardizing the Oracc transliterations before mapping each reading back to the Unicode representation of the source glyph. Further, we retain parallel structural information (e.g., surfaces, newlines, broken segments) through the use of special tokens. We release SumTablets as a Hugging Face Dataset (CC BY 4.0) and open source data preparation code via GitHub.\n  Additionally, we leverage SumTablets to implement and evaluate two transliteration baselines: (1) weighted sampling from a glyph's possible readings, and (2) fine-tuning an autoregressive language model. Our fine-tuned language model achieves an average transliteration character-level F-score (chrF) of 97.55, demonstrating the immediate potential of transformer-based transliteration models in allowing experts to rapidly verify generated transliterations rather than manually transliterating tablets one-by-one.",
+    "pdf_url": "https://arxiv.org/pdf/2602.22200v1",
+    "published": "2026-02-25T18:50:42Z",
+    "fetched_at": "2026-02-27T00:39:24.484153"
   },
   {
-    "title": "Untied Ulysses: Memory-Efficient Context Parallelism via Headwise Chunking",
+    "title": "Off-The-Shelf Image-to-Image Models Are All You Need To Defeat Image Protection Schemes",
     "authors": [
-      "Ravi Ghadia",
-      "Maksim Abraham",
-      "Sergei Vorobyov",
-      "Max Ryabinin"
+      "Xavier Pleimling",
+      "Sifat Muhammad Abdullah",
+      "Gunjan Balde",
+      "Peng Gao",
+      "Mainack Mondal",
+      "Murtuza Jadliwala",
+      "Bimal Viswanath"
     ],
-    "abstract": "Efficiently processing long sequences with Transformer models usually requires splitting the computations across accelerators via context parallelism. The dominant approaches in this family of methods, such as Ring Attention or DeepSpeed Ulysses, enable scaling over the context dimension but do not focus on memory efficiency, which limits the sequence lengths they can support. More advanced techniques, such as Fully Pipelined Distributed Transformer or activation offloading, can further extend the possible context length at the cost of training throughput. In this paper, we present UPipe, a simple yet effective context parallelism technique that performs fine-grained chunking at the attention head level. This technique significantly reduces the activation memory usage of self-attention, breaking the activation memory barrier and unlocking much longer context lengths. Our approach reduces intermediate tensor memory usage in the attention layer by as much as 87.5$\\%$ for 32B Transformers, while matching previous context parallelism techniques in terms of training speed. UPipe can support the context length of 5M tokens when training Llama3-8B on a single 8$\\times$H100 node, improving upon prior methods by over 25$\\%$.",
-    "pdf_url": "https://arxiv.org/pdf/2602.21196v1",
-    "published": "2026-02-24T18:54:39Z",
-    "fetched_at": "2026-02-26T00:37:01.501811"
+    "abstract": "Advances in Generative AI (GenAI) have led to the development of various protection strategies to prevent the unauthorized use of images. These methods rely on adding imperceptible protective perturbations to images to thwart misuse such as style mimicry or deepfake manipulations. Although previous attacks on these protections required specialized, purpose-built methods, we demonstrate that this is no longer necessary. We show that off-the-shelf image-to-image GenAI models can be repurposed as generic ``denoisers\" using a simple text prompt, effectively removing a wide range of protective perturbations. Across 8 case studies spanning 6 diverse protection schemes, our general-purpose attack not only circumvents these defenses but also outperforms existing specialized attacks while preserving the image's utility for the adversary. Our findings reveal a critical and widespread vulnerability in the current landscape of image protection, indicating that many schemes provide a false sense of security. We stress the urgent need to develop robust defenses and establish that any future protection mechanism must be benchmarked against attacks from off-the-shelf GenAI models. Code is available in this repository: https://github.com/mlsecviswanath/img2imgdenoiser",
+    "pdf_url": "https://arxiv.org/pdf/2602.22197v1",
+    "published": "2026-02-25T18:46:30Z",
+    "fetched_at": "2026-02-27T00:39:24.484168"
   }
 ]
