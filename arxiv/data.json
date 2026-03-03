@@ -1,74 +1,92 @@
 [
   {
-    "title": "MediX-R1: Open Ended Medical Reinforcement Learning",
+    "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
     "authors": [
-      "Sahal Shaji Mullappilly",
-      "Mohammed Irfan Kurpath",
-      "Omair Mohamed",
-      "Mohamed Zidan",
-      "Fahad Khan",
-      "Salman Khan",
-      "Rao Anwer",
-      "Hisham Cholakkal"
+      "Shengqu Cai",
+      "Weili Nie",
+      "Chao Liu",
+      "Julius Berner",
+      "Lvmin Zhang",
+      "Nanye Ma",
+      "Hansheng Chen",
+      "Maneesh Agrawala",
+      "Leonidas Guibas",
+      "Gordon Wetzstein",
+      "Arash Vahdat"
     ],
-    "abstract": "We introduce MediX-R1, an open-ended Reinforcement Learning (RL) framework for medical multimodal large language models (MLLMs) that enables clinically grounded, free-form answers beyond multiple-choice formats. MediX-R1 fine-tunes a baseline vision-language backbone with Group Based RL and a composite reward tailored for medical reasoning: an LLM-based accuracy reward that judges semantic correctness with a strict YES/NO decision, a medical embedding-based semantic reward to capture paraphrases and terminology variants, and lightweight format and modality rewards that enforce interpretable reasoning and modality recognition. This multi-signal design provides stable, informative feedback for open-ended outputs where traditional verifiable or MCQ-only rewards fall short. To measure progress, we propose a unified evaluation framework for both text-only and image+text tasks that uses a Reference-based LLM-as-judge in place of brittle string-overlap metrics, capturing semantic correctness, reasoning, and contextual alignment. Despite using only $\\sim51$K instruction examples, MediX-R1 achieves excellent results across standard medical LLM (text-only) and VLM (image + text) benchmarks, outperforming strong open-source baselines and delivering particularly large gains on open-ended clinical tasks. Our results demonstrate that open-ended RL with comprehensive reward signals and LLM-based evaluation is a practical path toward reliable medical reasoning in multimodal models. Our trained models, curated datasets and source code are available at https://medix.cvmbzuai.com",
-    "pdf_url": "https://arxiv.org/pdf/2602.23363v1",
-    "published": "2026-02-26T18:59:46Z",
-    "fetched_at": "2026-03-02T00:39:03.919863"
+    "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long videos to capture narrative structure, while simultaneously employing a local Distribution Matching head that aligns sliding windows to a frozen short-video teacher via a mode-seeking reverse-KL divergence. This strategy enables the synthesis of minute-scale videos that learns long-range coherence and motions from limited long videos via supervised flow matching, while inheriting local realism by aligning every sliding-window segment of the student to a frozen short-video teacher, resulting in a few-step fast long video generator. Evaluations show that our method effectively closes the fidelity-horizon gap by jointly improving local sharpness, motion and long-range consistency. Project website: https://primecai.github.io/mmm/.",
+    "pdf_url": "https://arxiv.org/pdf/2602.24289v1",
+    "published": "2026-02-27T18:59:02Z",
+    "fetched_at": "2026-03-03T00:39:48.124164"
   },
   {
-    "title": "Model Agreement via Anchoring",
+    "title": "DARE-bench: Evaluating Modeling and Instruction Fidelity of LLMs in Data Science",
     "authors": [
-      "Eric Eaton",
-      "Surbhi Goel",
-      "Marcel Hussing",
-      "Michael Kearns",
-      "Aaron Roth",
-      "Sikata Bela Sengupta",
-      "Jessica Sorrell"
+      "Fan Shu",
+      "Yite Wang",
+      "Ruofan Wu",
+      "Boyi Liu",
+      "Zhewei Yao",
+      "Yuxiong He",
+      "Feng Yan"
     ],
-    "abstract": "Numerous lines of aim to control $\\textit{model disagreement}$ -- the extent to which two machine learning models disagree in their predictions. We adopt a simple and standard notion of model disagreement in real-valued prediction problems, namely the expected squared difference in predictions between two models trained on independent samples, without any coordination of the training processes. We would like to be able to drive disagreement to zero with some natural parameter(s) of the training procedure using analyses that can be applied to existing training methodologies.\n  We develop a simple general technique for proving bounds on independent model disagreement based on $\\textit{anchoring}$ to the average of two models within the analysis. We then apply this technique to prove disagreement bounds for four commonly used machine learning algorithms: (1) stacked aggregation over an arbitrary model class (where disagreement is driven to 0 with the number of models $k$ being stacked) (2) gradient boosting (where disagreement is driven to 0 with the number of iterations $k$) (3) neural network training with architecture search (where disagreement is driven to 0 with the size $n$ of the architecture being optimized over) and (4) regression tree training over all regression trees of fixed depth (where disagreement is driven to 0 with the depth $d$ of the tree architecture). For clarity, we work out our initial bounds in the setting of one-dimensional regression with squared error loss -- but then show that all of our results generalize to multi-dimensional regression with any strongly convex loss.",
-    "pdf_url": "https://arxiv.org/pdf/2602.23360v1",
-    "published": "2026-02-26T18:59:32Z",
-    "fetched_at": "2026-03-02T00:39:03.919903"
+    "abstract": "The fast-growing demands in using Large Language Models (LLMs) to tackle complex multi-step data science tasks create an emergent need for accurate benchmarking. There are two major gaps in existing benchmarks: (i) the lack of standardized, process-aware evaluation that captures instruction adherence and process fidelity, and (ii) the scarcity of accurately labeled training data. To bridge these gaps, we introduce DARE-bench, a benchmark designed for machine learning modeling and data science instruction following. Unlike many existing benchmarks that rely on human- or model-based judges, all tasks in DARE-bench have verifiable ground truth, ensuring objective and reproducible evaluation. To cover a broad range of tasks and support agentic tools, DARE-bench consists of 6,300 Kaggle-derived tasks and provides both large-scale training data and evaluation sets. Extensive evaluations show that even highly capable models such as gpt-o4-mini struggle to achieve good performance, especially in machine learning modeling tasks. Using DARE-bench training tasks for fine-tuning can substantially improve model performance. For example, supervised fine-tuning boosts Qwen3-32B's accuracy by 1.83x and reinforcement learning boosts Qwen3-4B's accuracy by more than 8x. These significant improvements verify the importance of DARE-bench both as an accurate evaluation benchmark and critical training data.",
+    "pdf_url": "https://arxiv.org/pdf/2602.24288v1",
+    "published": "2026-02-27T18:58:57Z",
+    "fetched_at": "2026-03-03T00:39:48.124189"
   },
   {
-    "title": "A Dataset is Worth 1 MB",
+    "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
     "authors": [
-      "Elad Kimchi Shoshani",
-      "Leeyam Gabay",
-      "Yedid Hoshen"
+      "Weinan Dai",
+      "Hanlin Wu",
+      "Qiying Yu",
+      "Huan-ang Gao",
+      "Jiahao Li",
+      "Chengquan Jiang",
+      "Weiqiang Lou",
+      "Yufan Song",
+      "Hongli Yu",
+      "Jiaze Chen",
+      "Wei-Ying Ma",
+      "Ya-Qin Zhang",
+      "Jingjing Liu",
+      "Mingxuan Wang",
+      "Xin Liu",
+      "Hao Zhou"
     ],
-    "abstract": "A dataset server must often distribute the same large payload to many clients, incurring massive communication costs. Since clients frequently operate on diverse hardware and software frameworks, transmitting a pre-trained model is often infeasible; instead, agents require raw data to train their own task-specific models locally. While dataset distillation attempts to compress training signals, current methods struggle to scale to high-resolution data and rarely achieve sufficiently small files. In this paper, we propose Pseudo-Labels as Data (PLADA), a method that completely eliminates pixel transmission. We assume agents are preloaded with a large, generic, unlabeled reference dataset (e.g., ImageNet-1K, ImageNet-21K) and communicate a new task by transmitting only the class labels for specific images. To address the distribution mismatch between the reference and target datasets, we introduce a pruning mechanism that filters the reference dataset to retain only the labels of the most semantically relevant images for the target task. This selection process simultaneously maximizes training efficiency and minimizes transmission payload. Experiments on 10 diverse datasets demonstrate that our approach can transfer task knowledge with a payload of less than 1 MB while retaining high classification accuracy, offering a promising solution for efficient dataset serving.",
-    "pdf_url": "https://arxiv.org/pdf/2602.23358v1",
-    "published": "2026-02-26T18:59:03Z",
-    "fetched_at": "2026-03-02T00:39:03.919918"
+    "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\\%, 100\\%, and 92\\% faster rate over torch.compile on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\\% on the hardest Level-3 setting.",
+    "pdf_url": "https://arxiv.org/pdf/2602.24286v1",
+    "published": "2026-02-27T18:58:05Z",
+    "fetched_at": "2026-03-03T00:39:48.124216"
   },
   {
-    "title": "SOTAlign: Semi-Supervised Alignment of Unimodal Vision and Language Models via Optimal Transport",
+    "title": "Taming Momentum: Rethinking Optimizer States Through Low-Rank Approximation",
     "authors": [
-      "Simon Roschmann",
-      "Paul Krzakala",
-      "Sonia Mazelet",
-      "Quentin Bouniot",
-      "Zeynep Akata"
+      "Zhengbo Wang",
+      "Jian Liang",
+      "Ran He",
+      "Zilei Wang",
+      "Tieniu Tan"
     ],
-    "abstract": "The Platonic Representation Hypothesis posits that neural networks trained on different modalities converge toward a shared statistical model of the world. Recent work exploits this convergence by aligning frozen pretrained vision and language models with lightweight alignment layers, but typically relies on contrastive losses and millions of paired samples. In this work, we ask whether meaningful alignment can be achieved with substantially less supervision. We introduce a semi-supervised setting in which pretrained unimodal encoders are aligned using a small number of image-text pairs together with large amounts of unpaired data. To address this challenge, we propose SOTAlign, a two-stage framework that first recovers a coarse shared geometry from limited paired data using a linear teacher, then refines the alignment on unpaired samples via an optimal-transport-based divergence that transfers relational structure without overconstraining the target space. Unlike existing semi-supervised methods, SOTAlign effectively leverages unpaired images and text, learning robust joint embeddings across datasets and encoder pairs, and significantly outperforming supervised and semi-supervised baselines.",
-    "pdf_url": "https://arxiv.org/pdf/2602.23353v1",
-    "published": "2026-02-26T18:55:06Z",
-    "fetched_at": "2026-03-02T00:39:03.919933"
+    "abstract": "Modern optimizers like Adam and Muon are central to training large language models, but their reliance on first- and second-order momenta introduces significant memory overhead, which constrains scalability and computational efficiency. In this work, we reframe the exponential moving average (EMA) used in these momenta as the training of a linear regressor via online gradient flow. Building on this equivalence, we introduce LoRA-Pre, a novel low-rank optimizer designed for efficient pre-training. Specifically, LoRA-Pre reduces the optimizer's memory footprint by decomposing the full momentum matrix into a compact low-rank subspace within the online linear learner, thereby maintaining optimization performance while improving memory efficiency. We empirically validate LoRA-Pre's efficacy by pre-training models from the Llama architecture family, scaling from 60M to 1B parameters. LoRA-Pre achieves the highest performance across all model sizes. Notably, LoRA-Pre demonstrates remarkable rank efficiency, achieving comparable or superior results using only 1/8 the rank of baseline methods. Beyond pre-training, we evaluate LoRA-Pre's effectiveness in fine-tuning scenarios. With the same rank, LoRA-Pre consistently outperforms all efficient fine-tuning baselines. Specifically, compared to standard LoRA, LoRA-Pre achieves substantial improvements of 3.14 points on Llama-3.1-8B and 6.17 points on Llama-2-7B, validating our approach's effectiveness across both pre-training and fine-tuning paradigms. Our code is publicly available at https://github.com/mrflogs/LoRA-Pre.",
+    "pdf_url": "https://arxiv.org/pdf/2602.24283v1",
+    "published": "2026-02-27T18:57:06Z",
+    "fetched_at": "2026-03-03T00:39:48.124232"
   },
   {
-    "title": "FlashOptim: Optimizers for Memory Efficient Training",
+    "title": "Memory Caching: RNNs with Growing Memory",
     "authors": [
-      "Jose Javier Gonzalez Ortiz",
-      "Abhay Gupta",
-      "Chris Renard",
-      "Davis Blalock"
+      "Ali Behrouz",
+      "Zeman Li",
+      "Yuan Deng",
+      "Peilin Zhong",
+      "Meisam Razaviyayn",
+      "Vahab Mirrokni"
     ],
-    "abstract": "Standard mixed-precision training of neural networks requires many bytes of accelerator memory for each model parameter. These bytes reflect not just the parameter itself, but also its gradient and one or more optimizer state variables. With each of these values typically requiring 4 bytes, training even a 7 billion parameter model can be impractical for researchers with less than 100GB of accelerator memory.\n  We introduce FlashOptim, a suite of optimizations that reduces per-parameter memory by over 50% while preserving model quality and API compatibility. Our approach introduces two key techniques. First, we improve master weight splitting by finding and exploiting a tight bound on its quantization error. Second, we design companding functions that greatly reduce the error in 8-bit optimizer state quantization. Together with 16-bit gradients, these techniques reduce AdamW memory from 16 bytes to 7 bytes per parameter, or 5 bytes with gradient release. They also cut model checkpoint sizes by more than half.\n  Experiments with FlashOptim applied to SGD, AdamW, and Lion show no measurable quality degradation on any task from a collection of standard vision and language benchmarks, including Llama-3.1-8B finetuning.",
-    "pdf_url": "https://arxiv.org/pdf/2602.23349v1",
-    "published": "2026-02-26T18:52:22Z",
-    "fetched_at": "2026-03-02T00:39:03.919947"
+    "abstract": "Transformers have been established as the de-facto backbones for most recent advances in sequence modeling, mainly due to their growing memory capacity that scales with the context length. While plausible for retrieval tasks, it causes quadratic complexity and so has motivated recent studies to explore viable subquadratic recurrent alternatives. Despite showing promising preliminary results in diverse domains, such recurrent architectures underperform Transformers in recall-intensive tasks, often attributed to their fixed-size memory. In this paper, we introduce Memory Caching (MC), a simple yet effective technique that enhances recurrent models by caching checkpoints of their memory states (a.k.a. hidden states). Memory Caching allows the effective memory capacity of RNNs to grow with sequence length, offering a flexible trade-off that interpolates between the fixed memory (i.e., $O(L)$ complexity) of RNNs and the growing memory (i.e., $O(L^2)$ complexity) of Transformers. We propose four variants of MC, including gated aggregation and sparse selective mechanisms, and discuss their implications on both linear and deep memory modules. Our experimental results on language modeling, and long-context understanding tasks show that MC enhances the performance of recurrent models, supporting its effectiveness. The results of in-context recall tasks indicate that while Transformers achieve the best accuracy, our MC variants show competitive performance, close the gap with Transformers, and performs better than state-of-the-art recurrent models.",
+    "pdf_url": "https://arxiv.org/pdf/2602.24281v1",
+    "published": "2026-02-27T18:53:41Z",
+    "fetched_at": "2026-03-03T00:39:48.124248"
   }
 ]
