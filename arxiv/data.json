@@ -1,92 +1,66 @@
 [
   {
-    "title": "Mode Seeking meets Mean Seeking for Fast Long Video Generation",
+    "title": "Reasoning Core: A Scalable Procedural Data Generation Suite for Symbolic Pre-training and Post-Training",
     "authors": [
-      "Shengqu Cai",
-      "Weili Nie",
-      "Chao Liu",
-      "Julius Berner",
-      "Lvmin Zhang",
-      "Nanye Ma",
-      "Hansheng Chen",
-      "Maneesh Agrawala",
-      "Leonidas Guibas",
-      "Gordon Wetzstein",
-      "Arash Vahdat"
+      "Valentin Lacombe",
+      "Valentin Quesnel",
+      "Damien Sileo"
     ],
-    "abstract": "Scaling video generation from seconds to minutes faces a critical bottleneck: while short-video data is abundant and high-fidelity, coherent long-form data is scarce and limited to narrow domains. To address this, we propose a training paradigm where Mode Seeking meets Mean Seeking, decoupling local fidelity from long-term coherence based on a unified representation via a Decoupled Diffusion Transformer. Our approach utilizes a global Flow Matching head trained via supervised learning on long videos to capture narrative structure, while simultaneously employing a local Distribution Matching head that aligns sliding windows to a frozen short-video teacher via a mode-seeking reverse-KL divergence. This strategy enables the synthesis of minute-scale videos that learns long-range coherence and motions from limited long videos via supervised flow matching, while inheriting local realism by aligning every sliding-window segment of the student to a frozen short-video teacher, resulting in a few-step fast long video generator. Evaluations show that our method effectively closes the fidelity-horizon gap by jointly improving local sharpness, motion and long-range consistency. Project website: https://primecai.github.io/mmm/.",
-    "pdf_url": "https://arxiv.org/pdf/2602.24289v1",
-    "published": "2026-02-27T18:59:02Z",
-    "fetched_at": "2026-03-03T00:39:48.124164"
+    "abstract": "Training on verifiable symbolic data is a promising way to expand the reasoning frontier of language models beyond what standard pre-training corpora provide. Yet existing procedural generators often rely on fixed puzzles or templates and do not deliver the distributional breadth needed at scale. We introduce Reasoning Core, a scalable suite that procedurally generates verifiable symbolic reasoning data across core formal domains: PDDL planning over randomized domains, first-order logic with equality, context-free grammar parsing and generation, causal reasoning over random Bayesian networks, and systems of equations. Each task is paired with an external solver for rigorous verification and admits continuous difficulty control for curriculum design. Examples can optionally include solver-derived reasoning traces, enabling supervised training from the earliest pre-training stages, and the same interface provides verifiable reward functions for reinforcement learning. Our experiments show that mixing Reasoning Core data into pre-training improves downstream reasoning while preserving, or slightly improving, language modeling quality. Zero-shot evaluations confirm these tasks challenge frontier models such as GPT-5. The code and data are publicly available under the MIT license.",
+    "pdf_url": "https://arxiv.org/pdf/2603.02208v1",
+    "published": "2026-03-02T18:59:29Z",
+    "fetched_at": "2026-03-04T00:38:06.097323"
   },
   {
-    "title": "DARE-bench: Evaluating Modeling and Instruction Fidelity of LLMs in Data Science",
+    "title": "Novel technique based on Léja Points Approximation for Log-determinant Estimation of Large matrices",
     "authors": [
-      "Fan Shu",
-      "Yite Wang",
-      "Ruofan Wu",
-      "Boyi Liu",
-      "Zhewei Yao",
-      "Yuxiong He",
-      "Feng Yan"
+      "Verlon Roel Mbingui",
+      "Antoine Tambue",
+      "Issa Karambal"
     ],
-    "abstract": "The fast-growing demands in using Large Language Models (LLMs) to tackle complex multi-step data science tasks create an emergent need for accurate benchmarking. There are two major gaps in existing benchmarks: (i) the lack of standardized, process-aware evaluation that captures instruction adherence and process fidelity, and (ii) the scarcity of accurately labeled training data. To bridge these gaps, we introduce DARE-bench, a benchmark designed for machine learning modeling and data science instruction following. Unlike many existing benchmarks that rely on human- or model-based judges, all tasks in DARE-bench have verifiable ground truth, ensuring objective and reproducible evaluation. To cover a broad range of tasks and support agentic tools, DARE-bench consists of 6,300 Kaggle-derived tasks and provides both large-scale training data and evaluation sets. Extensive evaluations show that even highly capable models such as gpt-o4-mini struggle to achieve good performance, especially in machine learning modeling tasks. Using DARE-bench training tasks for fine-tuning can substantially improve model performance. For example, supervised fine-tuning boosts Qwen3-32B's accuracy by 1.83x and reinforcement learning boosts Qwen3-4B's accuracy by more than 8x. These significant improvements verify the importance of DARE-bench both as an accurate evaluation benchmark and critical training data.",
-    "pdf_url": "https://arxiv.org/pdf/2602.24288v1",
-    "published": "2026-02-27T18:58:57Z",
-    "fetched_at": "2026-03-03T00:39:48.124189"
+    "abstract": "The computation of the Log-determinant of large, sparse, symmetric positive definite (SPD) matrices is essential in many scientific computational fields such as numerical linear algebra and machine learning. In low dimensions, Cholesky is preferred, but in high dimensions, its computation may be prohibitive due to memory limitation. To circumvent this, Krylov subspace techniques have proven to be efficient but may be computationally expensive due to the required orthogonalization processes. In this paper, we introduce a novel technique to estimate the Log-determinant of a matrix using Léja points, where the implementation is only based on matrix multiplications and a rough estimation of eigenvalue bounds of the matrix. By coupling Léja points interpolation with a randomized algorithm called Hutch++, we achieve substantial reductions in computational complexity while preserving significant accuracy compared to the stochastic Lanczos quadrature. We establish the approximation errors of the matrix function together with multiplicative error bounds for the approximations obtained by this method.\n  The effectiveness and scalability of the proposed method on both large sparse synthetic matrices (maximum likelihood in Gaussian Markov Random fields) and large-scale real-world matrices are confirmed through numerical experiments.",
+    "pdf_url": "https://arxiv.org/pdf/2603.02207v1",
+    "published": "2026-03-02T18:59:29Z",
+    "fetched_at": "2026-03-04T00:38:06.097343"
   },
   {
-    "title": "CUDA Agent: Large-Scale Agentic RL for High-Performance CUDA Kernel Generation",
+    "title": "Analytical Exploration of Spatial Audio Cues: A Differentiable Multi-Sphere Scattering Model",
     "authors": [
-      "Weinan Dai",
-      "Hanlin Wu",
-      "Qiying Yu",
-      "Huan-ang Gao",
-      "Jiahao Li",
-      "Chengquan Jiang",
-      "Weiqiang Lou",
-      "Yufan Song",
-      "Hongli Yu",
-      "Jiaze Chen",
-      "Wei-Ying Ma",
-      "Ya-Qin Zhang",
-      "Jingjing Liu",
-      "Mingxuan Wang",
-      "Xin Liu",
-      "Hao Zhou"
+      "Siminfar Samakoush Galougah",
+      "Pranav Pulijala",
+      "Ramani Duraiswami"
     ],
-    "abstract": "GPU kernel optimization is fundamental to modern deep learning but remains a highly specialized task requiring deep hardware expertise. Despite strong performance in general programming, large language models (LLMs) remain uncompetitive with compiler-based systems such as torch.compile for CUDA kernel generation. Existing CUDA code generation approaches either rely on training-free refinement or fine-tune models within fixed multi-turn execution-feedback loops, but both paradigms fail to fundamentally improve the model's intrinsic CUDA optimization ability, resulting in limited performance gains. We present CUDA Agent, a large-scale agentic reinforcement learning system that develops CUDA kernel expertise through three components: a scalable data synthesis pipeline, a skill-augmented CUDA development environment with automated verification and profiling to provide reliable reward signals, and reinforcement learning algorithmic techniques enabling stable training. CUDA Agent achieves state-of-the-art results on KernelBench, delivering 100\\%, 100\\%, and 92\\% faster rate over torch.compile on KernelBench Level-1, Level-2, and Level-3 splits, outperforming the strongest proprietary models such as Claude Opus 4.5 and Gemini 3 Pro by about 40\\% on the hardest Level-3 setting.",
-    "pdf_url": "https://arxiv.org/pdf/2602.24286v1",
-    "published": "2026-02-27T18:58:05Z",
-    "fetched_at": "2026-03-03T00:39:48.124216"
+    "abstract": "A primary challenge in developing synthetic spatial hearing systems, particularly underwater, is accurately modeling sound scattering. Biological organisms achieve 3D spatial hearing by exploiting sound scattering off their bodies to generate location-dependent interaural level and time differences (ITD/ILD). While Head-Related Transfer Function (HRTF) models based on rigid scattering suffice for terrestrial humans, they fail in underwater environments due to the near-impedance match between water and soft tissue. Motivated by the acoustic anatomy of underwater animals, we introduce a novel, analytically derived, closed-form forward model for scattering from a semi-transparent sphere containing two rigid spherical scatterers. This model accurately maps source direction, frequency, and material properties to the pressure field, capturing the complex physics of layered, penetrable structures. Critically, our model is implemented in a fully differentiable setting, enabling its integration with a machine learning algorithm to optimize a cost function for active localization. We demonstrate enhanced convergence for localization under noise using a physics-informed frequency weighting scheme, and present accurate moving-source tracking via an Extended Kalman Filter (EKF) with analytically computed Jacobians. Our work suggests that differentiable models of scattering from layered rigid and transparent geometries offer a promising new foundation for microphone arrays that leverage scattering-based spatial cues over conventional beamforming, applicable to both terrestrial and underwater applications. Our model will be made open source.",
+    "pdf_url": "https://arxiv.org/pdf/2603.02205v1",
+    "published": "2026-03-02T18:58:39Z",
+    "fetched_at": "2026-03-04T00:38:06.097358"
   },
   {
-    "title": "Taming Momentum: Rethinking Optimizer States Through Low-Rank Approximation",
+    "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
     "authors": [
-      "Zhengbo Wang",
-      "Jian Liang",
-      "Ran He",
-      "Zilei Wang",
-      "Tieniu Tan"
+      "Amir Asiaee",
+      "Kavey Aryan",
+      "James P. Long"
     ],
-    "abstract": "Modern optimizers like Adam and Muon are central to training large language models, but their reliance on first- and second-order momenta introduces significant memory overhead, which constrains scalability and computational efficiency. In this work, we reframe the exponential moving average (EMA) used in these momenta as the training of a linear regressor via online gradient flow. Building on this equivalence, we introduce LoRA-Pre, a novel low-rank optimizer designed for efficient pre-training. Specifically, LoRA-Pre reduces the optimizer's memory footprint by decomposing the full momentum matrix into a compact low-rank subspace within the online linear learner, thereby maintaining optimization performance while improving memory efficiency. We empirically validate LoRA-Pre's efficacy by pre-training models from the Llama architecture family, scaling from 60M to 1B parameters. LoRA-Pre achieves the highest performance across all model sizes. Notably, LoRA-Pre demonstrates remarkable rank efficiency, achieving comparable or superior results using only 1/8 the rank of baseline methods. Beyond pre-training, we evaluate LoRA-Pre's effectiveness in fine-tuning scenarios. With the same rank, LoRA-Pre consistently outperforms all efficient fine-tuning baselines. Specifically, compared to standard LoRA, LoRA-Pre achieves substantial improvements of 3.14 points on Llama-3.1-8B and 6.17 points on Llama-2-7B, validating our approach's effectiveness across both pre-training and fine-tuning paradigms. Our code is publicly available at https://github.com/mrflogs/LoRA-Pre.",
-    "pdf_url": "https://arxiv.org/pdf/2602.24283v1",
-    "published": "2026-02-27T18:57:06Z",
-    "fetched_at": "2026-03-03T00:39:48.124232"
+    "abstract": "Selective conformal prediction can yield substantially tighter uncertainty sets when we can identify calibration examples that are exchangeable with the test example. In interventional settings, such as perturbation experiments in genomics, exchangeability often holds only within subsets of interventions that leave a target variable \"unaffected\" (e.g., non-descendants of an intervened node in a causal graph). We study the practical regime where this invariance structure is unknown and must be learned from data. Our contributions are: (i) a contamination-robust conformal coverage theorem that quantifies how misclassification of \"unaffected\" calibration examples degrades coverage via an explicit function $g(δ,n)$ of the contamination fraction and calibration set size, providing a finite-sample lower bound that holds for arbitrary contaminating distributions; (ii) a task-driven partial causal learning formulation that estimates only the binary descendant indicators $Z_{a,i}=\\mathbf{1}\\{i\\in\\mathrm{desc}(a)\\}$ needed for selective calibration, rather than the full causal graph; and (iii) algorithms for descendant discovery via perturbation intersection patterns (differentially affected variable set intersections across interventions), and for approximate distance-to-intervention estimation via local invariant causal prediction. We provide recovery conditions under which contamination is controlled. Experiments on synthetic linear structural equation models (SEMs) validate the bound: under controlled contamination up to $δ=0.30$, the corrected procedure maintains $\\ge 0.95$ coverage while uncorrected selective CP degrades to $0.867$. A proof-of-concept on Replogle K562 CRISPR interference (CRISPRi) perturbation data demonstrates applicability to real genomic screens.",
+    "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
+    "published": "2026-03-02T18:58:22Z",
+    "fetched_at": "2026-03-04T00:38:06.097372"
   },
   {
-    "title": "Memory Caching: RNNs with Growing Memory",
+    "title": "Tool Verification for Test-Time Reinforcement Learning",
     "authors": [
-      "Ali Behrouz",
-      "Zeman Li",
-      "Yuan Deng",
-      "Peilin Zhong",
-      "Meisam Razaviyayn",
-      "Vahab Mirrokni"
+      "Ruotong Liao",
+      "Nikolai Röhrich",
+      "Xiaohan Wang",
+      "Yuhui Zhang",
+      "Yasaman Samadzadeh",
+      "Volker Tresp",
+      "Serena Yeung-Levy"
     ],
-    "abstract": "Transformers have been established as the de-facto backbones for most recent advances in sequence modeling, mainly due to their growing memory capacity that scales with the context length. While plausible for retrieval tasks, it causes quadratic complexity and so has motivated recent studies to explore viable subquadratic recurrent alternatives. Despite showing promising preliminary results in diverse domains, such recurrent architectures underperform Transformers in recall-intensive tasks, often attributed to their fixed-size memory. In this paper, we introduce Memory Caching (MC), a simple yet effective technique that enhances recurrent models by caching checkpoints of their memory states (a.k.a. hidden states). Memory Caching allows the effective memory capacity of RNNs to grow with sequence length, offering a flexible trade-off that interpolates between the fixed memory (i.e., $O(L)$ complexity) of RNNs and the growing memory (i.e., $O(L^2)$ complexity) of Transformers. We propose four variants of MC, including gated aggregation and sparse selective mechanisms, and discuss their implications on both linear and deep memory modules. Our experimental results on language modeling, and long-context understanding tasks show that MC enhances the performance of recurrent models, supporting its effectiveness. The results of in-context recall tasks indicate that while Transformers achieve the best accuracy, our MC variants show competitive performance, close the gap with Transformers, and performs better than state-of-the-art recurrent models.",
-    "pdf_url": "https://arxiv.org/pdf/2602.24281v1",
-    "published": "2026-02-27T18:53:41Z",
-    "fetched_at": "2026-03-03T00:39:48.124248"
+    "abstract": "Test-time reinforcement learning (TTRL) has emerged as a promising paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation on unlabeled test inputs via self-induced rewards through majority voting. However, a spurious yet high-frequency unverified consensus can become a biased and reinforced reward signal, leading to incorrect mode collapse. We address this failure mode with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces test-time tool verification into reward estimation. Concretely, a verifier uses an external tool as evidence (e.g., from code execution) to upweight verified rollouts in a verification-aware voting, producing more reliable pseudo-labels for training. Across various math difficulties (MATH-500, AMC, and AIME 2024) and diverse backbone types, T^3RL significantly improves over TTRL, with larger gains on harder problems. More broadly, T^3RL can be viewed as verified online data synthesis, highlighting test-time tool verification as a key mechanism for stabilizing self-evolution.",
+    "pdf_url": "https://arxiv.org/pdf/2603.02203v1",
+    "published": "2026-03-02T18:57:52Z",
+    "fetched_at": "2026-03-04T00:38:06.097390"
   }
 ]
