@@ -1,66 +1,80 @@
 [
   {
-    "title": "Reasoning Core: A Scalable Procedural Data Generation Suite for Symbolic Pre-training and Post-Training",
+    "title": "Utonia: Toward One Encoder for All Point Clouds",
     "authors": [
-      "Valentin Lacombe",
-      "Valentin Quesnel",
-      "Damien Sileo"
+      "Yujia Zhang",
+      "Xiaoyang Wu",
+      "Yunhan Yang",
+      "Xianzhe Fan",
+      "Han Li",
+      "Yuechen Zhang",
+      "Zehao Huang",
+      "Naiyan Wang",
+      "Hengshuang Zhao"
     ],
-    "abstract": "Training on verifiable symbolic data is a promising way to expand the reasoning frontier of language models beyond what standard pre-training corpora provide. Yet existing procedural generators often rely on fixed puzzles or templates and do not deliver the distributional breadth needed at scale. We introduce Reasoning Core, a scalable suite that procedurally generates verifiable symbolic reasoning data across core formal domains: PDDL planning over randomized domains, first-order logic with equality, context-free grammar parsing and generation, causal reasoning over random Bayesian networks, and systems of equations. Each task is paired with an external solver for rigorous verification and admits continuous difficulty control for curriculum design. Examples can optionally include solver-derived reasoning traces, enabling supervised training from the earliest pre-training stages, and the same interface provides verifiable reward functions for reinforcement learning. Our experiments show that mixing Reasoning Core data into pre-training improves downstream reasoning while preserving, or slightly improving, language modeling quality. Zero-shot evaluations confirm these tasks challenge frontier models such as GPT-5. The code and data are publicly available under the MIT license.",
-    "pdf_url": "https://arxiv.org/pdf/2603.02208v1",
-    "published": "2026-03-02T18:59:29Z",
-    "fetched_at": "2026-03-04T00:38:06.097323"
+    "abstract": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point transformer encoder across diverse domains, spanning remote sensing, outdoor LiDAR, indoor RGB-D sequences, object-centric CAD models, and point clouds lifted from RGB-only videos. Despite their distinct sensing geometries, densities, and priors, Utonia learns a consistent representation space that transfers across domains. This unification improves perception capability while revealing intriguing emergent behaviors that arise only when domains are trained jointly. Beyond perception, we observe that Utonia representations can also benefit embodied and multimodal reasoning: conditioning vision-language-action policies on Utonia features improves robotic manipulation, and integrating them into vision-language models yields gains on spatial reasoning. We hope Utonia can serve as a step toward foundation models for sparse 3D data, and support downstream applications in AR/VR, robotics, and autonomous driving.",
+    "pdf_url": "https://arxiv.org/pdf/2603.03283v1",
+    "published": "2026-03-03T18:59:58Z",
+    "fetched_at": "2026-03-05T00:39:21.250990"
   },
   {
-    "title": "Novel technique based on Léja Points Approximation for Log-determinant Estimation of Large matrices",
+    "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
     "authors": [
-      "Verlon Roel Mbingui",
-      "Antoine Tambue",
-      "Issa Karambal"
+      "Hanyang Wang",
+      "Yiyang Liu",
+      "Jiawei Chi",
+      "Fangfu Liu",
+      "Ran Xue",
+      "Yueqi Duan"
     ],
-    "abstract": "The computation of the Log-determinant of large, sparse, symmetric positive definite (SPD) matrices is essential in many scientific computational fields such as numerical linear algebra and machine learning. In low dimensions, Cholesky is preferred, but in high dimensions, its computation may be prohibitive due to memory limitation. To circumvent this, Krylov subspace techniques have proven to be efficient but may be computationally expensive due to the required orthogonalization processes. In this paper, we introduce a novel technique to estimate the Log-determinant of a matrix using Léja points, where the implementation is only based on matrix multiplications and a rough estimation of eigenvalue bounds of the matrix. By coupling Léja points interpolation with a randomized algorithm called Hutch++, we achieve substantial reductions in computational complexity while preserving significant accuracy compared to the stochastic Lanczos quadrature. We establish the approximation errors of the matrix function together with multiplicative error bounds for the approximations obtained by this method.\n  The effectiveness and scalability of the proposed method on both large sparse synthetic matrices (maximum likelihood in Gaussian Markov Random fields) and large-scale real-world matrices are confirmed through numerical experiments.",
-    "pdf_url": "https://arxiv.org/pdf/2603.02207v1",
-    "published": "2026-03-02T18:59:29Z",
-    "fetched_at": "2026-03-04T00:38:06.097343"
+    "abstract": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG as a control applied to the first-order continuous-time generative flow, using the conditional-unconditional discrepancy as an error signal to adjust the velocity field. From this perspective, we summarize vanilla CFG as a proportional controller (P-control) with fixed gain, and typical follow-up variants develop extended control-law designs derived from it. However, existing methods mainly rely on linear control, inherently leading to instability, overshooting, and degraded semantic fidelity especially on large guidance scales. To address this, we introduce Sliding Mode Control CFG (SMC-CFG), which enforces the generative flow toward a rapidly convergent sliding manifold. Specifically, we define an exponential sliding mode surface over the semantic prediction error and introduce a switching control term to establish nonlinear feedback-guided correction. Moreover, we provide a Lyapunov stability analysis to theoretically support finite-time convergence. Experiments across text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image demonstrate that SMC-CFG outperforms standard CFG in semantic alignment and enhances robustness across a wide range of guidance scales. Project Page: https://hanyang-21.github.io/CFG-Ctrl",
+    "pdf_url": "https://arxiv.org/pdf/2603.03281v1",
+    "published": "2026-03-03T18:59:48Z",
+    "fetched_at": "2026-03-05T00:39:21.251013"
   },
   {
-    "title": "Analytical Exploration of Spatial Audio Cues: A Differentiable Multi-Sphere Scattering Model",
+    "title": "How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference",
     "authors": [
-      "Siminfar Samakoush Galougah",
-      "Pranav Pulijala",
-      "Ramani Duraiswami"
+      "Toru Lin",
+      "Shuying Deng",
+      "Zhao-Heng Yin",
+      "Pieter Abbeel",
+      "Jitendra Malik"
     ],
-    "abstract": "A primary challenge in developing synthetic spatial hearing systems, particularly underwater, is accurately modeling sound scattering. Biological organisms achieve 3D spatial hearing by exploiting sound scattering off their bodies to generate location-dependent interaural level and time differences (ITD/ILD). While Head-Related Transfer Function (HRTF) models based on rigid scattering suffice for terrestrial humans, they fail in underwater environments due to the near-impedance match between water and soft tissue. Motivated by the acoustic anatomy of underwater animals, we introduce a novel, analytically derived, closed-form forward model for scattering from a semi-transparent sphere containing two rigid spherical scatterers. This model accurately maps source direction, frequency, and material properties to the pressure field, capturing the complex physics of layered, penetrable structures. Critically, our model is implemented in a fully differentiable setting, enabling its integration with a machine learning algorithm to optimize a cost function for active localization. We demonstrate enhanced convergence for localization under noise using a physics-informed frequency weighting scheme, and present accurate moving-source tracking via an Extended Kalman Filter (EKF) with analytically computed Jacobians. Our work suggests that differentiable models of scattering from layered rigid and transparent geometries offer a promising new foundation for microphone arrays that leverage scattering-based spatial cues over conventional beamforming, applicable to both terrestrial and underwater applications. Our model will be made open source.",
-    "pdf_url": "https://arxiv.org/pdf/2603.02205v1",
-    "published": "2026-03-02T18:58:39Z",
-    "fetched_at": "2026-03-04T00:38:06.097358"
+    "abstract": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, but also by their \"implicit\" success criteria: unlike pick-and-place, task quality in these domains is continuous and subjective (e.g. how well a potato is peeled), making quantitative evaluation and reward engineering difficult. We present a learning framework for such tasks, using peeling with a knife as a representative example. Our approach follows a two-stage pipeline: first, we learn a robust initial policy via force-aware data collection and imitation learning, enabling generalization across object variations; second, we refine the policy through preference-based finetuning using a learned reward model that combines quantitative task metrics with qualitative human feedback, aligning policy behavior with human notions of task quality. Using only 50-200 peeling trajectories, our system achieves over 90% average success rates on challenging produce including cucumbers, apples, and potatoes, with performance improving by up to 40% through preference-based finetuning. Remarkably, policies trained on a single produce category exhibit strong zero-shot generalization to unseen in-category instances and to out-of-distribution produce from different categories while maintaining over 90% success rates.",
+    "pdf_url": "https://arxiv.org/pdf/2603.03280v1",
+    "published": "2026-03-03T18:59:32Z",
+    "fetched_at": "2026-03-05T00:39:21.251029"
   },
   {
-    "title": "Partial Causal Structure Learning for Valid Selective Conformal Inference under Interventions",
+    "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
     "authors": [
-      "Amir Asiaee",
-      "Kavey Aryan",
-      "James P. Long"
+      "Xialin He",
+      "Sirui Xu",
+      "Xinyao Li",
+      "Runpei Dong",
+      "Liuyu Bian",
+      "Yu-Xiong Wang",
+      "Liang-Yan Gui"
     ],
-    "abstract": "Selective conformal prediction can yield substantially tighter uncertainty sets when we can identify calibration examples that are exchangeable with the test example. In interventional settings, such as perturbation experiments in genomics, exchangeability often holds only within subsets of interventions that leave a target variable \"unaffected\" (e.g., non-descendants of an intervened node in a causal graph). We study the practical regime where this invariance structure is unknown and must be learned from data. Our contributions are: (i) a contamination-robust conformal coverage theorem that quantifies how misclassification of \"unaffected\" calibration examples degrades coverage via an explicit function $g(δ,n)$ of the contamination fraction and calibration set size, providing a finite-sample lower bound that holds for arbitrary contaminating distributions; (ii) a task-driven partial causal learning formulation that estimates only the binary descendant indicators $Z_{a,i}=\\mathbf{1}\\{i\\in\\mathrm{desc}(a)\\}$ needed for selective calibration, rather than the full causal graph; and (iii) algorithms for descendant discovery via perturbation intersection patterns (differentially affected variable set intersections across interventions), and for approximate distance-to-intervention estimation via local invariant causal prediction. We provide recovery conditions under which contamination is controlled. Experiments on synthetic linear structural equation models (SEMs) validate the bound: under controlled contamination up to $δ=0.30$, the corrected procedure maintains $\\ge 0.95$ coverage while uncorrected selective CP degrades to $0.867$. A proof-of-concept on Replogle K562 CRISPR interference (CRISPRi) perturbation data demonstrates applicability to real genomic screens.",
-    "pdf_url": "https://arxiv.org/pdf/2603.02204v1",
-    "published": "2026-03-02T18:58:22Z",
-    "fetched_at": "2026-03-04T00:38:06.097372"
+    "abstract": "Achieving autonomous and versatile whole-body loco-manipulation remains a central barrier to making humanoids practically useful. Yet existing approaches are fundamentally constrained: retargeted data are often scarce or low-quality; methods struggle to scale to large skill repertoires; and, most importantly, they rely on tracking predefined motion references rather than generating behavior from perception and high-level task specifications. To address these limitations, we propose ULTRA, a unified framework with two key components. First, we introduce a physics-driven neural retargeting algorithm that translates large-scale motion capture to humanoid embodiments while preserving physical plausibility for contact-rich interactions. Second, we learn a unified multimodal controller that supports both dense references and sparse task specifications, under sensing ranging from accurate motion-capture state to noisy egocentric visual inputs. We distill a universal tracking policy into this controller, compress motor skills into a compact latent space, and apply reinforcement learning finetuning to expand coverage and improve robustness under out-of-distribution scenarios. This enables coordinated whole-body behavior from sparse intent without test-time reference motions. We evaluate ULTRA in simulation and on a real Unitree G1 humanoid. Results show that ULTRA generalizes to autonomous, goal-conditioned whole-body loco-manipulation from egocentric perception, consistently outperforming tracking-only baselines with limited skills.",
+    "pdf_url": "https://arxiv.org/pdf/2603.03279v1",
+    "published": "2026-03-03T18:59:29Z",
+    "fetched_at": "2026-03-05T00:39:21.251047"
   },
   {
-    "title": "Tool Verification for Test-Time Reinforcement Learning",
+    "title": "Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping",
     "authors": [
-      "Ruotong Liao",
-      "Nikolai Röhrich",
-      "Xiaohan Wang",
-      "Yuhui Zhang",
-      "Yasaman Samadzadeh",
-      "Volker Tresp",
-      "Serena Yeung-Levy"
+      "William Liang",
+      "Sam Wang",
+      "Hung-Ju Wang",
+      "Osbert Bastani",
+      "Yecheng Jason Ma",
+      "Dinesh Jayaraman"
     ],
-    "abstract": "Test-time reinforcement learning (TTRL) has emerged as a promising paradigm for self-evolving large reasoning models (LRMs), enabling online adaptation on unlabeled test inputs via self-induced rewards through majority voting. However, a spurious yet high-frequency unverified consensus can become a biased and reinforced reward signal, leading to incorrect mode collapse. We address this failure mode with T^3RL (Tool-Verification for Test-Time Reinforcement Learning), which introduces test-time tool verification into reward estimation. Concretely, a verifier uses an external tool as evidence (e.g., from code execution) to upweight verified rollouts in a verification-aware voting, producing more reliable pseudo-labels for training. Across various math difficulties (MATH-500, AMC, and AIME 2024) and diverse backbone types, T^3RL significantly improves over TTRL, with larger gains on harder problems. More broadly, T^3RL can be viewed as verified online data synthesis, highlighting test-time tool verification as a key mechanism for stabilizing self-evolution.",
-    "pdf_url": "https://arxiv.org/pdf/2603.02203v1",
-    "published": "2026-03-02T18:57:52Z",
-    "fetched_at": "2026-03-04T00:38:06.097390"
+    "abstract": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations. However, realizing such \"play\" requires (1) a policy robust to diverse, potentially out-of-distribution environment states, and (2) a procedure that continuously produces useful robot experience. To address these challenges, we introduce Tether, a method for autonomous functional play involving structured, task-directed interactions. First, we design a novel open-loop policy that warps actions from a small set of source demonstrations (<=10) by anchoring them to semantic keypoint correspondences in the target scene. We show that this design is extremely data-efficient and robust even under significant spatial and semantic variations. Second, we deploy this policy for autonomous functional play in the real world via a continuous cycle of task selection, execution, evaluation, and improvement, guided by the visual understanding capabilities of vision-language models. This procedure generates diverse, high-quality datasets with minimal human intervention. In a household-like multi-object setup, our method is the first to perform many hours of autonomous multi-task play in the real world starting from only a handful of demonstrations. This produces a stream of data that consistently improves the performance of closed-loop imitation policies over time, ultimately yielding over 1000 expert-level trajectories and training policies competitive with those learned from human-collected demonstrations.",
+    "pdf_url": "https://arxiv.org/pdf/2603.03278v1",
+    "published": "2026-03-03T18:59:07Z",
+    "fetched_at": "2026-03-05T00:39:21.251063"
   }
 ]
