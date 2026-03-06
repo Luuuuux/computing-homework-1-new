@@ -1,80 +1,73 @@
 [
   {
-    "title": "Utonia: Toward One Encoder for All Point Clouds",
+    "title": "SimpliHuMoN: Simplifying Human Motion Prediction",
     "authors": [
-      "Yujia Zhang",
-      "Xiaoyang Wu",
-      "Yunhan Yang",
-      "Xianzhe Fan",
-      "Han Li",
-      "Yuechen Zhang",
-      "Zehao Huang",
-      "Naiyan Wang",
-      "Hengshuang Zhao"
+      "Aadya Agrawal",
+      "Alexander Schwing"
     ],
-    "abstract": "We dream of a future where point clouds from all domains can come together to shape a single model that benefits them all. Toward this goal, we present Utonia, a first step toward training a single self-supervised point transformer encoder across diverse domains, spanning remote sensing, outdoor LiDAR, indoor RGB-D sequences, object-centric CAD models, and point clouds lifted from RGB-only videos. Despite their distinct sensing geometries, densities, and priors, Utonia learns a consistent representation space that transfers across domains. This unification improves perception capability while revealing intriguing emergent behaviors that arise only when domains are trained jointly. Beyond perception, we observe that Utonia representations can also benefit embodied and multimodal reasoning: conditioning vision-language-action policies on Utonia features improves robotic manipulation, and integrating them into vision-language models yields gains on spatial reasoning. We hope Utonia can serve as a step toward foundation models for sparse 3D data, and support downstream applications in AR/VR, robotics, and autonomous driving.",
-    "pdf_url": "https://arxiv.org/pdf/2603.03283v1",
-    "published": "2026-03-03T18:59:58Z",
-    "fetched_at": "2026-03-05T00:39:21.250990"
+    "abstract": "Human motion prediction combines the tasks of trajectory forecasting and human pose prediction. For each of the two tasks, specialized models have been developed. Combining these models for holistic human motion prediction is non-trivial, and recent methods have struggled to compete on established benchmarks for individual tasks. To address this, we propose a simple yet effective transformer-based model for human motion prediction. The model employs a stack of self-attention modules to effectively capture both spatial dependencies within a pose and temporal relationships across a motion sequence. This simple, streamlined, end-to-end model is sufficiently versatile to handle pose-only, trajectory-only, and combined prediction tasks without task-specific modifications. We demonstrate that this approach achieves state-of-the-art results across all tasks through extensive experiments on a wide range of benchmark datasets, including Human3.6M, AMASS, ETH-UCY, and 3DPW.",
+    "pdf_url": "https://arxiv.org/pdf/2603.04399v1",
+    "published": "2026-03-04T18:59:57Z",
+    "fetched_at": "2026-03-06T00:42:26.273621"
   },
   {
-    "title": "CFG-Ctrl: Control-Based Classifier-Free Diffusion Guidance",
+    "title": "Accurate and Efficient Hybrid-Ensemble Atmospheric Data Assimilation in Latent Space with Uncertainty Quantification",
     "authors": [
-      "Hanyang Wang",
-      "Yiyang Liu",
-      "Jiawei Chi",
-      "Fangfu Liu",
-      "Ran Xue",
-      "Yueqi Duan"
+      "Hang Fan",
+      "Juan Nathaniel",
+      "Yi Xiao",
+      "Ce Bian",
+      "Fenghua Ling",
+      "Ben Fei",
+      "Lei Bai",
+      "Pierre Gentine"
     ],
-    "abstract": "Classifier-Free Guidance (CFG) has emerged as a central approach for enhancing semantic alignment in flow-based diffusion models. In this paper, we explore a unified framework called CFG-Ctrl, which reinterprets CFG as a control applied to the first-order continuous-time generative flow, using the conditional-unconditional discrepancy as an error signal to adjust the velocity field. From this perspective, we summarize vanilla CFG as a proportional controller (P-control) with fixed gain, and typical follow-up variants develop extended control-law designs derived from it. However, existing methods mainly rely on linear control, inherently leading to instability, overshooting, and degraded semantic fidelity especially on large guidance scales. To address this, we introduce Sliding Mode Control CFG (SMC-CFG), which enforces the generative flow toward a rapidly convergent sliding manifold. Specifically, we define an exponential sliding mode surface over the semantic prediction error and introduce a switching control term to establish nonlinear feedback-guided correction. Moreover, we provide a Lyapunov stability analysis to theoretically support finite-time convergence. Experiments across text-to-image generation models including Stable Diffusion 3.5, Flux, and Qwen-Image demonstrate that SMC-CFG outperforms standard CFG in semantic alignment and enhances robustness across a wide range of guidance scales. Project Page: https://hanyang-21.github.io/CFG-Ctrl",
-    "pdf_url": "https://arxiv.org/pdf/2603.03281v1",
-    "published": "2026-03-03T18:59:48Z",
-    "fetched_at": "2026-03-05T00:39:21.251013"
+    "abstract": "Data assimilation (DA) combines model forecasts and observations to estimate the optimal state of the atmosphere with its uncertainty, providing initial conditions for weather prediction and reanalyses for climate research. Yet, existing traditional and machine-learning DA methods struggle to achieve accuracy, efficiency and uncertainty quantification simultaneously. Here, we propose HLOBA (Hybrid-Ensemble Latent Observation-Background Assimilation), a three-dimensional hybrid-ensemble DA method that operates in an atmospheric latent space learned via an autoencoder (AE). HLOBA maps both model forecasts and observations into a shared latent space via the AE encoder and an end-to-end Observation-to-Latent-space mapping network (O2Lnet), respectively, and fuses them through a Bayesian update with weights inferred from time-lagged ensemble forecasts. Both idealized and real-observation experiments demonstrate that HLOBA matches dynamically constrained four-dimensional DA methods in both analysis and forecast skill, while achieving end-to-end inference-level efficiency and theoretical flexibility applies to any forecasting model. Moreover, by exploiting the error decorrelation property of latent variables, HLOBA enables element-wise uncertainty estimates for its latent analysis and propagates them to model space via the decoder. Idealized experiments show that this uncertainty highlights large-error regions and captures their seasonal variability.",
+    "pdf_url": "https://arxiv.org/pdf/2603.04395v1",
+    "published": "2026-03-04T18:58:27Z",
+    "fetched_at": "2026-03-06T00:42:26.273648"
   },
   {
-    "title": "How to Peel with a Knife: Aligning Fine-Grained Manipulation with Human Preference",
+    "title": "bayesgrid: An Open-Source Python Tool for Generating Probabilistic Synthetic Transmission-Distribution Grids Using Bayesian Hierarchical Models",
     "authors": [
-      "Toru Lin",
-      "Shuying Deng",
-      "Zhao-Heng Yin",
-      "Pieter Abbeel",
-      "Jitendra Malik"
+      "Henrique O. Caetano",
+      "Rahul K. Gupta",
+      "Carlos D. Maciel"
     ],
-    "abstract": "Many essential manipulation tasks - such as food preparation, surgery, and craftsmanship - remain intractable for autonomous robots. These tasks are characterized not only by contact-rich, force-sensitive dynamics, but also by their \"implicit\" success criteria: unlike pick-and-place, task quality in these domains is continuous and subjective (e.g. how well a potato is peeled), making quantitative evaluation and reward engineering difficult. We present a learning framework for such tasks, using peeling with a knife as a representative example. Our approach follows a two-stage pipeline: first, we learn a robust initial policy via force-aware data collection and imitation learning, enabling generalization across object variations; second, we refine the policy through preference-based finetuning using a learned reward model that combines quantitative task metrics with qualitative human feedback, aligning policy behavior with human notions of task quality. Using only 50-200 peeling trajectories, our system achieves over 90% average success rates on challenging produce including cucumbers, apples, and potatoes, with performance improving by up to 40% through preference-based finetuning. Remarkably, policies trained on a single produce category exhibit strong zero-shot generalization to unseen in-category instances and to out-of-distribution produce from different categories while maintaining over 90% success rates.",
-    "pdf_url": "https://arxiv.org/pdf/2603.03280v1",
-    "published": "2026-03-03T18:59:32Z",
-    "fetched_at": "2026-03-05T00:39:21.251029"
+    "abstract": "In this work, we present bayesgrid, an open-source python toolbox for generating synthetic power transmission-distribution systems for any geographical location worldwide, using the publicly available data from OpenStreetMap (OSM). The toolbox is based on Bayesian Hierarchical Models (BHM) which is trained on existing distribution network databases to develop a probabilistic model and can be applied to any geographical location worldwide, leveraging transfer learning. Thanks to the BHM, the tool is capable of generating multiple instances of the distribution system for a same region. The generated networks contain three-phase phase-consistent unbalanced networks, radial topology and information on the nodal demand distributions. The generated network also contain the critical reliability indices, specifically the interruption duration and frequency of failure for individual grid components, allowing its application in reliability-related studies. The tool is demonstrated for different case studies generating synthetic network datasets for different geographical regions around the world. The framework allows saving the generated networks into open-source platforms: PandaPower and OpenDSS. We also present an application for computation of probabilistic hosting capacity using the synthetic networks.",
+    "pdf_url": "https://arxiv.org/pdf/2603.04393v1",
+    "published": "2026-03-04T18:57:52Z",
+    "fetched_at": "2026-03-06T00:42:26.273662"
   },
   {
-    "title": "ULTRA: Unified Multimodal Control for Autonomous Humanoid Whole-Body Loco-Manipulation",
+    "title": "SELDON: Supernova Explosions Learned by Deep ODE Networks",
     "authors": [
-      "Xialin He",
-      "Sirui Xu",
-      "Xinyao Li",
-      "Runpei Dong",
-      "Liuyu Bian",
-      "Yu-Xiong Wang",
-      "Liang-Yan Gui"
+      "Jiezhong Wu",
+      "Jack O'Brien",
+      "Jennifer Li",
+      "M. S. Krafczyk",
+      "Ved G. Shah",
+      "Amanda R. Wasserman",
+      "Daniel W. Apley",
+      "Gautham Narayan",
+      "Noelle I. Samia"
     ],
-    "abstract": "Achieving autonomous and versatile whole-body loco-manipulation remains a central barrier to making humanoids practically useful. Yet existing approaches are fundamentally constrained: retargeted data are often scarce or low-quality; methods struggle to scale to large skill repertoires; and, most importantly, they rely on tracking predefined motion references rather than generating behavior from perception and high-level task specifications. To address these limitations, we propose ULTRA, a unified framework with two key components. First, we introduce a physics-driven neural retargeting algorithm that translates large-scale motion capture to humanoid embodiments while preserving physical plausibility for contact-rich interactions. Second, we learn a unified multimodal controller that supports both dense references and sparse task specifications, under sensing ranging from accurate motion-capture state to noisy egocentric visual inputs. We distill a universal tracking policy into this controller, compress motor skills into a compact latent space, and apply reinforcement learning finetuning to expand coverage and improve robustness under out-of-distribution scenarios. This enables coordinated whole-body behavior from sparse intent without test-time reference motions. We evaluate ULTRA in simulation and on a real Unitree G1 humanoid. Results show that ULTRA generalizes to autonomous, goal-conditioned whole-body loco-manipulation from egocentric perception, consistently outperforming tracking-only baselines with limited skills.",
-    "pdf_url": "https://arxiv.org/pdf/2603.03279v1",
-    "published": "2026-03-03T18:59:29Z",
-    "fetched_at": "2026-03-05T00:39:21.251047"
+    "abstract": "The discovery rate of optical transients will explode to 10 million public alerts per night once the Vera C. Rubin Observatory's Legacy Survey of Space and Time comes online, overwhelming the traditional physics-based inference pipelines. A continuous-time forecasting AI model is of interest because it can deliver millisecond-scale inference for thousands of objects per day, whereas legacy MCMC codes need hours per object. In this paper, we propose SELDON, a new continuous-time variational autoencoder for panels of sparse and irregularly time-sampled (gappy) astrophysical light curves that are nonstationary, heteroscedastic, and inherently dependent. SELDON combines a masked GRU-ODE encoder with a latent neural ODE propagator and an interpretable Gaussian-basis decoder. The encoder learns to summarize panels of imbalanced and correlated data even when only a handful of points are observed. The neural ODE then integrates this hidden state forward in continuous time, extrapolating to future unseen epochs. This extrapolated time series is further encoded by deep sets to a latent distribution that is decoded to a weighted sum of Gaussian basis functions, the parameters of which are physically meaningful. Such parameters (e.g., rise time, decay rate, peak flux) directly drive downstream prioritization of spectroscopic follow-up for astrophysical surveys. Beyond astronomy, the architecture of SELDON offers a generic recipe for interpretable and continuous-time sequence modeling in any time domain where data are multivariate, sparse, heteroscedastic, and irregularly spaced.",
+    "pdf_url": "https://arxiv.org/pdf/2603.04392v1",
+    "published": "2026-03-04T18:57:21Z",
+    "fetched_at": "2026-03-06T00:42:26.273681"
   },
   {
-    "title": "Tether: Autonomous Functional Play with Correspondence-Driven Trajectory Warping",
+    "title": "A Dual-Helix Governance Approach Towards Reliable Agentic AI for WebGIS Development",
     "authors": [
-      "William Liang",
-      "Sam Wang",
-      "Hung-Ju Wang",
-      "Osbert Bastani",
-      "Yecheng Jason Ma",
-      "Dinesh Jayaraman"
+      "Boyuan",
+      "Guan",
+      "Wencong Cui",
+      "Levente Juhasz"
     ],
-    "abstract": "The ability to conduct and learn from interaction and experience is a central challenge in robotics, offering a scalable alternative to labor-intensive human demonstrations. However, realizing such \"play\" requires (1) a policy robust to diverse, potentially out-of-distribution environment states, and (2) a procedure that continuously produces useful robot experience. To address these challenges, we introduce Tether, a method for autonomous functional play involving structured, task-directed interactions. First, we design a novel open-loop policy that warps actions from a small set of source demonstrations (<=10) by anchoring them to semantic keypoint correspondences in the target scene. We show that this design is extremely data-efficient and robust even under significant spatial and semantic variations. Second, we deploy this policy for autonomous functional play in the real world via a continuous cycle of task selection, execution, evaluation, and improvement, guided by the visual understanding capabilities of vision-language models. This procedure generates diverse, high-quality datasets with minimal human intervention. In a household-like multi-object setup, our method is the first to perform many hours of autonomous multi-task play in the real world starting from only a handful of demonstrations. This produces a stream of data that consistently improves the performance of closed-loop imitation policies over time, ultimately yielding over 1000 expert-level trajectories and training policies competitive with those learned from human-collected demonstrations.",
-    "pdf_url": "https://arxiv.org/pdf/2603.03278v1",
-    "published": "2026-03-03T18:59:07Z",
-    "fetched_at": "2026-03-05T00:39:21.251063"
+    "abstract": "WebGIS development requires rigor, yet agentic AI frequently fails due to five large language model (LLM) limitations: context constraints, cross-session forgetting, stochasticity, instruction failure, and adaptation rigidity. We propose a dual-helix governance framework reframing these challenges as structural governance problems that model capacity alone cannot resolve. We implement the framework as a 3-track architecture (Knowledge, Behavior, Skills) that uses a knowledge graph substrate to stabilize execution by externalizing domain facts and enforcing executable protocols, complemented by a self-learning cycle for autonomous knowledge growth. Applying this to the FutureShorelines WebGIS tool, a governed agent refactored a 2,265-line monolithic codebase into modular ES6 components. Results demonstrated a 51\\% reduction in cyclomatic complexity and a 7-point increase in maintainability index. A comparative experiment against a zero-shot LLM confirms that externalized governance, not just model capability, drives operational reliability in geospatial engineering. This approach is implemented in the open-source AgentLoom governance toolkit.",
+    "pdf_url": "https://arxiv.org/pdf/2603.04390v1",
+    "published": "2026-03-04T18:53:25Z",
+    "fetched_at": "2026-03-06T00:42:26.273695"
   }
 ]
