@@ -1,73 +1,74 @@
 [
   {
-    "title": "SimpliHuMoN: Simplifying Human Motion Prediction",
+    "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
     "authors": [
-      "Aadya Agrawal",
-      "Alexander Schwing"
+      "Junjie Fang",
+      "Wendi Chen",
+      "Han Xue",
+      "Fangyuan Zhou",
+      "Tian Le",
+      "Yi Wang",
+      "Yuting Zhang",
+      "Jun Lv",
+      "Chuan Wen",
+      "Cewu Lu"
     ],
-    "abstract": "Human motion prediction combines the tasks of trajectory forecasting and human pose prediction. For each of the two tasks, specialized models have been developed. Combining these models for holistic human motion prediction is non-trivial, and recent methods have struggled to compete on established benchmarks for individual tasks. To address this, we propose a simple yet effective transformer-based model for human motion prediction. The model employs a stack of self-attention modules to effectively capture both spatial dependencies within a pose and temporal relationships across a motion sequence. This simple, streamlined, end-to-end model is sufficiently versatile to handle pose-only, trajectory-only, and combined prediction tasks without task-specific modifications. We demonstrate that this approach achieves state-of-the-art results across all tasks through extensive experiments on a wide range of benchmark datasets, including Human3.6M, AMASS, ETH-UCY, and 3DPW.",
-    "pdf_url": "https://arxiv.org/pdf/2603.04399v1",
-    "published": "2026-03-04T18:59:57Z",
-    "fetched_at": "2026-03-06T00:42:26.273621"
+    "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
+    "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
+    "published": "2026-03-05T18:59:38Z",
+    "fetched_at": "2026-03-07T00:37:26.174113"
   },
   {
-    "title": "Accurate and Efficient Hybrid-Ensemble Atmospheric Data Assimilation in Latent Space with Uncertainty Quantification",
+    "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
     "authors": [
-      "Hang Fan",
-      "Juan Nathaniel",
-      "Yi Xiao",
-      "Ce Bian",
-      "Fenghua Ling",
-      "Ben Fei",
-      "Lei Bai",
-      "Pierre Gentine"
+      "Zeju Qiu",
+      "Lixin Liu",
+      "Adrian Weller",
+      "Han Shi",
+      "Weiyang Liu"
     ],
-    "abstract": "Data assimilation (DA) combines model forecasts and observations to estimate the optimal state of the atmosphere with its uncertainty, providing initial conditions for weather prediction and reanalyses for climate research. Yet, existing traditional and machine-learning DA methods struggle to achieve accuracy, efficiency and uncertainty quantification simultaneously. Here, we propose HLOBA (Hybrid-Ensemble Latent Observation-Background Assimilation), a three-dimensional hybrid-ensemble DA method that operates in an atmospheric latent space learned via an autoencoder (AE). HLOBA maps both model forecasts and observations into a shared latent space via the AE encoder and an end-to-end Observation-to-Latent-space mapping network (O2Lnet), respectively, and fuses them through a Bayesian update with weights inferred from time-lagged ensemble forecasts. Both idealized and real-observation experiments demonstrate that HLOBA matches dynamically constrained four-dimensional DA methods in both analysis and forecast skill, while achieving end-to-end inference-level efficiency and theoretical flexibility applies to any forecasting model. Moreover, by exploiting the error decorrelation property of latent variables, HLOBA enables element-wise uncertainty estimates for its latent analysis and propagates them to model space via the decoder. Idealized experiments show that this uncertainty highlights large-error regions and captures their seasonal variability.",
-    "pdf_url": "https://arxiv.org/pdf/2603.04395v1",
-    "published": "2026-03-04T18:58:27Z",
-    "fetched_at": "2026-03-06T00:42:26.273648"
+    "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
+    "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
+    "published": "2026-03-05T18:59:23Z",
+    "fetched_at": "2026-03-07T00:37:26.174135"
   },
   {
-    "title": "bayesgrid: An Open-Source Python Tool for Generating Probabilistic Synthetic Transmission-Distribution Grids Using Bayesian Hierarchical Models",
+    "title": "Calculating trace distances of bosonic states in Krylov subspace",
     "authors": [
-      "Henrique O. Caetano",
-      "Rahul K. Gupta",
-      "Carlos D. Maciel"
+      "Javier Martínez-Cifuentes",
+      "Nicolás Quesada"
     ],
-    "abstract": "In this work, we present bayesgrid, an open-source python toolbox for generating synthetic power transmission-distribution systems for any geographical location worldwide, using the publicly available data from OpenStreetMap (OSM). The toolbox is based on Bayesian Hierarchical Models (BHM) which is trained on existing distribution network databases to develop a probabilistic model and can be applied to any geographical location worldwide, leveraging transfer learning. Thanks to the BHM, the tool is capable of generating multiple instances of the distribution system for a same region. The generated networks contain three-phase phase-consistent unbalanced networks, radial topology and information on the nodal demand distributions. The generated network also contain the critical reliability indices, specifically the interruption duration and frequency of failure for individual grid components, allowing its application in reliability-related studies. The tool is demonstrated for different case studies generating synthetic network datasets for different geographical regions around the world. The framework allows saving the generated networks into open-source platforms: PandaPower and OpenDSS. We also present an application for computation of probabilistic hosting capacity using the synthetic networks.",
-    "pdf_url": "https://arxiv.org/pdf/2603.04393v1",
-    "published": "2026-03-04T18:57:52Z",
-    "fetched_at": "2026-03-06T00:42:26.273662"
+    "abstract": "Continuous-variable quantum systems are central to quantum technologies, with Gaussian states playing a key role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical evaluation is difficult due to the exponential cost of representing infinite-dimensional operators. We introduce an efficient numerical method to compute the trace distance between a pure and a mixed Gaussian state, based on a generalized Lanczos algorithm that avoids explicit matrix representations and uses only moment information. The technique extends to non-Gaussian states expressible as linear combinations of Gaussian states. We also show how it can yield lower bounds on the trace distance between mixed Gaussian states, offering a practical tool for state certification and learning in continuous-variable quantum systems.",
+    "pdf_url": "https://arxiv.org/pdf/2603.05499v1",
+    "published": "2026-03-05T18:59:06Z",
+    "fetched_at": "2026-03-07T00:37:26.174148"
   },
   {
-    "title": "SELDON: Supernova Explosions Learned by Deep ODE Networks",
+    "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
     "authors": [
-      "Jiezhong Wu",
-      "Jack O'Brien",
-      "Jennifer Li",
-      "M. S. Krafczyk",
-      "Ved G. Shah",
-      "Amanda R. Wasserman",
-      "Daniel W. Apley",
-      "Gautham Narayan",
-      "Noelle I. Samia"
+      "Khai Nguyen",
+      "Petros Ellinas",
+      "Anvita Bhagavathula",
+      "Priya Donti"
     ],
-    "abstract": "The discovery rate of optical transients will explode to 10 million public alerts per night once the Vera C. Rubin Observatory's Legacy Survey of Space and Time comes online, overwhelming the traditional physics-based inference pipelines. A continuous-time forecasting AI model is of interest because it can deliver millisecond-scale inference for thousands of objects per day, whereas legacy MCMC codes need hours per object. In this paper, we propose SELDON, a new continuous-time variational autoencoder for panels of sparse and irregularly time-sampled (gappy) astrophysical light curves that are nonstationary, heteroscedastic, and inherently dependent. SELDON combines a masked GRU-ODE encoder with a latent neural ODE propagator and an interpretable Gaussian-basis decoder. The encoder learns to summarize panels of imbalanced and correlated data even when only a handful of points are observed. The neural ODE then integrates this hidden state forward in continuous time, extrapolating to future unseen epochs. This extrapolated time series is further encoded by deep sets to a latent distribution that is decoded to a weighted sum of Gaussian basis functions, the parameters of which are physically meaningful. Such parameters (e.g., rise time, decay rate, peak flux) directly drive downstream prioritization of spectroscopic follow-up for astrophysical surveys. Beyond astronomy, the architecture of SELDON offers a generic recipe for interpretable and continuous-time sequence modeling in any time domain where data are multivariate, sparse, heteroscedastic, and irregularly spaced.",
-    "pdf_url": "https://arxiv.org/pdf/2603.04392v1",
-    "published": "2026-03-04T18:57:21Z",
-    "fetched_at": "2026-03-06T00:42:26.273681"
+    "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
+    "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
+    "published": "2026-03-05T18:58:39Z",
+    "fetched_at": "2026-03-07T00:37:26.174163"
   },
   {
-    "title": "A Dual-Helix Governance Approach Towards Reliable Agentic AI for WebGIS Development",
+    "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
     "authors": [
-      "Boyuan",
-      "Guan",
-      "Wencong Cui",
-      "Levente Juhasz"
+      "Helena Casademunt",
+      "Bartosz Cywiński",
+      "Khoi Tran",
+      "Arya Jakkli",
+      "Samuel Marks",
+      "Neel Nanda"
     ],
-    "abstract": "WebGIS development requires rigor, yet agentic AI frequently fails due to five large language model (LLM) limitations: context constraints, cross-session forgetting, stochasticity, instruction failure, and adaptation rigidity. We propose a dual-helix governance framework reframing these challenges as structural governance problems that model capacity alone cannot resolve. We implement the framework as a 3-track architecture (Knowledge, Behavior, Skills) that uses a knowledge graph substrate to stabilize execution by externalizing domain facts and enforcing executable protocols, complemented by a self-learning cycle for autonomous knowledge growth. Applying this to the FutureShorelines WebGIS tool, a governed agent refactored a 2,265-line monolithic codebase into modular ES6 components. Results demonstrated a 51\\% reduction in cyclomatic complexity and a 7-point increase in maintainability index. A comparative experiment against a zero-shot LLM confirms that externalized governance, not just model capability, drives operational reliability in geospatial engineering. This approach is implemented in the open-source AgentLoom governance toolkit.",
-    "pdf_url": "https://arxiv.org/pdf/2603.04390v1",
-    "published": "2026-03-04T18:53:25Z",
-    "fetched_at": "2026-03-06T00:42:26.273695"
+    "abstract": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
+    "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
+    "published": "2026-03-05T18:58:14Z",
+    "fetched_at": "2026-03-07T00:37:26.174179"
   }
 ]
