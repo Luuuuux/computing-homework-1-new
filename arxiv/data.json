@@ -1,74 +1,75 @@
 [
   {
-    "title": "RoboPocket: Improve Robot Policies Instantly with Your Phone",
+    "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
     "authors": [
-      "Junjie Fang",
-      "Wendi Chen",
-      "Han Xue",
-      "Fangyuan Zhou",
-      "Tian Le",
-      "Yi Wang",
-      "Yuting Zhang",
-      "Jun Lv",
-      "Chuan Wen",
-      "Cewu Lu"
+      "Thomas Monninger",
+      "Shaoyuan Xie",
+      "Qi Alfred Chen",
+      "Sihao Ding"
     ],
-    "abstract": "Scaling imitation learning is fundamentally constrained by the efficiency of data collection. While handheld interfaces have emerged as a scalable solution for in-the-wild data acquisition, they predominantly operate in an open-loop manner: operators blindly collect demonstrations without knowing the underlying policy's weaknesses, leading to inefficient coverage of critical state distributions. Conversely, interactive methods like DAgger effectively address covariate shift but rely on physical robot execution, which is costly and difficult to scale. To reconcile this trade-off, we introduce RoboPocket, a portable system that enables Robot-Free Instant Policy Iteration using single consumer smartphones. Its core innovation is a Remote Inference framework that visualizes the policy's predicted trajectory via Augmented Reality (AR) Visual Foresight. This immersive feedback allows collectors to proactively identify potential failures and focus data collection on the policy's weak regions without requiring a physical robot. Furthermore, we implement an asynchronous Online Finetuning pipeline that continuously updates the policy with incoming data, effectively closing the learning loop in minutes. Extensive experiments demonstrate that RoboPocket adheres to data scaling laws and doubles the data efficiency compared to offline scaling strategies, overcoming their long-standing efficiency bottleneck. Moreover, our instant iteration loop also boosts sample efficiency by up to 2$\\times$ in distributed environments a small number of interactive corrections per person. Project page and videos: https://robo-pocket.github.io.",
-    "pdf_url": "https://arxiv.org/pdf/2603.05504v1",
-    "published": "2026-03-05T18:59:38Z",
-    "fetched_at": "2026-03-09T00:39:36.019381"
+    "abstract": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
+    "pdf_url": "https://arxiv.org/pdf/2603.06576v1",
+    "published": "2026-03-06T18:59:55Z",
+    "fetched_at": "2026-03-10T00:35:47.071329"
   },
   {
-    "title": "POET-X: Memory-efficient LLM Training by Scaling Orthogonal Transformation",
+    "title": "An ode to instantons",
     "authors": [
-      "Zeju Qiu",
-      "Lixin Liu",
-      "Adrian Weller",
-      "Han Shi",
-      "Weiyang Liu"
+      "Oliver Janssen",
+      "Joel Karlsson",
+      "Flavio Riccardi",
+      "Mattia Varrone"
     ],
-    "abstract": "Efficient and stable training of large language models (LLMs) remains a core challenge in modern machine learning systems. To address this challenge, Reparameterized Orthogonal Equivalence Training (POET), a spectrum-preserving framework that optimizes each weight matrix through orthogonal equivalence transformation, has been proposed. Although POET provides strong training stability, its original implementation incurs high memory consumption and computational overhead due to intensive matrix multiplications. To overcome these limitations, we introduce POET-X, a scalable and memory-efficient variant that performs orthogonal equivalence transformations with significantly reduced computational cost. POET-X maintains the generalization and stability benefits of POET while achieving substantial improvements in throughput and memory efficiency. In our experiments, POET-X enables the pretraining of billion-parameter LLMs on a single Nvidia H100 GPU, and in contrast, standard optimizers such as AdamW run out of memory under the same settings.",
-    "pdf_url": "https://arxiv.org/pdf/2603.05500v1",
-    "published": "2026-03-05T18:59:23Z",
-    "fetched_at": "2026-03-09T00:39:36.019406"
+    "abstract": "We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the \"bounce\" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of bounce solutions at late times are discussed. The motivation of this work is to learn how to compute decay rates in quantum field theory in situations with non-trivial time dependence, by first taking a humble step backwards to the fascinating world of quantum mechanics.",
+    "pdf_url": "https://arxiv.org/pdf/2603.06575v1",
+    "published": "2026-03-06T18:59:54Z",
+    "fetched_at": "2026-03-10T00:35:47.071353"
   },
   {
-    "title": "Calculating trace distances of bosonic states in Krylov subspace",
+    "title": "SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation",
     "authors": [
-      "Javier Martínez-Cifuentes",
-      "Nicolás Quesada"
+      "Vishal Thengane",
+      "Zhaochong An",
+      "Tianjin Huang",
+      "Son Lam Phung",
+      "Abdesselam Bouzerdoum",
+      "Lu Yin",
+      "Na Zhao",
+      "Xiatian Zhu"
     ],
-    "abstract": "Continuous-variable quantum systems are central to quantum technologies, with Gaussian states playing a key role due to their broad applicability and simple description via first and second moments. Distinguishing Gaussian states requires computing their trace distance, but no analytical formula exists for general states, and numerical evaluation is difficult due to the exponential cost of representing infinite-dimensional operators. We introduce an efficient numerical method to compute the trace distance between a pure and a mixed Gaussian state, based on a generalized Lanczos algorithm that avoids explicit matrix representations and uses only moment information. The technique extends to non-Gaussian states expressible as linear combinations of Gaussian states. We also show how it can yield lower bounds on the trace distance between mixed Gaussian states, offering a practical tool for state certification and learning in continuous-variable quantum systems.",
-    "pdf_url": "https://arxiv.org/pdf/2603.05499v1",
-    "published": "2026-03-05T18:59:06Z",
-    "fetched_at": "2026-03-09T00:39:36.019419"
+    "abstract": "Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few labelled samples, relevant background prototypes are retrieved and fused with few-shot prototypes to form enriched representations without retraining the backbone or adding parameters. Experiments on ScanNet and S3DIS show that SCOPE achieves SOTA performance, improving novel-class IoU by up to 6.98% and 3.61%, and mean IoU by 2.25% and 1.70%, respectively, while maintaining low forgetting. Code is available https://github.com/Surrey-UP-Lab/SCOPE.",
+    "pdf_url": "https://arxiv.org/pdf/2603.06572v1",
+    "published": "2026-03-06T18:59:36Z",
+    "fetched_at": "2026-03-10T00:35:47.071372"
   },
   {
-    "title": "Cheap Thrills: Effective Amortized Optimization Using Inexpensive Labels",
+    "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
     "authors": [
-      "Khai Nguyen",
-      "Petros Ellinas",
-      "Anvita Bhagavathula",
-      "Priya Donti"
+      "Boqiang Zhang",
+      "Lei Ke",
+      "Ruihan Yang",
+      "Qi Gao",
+      "Tianyuan Qu",
+      "Rossell Chen",
+      "Dong Yu",
+      "Leoweiliang"
     ],
-    "abstract": "To scale the solution of optimization and simulation problems, prior work has explored machine-learning surrogates that inexpensively map problem parameters to corresponding solutions. Commonly used approaches, including supervised and self-supervised learning with either soft or hard feasibility enforcement, face inherent challenges such as reliance on expensive, high-quality labels or difficult optimization landscapes. To address their trade-offs, we propose a novel framework that first collects \"cheap\" imperfect labels, then performs supervised pretraining, and finally refines the model through self-supervised learning to improve overall performance. Our theoretical analysis and merit-based criterion show that labeled data need only place the model within a basin of attraction, confirming that only modest numbers of inexact labels and training epochs are required. We empirically validate our simple three-stage strategy across challenging domains, including nonconvex constrained optimization, power-grid operation, and stiff dynamical systems, and show that it yields faster convergence; improved accuracy, feasibility, and optimality; and up to 59x reductions in total offline cost.",
-    "pdf_url": "https://arxiv.org/pdf/2603.05495v1",
-    "published": "2026-03-05T18:58:39Z",
-    "fetched_at": "2026-03-09T00:39:36.019437"
+    "abstract": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
+    "pdf_url": "https://arxiv.org/pdf/2603.06569v1",
+    "published": "2026-03-06T18:58:04Z",
+    "fetched_at": "2026-03-10T00:35:47.071391"
   },
   {
-    "title": "Censored LLMs as a Natural Testbed for Secret Knowledge Elicitation",
+    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
     "authors": [
-      "Helena Casademunt",
-      "Bartosz Cywiński",
-      "Khoi Tran",
-      "Arya Jakkli",
-      "Samuel Marks",
-      "Neel Nanda"
+      "Eric Qu",
+      "Brandon M. Wood",
+      "Aditi S. Krishnapriyan",
+      "Zachary W. Ulissi"
     ],
-    "abstract": "Large language models sometimes produce false or misleading responses. Two approaches to this problem are honesty elicitation -- modifying prompts or weights so that the model answers truthfully -- and lie detection -- classifying whether a given response is false. Prior work evaluates such methods on models specifically trained to lie or conceal information, but these artificial constructions may not resemble naturally-occurring dishonesty. We instead study open-weights LLMs from Chinese developers, which are trained to censor politically sensitive topics: Qwen3 models frequently produce falsehoods about subjects like Falun Gong or the Tiananmen protests while occasionally answering correctly, indicating they possess knowledge they are trained to suppress. Using this as a testbed, we evaluate a suite of elicitation and lie detection techniques. For honesty elicitation, sampling without a chat template, few-shot prompting, and fine-tuning on generic honesty data most reliably increase truthful responses. For lie detection, prompting the censored model to classify its own responses performs near an uncensored-model upper bound, and linear probes trained on unrelated data offer a cheaper alternative. The strongest honesty elicitation techniques also transfer to frontier open-weights models including DeepSeek R1. Notably, no technique fully eliminates false responses. We release all prompts, code, and transcripts.",
-    "pdf_url": "https://arxiv.org/pdf/2603.05494v1",
-    "published": "2026-03-05T18:58:14Z",
-    "fetched_at": "2026-03-09T00:39:36.019453"
+    "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
+    "pdf_url": "https://arxiv.org/pdf/2603.06567v1",
+    "published": "2026-03-06T18:57:04Z",
+    "fetched_at": "2026-03-10T00:35:47.071406"
   }
 ]
