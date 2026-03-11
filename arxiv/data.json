@@ -1,75 +1,71 @@
 [
   {
-    "title": "BEVLM: Distilling Semantic Knowledge from LLMs into Bird's-Eye View Representations",
+    "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
     "authors": [
-      "Thomas Monninger",
-      "Shaoyuan Xie",
-      "Qi Alfred Chen",
-      "Sihao Ding"
+      "Azul Garza",
+      "Renée Rosillo",
+      "Rodrigo Mendoza-Smith",
+      "David Salinas",
+      "Andrew Robert Williams",
+      "Arjun Ashok",
+      "Mononito Goswami",
+      "José Martín Juárez"
     ],
-    "abstract": "The integration of Large Language Models (LLMs) into autonomous driving has attracted growing interest for their strong reasoning and semantic understanding abilities, which are essential for handling complex decision-making and long-tail scenarios. However, existing methods typically feed LLMs with tokens from multi-view and multi-frame images independently, leading to redundant computation and limited spatial consistency. This separation in visual processing hinders accurate 3D spatial reasoning and fails to maintain geometric coherence across views. On the other hand, Bird's-Eye View (BEV) representations learned from geometrically annotated tasks (e.g., object detection) provide spatial structure but lack the semantic richness of foundation vision encoders. To bridge this gap, we propose BEVLM, a framework that connects a spatially consistent and semantically distilled BEV representation with LLMs. Through extensive experiments, we show that BEVLM enables LLMs to reason more effectively in cross-view driving scenes, improving accuracy by 46%, by leveraging BEV features as unified inputs. Furthermore, by distilling semantic knowledge from LLMs into BEV representations, BEVLM significantly improves closed-loop end-to-end driving performance by 29% in safety-critical scenarios.",
-    "pdf_url": "https://arxiv.org/pdf/2603.06576v1",
-    "published": "2026-03-06T18:59:55Z",
-    "fetched_at": "2026-03-10T00:35:47.071329"
+    "abstract": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
+    "pdf_url": "https://arxiv.org/pdf/2603.08707v1",
+    "published": "2026-03-09T17:59:00Z",
+    "fetched_at": "2026-03-11T00:36:03.712411"
   },
   {
-    "title": "An ode to instantons",
+    "title": "Agentic Critical Training",
     "authors": [
-      "Oliver Janssen",
-      "Joel Karlsson",
-      "Flavio Riccardi",
-      "Mattia Varrone"
+      "Weize Liu",
+      "Minghui Liu",
+      "Sy-Tuyen Ho",
+      "Souradip Chakraborty",
+      "Xiyao Wang",
+      "Furong Huang"
     ],
-    "abstract": "We present a formalism for semiclassical time evolution in quantum mechanics, building on a century of work. We identify complex saddle points in real time, real saddle points in complex time, and complex saddle points in complex time that reproduce the known answers in classic problems. For the decay of a metastable state, we find finite time and finite energy analogs of the \"bounce\" which do not have strict zero or negative modes. The one-loop phase of the wave function and the multiplicity of bounce solutions at late times are discussed. The motivation of this work is to learn how to compute decay rates in quantum field theory in situations with non-trivial time dependence, by first taking a humble step backwards to the fascinating world of quantum mechanics.",
-    "pdf_url": "https://arxiv.org/pdf/2603.06575v1",
-    "published": "2026-03-06T18:59:54Z",
-    "fetched_at": "2026-03-10T00:35:47.071353"
+    "abstract": "Training large language models (LLMs) as autonomous agents often begins with imitation learning, but it only teaches agents what to do without understanding why: agents never contrast successful actions against suboptimal alternatives and thus lack awareness of action quality. Recent approaches attempt to address this by introducing self-reflection supervision derived from contrasts between expert and alternative actions. However, the training paradigm fundamentally remains imitation learning: the model imitates pre-constructed reflection text rather than learning to reason autonomously. We propose Agentic Critical Training (ACT), a reinforcement learning paradigm that trains agents to identify the better action among alternatives. By rewarding whether the model's judgment is correct, ACT drives the model to autonomously develop reasoning about action quality, producing genuine self-reflection rather than imitating it. Across three challenging agent benchmarks, ACT consistently improves agent performance when combined with different post-training methods. It achieves an average improvement of 5.07 points over imitation learning and 4.62 points over reinforcement learning. Compared to approaches that inject reflection capability through knowledge distillation, ACT also demonstrates clear advantages, yielding an average improvement of 2.42 points. Moreover, ACT enables strong out-of-distribution generalization on agentic benchmarks and improves performance on general reasoning benchmarks without any reasoning-specific training data, highlighting the value of our method. These results suggest that ACT is a promising path toward developing more reflective and capable LLM agents.",
+    "pdf_url": "https://arxiv.org/pdf/2603.08706v1",
+    "published": "2026-03-09T17:58:56Z",
+    "fetched_at": "2026-03-11T00:36:03.712435"
   },
   {
-    "title": "SCOPE: Scene-Contextualized Incremental Few-Shot 3D Segmentation",
+    "title": "Learning Functions of Halfspaces",
     "authors": [
-      "Vishal Thengane",
-      "Zhaochong An",
-      "Tianjin Huang",
-      "Son Lam Phung",
-      "Abdesselam Bouzerdoum",
-      "Lu Yin",
-      "Na Zhao",
-      "Xiatian Zhu"
+      "Josh Alman",
+      "Shyamal Patel",
+      "Rocco A. Servedio"
     ],
-    "abstract": "Incremental Few-Shot (IFS) segmentation aims to learn new categories over time from only a few annotations. Although widely studied in 2D, it remains underexplored for 3D point clouds. Existing methods suffer from catastrophic forgetting or fail to learn discriminative prototypes under sparse supervision, and often overlook a key cue: novel categories frequently appear as unlabelled background in base-training scenes. We introduce SCOPE (Scene-COntextualised Prototype Enrichment), a plug-and-play background-guided prototype enrichment framework that integrates with any prototype-based 3D segmentation method. After base training, a class-agnostic segmentation model extracts high-confidence pseudo-instances from background regions to build a prototype pool. When novel classes arrive with few labelled samples, relevant background prototypes are retrieved and fused with few-shot prototypes to form enriched representations without retraining the backbone or adding parameters. Experiments on ScanNet and S3DIS show that SCOPE achieves SOTA performance, improving novel-class IoU by up to 6.98% and 3.61%, and mean IoU by 2.25% and 1.70%, respectively, while maintaining low forgetting. Code is available https://github.com/Surrey-UP-Lab/SCOPE.",
-    "pdf_url": "https://arxiv.org/pdf/2603.06572v1",
-    "published": "2026-03-06T18:59:36Z",
-    "fetched_at": "2026-03-10T00:35:47.071372"
+    "abstract": "We give an algorithm that learns arbitrary Boolean functions of $k$ arbitrary halfspaces over $\\mathbb{R}^n$, in the challenging distribution-free Probably Approximately Correct (PAC) learning model, running in time $2^{\\sqrt{n} \\cdot (\\log n)^{O(k)}}$. This is the first algorithm that can PAC learn even intersections of two halfspaces in time $2^{o(n)}.$",
+    "pdf_url": "https://arxiv.org/pdf/2603.08700v1",
+    "published": "2026-03-09T17:57:19Z",
+    "fetched_at": "2026-03-11T00:36:03.712449"
   },
   {
-    "title": "Penguin-VL: Exploring the Efficiency Limits of VLM with LLM-based Vision Encoders",
+    "title": "Split Federated Learning Architectures for High-Accuracy and Low-Delay Model Training",
     "authors": [
-      "Boqiang Zhang",
-      "Lei Ke",
-      "Ruihan Yang",
-      "Qi Gao",
-      "Tianyuan Qu",
-      "Rossell Chen",
-      "Dong Yu",
-      "Leoweiliang"
+      "Yiannis Papageorgiou",
+      "Yannis Thomas",
+      "Ramin Khalili",
+      "Iordanis Koutsopoulos"
     ],
-    "abstract": "Vision Language Model (VLM) development has largely relied on scaling model size, which hinders deployment on compute-constrained mobile and edge devices such as smartphones and robots. In this work, we explore the performance limits of compact (e.g., 2B and 8B) VLMs. We challenge the prevailing practice that state-of-the-art VLMs must rely on vision encoders initialized via massive contrastive pretraining (e.g., CLIP/SigLIP). We identify an objective mismatch: contrastive learning, optimized for discrimination, enforces coarse and category-level invariances that suppress fine-grained visual cues needed for dense captioning and complex VLM reasoning. To address this issue, we present Penguin-VL, whose vision encoder is initialized from a text-only LLM. Our experiments reveal that Penguin-Encoder serves as a superior alternative to traditional contrastive pretraining, unlocking a higher degree of visual fidelity and data efficiency for multimodal understanding. Across various image and video benchmarks, Penguin-VL achieves performance comparable to leading VLMs (e.g., Qwen3-VL) in mathematical reasoning and surpasses them in tasks such as document understanding, visual knowledge, and multi-perspective video understanding. Notably, these gains are achieved with a lightweight architecture, demonstrating that improved visual representation rather than model scaling is the primary driver of performance. Our ablations show that Penguin-Encoder consistently outperforms contrastive-pretrained encoders, preserving fine-grained spatial and temporal cues that are critical for dense perception and complex reasoning. This makes it a strong drop-in alternative for compute-efficient VLMs and enables high performance in resource-constrained settings. Code: https://github.com/tencent-ailab/Penguin-VL",
-    "pdf_url": "https://arxiv.org/pdf/2603.06569v1",
-    "published": "2026-03-06T18:58:04Z",
-    "fetched_at": "2026-03-10T00:35:47.071391"
+    "abstract": "Can we find a network architecture for ML model training so as to optimize training loss (and thus, accuracy) in Split Federated Learning (SFL)? And can this architecture also reduce training delay and communication overhead? While accuracy is not influenced by how we split the model in ordinary, state-of-the-art SFL, in this work we answer the questions above in the affirmative. Recent Hierarchical SFL (HSFL) architectures adopt a three-tier training structure consisting of clients, (local) aggregators, and a central server. In this architecture, the model is partitioned at two partitioning layers into three sub-models, which are executed across the three tiers. Despite their merits, HSFL architectures overlook the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay, and overhead. This work explicitly captures the impact of the partitioning layers and client-to-aggregator assignments on accuracy, delay and overhead by formulating a joint optimization problem. We prove that the problem is NP-hard and propose the first accuracy-aware heuristic algorithm that explicitly accounts for model accuracy, while remaining delay-efficient. Simulation results on public datasets show that our approach can improve accuracy by 3%, while reducing delay by 20% and overhead by 50%, compared to state-of-the-art SFL and HSFL schemes.",
+    "pdf_url": "https://arxiv.org/pdf/2603.08687v1",
+    "published": "2026-03-09T17:53:20Z",
+    "fetched_at": "2026-03-11T00:36:03.712463"
   },
   {
-    "title": "A recipe for scalable attention-based MLIPs: unlocking long-range accuracy with all-to-all node attention",
+    "title": "Benchmarking Language Modeling for Lossless Compression of Full-Fidelity Audio",
     "authors": [
-      "Eric Qu",
-      "Brandon M. Wood",
-      "Aditi S. Krishnapriyan",
-      "Zachary W. Ulissi"
+      "Phillip Long",
+      "Zachary Novack",
+      "Chris Donahue"
     ],
-    "abstract": "Machine-learning interatomic potentials (MLIPs) have advanced rapidly, with many top models relying on strong physics-based inductive biases. However, as models scale to larger systems like biomolecules and electrolytes, they struggle to accurately capture long-range (LR) interactions, leading current approaches to rely on explicit physics-based terms or components. In this work, we propose AllScAIP, a straightforward, attention-based, and energy-conserving MLIP model that scales to O(100 million) training samples. It addresses the long-range challenge using an all-to-all node attention component that is data-driven. Extensive ablations reveal that in low-data/small-model regimes, inductive biases improve sample efficiency. However, as data and model size scale, these benefits diminish or even reverse, while all-to-all attention remains critical for capturing LR interactions. Our model achieves state-of-the-art energy/force accuracy on molecular systems, as well as a number of physics-based evaluations (OMol25), while being competitive on materials (OMat24) and catalysts (OC20). Furthermore, it enables stable, long-timescale MD simulations that accurately recover experimental observables, including density and heat of vaporization predictions.",
-    "pdf_url": "https://arxiv.org/pdf/2603.06567v1",
-    "published": "2026-03-06T18:57:04Z",
-    "fetched_at": "2026-03-10T00:35:47.071406"
+    "abstract": "Autoregressive \"language\" models (LMs) trained on raw waveforms can be repurposed for lossless audio compression, but prior work is limited to 8-bit audio, leaving open whether such approaches work for practical settings (16/24-bit) and can compete with existing codecs. We benchmark LM-based compression on full-fidelity audio across diverse domains (music, speech, bioacoustics), sampling rates (16kHz-48kHz), and bit depths (8, 16, 24-bit). Standard sample-level tokenization becomes intractable at higher bit depths due to vocabulary size (65K for 16-bit; 16.7M for 24-bit). We propose Trilobyte, a byte-level tokenization schema for full resolution audio, improving vocabulary scaling from $O(2^{b})$ to $O(1)$ and enabling the first tractable 24-bit LM-based lossless compression. While LMs consistently outperform FLAC and yield state-of-the-art compression at 8-bit and 16-bit, we observe that compression gains become more modest as bit depth increases beyond 8-bit.",
+    "pdf_url": "https://arxiv.org/pdf/2603.08683v1",
+    "published": "2026-03-09T17:52:02Z",
+    "fetched_at": "2026-03-11T00:36:03.712476"
   }
 ]
