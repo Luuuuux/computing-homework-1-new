@@ -1,78 +1,81 @@
 [
   {
-    "title": "Task Aware Modulation Using Representation Learning for Upsaling of Terrestrial Carbon Fluxes",
+    "title": "LiTo: Surface Light Field Tokenization",
     "authors": [
-      "Aleksei Rozanov",
-      "Arvind Renganathan",
-      "Vipin Kumar"
+      "Jen-Hao Rick Chang",
+      "Xiaoming Zhao",
+      "Dorian Chan",
+      "Oncel Tuzel"
     ],
-    "abstract": "Accurately upscaling terrestrial carbon fluxes is central to estimating the global carbon budget, yet remains challenging due to the sparse and regionally biased distribution of ground measurements. Existing data-driven upscaling products often fail to generalize beyond observed domains, leading to systematic regional biases and high predictive uncertainty. We introduce Task-Aware Modulation with Representation Learning (TAM-RL), a framework that couples spatio-temporal representation learning with knowledge-guided encoder-decoder architecture and loss function derived from the carbon balance equation. Across 150+ flux tower sites representing diverse biomes and climate regimes, TAM-RL improves predictive performance relative to existing state-of-the-art datasets, reducing RMSE by 8-9.6% and increasing explained variance ($R^2$) from 19.4% to 43.8%, depending on the target flux. These results demonstrate that integrating physically grounded constraints with adaptive representation learning can substantially enhance the robustness and transferability of global carbon flux estimates.",
-    "pdf_url": "https://arxiv.org/pdf/2603.09974v1",
-    "published": "2026-03-10T17:59:29Z",
-    "fetched_at": "2026-03-12T00:33:07.583126"
+    "abstract": "We propose a 3D latent representation that jointly models object geometry and view-dependent appearance. Most prior works focus on either reconstructing 3D geometry or predicting view-independent diffuse appearance, and thus struggle to capture realistic view-dependent effects. Our approach leverages that RGB-depth images provide samples of a surface light field. By encoding random subsamples of this surface light field into a compact set of latent vectors, our model learns to represent both geometry and appearance within a unified 3D latent space. This representation reproduces view-dependent effects such as specular highlights and Fresnel reflections under complex lighting. We further train a latent flow matching model on this representation to learn its distribution conditioned on a single input image, enabling the generation of 3D objects with appearances consistent with the lighting and materials in the input. Experiments show that our approach achieves higher visual quality and better input fidelity than existing methods.",
+    "pdf_url": "https://arxiv.org/pdf/2603.11047v1",
+    "published": "2026-03-11T17:59:59Z",
+    "fetched_at": "2026-03-13T00:38:40.692481"
   },
   {
-    "title": "From Data Statistics to Feature Geometry: How Correlations Shape Superposition",
+    "title": "Neural Field Thermal Tomography: A Differentiable Physics Framework for Non-Destructive Evaluation",
     "authors": [
-      "Lucas Prieto",
-      "Edward Stevinson",
-      "Melih Barsbey",
-      "Tolga Birdal",
-      "Pedro A. M. Mediano"
+      "Tao Zhong",
+      "Yixun Hu",
+      "Dongzhe Zheng",
+      "Aditya Sood",
+      "Christine Allen-Blanchette"
     ],
-    "abstract": "A central idea in mechanistic interpretability is that neural networks represent more features than they have dimensions, arranging them in superposition to form an over-complete basis. This framing has been influential, motivating dictionary learning approaches such as sparse autoencoders. However, superposition has mostly been studied in idealized settings where features are sparse and uncorrelated. In these settings, superposition is typically understood as introducing interference that must be minimized geometrically and filtered out by non-linearities such as ReLUs, yielding local structures like regular polytopes. We show that this account is incomplete for realistic data by introducing Bag-of-Words Superposition (BOWS), a controlled setting to encode binary bag-of-words representations of internet text in superposition. Using BOWS, we find that when features are correlated, interference can be constructive rather than just noise to be filtered out. This is achieved by arranging features according to their co-activation patterns, making interference between active features constructive, while still using ReLUs to avoid false positives. We show that this kind of arrangement is more prevalent in models trained with weight decay and naturally gives rise to semantic clusters and cyclical structures which have been observed in real language models yet were not explained by the standard picture of superposition. Code for this paper can be found at https://github.com/LucasPrietoAl/correlations-feature-geometry.",
-    "pdf_url": "https://arxiv.org/pdf/2603.09972v1",
-    "published": "2026-03-10T17:59:02Z",
-    "fetched_at": "2026-03-12T00:33:07.583147"
+    "abstract": "We propose Neural Field Thermal Tomography (NeFTY), a differentiable physics framework for the quantitative 3D reconstruction of material properties from transient surface temperature measurements. While traditional thermography relies on pixel-wise 1D approximations that neglect lateral diffusion, and soft-constrained Physics-Informed Neural Networks (PINNs) often fail in transient diffusion scenarios due to gradient stiffness, NeFTY parameterizes the 3D diffusivity field as a continuous neural field optimized through a rigorous numerical solver. By leveraging a differentiable physics solver, our approach enforces thermodynamic laws as hard constraints while maintaining the memory efficiency required for high-resolution 3D tomography. Our discretize-then-optimize paradigm effectively mitigates the spectral bias and ill-posedness inherent in inverse heat conduction, enabling the recovery of subsurface defects at arbitrary scales. Experimental validation on synthetic data demonstrates that NeFTY significantly improves the accuracy of subsurface defect localization over baselines. Additional details at https://cab-lab-princeton.github.io/nefty/",
+    "pdf_url": "https://arxiv.org/pdf/2603.11045v1",
+    "published": "2026-03-11T17:59:42Z",
+    "fetched_at": "2026-03-13T00:38:40.692503"
   },
   {
-    "title": "TiPToP: A Modular Open-Vocabulary Planning System for Robotic Manipulation",
+    "title": "Agentar-Fin-OCR",
     "authors": [
-      "William Shen",
-      "Nishanth Kumar",
-      "Sahit Chintalapudi",
-      "Jie Wang",
-      "Christopher Watson",
-      "Edward Hu",
-      "Jing Cao",
-      "Dinesh Jayaraman",
-      "Leslie Pack Kaelbling",
-      "Tomás Lozano-Pérez"
+      "Siyi Qian",
+      "Xiongfei Bai",
+      "Bingtao Fu",
+      "Yichen Lu",
+      "Gaoyang Zhang",
+      "Xudong Yang",
+      "Peng Zhang"
     ],
-    "abstract": "We present TiPToP, an extensible modular system that combines pretrained vision foundation models with an existing Task and Motion Planner (TAMP) to solve multi-step manipulation tasks directly from input RGB images and natural-language instructions. Our system aims to be simple and easy-to-use: it can be installed and run on a standard DROID setup in under one hour and adapted to new embodiments with minimal effort. We evaluate TiPToP -- which requires zero robot data -- over 28 tabletop manipulation tasks in simulation and the real world and find it matches or outperforms $π_{0.5}\\text{-DROID}$, a vision-language-action (VLA) model fine-tuned on 350 hours of embodiment-specific demonstrations. TiPToP's modular architecture enables us to analyze the system's failure modes at the component level. We analyze results from an evaluation of 173 trials and identify directions for improvement. We release TiPToP open-source to further research on modular manipulation systems and tighter integration between learning and planning. Project website and code: https://tiptop-robot.github.io",
-    "pdf_url": "https://arxiv.org/pdf/2603.09971v1",
-    "published": "2026-03-10T17:59:00Z",
-    "fetched_at": "2026-03-12T00:33:07.583169"
+    "abstract": "In this paper, we propose Agentar-Fin-OCR, a document parsing system tailored to financial-domain documents, transforming ultra-long financial PDFs into semantically consistent, highly accurate, structured outputs with auditing-grade provenance. To address finance-specific challenges such as complex layouts, cross-page structural discontinuities, and cell-level referencing capability, Agentar-Fin-OCR combines (1) a Cross-page Contents Consolidation algorithm to restore continuity across pages and a Document-level Heading Hierarchy Reconstruction (DHR) module to build a globally consistent Table of Contents (TOC) tree for structure-aware retrieval, and (2) a difficulty-adaptive curriculum learning training strategy for table parsing, together with a CellBBoxRegressor module that uses structural anchor tokens to localize table cells from decoder hidden states without external detectors. Experiments demonstrate that our model shows high performance on the table parsing metrics of OmniDocBench. To enable realistic evaluation in the financial vertical, we further introduce FinDocBench, a benchmark that includes six financial document categories with expert-verified annotations and evaluation metrics including Table of Contents edit-distance-based similarity (TocEDS), cross-page concatenated TEDS, and Table Cell Intersection over Union (C-IoU). We evaluate a wide range of state-of-the-art models on FinDocBench to assess their capabilities and remaining limitations on financial documents. Overall, Agentar-Fin-OCR and FinDocBench provide a practical foundation for reliable downstream financial document applications.",
+    "pdf_url": "https://arxiv.org/pdf/2603.11044v1",
+    "published": "2026-03-11T17:59:42Z",
+    "fetched_at": "2026-03-13T00:38:40.692520"
   },
   {
-    "title": "Think Before You Lie: How Reasoning Improves Honesty",
+    "title": "V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation",
     "authors": [
-      "Ann Yuan",
-      "Asma Ghandeharioun",
-      "Carter Blum",
-      "Alicia Machado",
-      "Jessica Hoffmann",
-      "Daphne Ippolito",
-      "Martin Wattenberg",
-      "Lucas Dixon",
-      "Katja Filippova"
+      "Yan-Bo Lin",
+      "Jonah Casebeer",
+      "Long Mai",
+      "Aniruddha Mahapatra",
+      "Gedas Bertasius",
+      "Nicholas J. Bryan"
     ],
-    "abstract": "While existing evaluations of large language models (LLMs) measure deception rates, the underlying conditions that give rise to deceptive behavior are poorly understood. We investigate this question using a novel dataset of realistic moral trade-offs where honesty incurs variable costs. Contrary to humans, who tend to become less honest given time to deliberate (Capraro, 2017; Capraro et al., 2019), we find that reasoning consistently increases honesty across scales and for several LLM families. This effect is not only a function of the reasoning content, as reasoning traces are often poor predictors of final behaviors. Rather, we show that the underlying geometry of the representational space itself contributes to the effect. Namely, we observe that deceptive regions within this space are metastable: deceptive answers are more easily destabilized by input paraphrasing, output resampling, and activation noise than honest ones. We interpret the effect of reasoning in this vein: generating deliberative tokens as part of moral reasoning entails the traversal of a biased representational space, ultimately nudging the model toward its more stable, honest defaults.",
-    "pdf_url": "https://arxiv.org/pdf/2603.09957v1",
-    "published": "2026-03-10T17:52:49Z",
-    "fetched_at": "2026-03-12T00:33:07.583188"
+    "abstract": "Generating music that temporally aligns with video events is challenging for existing text-to-music models, which lack fine-grained temporal control. We introduce V2M-Zero, a zero-pair video-to-music generation approach that outputs time-aligned music for video. Our method is motivated by a key observation: temporal synchronization requires matching when and how much change occurs, not what changes. While musical and visual events differ semantically, they exhibit shared temporal structure that can be captured independently within each modality. We capture this structure through event curves computed from intra-modal similarity using pretrained music and video encoders. By measuring temporal change within each modality independently, these curves provide comparable representations across modalities. This enables a simple training strategy: fine-tune a text-to-music model on music-event curves, then substitute video-event curves at inference without cross-modal training or paired data. Across OES-Pub, MovieGenBench-Music, and AIST++, V2M-Zero achieves substantial gains over paired-data baselines: 5-21% higher audio quality, 13-15% better semantic alignment, 21-52% improved temporal synchronization, and 28% higher beat alignment on dance videos. We find similar results via a large crowd-source subjective listening test. Overall, our results validate that temporal alignment through within-modality features, rather than paired cross-modal supervision, is effective for video-to-music generation. Results are available at https://genjib.github.io/v2m_zero/",
+    "pdf_url": "https://arxiv.org/pdf/2603.11042v1",
+    "published": "2026-03-11T17:59:40Z",
+    "fetched_at": "2026-03-13T00:38:40.692535"
   },
   {
-    "title": "Kinodynamic Motion Retargeting for Humanoid Locomotion via Multi-Contact Whole-Body Trajectory Optimization",
+    "title": "DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving",
     "authors": [
-      "Xiaoyu Zhang",
-      "Steven Haener",
-      "Varun Madabushi",
-      "Maegan Tucker"
+      "Shuyao Shang",
+      "Bing Zhan",
+      "Yunfei Yan",
+      "Yuqi Wang",
+      "Yingyan Li",
+      "Yasong An",
+      "Xiaoman Wang",
+      "Jierui Liu",
+      "Lu Hou",
+      "Lue Fan",
+      "Zhaoxiang Zhang",
+      "Tieniu Tan"
     ],
-    "abstract": "We present the KinoDynamic Motion Retargeting (KDMR) framework, a novel approach for humanoid locomotion that models the retargeting process as a multi-contact, whole-body trajectory optimization problem. Conventional kinematics-based retargeting methods rely solely on spatial motion capture (MoCap) data, inevitably introducing physically inconsistent artifacts, such as foot sliding and ground penetration, that severely degrade the performance of downstream imitation learning policies. To bridge this gap, KDMR extends beyond pure kinematics by explicitly enforcing rigid-body dynamics and contact complementarity constraints. Further, by integrating ground reaction force (GRF) measurements alongside MoCap data, our method automatically detects heel-toe contact events to accurately replicate complex human-like contact patterns. We evaluate KDMR against the state-of-the-art baseline, GMR, across three key dimensions: 1) the dynamic feasibility and smoothness of the retargeted motions, 2) the accuracy of GRF tracking compared to raw source data, and 3) the training efficiency and final performance of downstream control policies trained via the BeyondMimic framework. Experimental results demonstrate that KDMR significantly outperforms purely kinematic methods, yielding dynamically viable reference trajectories that accelerate policy convergence and enhance overall locomotion stability. Our end-to-end pipeline will be open-sourced upon publication.",
-    "pdf_url": "https://arxiv.org/pdf/2603.09956v1",
-    "published": "2026-03-10T17:51:17Z",
-    "fetched_at": "2026-03-12T00:33:07.583202"
+    "abstract": "We propose DynVLA, a driving VLA model that introduces a new CoT paradigm termed Dynamics CoT. DynVLA forecasts compact world dynamics before action generation, enabling more informed and physically grounded decision-making. To obtain compact dynamics representations, DynVLA introduces a Dynamics Tokenizer that compresses future evolution into a small set of dynamics tokens. Considering the rich environment dynamics in interaction-intensive driving scenarios, DynVLA decouples ego-centric and environment-centric dynamics, yielding more accurate world dynamics modeling. We then train DynVLA to generate dynamics tokens before actions through SFT and RFT, improving decision quality while maintaining latency-efficient inference. Compared to Textual CoT, which lacks fine-grained spatiotemporal understanding, and Visual CoT, which introduces substantial redundancy due to dense image prediction, Dynamics CoT captures the evolution of the world in a compact, interpretable, and efficient form. Extensive experiments on NAVSIM, Bench2Drive, and a large-scale in-house dataset demonstrate that DynVLA consistently outperforms Textual CoT and Visual CoT methods, validating the effectiveness and practical value of Dynamics CoT.",
+    "pdf_url": "https://arxiv.org/pdf/2603.11041v1",
+    "published": "2026-03-11T17:59:31Z",
+    "fetched_at": "2026-03-13T00:38:40.692555"
   }
 ]
