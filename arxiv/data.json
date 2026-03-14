@@ -1,81 +1,93 @@
 [
   {
-    "title": "LiTo: Surface Light Field Tokenization",
+    "title": "OmniStream: Mastering Perception, Reconstruction and Action in Continuous Streams",
     "authors": [
-      "Jen-Hao Rick Chang",
-      "Xiaoming Zhao",
-      "Dorian Chan",
-      "Oncel Tuzel"
+      "Yibin Yan",
+      "Jilan Xu",
+      "Shangzhe Di",
+      "Haoning Wu",
+      "Weidi Xie"
     ],
-    "abstract": "We propose a 3D latent representation that jointly models object geometry and view-dependent appearance. Most prior works focus on either reconstructing 3D geometry or predicting view-independent diffuse appearance, and thus struggle to capture realistic view-dependent effects. Our approach leverages that RGB-depth images provide samples of a surface light field. By encoding random subsamples of this surface light field into a compact set of latent vectors, our model learns to represent both geometry and appearance within a unified 3D latent space. This representation reproduces view-dependent effects such as specular highlights and Fresnel reflections under complex lighting. We further train a latent flow matching model on this representation to learn its distribution conditioned on a single input image, enabling the generation of 3D objects with appearances consistent with the lighting and materials in the input. Experiments show that our approach achieves higher visual quality and better input fidelity than existing methods.",
-    "pdf_url": "https://arxiv.org/pdf/2603.11047v1",
-    "published": "2026-03-11T17:59:59Z",
-    "fetched_at": "2026-03-13T00:38:40.692481"
+    "abstract": "Modern visual agents require representations that are general, causal, and physically structured to operate in real-time streaming environments. However, current vision foundation models remain fragmented, specializing narrowly in image semantic perception, offline temporal modeling, or spatial geometry. This paper introduces OmniStream, a unified streaming visual backbone that effectively perceives, reconstructs, and acts from diverse visual inputs. By incorporating causal spatiotemporal attention and 3D rotary positional embeddings (3D-RoPE), our model supports efficient, frame-by-frame online processing of video streams via a persistent KV-cache. We pre-train OmniStream using a synergistic multi-task framework coupling static and temporal representation learning, streaming geometric reconstruction, and vision-language alignment on 29 datasets. Extensive evaluations show that, even with a strictly frozen backbone, OmniStream achieves consistently competitive performance with specialized experts across image and video probing, streaming geometric reconstruction, complex video and spatial reasoning, as well as robotic manipulation (unseen at training). Rather than pursuing benchmark-specific dominance, our work demonstrates the viability of training a single, versatile vision backbone that generalizes across semantic, spatial, and temporal reasoning, i.e., a more meaningful step toward general-purpose visual understanding for interactive and embodied agents.",
+    "pdf_url": "https://arxiv.org/pdf/2603.12265v1",
+    "published": "2026-03-12T17:59:55Z",
+    "fetched_at": "2026-03-14T00:36:48.922757"
   },
   {
-    "title": "Neural Field Thermal Tomography: A Differentiable Physics Framework for Non-Destructive Evaluation",
+    "title": "$Ψ_0$: An Open Foundation Model Towards Universal Humanoid Loco-Manipulation",
     "authors": [
-      "Tao Zhong",
-      "Yixun Hu",
-      "Dongzhe Zheng",
-      "Aditya Sood",
-      "Christine Allen-Blanchette"
+      "Songlin Wei",
+      "Hongyi Jing",
+      "Boqian Li",
+      "Zhenyu Zhao",
+      "Jiageng Mao",
+      "Zhenhao Ni",
+      "Sicheng He",
+      "Jie Liu",
+      "Xiawei Liu",
+      "Kaidi Kang",
+      "Sheng Zang",
+      "Weiduo Yuan",
+      "Marco Pavone",
+      "Di Huang",
+      "Yue Wang"
     ],
-    "abstract": "We propose Neural Field Thermal Tomography (NeFTY), a differentiable physics framework for the quantitative 3D reconstruction of material properties from transient surface temperature measurements. While traditional thermography relies on pixel-wise 1D approximations that neglect lateral diffusion, and soft-constrained Physics-Informed Neural Networks (PINNs) often fail in transient diffusion scenarios due to gradient stiffness, NeFTY parameterizes the 3D diffusivity field as a continuous neural field optimized through a rigorous numerical solver. By leveraging a differentiable physics solver, our approach enforces thermodynamic laws as hard constraints while maintaining the memory efficiency required for high-resolution 3D tomography. Our discretize-then-optimize paradigm effectively mitigates the spectral bias and ill-posedness inherent in inverse heat conduction, enabling the recovery of subsurface defects at arbitrary scales. Experimental validation on synthetic data demonstrates that NeFTY significantly improves the accuracy of subsurface defect localization over baselines. Additional details at https://cab-lab-princeton.github.io/nefty/",
-    "pdf_url": "https://arxiv.org/pdf/2603.11045v1",
-    "published": "2026-03-11T17:59:42Z",
-    "fetched_at": "2026-03-13T00:38:40.692503"
+    "abstract": "We introduce $Ψ_0$ (Psi-Zero), an open foundation model to address challenging humanoid loco-manipulation tasks. While existing approaches often attempt to address this fundamental problem by co-training on large and diverse human and humanoid data, we argue that this strategy is suboptimal due to the fundamental kinematic and motion disparities between humans and humanoid robots. Therefore, data efficiency and model performance remain unsatisfactory despite the considerable data volume. To address this challenge, \\ours\\;decouples the learning process to maximize the utility of heterogeneous data sources. Specifically, we propose a staged training paradigm with different learning objectives: First, we autoregressively pre-train a VLM backbone on large-scale egocentric human videos to acquire generalizable visual-action representations. Then, we post-train a flow-based action expert on high-quality humanoid robot data to learn precise robot joint control. Our research further identifies a critical yet often overlooked data recipe: in contrast to approaches that scale with noisy Internet clips or heterogeneous cross-embodiment robot datasets, we demonstrate that pre-training on high-quality egocentric human manipulation data followed by post-training on domain-specific real-world humanoid trajectories yields superior performance. Extensive real-world experiments demonstrate that \\ours\\ achieves the best performance using only about 800 hours of human video data and 30 hours of real-world robot data, outperforming baselines pre-trained on more than 10$\\times$ as much data by over 40\\% in overall success rate across multiple tasks. We will open-source the entire ecosystem to the community, including a data processing and training pipeline, a humanoid foundation model, and a real-time action inference engine.",
+    "pdf_url": "https://arxiv.org/pdf/2603.12263v1",
+    "published": "2026-03-12T17:59:51Z",
+    "fetched_at": "2026-03-14T00:36:48.922790"
   },
   {
-    "title": "Agentar-Fin-OCR",
+    "title": "The Latent Color Subspace: Emergent Order in High-Dimensional Chaos",
     "authors": [
-      "Siyi Qian",
-      "Xiongfei Bai",
-      "Bingtao Fu",
-      "Yichen Lu",
-      "Gaoyang Zhang",
-      "Xudong Yang",
-      "Peng Zhang"
+      "Mateusz Pach",
+      "Jessica Bader",
+      "Quentin Bouniot",
+      "Serge Belongie",
+      "Zeynep Akata"
     ],
-    "abstract": "In this paper, we propose Agentar-Fin-OCR, a document parsing system tailored to financial-domain documents, transforming ultra-long financial PDFs into semantically consistent, highly accurate, structured outputs with auditing-grade provenance. To address finance-specific challenges such as complex layouts, cross-page structural discontinuities, and cell-level referencing capability, Agentar-Fin-OCR combines (1) a Cross-page Contents Consolidation algorithm to restore continuity across pages and a Document-level Heading Hierarchy Reconstruction (DHR) module to build a globally consistent Table of Contents (TOC) tree for structure-aware retrieval, and (2) a difficulty-adaptive curriculum learning training strategy for table parsing, together with a CellBBoxRegressor module that uses structural anchor tokens to localize table cells from decoder hidden states without external detectors. Experiments demonstrate that our model shows high performance on the table parsing metrics of OmniDocBench. To enable realistic evaluation in the financial vertical, we further introduce FinDocBench, a benchmark that includes six financial document categories with expert-verified annotations and evaluation metrics including Table of Contents edit-distance-based similarity (TocEDS), cross-page concatenated TEDS, and Table Cell Intersection over Union (C-IoU). We evaluate a wide range of state-of-the-art models on FinDocBench to assess their capabilities and remaining limitations on financial documents. Overall, Agentar-Fin-OCR and FinDocBench provide a practical foundation for reliable downstream financial document applications.",
-    "pdf_url": "https://arxiv.org/pdf/2603.11044v1",
-    "published": "2026-03-11T17:59:42Z",
-    "fetched_at": "2026-03-13T00:38:40.692520"
+    "abstract": "Text-to-image generation models have advanced rapidly, yet achieving fine-grained control over generated images remains difficult, largely due to limited understanding of how semantic information is encoded. We develop an interpretation of the color representation in the Variational Autoencoder latent space of FLUX.1 [Dev], revealing a structure reflecting Hue, Saturation, and Lightness. We verify our Latent Color Subspace (LCS) interpretation by demonstrating that it can both predict and explicitly control color, introducing a fully training-free method in FLUX based solely on closed-form latent-space manipulation. Code is available at https://github.com/ExplainableML/LCS.",
+    "pdf_url": "https://arxiv.org/pdf/2603.12261v1",
+    "published": "2026-03-12T17:59:48Z",
+    "fetched_at": "2026-03-14T00:36:48.922806"
   },
   {
-    "title": "V2M-Zero: Zero-Pair Time-Aligned Video-to-Music Generation",
+    "title": "HumDex:Humanoid Dexterous Manipulation Made Easy",
     "authors": [
-      "Yan-Bo Lin",
-      "Jonah Casebeer",
-      "Long Mai",
-      "Aniruddha Mahapatra",
-      "Gedas Bertasius",
-      "Nicholas J. Bryan"
+      "Liang Heng",
+      "Yihe Tang",
+      "Jiajun Xu",
+      "Henghui Bao",
+      "Di Huang",
+      "Yue Wang"
     ],
-    "abstract": "Generating music that temporally aligns with video events is challenging for existing text-to-music models, which lack fine-grained temporal control. We introduce V2M-Zero, a zero-pair video-to-music generation approach that outputs time-aligned music for video. Our method is motivated by a key observation: temporal synchronization requires matching when and how much change occurs, not what changes. While musical and visual events differ semantically, they exhibit shared temporal structure that can be captured independently within each modality. We capture this structure through event curves computed from intra-modal similarity using pretrained music and video encoders. By measuring temporal change within each modality independently, these curves provide comparable representations across modalities. This enables a simple training strategy: fine-tune a text-to-music model on music-event curves, then substitute video-event curves at inference without cross-modal training or paired data. Across OES-Pub, MovieGenBench-Music, and AIST++, V2M-Zero achieves substantial gains over paired-data baselines: 5-21% higher audio quality, 13-15% better semantic alignment, 21-52% improved temporal synchronization, and 28% higher beat alignment on dance videos. We find similar results via a large crowd-source subjective listening test. Overall, our results validate that temporal alignment through within-modality features, rather than paired cross-modal supervision, is effective for video-to-music generation. Results are available at https://genjib.github.io/v2m_zero/",
-    "pdf_url": "https://arxiv.org/pdf/2603.11042v1",
-    "published": "2026-03-11T17:59:40Z",
-    "fetched_at": "2026-03-13T00:38:40.692535"
+    "abstract": "This paper investigates humanoid whole-body dexterous manipulation, where the efficient collection of high-quality demonstration data remains a central bottleneck.\n  Existing teleoperation systems often suffer from limited portability, occlusion, or insufficient precision, which hinders their applicability to complex whole-body tasks. To address these challenges, we introduce HumDex, a portable teleoperation system designed for humanoid whole-body dexterous manipulation. Our system leverages IMU-based motion tracking to address the portability-precision trade-off, enabling accurate full-body tracking while remaining easy to deploy. For dexterous hand control, we further introduce a learning-based retargeting method that generates smooth and natural hand motions without manual parameter tuning. Beyond teleoperation, HumDex enables efficient collection of human motion data. Building on this capability, we propose a two-stage imitation learning framework that first pre-trains on diverse human motion data to learn generalizable priors, and then fine-tunes on robot data to bridge the embodiment gap for precise execution. We demonstrate that this approach significantly improves generalization to new configurations, objects, and backgrounds with minimal data acquisition costs. The entire system is fully reproducible and open-sourced at https://github.com/physical-superintelligence-lab/HumDex.",
+    "pdf_url": "https://arxiv.org/pdf/2603.12260v1",
+    "published": "2026-03-12T17:59:39Z",
+    "fetched_at": "2026-03-14T00:36:48.922823"
   },
   {
-    "title": "DynVLA: Learning World Dynamics for Action Reasoning in Autonomous Driving",
+    "title": "DreamVideo-Omni: Omni-Motion Controlled Multi-Subject Video Customization with Latent Identity Reinforcement Learning",
     "authors": [
-      "Shuyao Shang",
-      "Bing Zhan",
-      "Yunfei Yan",
-      "Yuqi Wang",
-      "Yingyan Li",
-      "Yasong An",
-      "Xiaoman Wang",
-      "Jierui Liu",
-      "Lu Hou",
-      "Lue Fan",
-      "Zhaoxiang Zhang",
-      "Tieniu Tan"
+      "Yujie Wei",
+      "Xinyu Liu",
+      "Shiwei Zhang",
+      "Hangjie Yuan",
+      "Jinbo Xing",
+      "Zhekai Chen",
+      "Xiang Wang",
+      "Haonan Qiu",
+      "Rui Zhao",
+      "Yutong Feng",
+      "Ruihang Chu",
+      "Yingya Zhang",
+      "Yike Guo",
+      "Xihui Liu",
+      "Hongming Shan"
     ],
-    "abstract": "We propose DynVLA, a driving VLA model that introduces a new CoT paradigm termed Dynamics CoT. DynVLA forecasts compact world dynamics before action generation, enabling more informed and physically grounded decision-making. To obtain compact dynamics representations, DynVLA introduces a Dynamics Tokenizer that compresses future evolution into a small set of dynamics tokens. Considering the rich environment dynamics in interaction-intensive driving scenarios, DynVLA decouples ego-centric and environment-centric dynamics, yielding more accurate world dynamics modeling. We then train DynVLA to generate dynamics tokens before actions through SFT and RFT, improving decision quality while maintaining latency-efficient inference. Compared to Textual CoT, which lacks fine-grained spatiotemporal understanding, and Visual CoT, which introduces substantial redundancy due to dense image prediction, Dynamics CoT captures the evolution of the world in a compact, interpretable, and efficient form. Extensive experiments on NAVSIM, Bench2Drive, and a large-scale in-house dataset demonstrate that DynVLA consistently outperforms Textual CoT and Visual CoT methods, validating the effectiveness and practical value of Dynamics CoT.",
-    "pdf_url": "https://arxiv.org/pdf/2603.11041v1",
-    "published": "2026-03-11T17:59:31Z",
-    "fetched_at": "2026-03-13T00:38:40.692555"
+    "abstract": "While large-scale diffusion models have revolutionized video synthesis, achieving precise control over both multi-subject identity and multi-granularity motion remains a significant challenge. Recent attempts to bridge this gap often suffer from limited motion granularity, control ambiguity, and identity degradation, leading to suboptimal performance on identity preservation and motion control. In this work, we present DreamVideo-Omni, a unified framework enabling harmonious multi-subject customization with omni-motion control via a progressive two-stage training paradigm. In the first stage, we integrate comprehensive control signals for joint training, encompassing subject appearances, global motion, local dynamics, and camera movements. To ensure robust and precise controllability, we introduce a condition-aware 3D rotary positional embedding to coordinate heterogeneous inputs and a hierarchical motion injection strategy to enhance global motion guidance. Furthermore, to resolve multi-subject ambiguity, we introduce group and role embeddings to explicitly anchor motion signals to specific identities, effectively disentangling complex scenes into independent controllable instances. In the second stage, to mitigate identity degradation, we design a latent identity reward feedback learning paradigm by training a latent identity reward model upon a pretrained video diffusion backbone. This provides motion-aware identity rewards in the latent space, prioritizing identity preservation aligned with human preferences. Supported by our curated large-scale dataset and the comprehensive DreamOmni Bench for multi-subject and omni-motion control evaluation, DreamVideo-Omni demonstrates superior performance in generating high-quality videos with precise controllability.",
+    "pdf_url": "https://arxiv.org/pdf/2603.12257v1",
+    "published": "2026-03-12T17:59:12Z",
+    "fetched_at": "2026-03-14T00:36:48.922849"
   }
 ]
