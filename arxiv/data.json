@@ -1,120 +1,71 @@
 [
   {
-    "title": "Efficient Reasoning on the Edge",
+    "title": "Unified Spatio-Temporal Token Scoring for Efficient Video VLMs",
     "authors": [
-      "Yelysei Bondarenko",
-      "Thomas Hehn",
-      "Rob Hesselink",
-      "Romain Lepert",
-      "Fabio Valerio Massoli",
-      "Evgeny Mironov",
-      "Leyla Mirvakhabova",
-      "Tribhuvanesh Orekondy",
-      "Spyridon Stasis",
-      "Andrey Kuzmin",
-      "Anna Kuzina",
-      "Markus Nagel",
-      "Ankita Nayak",
-      "Corrado Rainone",
-      "Ork de Rooij",
-      "Paul N Whatmough",
-      "Arash Behboodi",
-      "Babak Ehteshami Bejnordi"
-    ],
-    "abstract": "Large language models (LLMs) with chain-of-thought reasoning achieve state-of-the-art performance across complex problem-solving tasks, but their verbose reasoning traces and large context requirements make them impractical for edge deployment. These challenges include high token generation costs, large KV-cache footprints, and inefficiencies when distilling reasoning capabilities into smaller models for mobile devices. Existing approaches often rely on distilling reasoning traces from larger models into smaller models, which are verbose and stylistically redundant, undesirable for on-device inference. In this work, we propose a lightweight approach to enable reasoning in small LLMs using LoRA adapters combined with supervised fine-tuning. We further introduce budget forcing via reinforcement learning on these adapters, significantly reducing response length with minimal accuracy loss. To address memory-bound decoding, we exploit parallel test-time scaling, improving accuracy at minor latency increase. Finally, we present a dynamic adapter-switching mechanism that activates reasoning only when needed and a KV-cache sharing strategy during prompt encoding, reducing time-to-first-token for on-device inference. Experiments on Qwen2.5-7B demonstrate that our method achieves efficient, accurate reasoning under strict resource constraints, making LLM reasoning practical for mobile scenarios. Videos demonstrating our solution running on mobile devices are available on our project page.",
-    "pdf_url": "https://arxiv.org/pdf/2603.16867v1",
-    "published": "2026-03-17T17:59:51Z",
-    "fetched_at": "2026-03-19T00:41:19.531627"
-  },
-  {
-    "title": "ManiTwin: Scaling Data-Generation-Ready Digital Object Dataset to 100K",
-    "authors": [
-      "Kaixuan Wang",
-      "Tianxing Chen",
-      "Jiawei Liu",
-      "Honghao Su",
-      "Shaolong Zhu",
-      "Minxuan Wang",
-      "Zixuan Li",
-      "Yue Chen",
-      "Huan-ang Gao",
-      "Yusen Qin",
-      "Jiawei Wang",
-      "Qixuan Zhang",
-      "Lan Xu",
-      "Jingyi Yu",
-      "Yao Mu",
-      "Ping Luo"
-    ],
-    "abstract": "Learning in simulation provides a useful foundation for scaling robotic manipulation capabilities. However, this paradigm often suffers from a lack of data-generation-ready digital assets, in both scale and diversity. In this work, we present ManiTwin, an automated and efficient pipeline for generating data-generation-ready digital object twins. Our pipeline transforms a single image into simulation-ready and semantically annotated 3D asset, enabling large-scale robotic manipulation data generation. Using this pipeline, we construct ManiTwin-100K, a dataset containing 100K high-quality annotated 3D assets. Each asset is equipped with physical properties, language descriptions, functional annotations, and verified manipulation proposals. Experiments demonstrate that ManiTwin provides an efficient asset synthesis and annotation workflow, and that ManiTwin-100K offers high-quality and diverse assets for manipulation data generation, random scene synthesis, and VQA data generation, establishing a strong foundation for scalable simulation data synthesis and policy learning. Our webpage is available at https://manitwin.github.io/.",
-    "pdf_url": "https://arxiv.org/pdf/2603.16866v1",
-    "published": "2026-03-17T17:59:49Z",
-    "fetched_at": "2026-03-19T00:41:19.531687"
-  },
-  {
-    "title": "SparkVSR: Interactive Video Super-Resolution via Sparse Keyframe Propagation",
-    "authors": [
-      "Jiongze Yu",
-      "Xiangbo Gao",
-      "Pooja Verlani",
-      "Akshay Gadde",
-      "Yilin Wang",
-      "Balu Adsumilli",
-      "Zhengzhong Tu"
-    ],
-    "abstract": "Video Super-Resolution (VSR) aims to restore high-quality video frames from low-resolution (LR) estimates, yet most existing VSR approaches behave like black boxes at inference time: users cannot reliably correct unexpected artifacts, but instead can only accept whatever the model produces. In this paper, we propose a novel interactive VSR framework dubbed SparkVSR that makes sparse keyframes a simple and expressive control signal. Specifically, users can first super-resolve or optionally a small set of keyframes using any off-the-shelf image super-resolution (ISR) model, then SparkVSR propagates the keyframe priors to the entire video sequence while remaining grounded by the original LR video motion. Concretely, we introduce a keyframe-conditioned latent-pixel two-stage training pipeline that fuses LR video latents with sparsely encoded HR keyframe latents to learn robust cross-space propagation and refine perceptual details. At inference time, SparkVSR supports flexible keyframe selection (manual specification, codec I-frame extraction, or random sampling) and a reference-free guidance mechanism that continuously balances keyframe adherence and blind restoration, ensuring robust performance even when reference keyframes are absent or imperfect. Experiments on multiple VSR benchmarks demonstrate improved temporal consistency and strong restoration quality, surpassing baselines by up to 24.6%, 21.8%, and 5.6% on CLIP-IQA, DOVER, and MUSIQ, respectively, enabling controllable, keyframe-driven video super-resolution. Moreover, we demonstrate that SparkVSR is a generic interactive, keyframe-conditioned video processing framework as it can be applied out of the box to unseen tasks such as old-film restoration and video style transfer. Our project page is available at: https://sparkvsr.github.io/",
-    "pdf_url": "https://arxiv.org/pdf/2603.16864v1",
-    "published": "2026-03-17T17:59:30Z",
-    "fetched_at": "2026-03-19T00:41:19.531724"
-  },
-  {
-    "title": "MolmoB0T: Large-Scale Simulation Enables Zero-Shot Manipulation",
-    "authors": [
-      "Abhay Deshpande",
-      "Maya Guru",
-      "Rose Hendrix",
-      "Snehal Jauhri",
-      "Ainaz Eftekhar",
+      "Jianrui Zhang",
+      "Yue Yang",
       "Rohun Tripathi",
-      "Max Argus",
-      "Jordi Salvador",
-      "Haoquan Fang",
-      "Matthew Wallingford",
-      "Wilbert Pumacay",
-      "Yejin Kim",
-      "Quinn Pfeifer",
-      "Ying-Chun Lee",
-      "Piper Wolters",
-      "Omar Rayyan",
-      "Mingtong Zhang",
-      "Jiafei Duan",
-      "Karen Farley",
       "Winson Han",
-      "Eli Vanderbilt",
-      "Dieter Fox",
-      "Ali Farhadi",
-      "Georgia Chalvatzaki",
-      "Dhruv Shah",
-      "Ranjay Krishna"
+      "Ranjay Krishna",
+      "Christopher Clark",
+      "Yong Jae Lee",
+      "Sangho Lee"
     ],
-    "abstract": "A prevailing view in robot learning is that simulation alone is not enough; effective sim-to-real transfer is widely believed to require at least some real-world data collection or task-specific fine-tuning to bridge the gap between simulated and physical environments. We challenge that assumption. With sufficiently large-scale and diverse simulated synthetic training data, we show that zero-shot transfer to the real world is not only possible, but effective for both static and mobile manipulation. We introduce MolmoBot-Engine, a fully open-source pipeline for procedural data generation across robots, tasks, and diverse simulated environments in MolmoSpaces. With it, we release MolmoBot-Data, a dataset of 1.8 million expert trajectories for articulated object manipulation and pick-and-place tasks. We train three policy classes: MolmoBot, a Molmo2-based multi-frame vision-language model with a flow-matching action head; MolmoBot-Pi0, which replicates the $π_0$ architecture to enable direct comparison; and MolmoBot-SPOC, a lightweight policy suitable for edge deployment and amenable to RL fine-tuning. We evaluate on two robotic platforms: the Franka FR3 for tabletop manipulation tasks and the Rainbow Robotics RB-Y1 mobile manipulator for door opening, drawer manipulation, cabinet interaction, and mobile pick-and-place. Without any real-world fine-tuning, our policies achieve zero-shot transfer to unseen objects and environments. On tabletop pick-and-place, MolmoBot achieves a success rate of 79.2% in real world evaluations across 4 settings, outperforming $π_{0.5}$ at 39.2%. Our results demonstrate that procedural environment generation combined with diverse articulated assets can produce robust manipulation policies that generalize broadly to the real world. Technical Blog: https://allenai.org/blog/molmobot-robot-manipulation",
-    "pdf_url": "https://arxiv.org/pdf/2603.16861v1",
-    "published": "2026-03-17T17:59:03Z",
-    "fetched_at": "2026-03-19T00:41:19.531792"
+    "abstract": "Token pruning is essential for enhancing the computational efficiency of vision-language models (VLMs), particularly for video-based tasks where temporal redundancy is prevalent. Prior approaches typically prune tokens either (1) within the vision transformer (ViT) exclusively for unimodal perception tasks such as action recognition and object segmentation, without adapting to downstream vision-language tasks; or (2) only within the LLM while leaving the ViT output intact, often requiring complex text-conditioned token selection mechanisms. In this paper, we introduce Spatio-Temporal Token Scoring (STTS), a simple and lightweight module that prunes vision tokens across both the ViT and the LLM without text conditioning or token merging, and is fully compatible with end-to-end training. By learning how to score temporally via an auxiliary loss and spatially via LLM downstream gradients, aided by our efficient packing algorithm, STTS prunes 50% of vision tokens throughout the entire architecture, resulting in a 62% improvement in efficiency during both training and inference with only a 0.7% drop in average performance across 13 short and long video QA tasks. Efficiency gains increase with more sampled frames per video. Applying test-time scaling for long-video QA further yields performance gains of 0.5-1% compared to the baseline. Overall, STTS represents a novel, simple yet effective technique for unified, architecture-wide vision token pruning.",
+    "pdf_url": "https://arxiv.org/pdf/2603.18004v1",
+    "published": "2026-03-18T17:59:56Z",
+    "fetched_at": "2026-03-20T00:39:27.801079"
   },
   {
-    "title": "DreamPlan: Efficient Reinforcement Fine-Tuning of Vision-Language Planners via Video World Models",
+    "title": "EchoGen: Cycle-Consistent Learning for Unified Layout-Image Generation and Understanding",
     "authors": [
-      "Emily Yue-Ting Jia",
-      "Weiduo Yuan",
-      "Tianheng Shi",
-      "Vitor Guizilini",
-      "Jiageng Mao",
-      "Yue Wang"
+      "Kai Zou",
+      "Hongbo Liu",
+      "Dian Zheng",
+      "Jianxiong Gao",
+      "Zhiwei Zhao",
+      "Bin Liu"
     ],
-    "abstract": "Robotic manipulation requires sophisticated commonsense reasoning, a capability naturally possessed by large-scale Vision-Language Models (VLMs). While VLMs show promise as zero-shot planners, their lack of grounded physical understanding often leads to compounding errors and low success rates when deployed in complex real-world environments, particularly for challenging tasks like deformable object manipulation. Although Reinforcement Learning (RL) can adapt these planners to specific task dynamics, directly fine-tuning VLMs via real-world interaction is prohibitively expensive, unsafe, and sample-inefficient. To overcome this bottleneck, we introduce DreamPlan, a novel framework for the reinforcement fine-tuning of VLM planners via video world models. Instead of relying on costly physical rollouts, DreamPlan first leverages the zero-shot VLM to collect exploratory interaction data. We demonstrate that this sub-optimal data is sufficient to train an action-conditioned video generation model, which implicitly captures complex real-world physics. Subsequently, the VLM planner is fine-tuned entirely within the \"imagination\" of this video world model using Odds Ratio Policy Optimization (ORPO). By utilizing these virtual rollouts, physical and task-specific knowledge is efficiently injected into the VLM. Our results indicate that DreamPlan bridges the gap between semantic reasoning and physical grounding, significantly improving manipulation success rates without the need for large-scale real-world data collection. Our project page is https://psi-lab.ai/DreamPlan/.",
-    "pdf_url": "https://arxiv.org/pdf/2603.16860v1",
-    "published": "2026-03-17T17:59:00Z",
-    "fetched_at": "2026-03-19T00:41:19.531823"
+    "abstract": "In this work, we present EchoGen, a unified framework for layout-to-image generation and image grounding, capable of generating images with accurate layouts and high fidelity to text descriptions (e.g., spatial relationships), while grounding the image robustly at the same time. We believe that image grounding possesses strong text and layout understanding abilities, which can compensate for the corresponding limitations in layout-to-image generation. At the same time, images generated from layouts exhibit high diversity in content, thereby enhancing the robustness of image grounding. Jointly training both tasks within a unified model can promote performance improvements for each. However, we identify that this joint training paradigm encounters several optimization challenges and results in restricted performance. To address these issues, we propose progressive training strategies. First, the Parallel Multi-Task Pre-training (PMTP) stage equips the model with basic abilities for both tasks, leveraging shared tokens to accelerate training. Next, the Dual Joint Optimization (DJO) stage exploits task duality to sequentially integrate the two tasks, enabling unified optimization. Finally, the Cycle RL stage eliminates reliance on visual supervision by using consistency constraints as rewards, significantly enhancing the model's unified capabilities via the GRPO strategy. Extensive experiments demonstrate state-of-the-art results on both layout-to-image generation and image grounding benchmarks, and reveal clear synergistic gains from optimizing the two tasks together.",
+    "pdf_url": "https://arxiv.org/pdf/2603.18001v1",
+    "published": "2026-03-18T17:59:03Z",
+    "fetched_at": "2026-03-20T00:39:27.801103"
+  },
+  {
+    "title": "LoST: Level of Semantics Tokenization for 3D Shapes",
+    "authors": [
+      "Niladri Shekhar Dutt",
+      "Zifan Shi",
+      "Paul Guerrero",
+      "Chun-Hao Paul Huang",
+      "Duygu Ceylan",
+      "Niloy J. Mitra",
+      "Xuelin Chen"
+    ],
+    "abstract": "Tokenization is a fundamental technique in the generative modeling of various modalities. In particular, it plays a critical role in autoregressive (AR) models, which have recently emerged as a compelling option for 3D generation. However, optimal tokenization of 3D shapes remains an open question. State-of-the-art (SOTA) methods primarily rely on geometric level-of-detail (LoD) hierarchies, originally designed for rendering and compression. These spatial hierarchies are often token-inefficient and lack semantic coherence for AR modeling. We propose Level-of-Semantics Tokenization (LoST), which orders tokens by semantic salience, such that early prefixes decode into complete, plausible shapes that possess principal semantics, while subsequent tokens refine instance-specific geometric and semantic details. To train LoST, we introduce Relational Inter-Distance Alignment (RIDA), a novel 3D semantic alignment loss that aligns the relational structure of the 3D shape latent space with that of the semantic DINO feature space. Experiments show that LoST achieves SOTA reconstruction, surpassing previous LoD-based 3D shape tokenizers by large margins on both geometric and semantic reconstruction metrics. Moreover, LoST achieves efficient, high-quality AR 3D generation and enables downstream tasks like semantic retrieval, while using only 0.1%-10% of the tokens needed by prior AR models.",
+    "pdf_url": "https://arxiv.org/pdf/2603.17995v1",
+    "published": "2026-03-18T17:56:06Z",
+    "fetched_at": "2026-03-20T00:39:27.801122"
+  },
+  {
+    "title": "On min-Storey estimators for multiple testing and conformal novelty detection",
+    "authors": [
+      "Gao Zijun",
+      "Roquain Etienne"
+    ],
+    "abstract": "In a multiple testing task, finding an appropriate estimator of the proportion $π_0$ of non-signal in the data to boost power of false discovery rate (FDR) controlling procedures is a long-standing research theme, sometimes referred to as 'adaptive FDR control'. The interest in this theme has been reinforced in the recent years with conformal novelty detection, for which it turns out that similar tools can be used in combination with any 'blackbox' machine learning algorithm. Nevertheless, perhaps surprisingly, finding a solution for 'adaptive FDR control' that is optimal in a broad sense is still an open problem. This paper fills this gap by introducing new $π_0$-estimators, referred to as min-Storey (MS) and interval-min-Storey (IMS), which are built upon the so-called 'Storey estimator'. Plugging these estimators in the adaptive Benjamini-Hochberg (BH) procedure is shown to deliver FDR control both in the independent and conformal settings. In addition, these methods satisfy an optimal power property over any (regular) alternative distribution. The excellent behaviors of the new adaptive procedures are illustrated with numerical experiments both in the independent and conformal models for various distribution structures.",
+    "pdf_url": "https://arxiv.org/pdf/2603.17984v1",
+    "published": "2026-03-18T17:46:33Z",
+    "fetched_at": "2026-03-20T00:39:27.801135"
+  },
+  {
+    "title": "Toward Scalable Automated Repository-Level Datasets for Software Vulnerability Detection",
+    "authors": [
+      "Amine Lbath"
+    ],
+    "abstract": "Software vulnerabilities continue to grow in volume and remain difficult to detect in practice. Although learning-based vulnerability detection has progressed, existing benchmarks are largely function-centric and fail to capture realistic, executable, interprocedural settings. Recent repo-level security benchmarks demonstrate the importance of realistic environments, but their manual curation limits scale. This doctoral research proposes an automated benchmark generator that injects realistic vulnerabilities into real-world repositories and synthesizes reproducible proof-of-vulnerability (PoV) exploits, enabling precisely labeled datasets for training and evaluating repo-level vulnerability detection agents. We further investigate an adversarial co-evolution loop between injection and detection agents to improve robustness under realistic constraints.",
+    "pdf_url": "https://arxiv.org/pdf/2603.17974v1",
+    "published": "2026-03-18T17:38:35Z",
+    "fetched_at": "2026-03-20T00:39:27.801146"
   }
 ]
