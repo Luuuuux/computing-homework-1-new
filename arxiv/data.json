@@ -1,78 +1,77 @@
 [
   {
-    "title": "Improved constraint on the Hubble constant from dark sirens with LIGO/Virgo/KAGRA O4a",
+    "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
     "authors": [
-      "V. Alfradique",
-      "C. R. Bom",
-      "G. Teixeira",
-      "A. Santos"
-    ],
-    "abstract": "A new measurement of the Hubble constant $H_0$ is presented using the statistical dark siren method applied to a sample of seven well-localized gravitational-wave (GW) events from the fourth LIGO-Virgo-KAGRA (LVK) observing run and ten additional events from the first three runs. Galaxy catalogs from the DESI Legacy Imaging Survey (LS) are combined with a deep learning model to compute photometric redshift probability density functions. We extend our previous analysis by including the events GW230731_215307 and GW230927_153832, using sky maps from the fourth Gravitational-Wave Transient Catalog (GWTC-4), and introducing key methodological improvements: $r$-band luminosity weighting of host galaxies; an extended GW likelihood that incorporates information from the binary black hole component masses; and a consistent treatment of selection effects that accounts for the incompleteness of the magnitude-limited LS galaxy catalog. Using a total of 17 well-localized dark sirens (seven from the first part of the fourth observing run, O4a), we obtain $H_0 = 78.8^{+14.6}_{-12.2}$ km/s/Mpc without luminosity weighting and $H_0 = 78.2^{+12.0}_{-11.0}$ km/s/Mpc when applying $r$-band luminosity weighting. Finally, we combine the luminosity-weighted dark siren sample with the bright siren GW170817, including constraints on the jet viewing angle and corrections for the host galaxy peculiar velocity, to obtain a final constraint of $H_0 = 69.9^{+4.1}_{-4.0}$ km/s/Mpc, representing an improvement of approximately 11% in the uncertainty relative to the GW170817-only result.",
-    "pdf_url": "https://arxiv.org/pdf/2603.20195v1",
-    "published": "2026-03-20T17:59:58Z",
-    "fetched_at": "2026-03-24T00:41:09.321776"
-  },
-  {
-    "title": "From Masks to Pixels and Meaning: A New Taxonomy, Benchmark, and Metrics for VLM Image Tampering",
-    "authors": [
-      "Xinyi Shang",
-      "Yi Tang",
-      "Jiacheng Cui",
-      "Ahmed Elhagry",
-      "Salwa K. Al Khatib",
-      "Sondos Mahmoud Bsharat",
-      "Jiacheng Liu",
-      "Xiaohan Zhao",
-      "Jing-Hao Xue",
-      "Hao Li",
+      "Umair Nawaz",
+      "Ahmed Heakl",
+      "Ufaq Khan",
+      "Abdelrahman Shaker",
       "Salman Khan",
-      "Zhiqiang Shen"
+      "Fahad Shahbaz Khan"
     ],
-    "abstract": "Existing tampering detection benchmarks largely rely on object masks, which severely misalign with the true edit signal: many pixels inside a mask are untouched or only trivially modified, while subtle yet consequential edits outside the mask are treated as natural. We reformulate VLM image tampering from coarse region labels to a pixel-grounded, meaning and language-aware task. First, we introduce a taxonomy spanning edit primitives (replace/remove/splice/inpaint/attribute/colorization, etc.) and their semantic class of tampered object, linking low-level changes to high-level understanding. Second, we release a new benchmark with per-pixel tamper maps and paired category supervision to evaluate detection and classification within a unified protocol. Third, we propose a training framework and evaluation metrics that quantify pixel-level correctness with localization to assess confidence or prediction on true edit intensity, and further measure tamper meaning understanding via semantics-aware classification and natural language descriptions for the predicted regions. We also re-evaluate the existing strong segmentation/localization baselines on recent strong tamper detectors and reveal substantial over- and under-scoring using mask-only metrics, and expose failure modes on micro-edits and off-mask changes. Our framework advances the field from masks to pixels, meanings and language descriptions, establishing a rigorous standard for tamper localization, semantic classification and description. Code and benchmark data are available at https://github.com/VILA-Lab/PIXAR.",
-    "pdf_url": "https://arxiv.org/pdf/2603.20193v1",
-    "published": "2026-03-20T17:59:54Z",
-    "fetched_at": "2026-03-24T00:41:09.321805"
+    "abstract": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose \\textbf{WorldCache}, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves \\textbf{2.3$\\times$} inference speedup while preserving \\textbf{99.4\\%} of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on \\href{https://umair1221.github.io/World-Cache/}{World-Cache}.",
+    "pdf_url": "https://arxiv.org/pdf/2603.22286v1",
+    "published": "2026-03-23T17:59:54Z",
+    "fetched_at": "2026-03-25T00:40:39.686061"
   },
   {
-    "title": "MeanFlow Meets Control: Scaling Sampled-Data Control for Swarms",
+    "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
     "authors": [
-      "Anqi Dong",
-      "Yongxin Chen",
-      "Karl H. Johansson",
-      "Johan Karlsson"
+      "Shivam Duggal",
+      "Xingjian Bai",
+      "Zongze Wu",
+      "Richard Zhang",
+      "Eli Shechtman",
+      "Antonio Torralba",
+      "Phillip Isola",
+      "William T. Freeman"
     ],
-    "abstract": "Steering large-scale swarms in only a few control updates is challenging because real systems operate in sampled-data form: control inputs are updated intermittently and applied over finite intervals. In this regime, the natural object is not an instantaneous velocity field, but a finite-window control quantity that captures the system response over each sampling interval. Inspired by MeanFlow, we introduce a control-space learning framework for swarm steering under linear time-invariant dynamics. The learned object is the coefficient that parameterizes the finite-horizon minimum-energy control over each interval. We show that this coefficient admits both an integral representation and a local differential identity along bridge trajectories, which leads to a simple stop-gradient training objective. At implementation time, the learned coefficient is used directly in sampled-data updates, so the prescribed dynamics and actuation map are respected by construction. The resulting framework provides a scalable approach to few-step swarm steering that is consistent with the sampled-data structure of real control systems.",
-    "pdf_url": "https://arxiv.org/pdf/2603.20189v1",
-    "published": "2026-03-20T17:59:18Z",
-    "fetched_at": "2026-03-24T00:41:09.321820"
+    "abstract": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
+    "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
+    "published": "2026-03-23T17:59:49Z",
+    "fetched_at": "2026-03-25T00:40:39.686088"
   },
   {
-    "title": "Wildfire Spread Scenarios: Increasing Sample Diversity of Segmentation Diffusion Models with Training-Free Methods",
+    "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
     "authors": [
-      "Sebastian Gerard",
-      "Josephine Sullivan"
+      "Haichao Zhang",
+      "Yijiang Li",
+      "Shwai He",
+      "Tushar Nagarajan",
+      "Mingfei Chen",
+      "Jianglin Lu",
+      "Ang Li",
+      "Yun Fu"
     ],
-    "abstract": "Predicting future states in uncertain environments, such as wildfire spread, medical diagnosis, or autonomous driving, requires models that can consider multiple plausible outcomes. While diffusion models can effectively learn such multi-modal distributions, naively sampling from these models is computationally inefficient, potentially requiring hundreds of samples to find low-probability modes that may still be operationally relevant. In this work, we address the challenge of sample-efficient ambiguous segmentation by evaluating several training-free sampling methods that encourage diverse predictions. We adapt two techniques, particle guidance and SPELL, originally designed for the generation of diverse natural images, to discrete segmentation tasks, and additionally propose a simple clustering-based technique. We validate these approaches on the LIDC medical dataset, a modified version of the Cityscapes dataset, and MMFire, a new simulation-based wildfire spread dataset introduced in this paper. Compared to naive sampling, these approaches increase the HM IoU* metric by up to 7.5% on MMFire and 16.4% on Cityscapes, demonstrating that training-free methods can be used to efficiently increase the sample diversity of segmentation diffusion models with little cost to image quality and runtime.\n  Code and dataset: https://github.com/SebastianGer/wildfire-spread-scenarios",
-    "pdf_url": "https://arxiv.org/pdf/2603.20188v1",
-    "published": "2026-03-20T17:59:15Z",
-    "fetched_at": "2026-03-24T00:41:09.321832"
+    "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \\emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
+    "pdf_url": "https://arxiv.org/pdf/2603.22281v1",
+    "published": "2026-03-23T17:59:42Z",
+    "fetched_at": "2026-03-25T00:40:39.686107"
   },
   {
-    "title": "MuSteerNet: Human Reaction Generation from Videos via Observation-Reaction Mutual Steering",
+    "title": "The Dual Mechanisms of Spatial Reasoning in Vision-Language Models",
     "authors": [
-      "Yuan Zhou",
-      "Yongzhi Li",
-      "Yanqi Dai",
-      "Xingyu Zhu",
-      "Yi Tan",
-      "Qingshan Xu",
-      "Beier Zhu",
-      "Richang Hong",
-      "Hanwang Zhang"
+      "Kelly Cui",
+      "Nikhil Prakash",
+      "Ayush Raina",
+      "David Bau",
+      "Antonio Torralba",
+      "Tamar Rott Shaham"
     ],
-    "abstract": "Video-driven human reaction generation aims to synthesize 3D human motions that directly react to observed video sequences, which is crucial for building human-like interactive AI systems. However, existing methods often fail to effectively leverage video inputs to steer human reaction synthesis, resulting in reaction motions that are mismatched with the content of video sequences. We reveal that this limitation arises from a severe relational distortion between visual observations and reaction types. In light of this, we propose MuSteerNet, a simple yet effective framework that generates 3D human reactions from videos via observation-reaction mutual steering. Specifically, we first propose a Prototype Feedback Steering mechanism to mitigate relational distortion by refining visual observations with a gated delta-rectification modulator and a relational margin constraint, guided by prototypical vectors learned from human reactions. We then introduce Dual-Coupled Reaction Refinement that fully leverages rectified visual cues to further steer the refinement of generated reaction motions, thereby effectively improving reaction quality and enabling MuSteerNet to achieve competitive performance. Extensive experiments and ablation studies validate the effectiveness of our method. Code coming soon: https://github.com/zhouyuan888888/MuSteerNet.",
-    "pdf_url": "https://arxiv.org/pdf/2603.20187v1",
-    "published": "2026-03-20T17:59:06Z",
-    "fetched_at": "2026-03-24T00:41:09.321851"
+    "abstract": "Many multimodal tasks, such as image captioning and visual question answering, require vision-language models (VLMs) to associate objects with their properties and spatial relations. Yet it remains unclear where and how such associations are computed within VLMs. In this work, we show that VLMs rely on two concurrent mechanisms to represent such associations. In the language model backbone, intermediate layers represent content-independent spatial relations on top of visual tokens corresponding to objects. However, this mechanism plays only a secondary role in shaping model predictions. Instead, the dominant source of spatial information originates in the vision encoder, whose representations encode the layout of objects and are directly exploited by the language model backbone. Notably, this spatial signal is distributed globally across visual tokens, extending beyond object regions into surrounding background areas. We show that enhancing these vision-derived spatial representations globally across all image tokens improves spatial reasoning performance on naturalistic images. Together, our results clarify how spatial association is computed within VLMs and highlight the central role of vision encoders in enabling spatial reasoning.",
+    "pdf_url": "https://arxiv.org/pdf/2603.22278v1",
+    "published": "2026-03-23T17:58:02Z",
+    "fetched_at": "2026-03-25T00:40:39.686124"
+  },
+  {
+    "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+    "authors": [
+      "Alexandra Zelenin",
+      "Alexandra Zhuravlyova"
+    ],
+    "abstract": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved.\n  We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice.\n  Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
+    "pdf_url": "https://arxiv.org/pdf/2603.22276v1",
+    "published": "2026-03-23T17:57:24Z",
+    "fetched_at": "2026-03-25T00:40:39.686136"
   }
 ]
