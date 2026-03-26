@@ -1,77 +1,80 @@
 [
   {
-    "title": "WorldCache: Content-Aware Caching for Accelerated Video World Models",
+    "title": "UniGRPO: Unified Policy Optimization for Reasoning-Driven Visual Generation",
     "authors": [
-      "Umair Nawaz",
-      "Ahmed Heakl",
-      "Ufaq Khan",
-      "Abdelrahman Shaker",
-      "Salman Khan",
-      "Fahad Shahbaz Khan"
+      "Jie Liu",
+      "Zilyu Ye",
+      "Linxiao Yuan",
+      "Shenhan Zhu",
+      "Yu Gao",
+      "Jie Wu",
+      "Kunchang Li",
+      "Xionghui Wang",
+      "Xiaonan Nie",
+      "Weilin Huang",
+      "Wanli Ouyang"
     ],
-    "abstract": "Diffusion Transformers (DiTs) power high-fidelity video world models but remain computationally expensive due to sequential denoising and costly spatio-temporal attention. Training-free feature caching accelerates inference by reusing intermediate activations across denoising steps; however, existing methods largely rely on a Zero-Order Hold assumption i.e., reusing cached features as static snapshots when global drift is small. This often leads to ghosting artifacts, blur, and motion inconsistencies in dynamic scenes. We propose \\textbf{WorldCache}, a Perception-Constrained Dynamical Caching framework that improves both when and how to reuse features. WorldCache introduces motion-adaptive thresholds, saliency-weighted drift estimation, optimal approximation via blending and warping, and phase-aware threshold scheduling across diffusion steps. Our cohesive approach enables adaptive, motion-consistent feature reuse without retraining. On Cosmos-Predict2.5-2B evaluated on PAI-Bench, WorldCache achieves \\textbf{2.3$\\times$} inference speedup while preserving \\textbf{99.4\\%} of baseline quality, substantially outperforming prior training-free caching approaches. Our code can be accessed on \\href{https://umair1221.github.io/World-Cache/}{World-Cache}.",
-    "pdf_url": "https://arxiv.org/pdf/2603.22286v1",
-    "published": "2026-03-23T17:59:54Z",
-    "fetched_at": "2026-03-25T00:40:39.686061"
+    "abstract": "Unified models capable of interleaved generation have emerged as a promising paradigm, with the community increasingly converging on autoregressive modeling for text and flow matching for image generation. To advance this direction, we propose a unified reinforcement learning framework tailored for interleaved generation. We validate our approach on its fundamental unit: a single round of reasoning-driven image generation, where the model first expands the user prompt through reasoning, followed by image synthesis. Formulating this multimodal generation process as a Markov Decision Process with sparse terminal rewards, we introduce UniGRPO to jointly optimize text and image generation policies using GRPO. Adopting a minimalist methodology to avoid over-design, we leverage established training recipes for both modalities by seamlessly integrating standard GRPO for reasoning and FlowGRPO for visual synthesis. To ensure scalability to multi-round interleaved generation, we introduce two critical modifications to the original FlowGRPO: (1) eliminating classifier-free guidance to maintain linear, unbranched rollouts, which is essential for scaling to complex scenarios involving multi-turn interactions and multi-condition generation (e.g., editing); and (2) replacing the standard latent KL penalty with an MSE penalty directly on the velocity fields, providing a more robust and direct regularization signal to mitigate reward hacking effectively. Our experiments demonstrate that this unified training recipe significantly enhances image generation quality through reasoning, providing a robust and scalable baseline for the future post-training of fully interleaved models.",
+    "pdf_url": "https://arxiv.org/pdf/2603.23500v1",
+    "published": "2026-03-24T17:59:17Z",
+    "fetched_at": "2026-03-26T00:43:19.072250"
   },
   {
-    "title": "End-to-End Training for Unified Tokenization and Latent Denoising",
+    "title": "WildWorld: A Large-Scale Dataset for Dynamic World Modeling with Actions and Explicit State toward Generative ARPG",
     "authors": [
-      "Shivam Duggal",
-      "Xingjian Bai",
-      "Zongze Wu",
-      "Richard Zhang",
-      "Eli Shechtman",
-      "Antonio Torralba",
-      "Phillip Isola",
-      "William T. Freeman"
+      "Zhen Li",
+      "Zian Meng",
+      "Shuwei Shi",
+      "Wenshuo Peng",
+      "Yuwei Wu",
+      "Bo Zheng",
+      "Chuanhao Li",
+      "Kaipeng Zhang"
     ],
-    "abstract": "Latent diffusion models (LDMs) enable high-fidelity synthesis by operating in learned latent spaces. However, training state-of-the-art LDMs requires complex staging: a tokenizer must be trained first, before the diffusion model can be trained in the frozen latent space. We propose UNITE - an autoencoder architecture for unified tokenization and latent diffusion. UNITE consists of a Generative Encoder that serves as both image tokenizer and latent generator via weight sharing. Our key insight is that tokenization and generation can be viewed as the same latent inference problem under different conditioning regimes: tokenization infers latents from fully observed images, whereas generation infers them from noise together with text or class conditioning. Motivated by this, we introduce a single-stage training procedure that jointly optimizes both tasks via two forward passes through the same Generative Encoder. The shared parameters enable gradients to jointly shape the latent space, encouraging a \"common latent language\". Across image and molecule modalities, UNITE achieves near state of the art performance without adversarial losses or pretrained encoders (e.g., DINO), reaching FID 2.12 and 1.73 for Base and Large models on ImageNet 256 x 256. We further analyze the Generative Encoder through the lenses of representation alignment and compression. These results show that single stage joint training of tokenization & generation from scratch is feasible.",
-    "pdf_url": "https://arxiv.org/pdf/2603.22283v1",
-    "published": "2026-03-23T17:59:49Z",
-    "fetched_at": "2026-03-25T00:40:39.686088"
+    "abstract": "Dynamical systems theory and reinforcement learning view world evolution as latent-state dynamics driven by actions, with visual observations providing partial information about the state. Recent video world models attempt to learn this action-conditioned dynamics from data. However, existing datasets rarely match the requirement: they typically lack diverse and semantically meaningful action spaces, and actions are directly tied to visual observations rather than mediated by underlying states. As a result, actions are often entangled with pixel-level changes, making it difficult for models to learn structured world dynamics and maintain consistent evolution over long horizons. In this paper, we propose WildWorld, a large-scale action-conditioned world modeling dataset with explicit state annotations, automatically collected from a photorealistic AAA action role-playing game (Monster Hunter: Wilds). WildWorld contains over 108 million frames and features more than 450 actions, including movement, attacks, and skill casting, together with synchronized per-frame annotations of character skeletons, world states, camera poses, and depth maps. We further derive WildBench to evaluate models through Action Following and State Alignment. Extensive experiments reveal persistent challenges in modeling semantically rich actions and maintaining long-horizon state consistency, highlighting the need for state-aware video generation. The project page is https://shandaai.github.io/wildworld-project/.",
+    "pdf_url": "https://arxiv.org/pdf/2603.23497v1",
+    "published": "2026-03-24T17:58:25Z",
+    "fetched_at": "2026-03-26T00:43:19.072278"
   },
   {
-    "title": "ThinkJEPA: Empowering Latent World Models with Large Vision-Language Reasoning Model",
+    "title": "Estimating Flow Velocity and Vehicle Angle-of-Attack from Non-invasive Piezoelectric Structural Measurements Using Deep Learning",
     "authors": [
-      "Haichao Zhang",
-      "Yijiang Li",
-      "Shwai He",
-      "Tushar Nagarajan",
-      "Mingfei Chen",
-      "Jianglin Lu",
-      "Ang Li",
-      "Yun Fu"
+      "Chandler B. Smith",
+      "S. Hales Swift",
+      "Andrew Steyer",
+      "Ihab El-Kady"
     ],
-    "abstract": "Recent progress in latent world models (e.g., V-JEPA2) has shown promising capability in forecasting future world states from video observations. Nevertheless, dense prediction from a short observation window limits temporal context and can bias predictors toward local, low-level extrapolation, making it difficult to capture long-horizon semantics and reducing downstream utility. Vision--language models (VLMs), in contrast, provide strong semantic grounding and general knowledge by reasoning over uniformly sampled frames, but they are not ideal as standalone dense predictors due to compute-driven sparse sampling, a language-output bottleneck that compresses fine-grained interaction states into text-oriented representations, and a data-regime mismatch when adapting to small action-conditioned datasets. We propose a VLM-guided JEPA-style latent world modeling framework that combines dense-frame dynamics modeling with long-horizon semantic guidance via a dual-temporal pathway: a dense JEPA branch for fine-grained motion and interaction cues, and a uniformly sampled VLM \\emph{thinker} branch with a larger temporal stride for knowledge-rich guidance. To transfer the VLM's progressive reasoning signals effectively, we introduce a hierarchical pyramid representation extraction module that aggregates multi-layer VLM representations into guidance features compatible with latent prediction. Experiments on hand-manipulation trajectory prediction show that our method outperforms both a strong VLM-only baseline and a JEPA-predictor baseline, and yields more robust long-horizon rollout behavior.",
-    "pdf_url": "https://arxiv.org/pdf/2603.22281v1",
-    "published": "2026-03-23T17:59:42Z",
-    "fetched_at": "2026-03-25T00:40:39.686107"
+    "abstract": "Accurate estimation of aerodynamic state variables such as freestream velocity and angle of attack (AoA) is important for aerodynamic load prediction, flight control, and model validation. This work presents a non-intrusive method for estimating vehicle velocity and AoA from structural vibration measurements rather than direct flow instrumentation such as pitot tubes. A dense array of piezoelectric sensors mounted on the interior skin of an aeroshell capture vibrations induced by turbulent boundary layer pressure fluctuations, and a convolutional neural network (CNN) is trained to invert these structural responses to recover velocity and AoA.\n  Proof-of-concept is demonstrated through controlled experiments in Sandia's hypersonic wind tunnel spanning zero and nonzero AoA configurations, Mach~5 and Mach~8 conditions, and both constant and continuously varying tunnel operations. The CNN is trained and evaluated using data from 16 wind tunnel runs, with a temporally centered held-out interval within each run used to form training, validation, and test datasets and assess intra-run temporal generalization. Raw CNN predictions exhibit increased variance during continuously varying conditions; a short-window moving-median post-processing step suppresses this variance and improves robustness. After post-processing, the method achieves a mean velocity error relative to the low-pass filtered reference velocity below 2.27~m/s (0.21\\%) and a mean AoA error of $0.44^{\\circ} (8.25\\%)$ on held-out test data from the same experimental campaign, demonstrating feasibility of vibration-based velocity and AoA estimation in a controlled laboratory environment.",
+    "pdf_url": "https://arxiv.org/pdf/2603.23496v1",
+    "published": "2026-03-24T17:58:23Z",
+    "fetched_at": "2026-03-26T00:43:19.072298"
   },
   {
-    "title": "The Dual Mechanisms of Spatial Reasoning in Vision-Language Models",
+    "title": "VISion On Request: Enhanced VLLM efficiency with sparse, dynamically selected, vision-language interactions",
     "authors": [
-      "Kelly Cui",
-      "Nikhil Prakash",
-      "Ayush Raina",
-      "David Bau",
-      "Antonio Torralba",
-      "Tamar Rott Shaham"
+      "Adrian Bulat",
+      "Alberto Baldrati",
+      "Ioannis Maniadis Metaxas",
+      "Yassine Ouali",
+      "Georgios Tzimiropoulos"
     ],
-    "abstract": "Many multimodal tasks, such as image captioning and visual question answering, require vision-language models (VLMs) to associate objects with their properties and spatial relations. Yet it remains unclear where and how such associations are computed within VLMs. In this work, we show that VLMs rely on two concurrent mechanisms to represent such associations. In the language model backbone, intermediate layers represent content-independent spatial relations on top of visual tokens corresponding to objects. However, this mechanism plays only a secondary role in shaping model predictions. Instead, the dominant source of spatial information originates in the vision encoder, whose representations encode the layout of objects and are directly exploited by the language model backbone. Notably, this spatial signal is distributed globally across visual tokens, extending beyond object regions into surrounding background areas. We show that enhancing these vision-derived spatial representations globally across all image tokens improves spatial reasoning performance on naturalistic images. Together, our results clarify how spatial association is computed within VLMs and highlight the central role of vision encoders in enabling spatial reasoning.",
-    "pdf_url": "https://arxiv.org/pdf/2603.22278v1",
-    "published": "2026-03-23T17:58:02Z",
-    "fetched_at": "2026-03-25T00:40:39.686124"
+    "abstract": "Existing approaches for improving the efficiency of Large Vision-Language Models (LVLMs) are largely based on the concept of visual token reduction. This approach, however, creates an information bottleneck that impairs performance, especially on challenging tasks that require fine-grained understanding and reasoning. In this work, we challenge this paradigm by introducing VISion On Request (VISOR), a method that reduces inference cost without discarding visual information. Instead of compressing the image, VISOR improves efficiency by sparsifying the interaction between image and text tokens. Specifically, the language model attends to the full set of high-resolution visual tokens through a small, strategically placed set of attention layers: general visual context is provided by efficient cross-attention between text-image, while a few well-placed and dynamically selected self-attention layers refine the visual representations themselves, enabling complex, high-resolution reasoning when needed. Based on this principle, we first train a single universal network on a range of computational budgets by varying the number of self-attention layers, and then introduce a lightweight policy mechanism that dynamically allocates visual computation based on per-sample complexity. Extensive experiments show that VISOR drastically reduces computational cost while matching or exceeding state-of-the-art results across a diverse suite of benchmarks, and excels in challenging tasks that require detailed visual understanding.",
+    "pdf_url": "https://arxiv.org/pdf/2603.23495v1",
+    "published": "2026-03-24T17:58:17Z",
+    "fetched_at": "2026-03-26T00:43:19.072313"
   },
   {
-    "title": "Scaling DoRA: High-Rank Adaptation via Factored Norms and Fused Kernels",
+    "title": "Active learning-enabled multi-objective design of thermally conductive and mechanically compliant polymers",
     "authors": [
-      "Alexandra Zelenin",
-      "Alexandra Zhuravlyova"
+      "Yuhan Liu",
+      "Jiaxin Xu",
+      "Renzheng Zhang",
+      "Meng Jiang",
+      "Tengfei Luo"
     ],
-    "abstract": "Weight-Decomposed Low-Rank Adaptation (DoRA) extends LoRA by decoupling weight magnitude from direction, but its forward pass requires the row-wise norm of W + sBA, a computation that every major framework we surveyed implements by materializing the dense [d_out, d_in] product BA. At d_in = 8192 and rank r = 384, a single module's norm requires about 512 MB of transient working memory in bf16, making high-rank DoRA costly and often infeasible on common single-GPU setups once hundreds of adapted modules and checkpointing are involved.\n  We present two systems contributions. A factored norm decomposes the squared norm into base, cross, and Gram terms computable through O(d_out r + r^2) intermediates, eliminating the dense product. Fused Triton kernels collapse the four-kernel DoRA composition into a single pass, reducing memory traffic by about 4x and using a numerically stable form that avoids catastrophic cancellation in the near-unity rescaling regime where magnitude scales concentrate in practice.\n  Across six 8-32B vision-language models (VLMs) on three NVIDIA GPUs (RTX 6000 PRO, H200, B200) at r = 384 in bf16, the fused implementation is 1.5-2.0x faster than Hugging Face PEFT's DoRA implementation for inference and 1.5-1.9x faster for gradient computation (optimizer step excluded), with up to 7 GB lower peak VRAM. Microbenchmarks on six GPUs spanning four architecture generations (L40S, A100, RTX 6000 PRO, H200, B200, B300) confirm 1.5-2.7x compose-kernel speedup. Final-logit cosine similarity exceeds 0.9999 across all model/GPU pairs, and multi-seed training curves match within 7.1 x 10^-4 mean per-step loss delta over 2000 steps.",
-    "pdf_url": "https://arxiv.org/pdf/2603.22276v1",
-    "published": "2026-03-23T17:57:24Z",
-    "fetched_at": "2026-03-25T00:40:39.686136"
+    "abstract": "Polymers are attractive in applications like flexible electronics and thermal interface materials due to their mechanical compliance and processability. However, conventional polymers have low thermal conductivity (TC), limiting their heat dissipation performance. Identifying polymers that simultaneously achieve high intrinsic TC and mechanical flexibility (i.e., low modulus) remains a challenge. Here, we develop an active learning (AL) framework based on multi-objective Bayesian optimization (MOBO) to discover polymers exhibiting both high TC and low bulk modulus. Initially, a high-throughput molecular dynamics (MD) pipeline generated an initial dataset, and independent Deep Kernel Learning (DKL) surrogate models were trained for TC and bulk modulus to predict properties and uncertainties. Using the parallel noisy expected hypervolume improvement (qNEHVI) acquisition function, the framework iteratively screens a larger unlabeled polymer database, systematically recommends new polymer candidates for MD evaluation, and updates the DKL models with newly acquired data. Ultimately, six candidates were identified on the Pareto front, representing optimal trade-offs between TC and modulus. Interpretability analysis further revealed molecular features associated with these trade-offs, and synthesizability assessment supported the practical relevance of the selected candidates. By combining MD simulations with AL-enabled MOBO, our workflow mitigates data scarcity, reduces development time, and provides actionable guidance for designing multifunctional polymers tailored for different applications.",
+    "pdf_url": "https://arxiv.org/pdf/2603.23494v1",
+    "published": "2026-03-24T17:58:08Z",
+    "fetched_at": "2026-03-26T00:43:19.072328"
   }
 ]
