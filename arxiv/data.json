@@ -1,1 +1,75 @@
-[]
+[
+  {
+    "title": "Gen-Searcher: Reinforcing Agentic Search for Image Generation",
+    "authors": [
+      "Kaituo Feng",
+      "Manyuan Zhang",
+      "Shuang Chen",
+      "Yunlong Lin",
+      "Kaixuan Fan",
+      "Yilei Jiang",
+      "Hongyu Li",
+      "Dian Zheng",
+      "Chenyang Wang",
+      "Xiangyu Yue"
+    ],
+    "abstract": "Recent image generation models have shown strong capabilities in generating high-fidelity and photorealistic images. However, they are fundamentally constrained by frozen internal knowledge, thus often failing on real-world scenarios that are knowledge-intensive or require up-to-date information. In this paper, we present Gen-Searcher, as the first attempt to train a search-augmented image generation agent, which performs multi-hop reasoning and search to collect the textual knowledge and reference images needed for grounded generation. To achieve this, we construct a tailored data pipeline and curate two high-quality datasets, Gen-Searcher-SFT-10k and Gen-Searcher-RL-6k, containing diverse search-intensive prompts and corresponding ground-truth synthesis images. We further introduce KnowGen, a comprehensive benchmark that explicitly requires search-grounded external knowledge for image generation and evaluates models from multiple dimensions. Based on these resources, we train Gen-Searcher with SFT followed by agentic reinforcement learning with dual reward feedback, which combines text-based and image-based rewards to provide more stable and informative learning signals for GRPO training. Experiments show that Gen-Searcher brings substantial gains, improving Qwen-Image by around 16 points on KnowGen and 15 points on WISE. We hope this work can serve as an open foundation for search agents in image generation, and we fully open-source our data, models, and code.",
+    "pdf_url": "https://arxiv.org/pdf/2603.28767v1",
+    "published": "2026-03-30T17:59:56Z",
+    "fetched_at": "2026-04-01T00:48:37.723245"
+  },
+  {
+    "title": "Geometry-aware similarity metrics for neural representations on Riemannian and statistical manifolds",
+    "authors": [
+      "N Alex Cayco Gajic",
+      "Arthur Pellegrino"
+    ],
+    "abstract": "Similarity measures are widely used to interpret the representational geometries used by neural networks to solve tasks. Yet, because existing methods compare the extrinsic geometry of representations in state space, rather than their intrinsic geometry, they may fail to capture subtle yet crucial distinctions between fundamentally different neural network solutions. Here, we introduce metric similarity analysis (MSA), a novel method which leverages tools from Riemannian geometry to compare the intrinsic geometry of neural representations under the manifold hypothesis. We show that MSA can be used to i) disentangle features of neural computations in deep networks with different learning regimes, ii) compare nonlinear dynamics, and iii) investigate diffusion models. Hence, we introduce a mathematically grounded and broadly applicable framework to understand the mechanisms behind neural computations by comparing their intrinsic geometries.",
+    "pdf_url": "https://arxiv.org/pdf/2603.28764v1",
+    "published": "2026-03-30T17:59:22Z",
+    "fetched_at": "2026-04-01T00:48:37.723267"
+  },
+  {
+    "title": "On-the-fly Repulsion in the Contextual Space for Rich Diversity in Diffusion Transformers",
+    "authors": [
+      "Omer Dahary",
+      "Benaya Koren",
+      "Daniel Garibi",
+      "Daniel Cohen-Or"
+    ],
+    "abstract": "Modern Text-to-Image (T2I) diffusion models have achieved remarkable semantic alignment, yet they often suffer from a significant lack of variety, converging on a narrow set of visual solutions for any given prompt. This typicality bias presents a challenge for creative applications that require a wide range of generative outcomes. We identify a fundamental trade-off in current approaches to diversity: modifying model inputs requires costly optimization to incorporate feedback from the generative path. In contrast, acting on spatially-committed intermediate latents tends to disrupt the forming visual structure, leading to artifacts. In this work, we propose to apply repulsion in the Contextual Space as a novel framework for achieving rich diversity in Diffusion Transformers. By intervening in the multimodal attention channels, we apply on-the-fly repulsion during the transformer's forward pass, injecting the intervention between blocks where text conditioning is enriched with emergent image structure. This allows for redirecting the guidance trajectory after it is structurally informed but before the composition is fixed. Our results demonstrate that repulsion in the Contextual Space produces significantly richer diversity without sacrificing visual fidelity or semantic adherence. Furthermore, our method is uniquely efficient, imposing a small computational overhead while remaining effective even in modern \"Turbo\" and distilled models where traditional trajectory-based interventions typically fail.",
+    "pdf_url": "https://arxiv.org/pdf/2603.28762v1",
+    "published": "2026-03-30T17:59:13Z",
+    "fetched_at": "2026-04-01T00:48:37.723281"
+  },
+  {
+    "title": "SonoWorld: From One Image to a 3D Audio-Visual Scene",
+    "authors": [
+      "Derong Jin",
+      "Xiyi Chen",
+      "Ming C. Lin",
+      "Ruohan Gao"
+    ],
+    "abstract": "Tremendous progress in visual scene generation now turns a single image into an explorable 3D world, yet immersion remains incomplete without sound. We introduce Image2AVScene, the task of generating a 3D audio-visual scene from a single image, and present SonoWorld, the first framework to tackle this challenge. From one image, our pipeline outpaints a 360° panorama, lifts it into a navigable 3D scene, places language-guided sound anchors, and renders ambisonics for point, areal, and ambient sources, yielding spatial audio aligned with scene geometry and semantics. Quantitative evaluations on a newly curated real-world dataset and a controlled user study confirm the effectiveness of our approach. Beyond free-viewpoint audio-visual rendering, we also demonstrate applications to one-shot acoustic learning and audio-visual spatial source separation. Project website: https://humathe.github.io/sonoworld/",
+    "pdf_url": "https://arxiv.org/pdf/2603.28757v1",
+    "published": "2026-03-30T17:57:47Z",
+    "fetched_at": "2026-04-01T00:48:37.723295"
+  },
+  {
+    "title": "Graphilosophy: Graph-Based Digital Humanities Computing with The Four Books",
+    "authors": [
+      "Minh-Thu Do",
+      "Quynh-Chau Le-Tran",
+      "Duc-Duy Nguyen-Mai",
+      "Thien-Trang Nguyen",
+      "Khanh-Duy Le",
+      "Minh-Triet Tran",
+      "Tam V. Nguyen",
+      "Trung-Nghia Le"
+    ],
+    "abstract": "The Four Books have shaped East Asian intellectual traditions, yet their multi-layered interpretive complexity limits their accessibility in the digital age. While traditional bilingual commentaries provide a vital pedagogical bridge, computational frameworks are needed to preserve and explore this wisdom. This paper bridges AI and classical philosophy by introducing Graphilosophy, an ontology-guided, multi-layered knowledge graph framework for modeling and interpreting The Four Books. Integrating natural language processing, multilingual semantic embeddings, and humanistic analysis, the framework transforms a bilingual Chinese-Vietnamese corpus into an interpretively grounded resource. Graphilosophy encodes linguistic, conceptual, and interpretive relationships across interconnected layers, enabling cross-lingual retrieval and AI-assisted reasoning while explicitly preserving scholarly nuance and interpretive plurality. The system also enables non-expert users to trace the evolution of ethical concepts across borders and languages, ensuring that ancient wisdom remains a living resource for modern moral discourse rather than a static relic of the past. Through an interactive interface, users can trace the evolution of ethical concepts across languages, ensuring ancient wisdom remains relevant for modern discourse. A preliminary user study suggests the system's capacity to enhance conceptual understanding and cross-cultural learning. By linking algorithmic representation with ethical inquiry, this research exemplifies how AI can serve as a methodological bridge, accommodating the ambiguity of cultural heritage rather than reducing it to static data. The Source code and data are released at https://github.com/ThuDoMinh1102/confucian-texts-knowledge-graph.",
+    "pdf_url": "https://arxiv.org/pdf/2603.28755v1",
+    "published": "2026-03-30T17:57:07Z",
+    "fetched_at": "2026-04-01T00:48:37.723313"
+  }
+]
