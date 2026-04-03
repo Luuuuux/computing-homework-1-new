@@ -1,68 +1,76 @@
 [
   {
-    "title": "HapCompass: A Rotational Haptic Device for Contact-Rich Robotic Teleoperation",
+    "title": "Functional Force-Aware Retargeting from Virtual Human Demos to Soft Robot Policies",
     "authors": [
-      "Xiangshan Tan",
-      "Jingtian Ji",
-      "Tianchong Jiang",
-      "Pedro Lopes",
-      "Matthew R. Walter"
+      "Uksang Yoo",
+      "Mengjia Zhu",
+      "Evan Pezent",
+      "Jom Preechayasomboon",
+      "Jean Oh",
+      "Jeffrey Ichnowski",
+      "Amir Memar",
+      "Ben Abbatematteo",
+      "Homanga Bharadhwaj",
+      "Ashish Deshpande",
+      "Harsha Prahlad"
     ],
-    "abstract": "The contact-rich nature of manipulation makes it a significant challenge for robotic teleoperation. While haptic feedback is critical for contact-rich tasks, providing intuitive directional cues within wearable teleoperation interfaces remains a bottleneck. Existing solutions, such as non-directional vibrations from handheld controllers, provide limited information, while vibrotactile arrays are prone to perceptual interference. To address these limitations, we propose HapCompass, a novel, low-cost wearable haptic device that renders 2D directional cues by mechanically rotating a single linear resonant actuator (LRA). We evaluated HapCompass's ability to convey directional cues to human operators and showed that it increased the success rate, decreased the completion time and the maximum contact force for teleoperated manipulation tasks when compared to vision-only and non-directional feedback baselines. Furthermore, we conducted a preliminary imitation-learning evaluation, suggesting that the directional feedback provided by HapCompass enhances the quality of demonstration data and, in turn, the trained policy. We release the design of the HapCompass device along with the code that implements our teleoperation interface: https://ripl.github.io/HapCompass/.",
-    "pdf_url": "https://arxiv.org/pdf/2603.30042v1",
-    "published": "2026-03-31T17:57:52Z",
-    "fetched_at": "2026-04-02T00:41:30.762347"
+    "abstract": "We introduce SoftAct, a framework for teaching soft robot hands to perform human-like manipulation skills by explicitly reasoning about contact forces. Leveraging immersive virtual reality, our system captures rich human demonstrations, including hand kinematics, object motion, dense contact patches, and detailed contact force information. Unlike conventional approaches that retarget human joint trajectories, SoftAct employs a two-stage, force-aware retargeting algorithm. The first stage attributes demonstrated contact forces to individual human fingers and allocates robot fingers proportionally, establishing a force-balanced mapping between human and robot hands. The second stage performs online retargeting by combining baseline end-effector pose tracking with geodesic-weighted contact refinements, using contact geometry and force magnitude to adjust robot fingertip targets in real time. This formulation enables soft robotic hands to reproduce the functional intent of human demonstrations while naturally accommodating extreme embodiment mismatch and nonlinear compliance. We evaluate SoftAct on a suite of contact-rich manipulation tasks using a custom non-anthropomorphic pneumatic soft robot hand. SoftAct's controller reduces fingertip trajectory tracking RMSE by up to 55 percent and reduces tracking variance by up to 69 percent compared to kinematic and learning-based baselines. At the policy level, SoftAct achieves consistently higher success in zero-shot real-world deployment and in simulation. These results demonstrate that explicitly modeling contact geometry and force distribution is essential for effective skill transfer to soft robotic hands, and cannot be recovered through kinematic imitation alone. Project videos and additional details are available at https://soft-act.github.io/.",
+    "pdf_url": "https://arxiv.org/pdf/2604.01224v1",
+    "published": "2026-04-01T17:59:35Z",
+    "fetched_at": "2026-04-03T00:43:54.698879"
   },
   {
-    "title": "Aligned, Orthogonal or In-conflict: When can we safely optimize Chain-of-Thought?",
+    "title": "LAtent Phase Inference from Short time sequences using SHallow REcurrent Decoders (LAPIS-SHRED)",
     "authors": [
-      "Max Kaufmann",
-      "David Lindner",
-      "Roland S. Zimmermann",
-      "and Rohin Shah"
+      "Yuxuan Bao",
+      "Xingyue Zhang",
+      "J. Nathan Kutz"
     ],
-    "abstract": "Chain-of-Thought (CoT) monitoring, in which automated systems monitor the CoT of an LLM, is a promising approach for effectively overseeing AI systems. However, the extent to which a model's CoT helps us oversee the model - the monitorability of the CoT - can be affected by training, for instance by the model learning to hide important features of its reasoning. We propose and empirically validate a conceptual framework for predicting when and why this occurs. We model LLM post-training as an RL environment where the reward decomposes into two terms: one term depending on final outputs and another term depending on the CoT. Our framework allows us to classify these two terms as \"aligned\", \"orthogonal\", or \"in-conflict\" before training. We predict that training with in-conflict terms will reduce monitorability, orthogonal terms will not affect it, and aligned terms will improve it. To validate our framework, we use it to classify a set of RL environments, train LLMs within those environments, and evaluate how training affects CoT monitorability. We find that (1) training with \"in-conflict\" reward terms reduces CoT monitorability and (2) optimizing in-conflict reward terms is difficult.",
-    "pdf_url": "https://arxiv.org/pdf/2603.30036v1",
-    "published": "2026-03-31T17:38:39Z",
-    "fetched_at": "2026-04-02T00:41:30.762372"
+    "abstract": "Reconstructing full spatio-temporal dynamics from sparse observations in both space and time remains a central challenge in complex systems, as measurements can be spatially incomplete and can be also limited to narrow temporal windows. Yet approximating the complete spatio-temporal trajectory is essential for mechanistic insight and understanding, model calibration, and operational decision-making. We introduce LAPIS-SHRED (LAtent Phase Inference from Short time sequence using SHallow REcurrent Decoders), a modular architecture that reconstructs and/or forecasts complete spatiotemporal dynamics from sparse sensor observations confined to short temporal windows. LAPIS-SHRED operates through a three-stage pipeline: (i) a SHRED model is pre-trained entirely on simulation data to map sensor time-histories into a structured latent space, (ii) a temporal sequence model, trained on simulation-derived latent trajectories, learns to propagate latent states forward or backward in time to span unobserved temporal regions from short observational time windows, and (iii) at deployment, only a short observation window of hyper-sparse sensor measurements from the true system is provided, from which the frozen SHRED model and the temporal model jointly reconstruct or forecast the complete spatiotemporal trajectory. The framework supports bidirectional inference, inherits data assimilation and multiscale reconstruction capabilities from its modular structure, and accommodates extreme observational constraints including single-frame terminal inputs. We evaluate LAPIS-SHRED on six experiments spanning complex spatio-temporal physics: turbulent flows, multiscale propulsion physics, volatile combustion transients, and satellite-derived environmental fields, highlighting a lightweight, modular architecture suited for operational settings where observation is constrained by physical or logistical limitations.",
+    "pdf_url": "https://arxiv.org/pdf/2604.01216v1",
+    "published": "2026-04-01T17:55:10Z",
+    "fetched_at": "2026-04-03T00:43:54.698902"
   },
   {
-    "title": "Reward-Based Online LLM Routing via NeuralUCB",
+    "title": "The Recipe Matters More Than the Kitchen:Mathematical Foundations of the AI Weather Prediction Pipeline",
     "authors": [
-      "Ming-Hua Tsai",
-      "Phat Tran"
+      "Piyush Garg",
+      "Diana R. Gergel",
+      "Andrew E. Shao",
+      "Galen J. Yacalis"
     ],
-    "abstract": "This study investigates the use of NeuralUCB for cost-aware large language model (LLM) routing. Existing routing approaches can be broadly grouped into supervised routing methods and partial-feedback methods, each with different tradeoffs in efficiency and adaptivity. We implement a NeuralUCB-based routing policy and evaluate it on RouterBench under a simulated online setting. Experimental results show that the proposed method consistently outperforms random and min-cost baselines in utility reward. Compared with the max-quality reference, our method achieves substantially lower inference cost while maintaining competitive reward. These findings suggest that NeuralUCB is a promising approach for cost-aware LLM routing, while also highlighting remaining challenges in action discrimination and exploration.",
-    "pdf_url": "https://arxiv.org/pdf/2603.30035v1",
-    "published": "2026-03-31T17:35:34Z",
-    "fetched_at": "2026-04-02T00:41:30.762385"
+    "abstract": "AI weather prediction has advanced rapidly, yet no unified mathematical framework explains what determines forecast skill. Existing theory addresses specific architectural choices rather than the learning pipeline as a whole, while operational evidence from 2023-2026 demonstrates that training methodology, loss function design, and data diversity matter at least as much as architecture selection. This paper makes two interleaved contributions. Theoretically, we construct a framework rooted in approximation theory on the sphere, dynamical systems theory, information theory, and statistical learning theory that treats the complete learning pipeline (architecture, loss function, training strategy, data distribution) rather than architecture alone. We establish a Learning Pipeline Error Decomposition showing that estimation error (loss- and data-dependent) dominates approximation error (architecture-dependent) at current scales. We develop a Loss Function Spectral Theory formalizing MSE-induced spectral blurring in spherical harmonic coordinates, and derive Out-of-Distribution Extrapolation Bounds proving that data-driven models systematically underestimate record-breaking extremes with bias growing linearly in record exceedance. Empirically, we validate these predictions via inference across ten architecturally diverse AI weather models using NVIDIA Earth2Studio with ERA5 initial conditions, evaluating six metrics across 30 initialization dates spanning all seasons. Results confirm universal spectral energy loss at high wavenumbers for MSE-trained models, rising Error Consensus Ratios showing that the majority of forecast error is shared across architectures, and linear negative bias during extreme events. A Holistic Model Assessment Score provides unified multi-dimensional evaluation, and a prescriptive framework enables mathematical evaluation of proposed pipelines before training.",
+    "pdf_url": "https://arxiv.org/pdf/2604.01215v1",
+    "published": "2026-04-01T17:53:51Z",
+    "fetched_at": "2026-04-03T00:43:54.698916"
   },
   {
-    "title": "Tucker Attention: A generalization of approximate attention mechanisms",
+    "title": "Collaborative Task and Path Planning for Heterogeneous Robotic Teams using Multi-Agent PPO",
     "authors": [
-      "Timon Klein",
-      "Jonas Kusch",
-      "Sebastian Sager",
-      "Stefan Schnake",
-      "Steffen Schotthöfer"
+      "Matthias Rubio",
+      "Julia Richter",
+      "Hendrik Kolvenbach",
+      "Marco Hutter"
     ],
-    "abstract": "The pursuit of reducing the memory footprint of the self-attention mechanism in multi-headed self attention (MHA) spawned a rich portfolio of methods, e.g., group-query attention (GQA) and multi-head latent attention (MLA). The methods leverage specialized low-rank factorizations across embedding dimensions or attention heads. From the point of view of classical low-rank approximation, these methods are unconventional and raise questions of which objects they really approximate and how to interpret the low-rank behavior of the resulting representations. To answer these questions, this work proposes a generalized view on the weight objects in the self-attention layer and a factorization strategy, which allows us to construct a parameter efficient scheme, called Tucker Attention. Tucker Attention requires an order of magnitude fewer parameters for comparable validation metrics, compared to GQA and MLA, as evaluated in LLM and ViT test cases. Additionally, Tucker Attention~encompasses GQA, MLA, MHA as special cases and is fully compatible with flash-attention and rotary position embeddings (RoPE). This generalization strategy yields insights of the actual ranks achieved by MHA, GQA, and MLA, and further enables simplifications for MLA.",
-    "pdf_url": "https://arxiv.org/pdf/2603.30033v1",
-    "published": "2026-03-31T17:30:51Z",
-    "fetched_at": "2026-04-02T00:41:30.762401"
+    "abstract": "Efficient robotic extraterrestrial exploration requires robots with diverse capabilities, ranging from scientific measurement tools to advanced locomotion. A robotic team enables the distribution of tasks over multiple specialized subsystems, each providing specific expertise to complete the mission. The central challenge lies in efficiently coordinating the team to maximize utilization and the extraction of scientific value. Classical planning algorithms scale poorly with problem size, leading to long planning cycles and high inference costs due to the combinatorial growth of possible robot-target allocations and possible trajectories. Learning-based methods are a viable alternative that move the scaling concern from runtime to training time, setting a critical step towards achieving real-time planning. In this work, we present a collaborative planning strategy based on Multi-Agent Proximal Policy Optimization (MAPPO) to coordinate a team of heterogeneous robots to solve a complex target allocation and scheduling problem. We benchmark our approach against single-objective optimal solutions obtained through exhaustive search and evaluate its ability to perform online replanning in the context of a planetary exploration scenario.",
+    "pdf_url": "https://arxiv.org/pdf/2604.01213v1",
+    "published": "2026-04-01T17:53:51Z",
+    "fetched_at": "2026-04-03T00:43:54.698931"
   },
   {
-    "title": "Covertly improving intelligibility with data-driven adaptations of speech timing",
+    "title": "$\\texttt{YC-Bench}$: Benchmarking AI Agents for Long-Term Planning and Consistent Execution",
     "authors": [
-      "Paige Tuttösí",
-      "Angelica Lim",
-      "H. Henny Yeung",
-      "Yue Wang",
-      "Jean-Julien Aucouturier"
+      "Muyu He",
+      "Adit Jain",
+      "Anand Kumar",
+      "Vincent Tu",
+      "Soumyadeep Bakshi",
+      "Sachin Patro",
+      "Nazneen Rajani"
     ],
-    "abstract": "Human talkers often address listeners with language-comprehension challenges, such as hard-of-hearing or non-native adults, by globally slowing down their speech. However, it remains unclear whether this strategy actually makes speech more intelligible. Here, we take advantage of recent advancements in machine-generated speech allowing more precise control of speech rate in order to systematically examine how targeted speech-rate adjustments may improve comprehension. We first use reverse-correlation experiments to show that the temporal influence of speech rate prior to a target vowel contrast (ex. the tense-lax distinction) in fact manifests in a scissor-like pattern, with opposite effects in early versus late context windows; this pattern is remarkably stable both within individuals and across native L1-English listeners and L2-English listeners with French, Mandarin, and Japanese L1s. Second, we show that this speech rate structure not only facilitates L2 listeners' comprehension of the target vowel contrast, but that native listeners also rely on this pattern in challenging acoustic conditions. Finally, we build a data-driven text-to-speech algorithm that replicates this temporal structure on novel speech sequences. Across a variety of sentences and vowel contrasts, listeners remained unaware that such targeted slowing improved word comprehension. Strikingly, participants instead judged the common strategy of global slowing as clearer, even though it actually increased comprehension errors. Together, these results show that targeted adjustments to speech rate significantly aid intelligibility under challenging conditions, while often going unnoticed. More generally, this paper provides a data-driven methodology to improve the accessibility of machine-generated speech which can be extended to other aspects of speech comprehension and a wide variety of listeners and environments.",
-    "pdf_url": "https://arxiv.org/pdf/2603.30032v1",
-    "published": "2026-03-31T17:30:47Z",
-    "fetched_at": "2026-04-02T00:41:30.762417"
+    "abstract": "As LLM agents tackle increasingly complex tasks, a critical question is whether they can maintain strategic coherence over long horizons: planning under uncertainty, learning from delayed feedback, and adapting when early mistakes compound. We introduce $\\texttt{YC-Bench}$, a benchmark that evaluates these capabilities by tasking an agent with running a simulated startup over a one-year horizon spanning hundreds of turns. The agent must manage employees, select task contracts, and maintain profitability in a partially observable environment where adversarial clients and growing payroll create compounding consequences for poor decisions. We evaluate 12 models, both proprietary and open source, across 3 seeds each. Only three models consistently surpass the starting capital of \\$200K, with Claude Opus 4.6 achieving the highest average final funds at \\$1.27 M, followed by GLM-5 at \\$1.21 M at 11$\\times$ lower inference cost. Scratchpad usage, the sole mechanism for persisting information across context truncation, is the strongest predictor of success, and adversarial client detection is the primary failure mode, accounting for $47\\%$ of bankruptcies. Our analysis reveals that frontier models still fail through distinct failure modes such as over-parallelization, demonstrating the capability gaps for long-horizon performance. $\\texttt{YC-Bench}$ is open-source, reproducible, and configurable.",
+    "pdf_url": "https://arxiv.org/pdf/2604.01212v1",
+    "published": "2026-04-01T17:52:19Z",
+    "fetched_at": "2026-04-03T00:43:54.698965"
   }
 ]
