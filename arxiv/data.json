@@ -1,83 +1,73 @@
 [
   {
-    "title": "ActionParty: Multi-Subject Action Binding in Generative Video Games",
+    "title": "CoME-VL: Scaling Complementary Multi-Encoder Vision-Language Learning",
     "authors": [
-      "Alexander Pondaven",
-      "Ziyi Wu",
-      "Igor Gilitschenski",
-      "Philip Torr",
-      "Sergey Tulyakov",
-      "Fabio Pizzati",
-      "Aliaksandr Siarohin"
+      "Ankan Deria",
+      "Komal Kumar",
+      "Xilin He",
+      "Imran Razzak",
+      "Hisham Cholakkal",
+      "Fahad Shahbaz Khan",
+      "Salman Khan"
     ],
-    "abstract": "Recent advances in video diffusion have enabled the development of \"world models\" capable of simulating interactive environments. However, these models are largely restricted to single-agent settings, failing to control multiple agents simultaneously in a scene. In this work, we tackle a fundamental issue of action binding in existing video diffusion models, which struggle to associate specific actions with their corresponding subjects. For this purpose, we propose ActionParty, an action controllable multi-subject world model for generative video games. It introduces subject state tokens, i.e. latent variables that persistently capture the state of each subject in the scene. By jointly modeling state tokens and video latents with a spatial biasing mechanism, we disentangle global video frame rendering from individual action-controlled subject updates. We evaluate ActionParty on the Melting Pot benchmark, demonstrating the first video world model capable of controlling up to seven players simultaneously across 46 diverse environments. Our results show significant improvements in action-following accuracy and identity consistency, while enabling robust autoregressive tracking of subjects through complex interactions.",
-    "pdf_url": "https://arxiv.org/pdf/2604.02330v1",
-    "published": "2026-04-02T17:59:58Z",
-    "fetched_at": "2026-04-06T00:45:56.143558"
+    "abstract": "Recent vision-language models (VLMs) typically rely on a single vision encoder trained with contrastive image-text objectives, such as CLIP-style pretraining. While contrastive encoders are effective for cross-modal alignment and retrieval, self-supervised visual encoders often capture richer dense semantics and exhibit stronger robustness on recognition and understanding tasks. In this work, we investigate how to scale the fusion of these complementary visual representations for vision-language modeling. We propose CoME-VL: Complementary Multi-Encoder Vision-Language, a modular fusion framework that integrates a contrastively trained vision encoder with a self-supervised DINO encoder. Our approach performs representation-level fusion by (i) entropy-guided multi-layer aggregation with orthogonality-constrained projections to reduce redundancy, and (ii) RoPE-enhanced cross-attention to align heterogeneous token grids and produce compact fused visual tokens. The fused tokens can be injected into a decoder-only LLM with minimal changes to standard VLM pipelines. Extensive experiments across diverse vision-language benchmarks demonstrate that CoME-VL consistently outperforms single-encoder baselines. In particular, we observe an average improvement of 4.9% on visual understanding tasks and 5.4% on grounding tasks. Our method achieves state-of-the-art performance on RefCOCO for detection while improving over the baseline by a large margin. Finally, we conduct ablation studies on layer merging, non-redundant feature mixing, and fusion capacity to evaluate how complementary contrastive and self-supervised signals affect VLM performance.",
+    "pdf_url": "https://arxiv.org/pdf/2604.03231v1",
+    "published": "2026-04-03T17:59:51Z",
+    "fetched_at": "2026-04-07T00:44:45.812719"
   },
   {
-    "title": "Modulate-and-Map: Crossmodal Feature Mapping with Cross-View Modulation for 3D Anomaly Detection",
+    "title": "Enhancing Robustness of Federated Learning via Server Learning",
     "authors": [
-      "Alex Costanzino",
-      "Pierluigi Zama Ramirez",
-      "Giuseppe Lisanti",
-      "Luigi Di Stefano"
+      "Van Sy Mai",
+      "Kushal Chakrabarti",
+      "Richard J. La",
+      "Dipankar Maity"
     ],
-    "abstract": "We present ModMap, a natively multiview and multimodal framework for 3D anomaly detection and segmentation. Unlike existing methods that process views independently, our method draws inspiration from the crossmodal feature mapping paradigm to learn to map features across both modalities and views, while explicitly modelling view-dependent relationships through feature-wise modulation. We introduce a cross-view training strategy that leverages all possible view combinations, enabling effective anomaly scoring through multiview ensembling and aggregation. To process high-resolution 3D data, we train and publicly release a foundational depth encoder tailored to industrial datasets. Experiments on SiM3D, a recent benchmark that introduces the first multiview and multimodal setup for 3D anomaly detection and segmentation, demonstrate that ModMap attains state-of-the-art performance by surpassing previous methods by wide margins.",
-    "pdf_url": "https://arxiv.org/pdf/2604.02328v1",
-    "published": "2026-04-02T17:59:51Z",
-    "fetched_at": "2026-04-06T00:45:56.143580"
+    "abstract": "This paper explores the use of server learning for enhancing the robustness of federated learning against malicious attacks even when clients' training data are not independent and identically distributed. We propose a heuristic algorithm that uses server learning and client update filtering in combination with geometric median aggregation. We demonstrate via experiments that this approach can achieve significant improvement in model accuracy even when the fraction of malicious clients is high, even more than $50\\%$ in some cases, and the dataset utilized by the server is small and could be synthetic with its distribution not necessarily close to that of the clients' aggregated data.",
+    "pdf_url": "https://arxiv.org/pdf/2604.03226v1",
+    "published": "2026-04-03T17:51:29Z",
+    "fetched_at": "2026-04-07T00:44:45.812737"
   },
   {
-    "title": "Grounded Token Initialization for New Vocabulary in LMs for Generative Recommendation",
+    "title": "HyperCT: Low-Rank Hypernet for Unified Chest CT Analysis",
     "authors": [
-      "Daiwei Chen",
-      "Zhoutong Fu",
-      "Chengming Jiang",
-      "Haichao Zhang",
-      "Ran Zhou",
-      "Tan Wang",
-      "Chunnan Yao",
-      "Guoyao Li",
-      "Rui Cai",
-      "Yihan Cao",
-      "Ruijie Jiang",
-      "Fedor Borisyuk",
-      "Jianqiang Shen",
-      "Jingwei Wu",
-      "Ramya Korlakai Vinayak"
+      "Fengbei Liu",
+      "Sunwoo Kwak",
+      "Hao Phung",
+      "Nusrat Binta Nizam",
+      "Ilan Richter",
+      "Nir Uriel",
+      "Hadar Averbuch-Elor",
+      "Daborah Estrin",
+      "Mert R. Sabuncu"
     ],
-    "abstract": "Language models (LMs) are increasingly extended with new learnable vocabulary tokens for domain-specific tasks, such as Semantic-ID tokens in generative recommendation. The standard practice initializes these new tokens as the mean of existing vocabulary embeddings, then relies on supervised fine-tuning to learn their representations. We present a systematic analysis of this strategy: through spectral and geometric diagnostics, we show that mean initialization collapses all new tokens into a degenerate subspace, erasing inter-token distinctions that subsequent fine-tuning struggles to fully recover. These findings suggest that \\emph{token initialization} is a key bottleneck when extending LMs with new vocabularies. Motivated by this diagnosis, we propose the \\emph{Grounded Token Initialization Hypothesis}: linguistically grounding novel tokens in the pretrained embedding space before fine-tuning better enables the model to leverage its general-purpose knowledge for novel-token domains. We operationalize this hypothesis as GTI (Grounded Token Initialization), a lightweight grounding stage that, prior to fine-tuning, maps new tokens to distinct, semantically meaningful locations in the pretrained embedding space using only paired linguistic supervision. Despite its simplicity, GTI outperforms both mean initialization and existing auxiliary-task adaptation methods in the majority of evaluation settings across multiple generative recommendation benchmarks, including industry-scale and public datasets. Further analyses show that grounded embeddings produce richer inter-token structure that persists through fine-tuning, corroborating the hypothesis that initialization quality is a key bottleneck in vocabulary extension.",
-    "pdf_url": "https://arxiv.org/pdf/2604.02324v1",
-    "published": "2026-04-02T17:59:19Z",
-    "fetched_at": "2026-04-06T00:45:56.143606"
+    "abstract": "Non-contrast chest CTs offer a rich opportunity for both conventional pulmonary and opportunistic extra-pulmonary screening. While Multi-Task Learning (MTL) can unify these diverse tasks, standard hard-parameter sharing approaches are often suboptimal for modeling distinct pathologies. We propose HyperCT, a framework that dynamically adapts a Vision Transformer backbone via a Hypernetwork. To ensure computational efficiency, we integrate Low-Rank Adaptation (LoRA), allowing the model to regress task-specific low-rank weight updates rather than full parameters. Validated on a large-scale dataset of radiological and cardiological tasks, \\method{} outperforms various strong baselines, offering a unified, parameter-efficient solution for holistic patient assessment. Our code is available at https://github.com/lfb-1/HyperCT.",
+    "pdf_url": "https://arxiv.org/pdf/2604.03224v1",
+    "published": "2026-04-03T17:50:09Z",
+    "fetched_at": "2026-04-07T00:44:45.812756"
   },
   {
-    "title": "Beyond Referring Expressions: Scenario Comprehension Visual Grounding",
+    "title": "Unmixing the Crowd: Learning Mixture-to-Set Speaker Embeddings for Enrollment-Free Target Speech Extraction",
     "authors": [
-      "Ruozhen He",
-      "Nisarg A. Shah",
-      "Qihua Dong",
-      "Zilin Xiao",
-      "Jaywon Koo",
-      "Vicente Ordonez"
+      "FNU Sidharth",
+      "Meysam Asgari",
+      "Hao-Wen Dong",
+      "Dhruv Jain"
     ],
-    "abstract": "Existing visual grounding benchmarks primarily evaluate alignment between image regions and literal referring expressions, where models can often succeed by matching a prominent named category. We explore a complementary and more challenging setting of scenario-based visual grounding, where the target must be inferred from roles, intentions, and relational context rather than explicit naming. We introduce Referring Scenario Comprehension (RSC), a benchmark designed for this setting. The queries in this benchmark are paragraph-length texts that describe object roles, user goals, and contextual cues, including deliberate references to distractor objects that often require deep understanding to resolve. Each instance is annotated with interpretable difficulty tags for uniqueness, clutter, size, overlap, and position which expose distinct failure modes and support fine-grained analysis. RSC contains approximately 31k training examples, 4k in-domain test examples, and a 3k out-of-distribution split with unseen object categories. We further propose ScenGround, a curriculum reasoning method serving as a reference point for this setting, combining supervised warm-starting with difficulty-aware reinforcement learning. Experiments show that scenario-based queries expose systematic failures in current models that standard benchmarks do not reveal, and that curriculum training improves performance on challenging slices and transfers to standard benchmarks.",
-    "pdf_url": "https://arxiv.org/pdf/2604.02323v1",
-    "published": "2026-04-02T17:59:08Z",
-    "fetched_at": "2026-04-06T00:45:56.143623"
+    "abstract": "Personalized or target speech extraction (TSE) typically needs a clean enrollment -- hard to obtain in real-world crowded environments. We remove the essential need for enrollment by predicting, from the mixture itself, a small set of per-speaker embeddings that serve as the control signal for extraction. Our model maps a noisy mixture directly to a small set of candidate speaker embeddings trained to align with a strong single-speaker speaker-embedding space via permutation-invariant teacher supervision. On noisy LibriMix, the resulting embeddings form a structured and clusterable identity space, outperforming WavLM+K-means and separation-derived embeddings in standard clustering metrics. Conditioning these embeddings into multiple extraction back-ends consistently improves objective quality and intelligibility, and generalizes to real DNS-Challenge recordings.",
+    "pdf_url": "https://arxiv.org/pdf/2604.03219v1",
+    "published": "2026-04-03T17:46:17Z",
+    "fetched_at": "2026-04-07T00:44:45.812770"
   },
   {
-    "title": "Batched Contextual Reinforcement: A Task-Scaling Law for Efficient Reasoning",
+    "title": "Power one sequential tests exist for weakly compact $\\mathscr P$ against $\\mathscr P^c$",
     "authors": [
-      "Bangji Yang",
-      "Hongbo Ma",
-      "Jiajun Fan",
-      "Ge Liu"
+      "Ashwin Ram",
+      "Aaditya Ramdas"
     ],
-    "abstract": "Large Language Models employing Chain-of-Thought reasoning achieve strong performance but suffer from excessive token consumption that inflates inference costs. Existing efficiency methods such as explicit length penalties, difficulty estimators, or multi-stage curricula either degrade reasoning quality or require complex training pipelines. We introduce Batched Contextual Reinforcement, a minimalist, single-stage training paradigm that unlocks efficient reasoning through a simple structural modification: training the model to solve N problems simultaneously within a shared context window, rewarded purely by per-instance accuracy. This formulation creates an implicit token budget that yields several key findings: (1) We identify a novel task-scaling law: as the number of concurrent problems N increases during inference, per-problem token usage decreases monotonically while accuracy degrades far more gracefully than baselines, establishing N as a controllable throughput dimension. (2) BCR challenges the traditional accuracy-efficiency trade-off by demonstrating a \"free lunch\" phenomenon at standard single-problem inference. Across both 1.5B and 4B model families, BCR reduces token usage by 15.8% to 62.6% while consistently maintaining or improving accuracy across five major mathematical benchmarks. (3) Qualitative analyses reveal emergent self-regulated efficiency, where models autonomously eliminate redundant metacognitive loops without explicit length supervision. (4) Crucially, we empirically demonstrate that implicit budget constraints successfully circumvent the adversarial gradients and catastrophic optimization collapse inherent to explicit length penalties, offering a highly stable, constraint-based alternative for length control. These results prove BCR practical, showing simple structural incentives unlock latent high-density reasoning in LLMs.",
-    "pdf_url": "https://arxiv.org/pdf/2604.02322v1",
-    "published": "2026-04-02T17:58:50Z",
-    "fetched_at": "2026-04-06T00:45:56.143637"
+    "abstract": "Suppose we observe data from a distribution $P$ and we wish to test the composite null hypothesis that $P\\in\\mathscr P$ against a composite alternative $P\\in \\mathscr Q\\subseteq \\mathscr P^c$. Herbert Robbins and coauthors pointed out around 1970 that, while no batch test can have a level $α\\in(0,1)$ and power equal to one, sequential tests can be constructed with this fantastic property. Since then, and especially in the last decade, a plethora of sequential tests have been developed for a wide variety of settings. However, the literature has not yet provided a clean and general answer as to when such power-one sequential tests exist. This paper provides a remarkably general sufficient condition (that we also prove is not necessary). Focusing on i.i.d. laws in Polish spaces without any further restriction, we show that there exists a level-$α$ sequential test for any weakly compact $\\mathscr P$, that is power-one against $\\mathscr P^c$ (or any subset thereof). We show how to aggregate such tests into an $e$-process for $\\mathscr P$ that increases to infinity under $\\mathscr P^c$. We conclude by building an $e$-process that is asymptotically relatively growth rate optimal against $\\mathscr P^c$, an extremely powerful result.",
+    "pdf_url": "https://arxiv.org/pdf/2604.03218v1",
+    "published": "2026-04-03T17:45:42Z",
+    "fetched_at": "2026-04-07T00:44:45.812782"
   }
 ]
