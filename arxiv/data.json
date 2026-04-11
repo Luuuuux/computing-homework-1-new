@@ -1,83 +1,89 @@
 [
   {
-    "title": "Fast Spatial Memory with Elastic Test-Time Training",
+    "title": "GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics",
     "authors": [
-      "Ziqiao Ma",
-      "Xueyang Yu",
-      "Haoyu Zhen",
-      "Yuncong Yang",
-      "Joyce Chai",
-      "Chuang Gan"
+      "Jiaxin Wang",
+      "Dongxin Lyu",
+      "Zeyu Cai",
+      "Zhiyang Dou",
+      "Cheng Lin",
+      "Anpei Chen",
+      "Yuliang Xiu"
     ],
-    "abstract": "Large Chunk Test-Time Training (LaCT) has shown strong performance on long-context 3D reconstruction, but its fully plastic inference-time updates remain vulnerable to catastrophic forgetting and overfitting. As a result, LaCT is typically instantiated with a single large chunk spanning the full input sequence, falling short of the broader goal of handling arbitrarily long sequences in a single pass. We propose Elastic Test-Time Training inspired by elastic weight consolidation, that stabilizes LaCT fast-weight updates with a Fisher-weighted elastic prior around a maintained anchor state. The anchor evolves as an exponential moving average of past fast weights to balance stability and plasticity. Based on this updated architecture, we introduce Fast Spatial Memory (FSM), an efficient and scalable model for 4D reconstruction that learns spatiotemporal representations from long observation sequences and renders novel view-time combinations. We pre-trained FSM on large-scale curated 3D/4D data to capture the dynamics and semantics of complex spatial environments. Extensive experiments show that FSM supports fast adaptation over long sequences and delivers high-quality 3D/4D reconstruction with smaller chunks and mitigating the camera-interpolation shortcut. Overall, we hope to advance LaCT beyond the bounded single-chunk setting toward robust multi-chunk adaptation, a necessary step for generalization to genuinely longer sequences, while substantially alleviating the activation-memory bottleneck.",
-    "pdf_url": "https://arxiv.org/pdf/2604.07350v1",
-    "published": "2026-04-08T17:59:48Z",
-    "fetched_at": "2026-04-10T00:45:14.233690"
+    "abstract": "Free-form bones, that conform closely to the surface, can effectively capture non-rigid deformations, but lack a kinematic structure necessary for intuitive control. Thus, we propose a Scaffold-Skin Rigging System, termed \"Skelebones\", with three key steps: (1) Bones: compress temporally-consistent deformable Gaussians into free-form bones, approximating non-rigid surface deformations; (2) Skeleton: extract a Mean Curvature Skeleton from canonical Gaussians and refine it temporally, ensuring a category-agnostic, motion-adaptive, and topology-correct kinematic structure; (3) Binding: bind the skeleton and bones via non-parametric partwise motion matching (PartMM), synthesizing novel bone motions by matching, retrieving, and blending existing ones. Collectively, these three steps enable us to compress the Level of Dynamics of 4D shapes into compact skelebones that are both controllable and expressive. We validate our approach on both synthetic and real-world datasets, achieving significant improvements in reanimation performance across unseen poses-with 17.3% PSNR gains over Linear Blend Skinning (LBS) and 21.7% over Bag-of-Bones (BoB)-while maintaining excellent reconstruction fidelity, particularly for characters exhibiting complex non-rigid surface dynamics. Our Partwise Motion Matching algorithm demonstrates strong generalization to both Gaussian and mesh representations, especially under low-data regime (~1000 frames), achieving 48.4% RMSE improvement over robust LBS and outperforming GRU- and MLP-based learning methods by >20%. Code will be made publicly available for research purposes at cookmaker.cn/gaussianimate.",
+    "pdf_url": "https://arxiv.org/pdf/2604.08547v1",
+    "published": "2026-04-09T17:59:59Z",
+    "fetched_at": "2026-04-11T00:42:39.981324"
   },
   {
-    "title": "MoRight: Motion Control Done Right",
+    "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
     "authors": [
-      "Shaowei Liu",
-      "Xuanchi Ren",
-      "Tianchang Shen",
-      "Huan Ling",
-      "Saurabh Gupta",
-      "Shenlong Wang",
-      "Sanja Fidler",
-      "Jun Gao"
+      "Shilin Yan",
+      "Jintao Tong",
+      "Hongwei Xue",
+      "Xiaojun Tang",
+      "Yangyang Wang",
+      "Kunyu Shi",
+      "Guannan Zhang",
+      "Ruixuan Li",
+      "Yixiong Zou"
     ],
-    "abstract": "Generating motion-controlled videos--where user-specified actions drive physically plausible scene dynamics under freely chosen viewpoints--demands two capabilities: (1) disentangled motion control, allowing users to separately control the object motion and adjust camera viewpoint; and (2) motion causality, ensuring that user-driven actions trigger coherent reactions from other objects rather than merely displacing pixels. Existing methods fall short on both fronts: they entangle camera and object motion into a single tracking signal and treat motion as kinematic displacement without modeling causal relationships between object motion. We introduce MoRight, a unified framework that addresses both limitations through disentangled motion modeling. Object motion is specified in a canonical static-view and transferred to an arbitrary target camera viewpoint via temporal cross-view attention, enabling disentangled camera and object control. We further decompose motion into active (user-driven) and passive (consequence) components, training the model to learn motion causality from data. At inference, users can either supply active motion and MoRight predicts consequences (forward reasoning), or specify desired passive outcomes and MoRight recovers plausible driving actions (inverse reasoning), all while freely adjusting the camera viewpoint. Experiments on three benchmarks demonstrate state-of-the-art performance in generation quality, motion controllability, and interaction awareness.",
-    "pdf_url": "https://arxiv.org/pdf/2604.07348v1",
-    "published": "2026-04-08T17:59:22Z",
-    "fetched_at": "2026-04-10T00:45:14.233718"
+    "abstract": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to arbitrate between leveraging internal knowledge and querying external utilities. Consequently, they frequently fall prey to blind tool invocation, resorting to reflexive tool execution even when queries are resolvable from the raw visual context. This pathological behavior precipitates severe latency bottlenecks and injects extraneous noise that derails sound reasoning. Existing reinforcement learning protocols attempt to mitigate this via a scalarized reward that penalizes tool usage. Yet, this coupled formulation creates an irreconcilable optimization dilemma: an aggressive penalty suppresses essential tool use, whereas a mild penalty is entirely subsumed by the variance of the accuracy reward during advantage normalization, rendering it impotent against tool overuse. To transcend this bottleneck, we propose HDPO, a framework that reframes tool efficiency from a competing scalar objective to a strictly conditional one. By eschewing reward scalarization, HDPO maintains two orthogonal optimization channels: an accuracy channel that maximizes task correctness, and an efficiency channel that enforces execution economy exclusively within accurate trajectories via conditional advantage estimation. This decoupled architecture naturally induces a cognitive curriculum-compelling the agent to first master task resolution before refining its self-reliance. Extensive evaluations demonstrate that our resulting model, Metis, reduces tool invocations by orders of magnitude while simultaneously elevating reasoning accuracy.",
+    "pdf_url": "https://arxiv.org/pdf/2604.08545v1",
+    "published": "2026-04-09T17:59:57Z",
+    "fetched_at": "2026-04-11T00:42:39.981350"
   },
   {
-    "title": "Measurement of Generative AI Workload Power Profiles for Whole-Facility Data Center Infrastructure Planning",
+    "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
     "authors": [
-      "Roberto Vercellino",
-      "Jared Willard",
-      "Gustavo Campos",
-      "Weslley da Silva Pereira",
-      "Olivia Hull",
-      "Matthew Selensky",
-      "Juliane Mueller"
+      "Yunsong Zhou",
+      "Hangxu Liu",
+      "Xuekun Jiang",
+      "Xing Shen",
+      "Yuanzhen Zhou",
+      "Hui Wang",
+      "Baole Fang",
+      "Yang Tian",
+      "Mulin Yu",
+      "Qiaojun Yu",
+      "Li Ma",
+      "Hengjie Li",
+      "Hanqing Wang",
+      "Jia Zeng",
+      "Jiangmiao Pang"
     ],
-    "abstract": "The rapid growth of generative artificial intelligence (AI) has introduced unprecedented computational demands, driving significant increases in the energy footprint of data centers. However, existing power consumption data is largely proprietary and reported at varying resolutions, creating challenges for estimating whole-facility energy use and planning infrastructure. In this work, we present a methodology that bridges this gap by linking high-resolution workload power measurements to whole-facility energy demand. Using NLR's high-performance computing data center equipped with NVIDIA H100 GPUs, we measure power consumption of AI workloads at 0.1-second resolution for AI training, fine-tuning and inference jobs. Workloads are characterized using MLCommons benchmarks for model training and fine-tuning, and vLLM benchmarks for inference, enabling reproducible and standardized workload profiling. The dataset of power consumption profiles is made publicly available. These power profiles are then scaled to the whole-facility-level using a bottom-up, event-driven, data center energy model. The resulting whole-facility energy profiles capture realistic temporal fluctuations driven by AI workloads and user-behavior, and can be used to inform infrastructure planning for grid connection, on-site energy generation, and distributed microgrids.",
-    "pdf_url": "https://arxiv.org/pdf/2604.07345v1",
-    "published": "2026-04-08T17:56:41Z",
-    "fetched_at": "2026-04-10T00:45:14.233736"
+    "abstract": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Although simulation promises relief from the cost of real-world data acquisition, prevailing sim-to-real pipelines remain rooted in rigid-body abstractions, producing mismatched geometry, fragile soft dynamics, and motion primitives poorly suited for cloth interaction. We posit that simulation fails not for being synthetic, but for being ungrounded. To address this, we introduce SIM1, a physics-aligned real-to-sim-to-real data engine that grounds simulation in the physical world. Given limited demonstrations, the system digitizes scenes into metric-consistent twins, calibrates deformable dynamics through elastic modeling, and expands behaviors via diffusion-based trajectory generation with quality filtering. This pipeline transforms sparse observations into scaled synthetic supervision with near-demonstration fidelity. Experiments show that policies trained on purely synthetic data achieve parity with real-data baselines at a 1:15 equivalence ratio, while delivering 90% zero-shot success and 50% generalization gains in real-world deployment. These results validate physics-aligned simulation as scalable supervision for deformable manipulation and a practical pathway for data-efficient policy learning.",
+    "pdf_url": "https://arxiv.org/pdf/2604.08544v1",
+    "published": "2026-04-09T17:59:52Z",
+    "fetched_at": "2026-04-11T00:42:39.981376"
   },
   {
-    "title": "NIRVANA: A Comprehensive Dataset for Reproducing How Students Use Generative AI for Essay Writing",
+    "title": "E-3DPSM: A State Machine for Event-Based Egocentric 3D Human Pose Estimation",
     "authors": [
-      "Andrew Jelson",
-      "Daniel Manesh",
-      "Sangwook Lee",
-      "Alice Jang",
-      "Daniel Dunlap",
-      "Tamara Maddox",
-      "Young-Ho Kim",
-      "Sang Won Lee"
+      "Mayur Deshmukh",
+      "Hiroyasu Akada",
+      "Helge Rhodin",
+      "Christian Theobalt",
+      "Vladislav Golyanik"
     ],
-    "abstract": "With the rapid adoption of AI writing assistants in education, educators and researchers need empirical evidence to understand the impact on student writing and inform effective pedagogical design. Despite widespread use, we lack systematic understanding of how students engage with these tools during authentic writing tasks: when they seek assistance, what they ask, and how they incorporate AI-generated content into their essays. This gap limits evidence-based policy development and rigorous evaluation of generative AI's learning effects. To address this gap, we introduce NIRVANA, a dataset capturing how university students use generative AI while writing an analytical essay. The dataset includes 77 students who completed an essay task with access to ChatGPT, recording keystroke-level writing behavior, full ChatGPT conversation histories, and all text copied from ChatGPT, enabling a complete reconstruction of the writing process and revealing how AI assistance shapes student work. Our analysis identifies key behavioral patterns, including variation in ChatGPT query frequency and its relationship to essay characteristics such as length and readability. We identify four writing profiles based on students' contribution and revision patterns: Lead Authors, Collaborators, Drafters, and Vibe Writers. To support deeper investigation, we developed a replay interface that reconstructs the writing process; qualitative analysis of sampled replays demonstrates how this tool enables systematic examination of student-AI interactions.",
-    "pdf_url": "https://arxiv.org/pdf/2604.07344v1",
-    "published": "2026-04-08T17:56:20Z",
-    "fetched_at": "2026-04-10T00:45:14.233754"
+    "abstract": "Event cameras offer multiple advantages in monocular egocentric 3D human pose estimation from head-mounted devices, such as millisecond temporal resolution, high dynamic range, and negligible motion blur. Existing methods effectively leverage these properties, but suffer from low 3D estimation accuracy, insufficient in many applications (e.g., immersive VR/AR). This is due to the design not being fully tailored towards event streams (e.g., their asynchronous and continuous nature), leading to high sensitivity to self-occlusions and temporal jitter in the estimates. This paper rethinks the setting and introduces E-3DPSM, an event-driven continuous pose state machine for event-based egocentric 3D human pose estimation. E-3DPSM aligns continuous human motion with fine-grained event dynamics; it evolves latent states and predicts continuous changes in 3D joint positions associated with observed events, which are fused with direct 3D human pose predictions, leading to stable and drift-free final 3D pose reconstructions. E-3DPSM runs in real-time at 80 Hz on a single workstation and sets a new state of the art in experiments on two benchmarks, improving accuracy by up to 19% (MPJPE) and temporal stability by up to 2.7x. See our project page for the source code and trained models.",
+    "pdf_url": "https://arxiv.org/pdf/2604.08543v1",
+    "published": "2026-04-09T17:59:52Z",
+    "fetched_at": "2026-04-11T00:42:39.981392"
   },
   {
-    "title": "Personalized RewardBench: Evaluating Reward Models with Human Aligned Personalization",
+    "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
     "authors": [
-      "Qiyao Ma",
-      "Dechen Gao",
-      "Rui Cai",
-      "Boqi Zhao",
-      "Hanchu Zhou",
-      "Junshan Zhang",
-      "Zhe Zhao"
+      "Wenbo Hu",
+      "Xin Chen",
+      "Yan Gao-Tian",
+      "Yihe Deng",
+      "Nanyun Peng",
+      "Kai-Wei Chang"
     ],
-    "abstract": "Pluralistic alignment has emerged as a critical frontier in the development of Large Language Models (LLMs), with reward models (RMs) serving as a central mechanism for capturing diverse human values. While benchmarks for general response quality are prevalent, evaluating how well reward models account for individual user preferences remains an open challenge. To bridge this gap, we introduce Personalized RewardBench, a novel benchmark designed to rigorously assess reward models' capacity to model personalized preferences. We construct chosen and rejected response pairs based on strict adherence to (or violation of) user-specific rubrics, ensuring that preference distinctions are uniquely tailored to the individual. In particular, human evaluations confirm that the primary discriminative factor between pairs is strictly personal preference, with both responses maintaining high general quality (e.g., correctness, relevance and helpfulness). Extensive testing reveals that existing state-of-the-art reward models struggle significantly with personalization, peaking at an accuracy of just 75.94%. Crucially, because an effective reward model benchmark should predict a reward model's performance on downstream tasks, we conduct experiments demonstrating that our benchmark exhibits a significantly higher correlation with downstream performance in both Best-of-N (BoN) sampling and Proximal Policy Optimization (PPO) compared to existing baselines. These findings establish Personalized RewardBench as a robust and accurate proxy for evaluating reward models' performance in downstream applications.",
-    "pdf_url": "https://arxiv.org/pdf/2604.07343v1",
-    "published": "2026-04-08T17:55:00Z",
-    "fetched_at": "2026-04-10T00:45:14.233771"
+    "abstract": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
+    "pdf_url": "https://arxiv.org/pdf/2604.08539v1",
+    "published": "2026-04-09T17:59:39Z",
+    "fetched_at": "2026-04-11T00:42:39.981408"
   }
 ]
