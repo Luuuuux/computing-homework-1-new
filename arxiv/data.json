@@ -1,89 +1,78 @@
 [
   {
-    "title": "GaussiAnimate: Reconstruct and Rig Animatable Categories with Level of Dynamics",
+    "title": "Large Language Models Generate Harmful Content Using a Distinct, Unified Mechanism",
     "authors": [
-      "Jiaxin Wang",
-      "Dongxin Lyu",
-      "Zeyu Cai",
-      "Zhiyang Dou",
-      "Cheng Lin",
-      "Anpei Chen",
-      "Yuliang Xiu"
+      "Hadas Orgad",
+      "Boyi Wei",
+      "Kaden Zheng",
+      "Martin Wattenberg",
+      "Peter Henderson",
+      "Seraphina Goldfarb-Tarrant",
+      "Yonatan Belinkov"
     ],
-    "abstract": "Free-form bones, that conform closely to the surface, can effectively capture non-rigid deformations, but lack a kinematic structure necessary for intuitive control. Thus, we propose a Scaffold-Skin Rigging System, termed \"Skelebones\", with three key steps: (1) Bones: compress temporally-consistent deformable Gaussians into free-form bones, approximating non-rigid surface deformations; (2) Skeleton: extract a Mean Curvature Skeleton from canonical Gaussians and refine it temporally, ensuring a category-agnostic, motion-adaptive, and topology-correct kinematic structure; (3) Binding: bind the skeleton and bones via non-parametric partwise motion matching (PartMM), synthesizing novel bone motions by matching, retrieving, and blending existing ones. Collectively, these three steps enable us to compress the Level of Dynamics of 4D shapes into compact skelebones that are both controllable and expressive. We validate our approach on both synthetic and real-world datasets, achieving significant improvements in reanimation performance across unseen poses-with 17.3% PSNR gains over Linear Blend Skinning (LBS) and 21.7% over Bag-of-Bones (BoB)-while maintaining excellent reconstruction fidelity, particularly for characters exhibiting complex non-rigid surface dynamics. Our Partwise Motion Matching algorithm demonstrates strong generalization to both Gaussian and mesh representations, especially under low-data regime (~1000 frames), achieving 48.4% RMSE improvement over robust LBS and outperforming GRU- and MLP-based learning methods by >20%. Code will be made publicly available for research purposes at cookmaker.cn/gaussianimate.",
-    "pdf_url": "https://arxiv.org/pdf/2604.08547v1",
-    "published": "2026-04-09T17:59:59Z",
-    "fetched_at": "2026-04-13T00:49:04.733037"
+    "abstract": "Large language models (LLMs) undergo alignment training to avoid harmful behaviors, yet the resulting safeguards remain brittle: jailbreaks routinely bypass them, and fine-tuning on narrow domains can induce ``emergent misalignment'' that generalizes broadly. Whether this brittleness reflects a fundamental lack of coherent internal organization for harmfulness remains unclear. Here we use targeted weight pruning as a causal intervention to probe the internal organization of harmfulness in LLMs. We find that harmful content generation depends on a compact set of weights that are general across harm types and distinct from benign capabilities. Aligned models exhibit a greater compression of harm generation weights than unaligned counterparts, indicating that alignment reshapes harmful representations internally--despite the brittleness of safety guardrails at the surface level. This compression explains emergent misalignment: if weights of harmful capabilities are compressed, fine-tuning that engages these weights in one domain can trigger broad misalignment. Consistent with this, pruning harm generation weights in a narrow domain substantially reduces emergent misalignment. Notably, LLMs harmful generation capability is dissociated from how they recognize and explain such content. Together, these results reveal a coherent internal structure for harmfulness in LLMs that may serve as a foundation for more principled approaches to safety.",
+    "pdf_url": "https://arxiv.org/pdf/2604.09544v1",
+    "published": "2026-04-10T17:58:31Z",
+    "fetched_at": "2026-04-14T00:49:32.545522"
   },
   {
-    "title": "Act Wisely: Cultivating Meta-Cognitive Tool Use in Agentic Multimodal Models",
+    "title": "ANTIC: Adaptive Neural Temporal In-situ Compressor",
     "authors": [
-      "Shilin Yan",
-      "Jintao Tong",
-      "Hongwei Xue",
-      "Xiaojun Tang",
-      "Yangyang Wang",
-      "Kunyu Shi",
-      "Guannan Zhang",
-      "Ruixuan Li",
-      "Yixiong Zou"
+      "Sandeep S. Cranganore",
+      "Andrei Bodnar",
+      "Gianluca Galleti",
+      "Fabian Paischer",
+      "Johannes Brandstetter"
     ],
-    "abstract": "The advent of agentic multimodal models has empowered systems to actively interact with external environments. However, current agents suffer from a profound meta-cognitive deficit: they struggle to arbitrate between leveraging internal knowledge and querying external utilities. Consequently, they frequently fall prey to blind tool invocation, resorting to reflexive tool execution even when queries are resolvable from the raw visual context. This pathological behavior precipitates severe latency bottlenecks and injects extraneous noise that derails sound reasoning. Existing reinforcement learning protocols attempt to mitigate this via a scalarized reward that penalizes tool usage. Yet, this coupled formulation creates an irreconcilable optimization dilemma: an aggressive penalty suppresses essential tool use, whereas a mild penalty is entirely subsumed by the variance of the accuracy reward during advantage normalization, rendering it impotent against tool overuse. To transcend this bottleneck, we propose HDPO, a framework that reframes tool efficiency from a competing scalar objective to a strictly conditional one. By eschewing reward scalarization, HDPO maintains two orthogonal optimization channels: an accuracy channel that maximizes task correctness, and an efficiency channel that enforces execution economy exclusively within accurate trajectories via conditional advantage estimation. This decoupled architecture naturally induces a cognitive curriculum-compelling the agent to first master task resolution before refining its self-reliance. Extensive evaluations demonstrate that our resulting model, Metis, reduces tool invocations by orders of magnitude while simultaneously elevating reasoning accuracy.",
-    "pdf_url": "https://arxiv.org/pdf/2604.08545v1",
-    "published": "2026-04-09T17:59:57Z",
-    "fetched_at": "2026-04-13T00:49:04.733067"
+    "abstract": "The persistent storage requirements for high-resolution, spatiotemporally evolving fields governed by large-scale and high-dimensional partial differential equations (PDEs) have reached the petabyte-to-exabyte scale. Transient simulations modeling Navier-Stokes equations, magnetohydrodynamics, plasma physics, or binary black hole mergers generate data volumes that are prohibitive for modern high-performance computing (HPC) infrastructures. To address this bottleneck, we introduce ANTIC (Adaptive Neural Temporal in situ Compressor), an end-to-end in situ compression pipeline. ANTIC consists of an adaptive temporal selector tailored to high-dimensional physics that identifies and filters informative snapshots at simulation time, combined with a spatial neural compression module based on continual fine-tuning that learns residual updates between adjacent snapshots using neural fields. By operating in a single streaming pass, ANTIC enables a combined compression of temporal and spatial components and effectively alleviates the need for explicit on-disk storage of entire time-evolved trajectories. Experimental results demonstrate how storage reductions of several orders of magnitude relate to physics accuracy.",
+    "pdf_url": "https://arxiv.org/pdf/2604.09543v1",
+    "published": "2026-04-10T17:58:16Z",
+    "fetched_at": "2026-04-14T00:49:32.545563"
   },
   {
-    "title": "SIM1: Physics-Aligned Simulator as Zero-Shot Data Scaler in Deformable Worlds",
+    "title": "Explicit Block Encoding of Difference-of-Gaussian Operators on a Periodic Grid",
     "authors": [
-      "Yunsong Zhou",
-      "Hangxu Liu",
-      "Xuekun Jiang",
-      "Xing Shen",
-      "Yuanzhen Zhou",
-      "Hui Wang",
-      "Baole Fang",
-      "Yang Tian",
-      "Mulin Yu",
-      "Qiaojun Yu",
-      "Li Ma",
-      "Hengjie Li",
-      "Hanqing Wang",
-      "Jia Zeng",
-      "Jiangmiao Pang"
+      "Jishnu Mahmud",
+      "John Winship",
+      "Tom Lash",
+      "James Ostrowski",
+      "Rebekah Herrman"
     ],
-    "abstract": "Robotic manipulation with deformable objects represents a data-intensive regime in embodied learning, where shape, contact, and topology co-evolve in ways that far exceed the variability of rigids. Although simulation promises relief from the cost of real-world data acquisition, prevailing sim-to-real pipelines remain rooted in rigid-body abstractions, producing mismatched geometry, fragile soft dynamics, and motion primitives poorly suited for cloth interaction. We posit that simulation fails not for being synthetic, but for being ungrounded. To address this, we introduce SIM1, a physics-aligned real-to-sim-to-real data engine that grounds simulation in the physical world. Given limited demonstrations, the system digitizes scenes into metric-consistent twins, calibrates deformable dynamics through elastic modeling, and expands behaviors via diffusion-based trajectory generation with quality filtering. This pipeline transforms sparse observations into scaled synthetic supervision with near-demonstration fidelity. Experiments show that policies trained on purely synthetic data achieve parity with real-data baselines at a 1:15 equivalence ratio, while delivering 90% zero-shot success and 50% generalization gains in real-world deployment. These results validate physics-aligned simulation as scalable supervision for deformable manipulation and a practical pathway for data-efficient policy learning.",
-    "pdf_url": "https://arxiv.org/pdf/2604.08544v1",
-    "published": "2026-04-09T17:59:52Z",
-    "fetched_at": "2026-04-13T00:49:04.733094"
+    "abstract": "The Difference-of-Gaussian (DoG) is a widely used operator across applications, including image processing (feature and edge detection), quantum machine learning, and finite-difference methods (approximations of the Laplacian-of-Gaussian). In this paper, we construct an explicit quantum block encoding of the DoG operator on a periodic grid, exploiting its natural probabilistic structure. The central observation is that the DoG admits a natural decomposition to two normalized Gaussian distributions, each preparable by explicit and efficient circuits, with the negation encoded using a single Pauli-$Z$ gate on a branch-indicator qubit. This enables the operator's block encoding to be directly mapped to the Linear Combination of Unitaries framework without requiring signed amplitude loading, quantum random-access memory, or any other black-box oracles. The proposed method achieves a constant subnormalization factor $λ= 2$ independent of the grid size $N$, the spatial dimension $D$, and the stencil width. Additionally, we show that the DoG operator is diagonalized by the discrete Fourier basis, which allows us to derive an exact closed-form expression for the block-encoding success probability in terms of the input signal's power spectrum, weighted by the operator's transfer function. Finally, we prove that the expression reduces to $O(h^4)$ scaling with respect to grid spacing $h$ as the periodic grid becomes finer. This implementation provides an explicit construction method for a tunable, wide-stencil bandpass filter whose frequency response is controlled by two Gaussian scale parameters.",
+    "pdf_url": "https://arxiv.org/pdf/2604.09538v1",
+    "published": "2026-04-10T17:55:51Z",
+    "fetched_at": "2026-04-14T00:49:32.545580"
   },
   {
-    "title": "E-3DPSM: A State Machine for Event-Based Egocentric 3D Human Pose Estimation",
+    "title": "Case-Grounded Evidence Verification: A Framework for Constructing Evidence-Sensitive Supervision",
     "authors": [
-      "Mayur Deshmukh",
-      "Hiroyasu Akada",
-      "Helge Rhodin",
-      "Christian Theobalt",
-      "Vladislav Golyanik"
+      "Soroosh Tayebi Arasteh",
+      "Mehdi Joodaki",
+      "Mahshad Lotfinia",
+      "Sven Nebelung",
+      "Daniel Truhn"
     ],
-    "abstract": "Event cameras offer multiple advantages in monocular egocentric 3D human pose estimation from head-mounted devices, such as millisecond temporal resolution, high dynamic range, and negligible motion blur. Existing methods effectively leverage these properties, but suffer from low 3D estimation accuracy, insufficient in many applications (e.g., immersive VR/AR). This is due to the design not being fully tailored towards event streams (e.g., their asynchronous and continuous nature), leading to high sensitivity to self-occlusions and temporal jitter in the estimates. This paper rethinks the setting and introduces E-3DPSM, an event-driven continuous pose state machine for event-based egocentric 3D human pose estimation. E-3DPSM aligns continuous human motion with fine-grained event dynamics; it evolves latent states and predicts continuous changes in 3D joint positions associated with observed events, which are fused with direct 3D human pose predictions, leading to stable and drift-free final 3D pose reconstructions. E-3DPSM runs in real-time at 80 Hz on a single workstation and sets a new state of the art in experiments on two benchmarks, improving accuracy by up to 19% (MPJPE) and temporal stability by up to 2.7x. See our project page for the source code and trained models.",
-    "pdf_url": "https://arxiv.org/pdf/2604.08543v1",
-    "published": "2026-04-09T17:59:52Z",
-    "fetched_at": "2026-04-13T00:49:04.733110"
+    "abstract": "Evidence-grounded reasoning requires more than attaching retrieved text to a prediction: a model should make decisions that depend on whether the provided evidence supports the target claim. In practice, this often fails because supervision is weak, evidence is only loosely tied to the claim, and evaluation does not test evidence dependence directly. We introduce case-grounded evidence verification, a general framework in which a model receives a local case context, external evidence, and a structured claim, and must decide whether the evidence supports the claim for that case. Our key contribution is a supervision construction procedure that generates explicit support examples together with semantically controlled non-support examples, including counterfactual wrong-state and topic-related negatives, without manual evidence annotation. We instantiate the framework in radiology and train a standard verifier on the resulting support task. The learned verifier substantially outperforms both case-only and evidence-only baselines, remains strong under correct evidence, and collapses when evidence is removed or swapped, indicating genuine evidence dependence. This behavior transfers across unseen evidence articles and an external case distribution, though performance degrades under evidence-source shift and remains sensitive to backbone choice. Overall, the results suggest that a major bottleneck in evidence grounding is not only model capacity, but the lack of supervision that encodes the causal role of evidence.",
+    "pdf_url": "https://arxiv.org/pdf/2604.09537v1",
+    "published": "2026-04-10T17:55:38Z",
+    "fetched_at": "2026-04-14T00:49:32.545596"
   },
   {
-    "title": "OpenVLThinkerV2: A Generalist Multimodal Reasoning Model for Multi-domain Visual Tasks",
+    "title": "Seeing is Believing: Robust Vision-Guided Cross-Modal Prompt Learning under Label Noise",
     "authors": [
-      "Wenbo Hu",
-      "Xin Chen",
-      "Yan Gao-Tian",
-      "Yihe Deng",
-      "Nanyun Peng",
-      "Kai-Wei Chang"
+      "Zibin Geng",
+      "Xuefeng Jiang",
+      "Jia Li",
+      "Zheng Li",
+      "Tian Wen",
+      "Lvhua Wu",
+      "Sheng Sun",
+      "Yuwei Wang",
+      "Min Liu"
     ],
-    "abstract": "Group Relative Policy Optimization (GRPO) has emerged as the de facto Reinforcement Learning (RL) objective driving recent advancements in Multimodal Large Language Models. However, extending this success to open-source multimodal generalist models remains heavily constrained by two primary challenges: the extreme variance in reward topologies across diverse visual tasks, and the inherent difficulty of balancing fine-grained perception with multi-step reasoning capabilities. To address these issues, we introduce Gaussian GRPO (G$^2$RPO), a novel RL training objective that replaces standard linear scaling with non-linear distributional matching. By mathematically forcing the advantage distribution of any given task to strictly converge to a standard normal distribution, $\\mathcal{N}(0,1)$, G$^2$RPO theoretically ensures inter-task gradient equity, mitigates vulnerabilities to heavy-tail outliers, and offers symmetric update for positive and negative rewards. Leveraging the enhanced training stability provided by G$^2$RPO, we introduce two task-level shaping mechanisms to seamlessly balance perception and reasoning. First, response length shaping dynamically elicits extended reasoning chains for complex queries while enforce direct outputs to bolster visual grounding. Second, entropy shaping tightly bounds the model's exploration zone, effectively preventing both entropy collapse and entropy explosion. Integrating these methodologies, we present OpenVLThinkerV2, a highly robust, general-purpose multimodal model. Extensive evaluations across 18 diverse benchmarks demonstrate its superior performance over strong open-source and leading proprietary frontier models.",
-    "pdf_url": "https://arxiv.org/pdf/2604.08539v1",
-    "published": "2026-04-09T17:59:39Z",
-    "fetched_at": "2026-04-13T00:49:04.733127"
+    "abstract": "Prompt learning is a parameter-efficient approach for vision-language models, yet its robustness under label noise is less investigated. Visual content contains richer and more reliable semantic information, which remains more robust under label noise. However, the prompt itself is highly susceptible to label noise. Motivated by this intuition, we propose VisPrompt, a lightweight and robust vision-guided prompt learning framework for noisy-label settings. Specifically, we exploit a cross-modal attention mechanism to reversely inject visual semantics into prompt representations. This enables the prompt tokens to selectively aggregate visual information relevant to the current sample, thereby improving robustness by anchoring prompt learning to stable instance-level visual evidence and reducing the influence of noisy supervision. To address the instability caused by using the same way of injecting visual information for all samples, despite differences in the quality of their visual cues, we further introduce a lightweight conditional modulation mechanism to adaptively control the strength of visual information injection, which strikes a more robust balance between text-side semantic priors and image-side instance evidence. The proposed framework effectively suppresses the noise-induced disturbances, reduce instability in prompt updates, and alleviate memorization of mislabeled samples. VisPrompt significantly improves robustness while keeping the pretrained VLM backbone frozen and introducing only a small amount of additional trainable parameters. Extensive experiments under synthetic and real-world label noise demonstrate that VisPrompt generally outperforms existing baselines on seven benchmark datasets and achieves stronger robustness. Our code is publicly available at https://github.com/gezbww/Vis_Prompt.",
+    "pdf_url": "https://arxiv.org/pdf/2604.09532v1",
+    "published": "2026-04-10T17:48:56Z",
+    "fetched_at": "2026-04-14T00:49:32.545616"
   }
 ]
