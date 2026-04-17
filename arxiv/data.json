@@ -1,1 +1,86 @@
-[]
+[
+  {
+    "title": "From $P(y|x)$ to $P(y)$: Investigating Reinforcement Learning in Pre-train Space",
+    "authors": [
+      "Yuqiao Tan",
+      "Minzheng Wang",
+      "Bo Liu",
+      "Zichen Liu",
+      "Tian Liang",
+      "Shizhu He",
+      "Jun Zhao",
+      "Kang Liu"
+    ],
+    "abstract": "While reinforcement learning with verifiable rewards (RLVR) significantly enhances LLM reasoning by optimizing the conditional distribution P(y|x), its potential is fundamentally bounded by the base model's existing output distribution. Optimizing the marginal distribution P(y) in the Pre-train Space addresses this bottleneck by encoding reasoning ability and preserving broad exploration capacity. Yet, conventional pre-training relies on static corpora for passive learning, leading to a distribution shift that hinders targeted reasoning enhancement. In this paper, we introduce PreRL (Pre-train Space RL), which applies reward-driven online updates directly to P(y). We theoretically and empirically validate the strong gradient alignment between log P(y) and log P(y|x), establishing PreRL as a viable surrogate for standard RL. Furthermore, we uncover a critical mechanism: Negative Sample Reinforcement (NSR) within PreRL serves as an exceptionally effective driver for reasoning. NSR-PreRL rapidly prunes incorrect reasoning spaces while stimulating endogenous reflective behaviors, increasing transition and reflection thoughts by 14.89x and 6.54x, respectively. Leveraging these insights, we propose Dual Space RL (DSRL), a Policy Reincarnation strategy that initializes models with NSR-PreRL to expand the reasoning horizon before transitioning to standard RL for fine-grained optimization. Extensive experiments demonstrate that DSRL consistently outperforms strong baselines, proving that pre-train space pruning effectively steers the policy toward a refined correct reasoning subspace.",
+    "pdf_url": "https://arxiv.org/pdf/2604.14142v1",
+    "published": "2026-04-15T17:59:01Z",
+    "fetched_at": "2026-04-17T00:49:11.437706"
+  },
+  {
+    "title": "LongCoT: Benchmarking Long-Horizon Chain-of-Thought Reasoning",
+    "authors": [
+      "Sumeet Ramesh Motwani",
+      "Daniel Nichols",
+      "Charles London",
+      "Peggy Li",
+      "Fabio Pizzati",
+      "Acer Blake",
+      "Hasan Hammoud",
+      "Tavish McDonald",
+      "Akshat Naik",
+      "Alesia Ivanova",
+      "Vignesh Baskaran",
+      "Ivan Laptev",
+      "Ruben Glatt",
+      "Tal Ben-Nun",
+      "Philip Torr",
+      "Natasha Jaques",
+      "Ameya Prabhu",
+      "Brian Bartoldson",
+      "Bhavya Kailkhura",
+      "Christian Schroeder de Witt"
+    ],
+    "abstract": "As language models are increasingly deployed for complex autonomous tasks, their ability to reason accurately over longer horizons becomes critical. An essential component of this ability is planning and managing a long, complex chain-of-thought (CoT). We introduce LongCoT, a scalable benchmark of 2,500 expert-designed problems spanning chemistry, mathematics, computer science, chess, and logic to isolate and directly measure the long-horizon CoT reasoning capabilities of frontier models. Problems consist of a short input with a verifiable answer; solving them requires navigating a graph of interdependent steps that span tens to hundreds of thousands of reasoning tokens. Each local step is individually tractable for frontier models, so failures reflect long-horizon reasoning limitations. At release, the best models achieve <10% accuracy (GPT 5.2: 9.8%; Gemini 3 Pro: 6.1%) on LongCoT, revealing a substantial gap in current capabilities. Overall, LongCoT provides a rigorous measure of long-horizon reasoning, tracking the ability of frontier models to reason reliably over extended periods.",
+    "pdf_url": "https://arxiv.org/pdf/2604.14140v1",
+    "published": "2026-04-15T17:58:05Z",
+    "fetched_at": "2026-04-17T00:49:11.437752"
+  },
+  {
+    "title": "From Feelings to Metrics: Understanding and Formalizing How Users Vibe-Test LLMs",
+    "authors": [
+      "Itay Itzhak",
+      "Eliya Habba",
+      "Gabriel Stanovsky",
+      "Yonatan Belinkov"
+    ],
+    "abstract": "Evaluating LLMs is challenging, as benchmark scores often fail to capture models' real-world usefulness. Instead, users often rely on ``vibe-testing'': informal experience-based evaluation, such as comparing models on coding tasks related to their own workflow. While prevalent, vibe-testing is often too ad hoc and unstructured to analyze or reproduce at scale. In this work, we study how vibe-testing works in practice and then formalize it to support systematic analysis. We first analyze two empirical resources: (1) a survey of user evaluation practices, and (2) a collection of in-the-wild model comparison reports from blogs and social media. Based on these resources, we formalize vibe-testing as a two-part process: users personalize both what they test and how they judge responses. We then introduce a proof-of-concept evaluation pipeline that follows this formulation by generating personalized prompts and comparing model outputs using user-aware subjective criteria. In experiments on coding benchmarks, we find that combining personalized prompts and user-aware evaluation can change which model is preferred, reflecting the role of vibe-testing in practice. These findings suggest that formalized vibe-testing can serve as a useful approach for bridging benchmark scores and real-world experience.",
+    "pdf_url": "https://arxiv.org/pdf/2604.14137v1",
+    "published": "2026-04-15T17:57:08Z",
+    "fetched_at": "2026-04-17T00:49:11.437767"
+  },
+  {
+    "title": "AI-assisted modeling and Bayesian inference of unpolarized quark transverse momentum distributions from Drell-Yan data",
+    "authors": [
+      "Zhong-Bo Kang",
+      "Luke Sellers",
+      "Congyue Zhang",
+      "Curtis Zhou"
+    ],
+    "abstract": "We present an extraction of unpolarized quark transverse-momentum-dependent parton distribution functions (TMD PDFs) from Drell-Yan data within a Bayesian inference framework, incorporating artificial intelligence at multiple stages of the analysis. Our analysis is performed at ${\\rm N^3LO}$ in perturbative QCD combined with ${\\rm N^4LL}$ resummation accuracy. We first employ an AI-driven iterative procedure to explore and rank candidate functional forms for the nonperturbative contributions to TMD PDFs at the initial scale, as well as for the Collins-Soper evolution kernel, using $χ^2$ fits and physics constraints. To enable efficient Bayesian inference, we construct a surrogate model for TMD cross sections by training a machine-learning emulator over the parameter space, replacing computationally expensive repeated evaluations and allowing scalable sampling with an affine-invariant Markov Chain Monte Carlo (MCMC) ensemble. Using this framework, we perform a global analysis of Drell-Yan data from fixed-target, RHIC, and LHC experiments and extract TMD PDFs with quantified uncertainties. We compare the results with those obtained using the replica method and highlight differences in the resulting uncertainty estimates.",
+    "pdf_url": "https://arxiv.org/pdf/2604.14133v1",
+    "published": "2026-04-15T17:54:47Z",
+    "fetched_at": "2026-04-17T00:49:11.437781"
+  },
+  {
+    "title": "Don't Let the Video Speak: Audio-Contrastive Preference Optimization for Audio-Visual Language Models",
+    "authors": [
+      "Ami Baid",
+      "Zihui Xue",
+      "Kristen Grauman"
+    ],
+    "abstract": "While Audio-Visual Language Models (AVLMs) have achieved remarkable progress over recent years, their reliability is bottlenecked by cross-modal hallucination. A particularly pervasive manifestation is video-driven audio hallucination: models routinely exploit visual shortcuts to hallucinate expected sounds, discarding true auditory evidence. To counteract this deeply ingrained visual dominance, we propose Audio-Contrastive Preference Optimization (ACPO). This dual-axis preference learning framework introduces an output-contrastive objective to penalize visual descriptions masquerading as audio facts, alongside an input-contrastive objective that swaps audio tracks to explicitly penalize generation invariant to the true auditory signal. Extensive experiments demonstrate that ACPO establishes highly faithful audio grounding and mitigates audio hallucination without compromising overarching multimodal capabilities.",
+    "pdf_url": "https://arxiv.org/pdf/2604.14129v1",
+    "published": "2026-04-15T17:51:28Z",
+    "fetched_at": "2026-04-17T00:49:11.437793"
+  }
+]
