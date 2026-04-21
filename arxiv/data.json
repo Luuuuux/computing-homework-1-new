@@ -1,72 +1,75 @@
 [
   {
-    "title": "Bidirectional Cross-Modal Prompting for Event-Frame Asymmetric Stereo",
+    "title": "Phase transitions in Doi-Onsager, Noisy Transformer, and other multimodal models",
     "authors": [
-      "Ninghui Xu",
-      "Fabio Tosi",
-      "Lihui Wang",
-      "Jiawei Han",
-      "Luca Bartolomei",
-      "Zhiting Yao",
-      "Matteo Poggi",
-      "Stefano Mattoccia"
+      "Kyunghoo Mun",
+      "Matthew Rosenzweig"
     ],
-    "abstract": "Conventional frame-based cameras capture rich contextual information but suffer from limited temporal resolution and motion blur in dynamic scenes. Event cameras offer an alternative visual representation with higher dynamic range free from such limitations. The complementary characteristics of the two modalities make event-frame asymmetric stereo promising for reliable 3D perception under fast motion and challenging illumination. However, the modality gap often leads to marginalization of domain-specific cues essential for cross-modal stereo matching. In this paper, we introduce Bi-CMPStereo, a novel bidirectional cross-modal prompting framework that fully exploits semantic and structural features from both domains for robust matching. Our approach learns finely aligned stereo representations within a target canonical space and integrates complementary representations by projecting each modality into both event and frame domains. Extensive experiments demonstrate that our approach significantly outperforms state-of-the-art methods in accuracy and generalization.",
-    "pdf_url": "https://arxiv.org/pdf/2604.15312v1",
-    "published": "2026-04-16T17:59:58Z",
-    "fetched_at": "2026-04-20T00:49:26.938764"
+    "abstract": "We study phase transitions for repulsive-attractive mean-field free energies on the circle. For a $\\frac{1}{n+1}$-periodic interaction whose Fourier coefficients satisfy a certain decay condition, we prove that the critical coupling strength $K_c$ coincides with the linear stability threshold $K_\\#$ of the uniform distribution and that the phase transition is continuous, in the sense that the uniform distribution is the unique global minimizer at criticality. The proof is based on a sharp coercivity estimate for the free energy obtained from the constrained Lebedev--Milin inequality.\n  We apply this result to three motivating models for which the exact value of the phase transition and its (dis)continuity in terms of the model parameters was not fully known. For the two-dimensional Doi--Onsager model $W(θ)=-|\\sin(2πθ)|$, we prove that the phase transition is continuous at $K_c=K_\\#=3π/4$. For the noisy transformer model $W_β(θ)=(e^{β\\cos(2πθ)}-1)/β$, we identify the sharp threshold $β_*$ such that $K_c(β) = K_\\#(β)$ and the phase transition is continuous for $β\\leq β_*$, while $K_c(β)<K_\\#(β)$ and the phase transition is discontinuous for $β> β_*$. We also obtain the corresponding sharp dichotomy for the noisy Hegselmann--Krause model $W_{R}(θ) = (R-2π|θ|)_{+}^2$ .",
+    "pdf_url": "https://arxiv.org/pdf/2604.16288v1",
+    "published": "2026-04-17T17:50:29Z",
+    "fetched_at": "2026-04-21T00:49:28.324436"
   },
   {
-    "title": "RAD-2: Scaling Reinforcement Learning in a Generator-Discriminator Framework",
+    "title": "Geometric regularization of autoencoders via observed stochastic dynamics",
     "authors": [
-      "Hao Gao",
-      "Shaoyu Chen",
-      "Yifan Zhu",
-      "Yuehao Song",
-      "Wenyu Liu",
-      "Qian Zhang",
-      "Xinggang Wang"
+      "Sean Hill",
+      "Felix X. -F. Ye"
     ],
-    "abstract": "High-level autonomous driving requires motion planners capable of modeling multimodal future uncertainties while remaining robust in closed-loop interactions. Although diffusion-based planners are effective at modeling complex trajectory distributions, they often suffer from stochastic instabilities and the lack of corrective negative feedback when trained purely with imitation learning. To address these issues, we propose RAD-2, a unified generator-discriminator framework for closed-loop planning. Specifically, a diffusion-based generator is used to produce diverse trajectory candidates, while an RL-optimized discriminator reranks these candidates according to their long-term driving quality. This decoupled design avoids directly applying sparse scalar rewards to the full high-dimensional trajectory space, thereby improving optimization stability. To further enhance reinforcement learning, we introduce Temporally Consistent Group Relative Policy Optimization, which exploits temporal coherence to alleviate the credit assignment problem. In addition, we propose On-policy Generator Optimization, which converts closed-loop feedback into structured longitudinal optimization signals and progressively shifts the generator toward high-reward trajectory manifolds. To support efficient large-scale training, we introduce BEV-Warp, a high-throughput simulation environment that performs closed-loop evaluation directly in Bird's-Eye View feature space via spatial warping. RAD-2 reduces the collision rate by 56% compared with strong diffusion-based planners. Real-world deployment further demonstrates improved perceived safety and driving smoothness in complex urban traffic.",
-    "pdf_url": "https://arxiv.org/pdf/2604.15308v1",
-    "published": "2026-04-16T17:59:44Z",
-    "fetched_at": "2026-04-20T00:49:26.938792"
+    "abstract": "Stochastic dynamical systems with slow or metastable behavior evolve, on long time scales, on an unknown low-dimensional manifold in high-dimensional ambient space. Building a reduced simulator from short-burst ambient ensembles is a long-standing problem: local-chart methods like ATLAS suffer from exponential landmark scaling and per-step reprojection, while autoencoder alternatives leave tangent-bundle geometry poorly constrained, and the errors propagate into the learned drift and diffusion. We observe that the ambient covariance~$Λ$ already encodes coordinate-invariant tangent-space information, its range spanning the tangent bundle. Using this, we construct a tangent-bundle penalty and an inverse-consistency penalty for a three-stage pipeline (chart learning, latent drift, latent diffusion) that learns a single nonlinear chart and the latent SDE. The penalties induce a function-space metric, the $ρ$-metric, strictly weaker than the Sobolev $H^1$ norm yet achieving the same chart-quality generalization rate up to logarithmic factors. For the drift, we derive an encoder-pullback target via Itô's formula on the learned encoder and prove a bias decomposition showing the standard decoder-side formula carries systematic error for any imperfect chart. Under a $W^{2,\\infty}$ chart-convergence assumption, chart-level error propagates controllably to weak convergence of the ambient dynamics and to convergence of radial mean first-passage times. Experiments on four surfaces embedded in up to $201$ ambient dimensions reduce radial MFPT error by $50$--$70\\%$ under rotation dynamics and achieve the lowest inter-well MFPT error on most surface--transition pairs under metastable Müller--Brown Langevin dynamics, while reducing end-to-end ambient coefficient errors by up to an order of magnitude relative to an unregularized autoencoder.",
+    "pdf_url": "https://arxiv.org/pdf/2604.16282v1",
+    "published": "2026-04-17T17:44:02Z",
+    "fetched_at": "2026-04-21T00:49:28.324473"
   },
   {
-    "title": "Generalization in LLM Problem Solving: The Case of the Shortest Path",
+    "title": "Using Large Language Models and Knowledge Graphs to Improve the Interpretability of Machine Learning Models in Manufacturing",
     "authors": [
-      "Yao Tong",
-      "Jiayuan Ye",
-      "Anastasia Borovykh",
-      "Reza Shokri"
+      "Thomas Bayer",
+      "Alexander Lohr",
+      "Sarah Weiß",
+      "Bernd Michelberger",
+      "Wolfram Höpken"
     ],
-    "abstract": "Whether language models can systematically generalize remains actively debated. Yet empirical performance is jointly shaped by multiple factors such as training data, training paradigms, and inference-time strategies, making failures difficult to interpret. We introduce a controlled synthetic environment based on shortest-path planning, a canonical composable sequential optimization problem. The setup enables clean separation of these factors and supports two orthogonal axes of generalization: spatial transfer to unseen maps and length scaling to longer-horizon problems. We find that models exhibit strong spatial transfer but consistently fail under length scaling due to recursive instability. We further analyze how distinct stages of the learning pipeline influence systematic problem-solving: for example, data coverage sets capability limits; reinforcement learning improves training stability but does not expand those limits; and inference-time scaling enhances performance but cannot rescue length-scaling failures.",
-    "pdf_url": "https://arxiv.org/pdf/2604.15306v1",
-    "published": "2026-04-16T17:59:43Z",
-    "fetched_at": "2026-04-20T00:49:26.938808"
+    "abstract": "Explaining Machine Learning (ML) results in a transparent and user-friendly manner remains a challenging task of Explainable Artificial Intelligence (XAI). In this paper, we present a method to enhance the interpretability of ML models by using a Knowledge Graph (KG). We store domain-specific data along with ML results and their corresponding explanations, establishing a structured connection between domain knowledge and ML insights. To make these insights accessible to users, we designed a selective retrieval method in which relevant triplets are extracted from the KG and processed by a Large Language Model (LLM) to generate user-friendly explanations of ML results. We evaluated our method in a manufacturing environment using the XAI Question Bank. Beyond standard questions, we introduce more complex, tailored questions that highlight the strengths of our approach. We evaluated 33 questions, analyzing responses using quantitative metrics such as accuracy and consistency, as well as qualitative ones such as clarity and usefulness. Our contribution is both theoretical and practical: from a theoretical perspective, we present a novel approach for effectively enabling LLMs to dynamically access a KG in order to improve the explainability of ML results. From a practical perspective, we provide empirical evidence showing that such explanations can be successfully applied in real-world manufacturing environments, supporting better decision-making in manufacturing processes.",
+    "pdf_url": "https://arxiv.org/pdf/2604.16280v1",
+    "published": "2026-04-17T17:41:17Z",
+    "fetched_at": "2026-04-21T00:49:28.324490"
   },
   {
-    "title": "Diagnosing LLM Judge Reliability: Conformal Prediction Sets and Transitivity Violations",
+    "title": "Evaluating the Progression of Large Language Model Capabilities for Small-Molecule Drug Design",
     "authors": [
-      "Manan Gupta",
-      "Dhruv Kumar"
+      "Shriram Chennakesavalu",
+      "Kirill Shmilovich",
+      "Hayley Weir",
+      "Colin Grambow",
+      "John Bradshaw",
+      "Patricia Suriana",
+      "Chen Cheng",
+      "Kangway Chuang"
     ],
-    "abstract": "LLM-as-judge frameworks are increasingly used for automatic NLG evaluation, yet their per-instance reliability remains poorly understood. We present a two-pronged diagnostic toolkit applied to SummEval: $\\textbf{(1)}$ a transitivity analysis that reveals widespread per-input inconsistency masked by low aggregate violation rates ($\\barρ = 0.8$-$4.1\\%$), with $33$-$67\\%$ of documents exhibiting at least one directed 3-cycle; and $\\textbf{(2)}$ split conformal prediction sets over 1-5 Likert scores providing theoretically-guaranteed $\\geq(1{-}α)$ coverage, with set width serving as a per-instance reliability indicator ($r_s = {+}0.576$, $N{=}1{,}918$, $p < 10^{-100}$, pooled across all judges). Critically, prediction set width shows consistent cross-judge agreement ($\\bar{r} = 0.32$-$0.38$), demonstrating it captures document-level difficulty rather than judge-specific noise. Across four judges and four criteria, both diagnostics converge: criterion matters more than judge, with relevance judged most reliably (avg. set size $\\approx 3.0$) and coherence moderately so (avg. set size $\\approx 3.9$), while fluency and consistency remain unreliable (avg. set size $\\approx 4.9$). We release all code, prompts, and cached results.",
-    "pdf_url": "https://arxiv.org/pdf/2604.15302v1",
-    "published": "2026-04-16T17:58:21Z",
-    "fetched_at": "2026-04-20T00:49:26.938820"
+    "abstract": "Large Language Models (LLMs) have the potential to accelerate small molecule drug design due to their ability to reason about information from diverse sources and formats. However, their practical utility remains unclear due to the lack of benchmarks that reflect real-world scenarios. In this work, we introduce a suite of chemically-grounded tasks spanning molecular property prediction, molecular representation transformations, and molecular design. Importantly, we formulate these tasks as reinforcement learning (RL) environments, enabling a unified approach for evaluation and post-training. Across three model families, we find that frontier models are increasingly proficient at chemical tasks, but that there is significant room for improvement, especially in experimental settings with low data. Critically, we show that RL-based post-training can substantially improve performance. A smaller model post-trained on our environments becomes competitive with state-of-the-art frontier models, despite a significantly weaker base model. This suggests a practical route toward employing LLMs in drug discovery; by combining carefully-designed evaluation tasks with targeted post-training, we can both elucidate and close critical capability gaps.",
+    "pdf_url": "https://arxiv.org/pdf/2604.16279v1",
+    "published": "2026-04-17T17:40:26Z",
+    "fetched_at": "2026-04-21T00:49:28.324510"
   },
   {
-    "title": "Benchmarking Optimizers for MLPs in Tabular Deep Learning",
+    "title": "Learning to Reason with Insight for Informal Theorem Proving",
     "authors": [
-      "Yury Gorishniy",
-      "Ivan Rubachev",
-      "Dmitrii Feoktistov",
-      "Artem Babenko"
+      "Yunhe Li",
+      "Hao Shi",
+      "Bowen Deng",
+      "Wei Wang",
+      "Mengzhe Ruan",
+      "Hanxu Hou",
+      "Zhongxiang Dai",
+      "Siyang Gao",
+      "Chao Wang",
+      "Shuang Qiu",
+      "Linqi Song"
     ],
-    "abstract": "MLP is a heavily used backbone in modern deep learning (DL) architectures for supervised learning on tabular data, and AdamW is the go-to optimizer used to train tabular DL models. Unlike architecture design, however, the choice of optimizer for tabular DL has not been examined systematically, despite new optimizers showing promise in other domains. To fill this gap, we benchmark \\Noptimizers optimizers on \\Ndatasets tabular datasets for training MLP-based models in the standard supervised learning setting under a shared experiment protocol. Our main finding is that the Muon optimizer consistently outperforms AdamW, and thus should be considered a strong and practical choice for practitioners and researchers, if the associated training efficiency overhead is affordable. Additionally, we find exponential moving average of model weights to be a simple yet effective technique that improves AdamW on vanilla MLPs, though its effect is less consistent across model variants.",
-    "pdf_url": "https://arxiv.org/pdf/2604.15297v1",
-    "published": "2026-04-16T17:57:02Z",
-    "fetched_at": "2026-04-20T00:49:26.938835"
+    "abstract": "Although most of the automated theorem-proving approaches depend on formal proof systems, informal theorem proving can align better with large language models' (LLMs) strength in natural language processing. In this work, we identify a primary bottleneck in informal theorem proving as a lack of insight, namely the difficulty of recognizing the core techniques required to solve complex problems. To address this, we propose a novel framework designed to cultivate this essential reasoning skill and enable LLMs to perform insightful reasoning. We propose $\\mathtt{DeepInsightTheorem}$, a hierarchical dataset that structures informal proofs by explicitly extracting core techniques and proof sketches alongside the final proof. To fully exploit this dataset, we design a Progressive Multi-Stage SFT strategy that mimics the human learning process, guiding the model from basic proof writing to insightful thinking. Our experiments on challenging mathematical benchmarks demonstrate that this insight-aware generation strategy significantly outperforms baselines. These results demonstrate that teaching models to identify and apply core techniques can substantially improve their mathematical reasoning.",
+    "pdf_url": "https://arxiv.org/pdf/2604.16278v1",
+    "published": "2026-04-17T17:36:21Z",
+    "fetched_at": "2026-04-21T00:49:28.324532"
   }
 ]
