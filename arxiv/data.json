@@ -1,73 +1,76 @@
 [
   {
-    "title": "CityRAG: Stepping Into a City via Spatially-Grounded Video Generation",
+    "title": "PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance",
     "authors": [
-      "Gene Chou",
-      "Charles Herrmann",
-      "Kyle Genova",
-      "Boyang Deng",
-      "Songyou Peng",
-      "Bharath Hariharan",
-      "Jason Y. Zhang",
-      "Noah Snavely",
-      "Philipp Henzler"
+      "Yupeng Zheng",
+      "Xiang Li",
+      "Songen Gu",
+      "Yuhang Zheng",
+      "Shuai Tian",
+      "Weize Li",
+      "Linbo Wang",
+      "Senyu Fei",
+      "Pengfei Li",
+      "Yinfeng Gao",
+      "Zebin Xing",
+      "Yilun Chen",
+      "Qichao Zhang",
+      "Haoran Li",
+      "Wenchao Ding"
     ],
-    "abstract": "We address the problem of generating a 3D-consistent, navigable environment that is spatially grounded: a simulation of a real location. Existing video generative models can produce a plausible sequence that is consistent with a text (T2V) or image (I2V) prompt. However, the capability to reconstruct the real world under arbitrary weather conditions and dynamic object configurations is essential for downstream applications including autonomous driving and robotics simulation. To this end, we present CityRAG, a video generative model that leverages large corpora of geo-registered data as context to ground generation to the physical scene, while maintaining learned priors for complex motion and appearance changes. CityRAG relies on temporally unaligned training data, which teaches the model to semantically disentangle the underlying scene from its transient attributes. Our experiments demonstrate that CityRAG can generate coherent minutes-long, physically grounded video sequences, maintain weather and lighting conditions over thousands of frames, achieve loop closure, and navigate complex trajectories to reconstruct real-world geography.",
-    "pdf_url": "https://arxiv.org/pdf/2604.19741v1",
-    "published": "2026-04-21T17:59:03Z",
-    "fetched_at": "2026-04-23T00:51:02.782788"
+    "abstract": "Recent advances in Vision-Language-Action (VLA) models have opened new avenues for robot manipulation, yet existing methods exhibit limited efficiency and a lack of high-level knowledge and spatial awareness. To address these challenges, we propose PokeVLA, a lightweight yet powerful foundation model for embodied manipulation that effectively infuses vision-language understanding into action learning. Our framework introduces a two-stage training paradigm: first, we pre-train a compact vision-language model (PokeVLM) on a curated multimodal dataset of 2.4M samples encompassing spatial grounding, affordance, and embodied reasoning tasks; second, we inject manipulation-relevant representations into the action space through multi-view goal-aware semantics learning, geometry alignment, and a novel action expert. Extensive experiments demonstrate state-of-the-art performance on the LIBERO-Plus benchmark and in real-world deployment, outperforming comparable baselines in success rate and robustness under diverse perturbations. To foster reproducibility and community progress, we will open-source our code, model weights, and the scripts for the curated pre-training dataset. Project page: https://getterupper.github.io/PokeVLA",
+    "pdf_url": "https://arxiv.org/pdf/2604.20834v1",
+    "published": "2026-04-22T17:58:19Z",
+    "fetched_at": "2026-04-24T00:51:35.177312"
   },
   {
-    "title": "Generalization at the Edge of Stability",
+    "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
     "authors": [
-      "Mario Tuci",
-      "Caner Korkmaz",
-      "Umut Şimşekli",
-      "Tolga Birdal"
+      "Sina Gholami",
+      "Abdulmoneam Ali",
+      "Tania Haghighi",
+      "Ahmed Arafa",
+      "Minhaj Nur Alam"
     ],
-    "abstract": "Training modern neural networks often relies on large learning rates, operating at the edge of stability, where the optimization dynamics exhibit oscillatory and chaotic behavior. Empirically, this regime often yields improved generalization performance, yet the underlying mechanism remains poorly understood. In this work, we represent stochastic optimizers as random dynamical systems, which often converge to a fractal attractor set (rather than a point) with a smaller intrinsic dimension. Building on this connection and inspired by Lyapunov dimension theory, we introduce a novel notion of dimension, coined the `sharpness dimension', and prove a generalization bound based on this dimension. Our results show that generalization in the chaotic regime depends on the complete Hessian spectrum and the structure of its partial determinants, highlighting a complexity that cannot be captured by the trace or spectral norm considered in prior work. Experiments across various MLPs and transformers validate our theory while also providing new insights into the recently observed phenomenon of grokking.",
-    "pdf_url": "https://arxiv.org/pdf/2604.19740v1",
-    "published": "2026-04-21T17:59:02Z",
-    "fetched_at": "2026-04-23T00:51:02.782812"
+    "abstract": "Federated learning (FL) enables collaborative model training without sharing raw data; however, the presence of noisy labels across distributed clients can severely degrade the learning performance. In this paper, we propose FedSIR, a multi-stage framework for robust FL under noisy labels. Different from existing approaches that mainly rely on designing noise-tolerant loss functions or exploiting loss dynamics during training, our method leverages the spectral structure of client feature representations to identify and mitigate label noise.\n  Our framework consists of three key components. First, we identify clean and noisy clients by analyzing the spectral consistency of class-wise feature subspaces with minimal communication overhead. Second, clean clients provide spectral references that enable noisy clients to relabel potentially corrupted samples using both dominant class directions and residual subspaces. Third, we employ a noise-aware training strategy that integrates logit-adjusted loss, knowledge distillation, and distance-aware aggregation to further stabilize federated optimization. Extensive experiments on standard FL benchmarks demonstrate that FedSIR consistently outperforms state-of-the-art methods for FL with noisy labels. The code is available at https://github.com/sinagh72/FedSIR.",
+    "pdf_url": "https://arxiv.org/pdf/2604.20825v1",
+    "published": "2026-04-22T17:49:20Z",
+    "fetched_at": "2026-04-24T00:51:35.177336"
   },
   {
-    "title": "Phase Transitions in the Fluctuations of Functionals of Random Neural Networks",
+    "title": "Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples",
     "authors": [
-      "Simmaco Di Lillo",
-      "Leonardo Maini",
-      "Domenico Marinucci"
+      "Ana Sanchez-Fernandez",
+      "Thomas Pinetz",
+      "Werner Zellinger",
+      "Günter Klambauer"
     ],
-    "abstract": "We establish central and non-central limit theorems for sequences of functionals of the Gaussian output of an infinitely-wide random neural network on the d-dimensional sphere . We show that the asymptotic behaviour of these functionals as the depth of the network increases depends crucially on the fixed points of the covariance function, resulting in three distinct limiting regimes: convergence to the same functional of a limiting Gaussian field, convergence to a Gaussian distribution, convergence to a distribution in the Qth Wiener chaos. Our proofs exploit tools that are now classical (Hermite expansions, Diagram Formula, Stein-Malliavin techniques), but also ideas which have never been used in similar contexts: in particular, the asymptotic behaviour is determined by the fixed-point structure of the iterative operator associated with the covariance, whose nature and stability governs the different limiting regimes.",
-    "pdf_url": "https://arxiv.org/pdf/2604.19738v1",
-    "published": "2026-04-21T17:58:39Z",
-    "fetched_at": "2026-04-23T00:51:02.782826"
+    "abstract": "The central problem in biomedical imaging are batch effects: systematic technical variations unrelated to the biological signal of interest. These batch effects critically undermine experimental reproducibility and are the primary cause of failure of deep learning systems on new experimental batches, preventing their practical use in the real world. Despite years of research, no method has succeeded in closing this performance gap for deep learning models. We propose Control-Stabilized Adaptive Risk Minimization via Batch Normalization (CS-ARM-BN), a meta-learning adaptation method that exploits negative control samples. Such unperturbed reference images are present in every experimental batch by design and serve as stable context for adaptation. We validate our novel method on Mechanism-of-Action (MoA) classification, a crucial task for drug discovery, on the large-scale JUMP-CP dataset. The accuracy of standard ResNets drops from 0.939 $\\pm$ 0.005, on the training domain, to 0.862 $\\pm$ 0.060 on data from new experimental batches. Foundation models, even after Typical Variation Normalization, fail to close this gap. We are the first to show that meta-learning approaches close the domain gap by achieving 0.935 $\\pm$ 0.018. If the new experimental batches exhibit strong domain shifts, such as being generated in a different lab, meta-learning approaches can be stabilized with control samples, which are always available in biomedical experiments. Our work shows that batch effects in bioimaging data can be effectively neutralized through principled in-context adaptation, which also makes them practically usable and efficient.",
+    "pdf_url": "https://arxiv.org/pdf/2604.20824v1",
+    "published": "2026-04-22T17:49:00Z",
+    "fetched_at": "2026-04-24T00:51:35.177351"
   },
   {
-    "title": "Safe Continual Reinforcement Learning in Non-stationary Environments",
+    "title": "Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series",
     "authors": [
-      "Austin Coursey",
-      "Abel Diaz-Gonzalez",
-      "Marcos Quinones-Grueiro",
-      "Gautam Biswas"
+      "Thorsten Hoeser",
+      "Felix Bachofer",
+      "Claudia Kuenzer"
     ],
-    "abstract": "Reinforcement learning (RL) offers a compelling data-driven paradigm for synthesizing controllers for complex systems when accurate physical models are unavailable; however, most existing control-oriented RL methods assume stationarity and, therefore, struggle in real-world non-stationary deployments where system dynamics and operating conditions can change unexpectedly. Moreover, RL controllers acting in physical environments must satisfy safety constraints throughout their learning and execution phases, rendering transient violations during adaptation unacceptable. Although continual RL and safe RL have each addressed non-stationarity and safety, respectively, their intersection remains comparatively unexplored, motivating the study of safe continual RL algorithms that can adapt over the system's lifetime while preserving safety. In this work, we systematically investigate safe continual reinforcement learning by introducing three benchmark environments that capture safety-critical continual adaptation and by evaluating representative approaches from safe RL, continual RL, and their combinations. Our empirical results reveal a fundamental tension between maintaining safety constraints and preventing catastrophic forgetting under non-stationary dynamics, with existing methods generally failing to achieve both objectives simultaneously. To address this shortcoming, we examine regularization-based strategies that partially mitigate this trade-off and characterize their benefits and limitations. Finally, we outline key open challenges and research directions toward developing safe, resilient learning-based controllers capable of sustained autonomous operation in changing environments.",
-    "pdf_url": "https://arxiv.org/pdf/2604.19737v1",
-    "published": "2026-04-21T17:58:32Z",
-    "fetched_at": "2026-04-23T00:51:02.782840"
+    "abstract": "The offshore wind energy sector is expanding rapidly, increasing the need for independent, high-temporal-resolution monitoring of infrastructure deployment and operation at global scale. While Earth Observation based offshore wind infrastructure mapping has matured for spatial localization, existing open datasets lack temporally dense and semantically fine-grained information on construction and operational dynamics. We introduce a global Sentinel-1 synthetic aperture radar (SAR) time series data corpus that resolves deployment and operational phases of offshore wind infrastructure from 2016Q1 to 2025Q1. Building on an updated object detection workflow, we compile 15,606 time series at detected infrastructure locations, with overall 14,840,637 events as analysis-ready 1D SAR backscatter profiles, one profile per Sentinel-1 acquisition and location. To enable direct use and benchmarking, we release (i) the analysis ready 1D SAR profiles, (ii) event-level baseline semantic labels generated by a rule-based classifier, and (iii) an expert-annotated benchmark dataset of 553 time series with 328,657 event labels. The baseline classifier achieves a macro F1 score of 0.84 in event-wise evaluation and an area under the collapsed edit similarity-quality threshold curve (AUC) of 0.785, indicating temporal coherence. We demonstrate that the resulting corpus supports global-scale analyses of deployment dynamics, the identification of differences in regional deployment patterns, vessel interactions, and operational events, and provides a reference for developing and comparing time series classification methods for offshore wind infrastructure monitoring.",
+    "pdf_url": "https://arxiv.org/pdf/2604.20822v1",
+    "published": "2026-04-22T17:47:33Z",
+    "fetched_at": "2026-04-24T00:51:35.177364"
   },
   {
-    "title": "Generative Drifting for Conditional Medical Image Generation",
+    "title": "Autonomous Emergence of Hamiltonian in Deep Generative Models",
     "authors": [
-      "Zirong Li",
-      "Siyuan Mei",
-      "Weiwen Wu",
-      "Andreas Maier",
-      "Lina Gölz",
-      "Yan Xia"
+      "Wenjie Xi",
+      "Wei-Qiang Chen"
     ],
-    "abstract": "Conditional medical image generation plays an important role in many clinically relevant imaging tasks. However, existing methods still face a fundamental challenge in balancing inference efficiency, patient-specific fidelity, and distribution-level plausibility, particularly in high-dimensional 3D medical imaging. In this work, we propose GDM, a generative drifting framework that reformulates deterministic medical image prediction as a multi-objective learning problem to jointly promote distribution-level plausibility and patient-specific fidelity while retaining one-step inference. GDM extends drifting to 3D medical imaging through an attractive-repulsive drift that minimizes the discrepancy between the generator pushforward and the target distribution. To enable stable drifting-based learning in 3D volumetric data, GDM constructs a multi-level feature bank from a medical foundation encoder to support reliable affinity estimation and drifting field computation across complementary global, local, and spatial representations. In addition, a gradient coordination strategy in the shared output space improves optimization balance under competing distribution-level and fidelity-oriented objectives. We evaluate the proposed framework on two representative tasks, MRI-to-CT synthesis and sparse-view CT reconstruction. Experimental results show that GDM consistently outperforms a wide range of baselines, including GAN-based, flow-matching-based, and SDE-based generative models, as well as supervised regression methods, while improving the balance among anatomical fidelity, quantitative reliability, perceptual realism, and inference efficiency. These findings suggest that GDM provides a practical and effective framework for conditional 3D medical image generation.",
-    "pdf_url": "https://arxiv.org/pdf/2604.19736v1",
-    "published": "2026-04-21T17:58:26Z",
-    "fetched_at": "2026-04-23T00:51:02.782857"
+    "abstract": "The unprecedented predictive success of deep generative models in complex many-body systems, such as AlphaFold3, raises an epistemological question: do these networks merely memorize data distributions via high-dimensional interpolation, or do they autonomously deduce the underlying physical laws? To address this, we introduce a rigorous algebraic framework to extract the implicit physical interactions learned by generative models. By establishing an exact equivalence between the zero-noise limit of a Riemannian diffusion score field and the thermodynamic restoring force, we utilize the trained neural network as a direct force estimator. Applying this framework to a sequence-dependent, frustrated 1D $O(3)$ spin glass, we probe the latent representations of an $O(3)$-equivariant attention architecture trained solely on thermal equilibrium snapshots. Without incorporating any energetic priors, an overdetermined linear inversion successfully recovers the microscopic Hamiltonian parameters of the spin system. The inferred Hamiltonian parameters exhibit a $99.7\\%$ cosine similarity with the ground-truth interaction parameters. Furthermore, these sparse local parameters alone are sufficient to explain $87\\%$ of the variance in the continuous force field predicted by the network. Our results provide quantitative, falsifiable evidence that deep generative architectures do not merely perform statistical pattern matching, but autonomously discover and internalize the underlying physical rules.",
+    "pdf_url": "https://arxiv.org/pdf/2604.20821v1",
+    "published": "2026-04-22T17:46:35Z",
+    "fetched_at": "2026-04-24T00:51:35.177377"
   }
 ]
