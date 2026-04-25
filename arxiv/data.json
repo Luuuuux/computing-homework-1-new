@@ -1,76 +1,75 @@
 [
   {
-    "title": "PokeVLA: Empowering Pocket-Sized Vision-Language-Action Model with Comprehensive World Knowledge Guidance",
+    "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
     "authors": [
-      "Yupeng Zheng",
-      "Xiang Li",
+      "Yen-Siang Wu",
+      "Rundong Luo",
+      "Jingsen Zhu",
+      "Tao Tu",
+      "Ali Farhadi",
+      "Matthew Wallingford",
+      "Yu-Chiang Frank Wang",
+      "Steve Marschner",
+      "Wei-Chiu Ma"
+    ],
+    "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
+    "pdf_url": "https://arxiv.org/pdf/2604.21931v1",
+    "published": "2026-04-23T17:59:57Z",
+    "fetched_at": "2026-04-25T00:46:53.414460"
+  },
+  {
+    "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
+    "authors": [
+      "Nicolae Filat",
+      "Ahmed Hussain",
+      "Konstantinos Kalogiannis",
+      "Elena Burceanu"
+    ],
+    "abstract": "Streaming Continual Learning (CL) typically converts a continuous stream into a sequence of discrete tasks through temporal partitioning. We argue that this temporal taskification step is not a neutral preprocessing choice, but a structural component of evaluation: different valid splits of the same stream can induce different CL regimes and therefore different benchmark conclusions. To study this effect, we introduce a taskification-level framework based on plasticity and stability profiles, a profile distance between taskifications, and Boundary-Profile Sensitivity (BPS), which diagnoses how strongly small boundary perturbations alter the induced regime before any CL model is trained. We evaluate continual finetuning, Experience Replay, Elastic Weight Consolidation, and Learning without Forgetting on network traffic forecasting with CESNET-Timeseries24, keeping the stream, model, and training budget fixed while varying only the temporal taskification. Across 9-, 30-, and 44-day splits, we observe substantial changes in forecasting error, forgetting, and backward transfer, showing that taskification alone can materially affect CL evaluation. We further find that shorter taskifications induce noisier distribution-level patterns, larger structural distances, and higher BPS, indicating greater sensitivity to boundary perturbations. These results show that benchmark conclusions in streaming CL depend not only on the learner and the data stream, but also on how that stream is taskified, motivating temporal taskification as a first-class evaluation variable.",
+    "pdf_url": "https://arxiv.org/pdf/2604.21930v1",
+    "published": "2026-04-23T17:59:54Z",
+    "fetched_at": "2026-04-25T00:46:53.414484"
+  },
+  {
+    "title": "Fine-Tuning Regimes Define Distinct Continual Learning Problems",
+    "authors": [
+      "Paul-Tiberiu Iordache",
+      "Elena Burceanu"
+    ],
+    "abstract": "Continual learning (CL) studies how models acquire tasks sequentially while retaining previously learned knowledge. Despite substantial progress in benchmarking CL methods, comparative evaluations typically keep the fine-tuning regime fixed. In this paper, we argue that the fine-tuning regime, defined by the trainable parameter subspace, is itself a key evaluation variable. We formalize adaptation regimes as projected optimization over fixed trainable subspaces, showing that changing the trainable depth alters the effective update signal through which both current task fitting and knowledge preservation operate. This analysis motivates the hypothesis that method comparisons need not be invariant across regimes. We test this hypothesis in task incremental CL, five trainable depth regimes, and four standard methods: online EWC, LwF, SI, and GEM. Across five benchmark datasets, namely MNIST, Fashion MNIST, KMNIST, QMNIST, and CIFAR-100, and across 11 task orders per dataset, we find that the relative ranking of methods is not consistently preserved across regimes. We further show that deeper adaptation regimes are associated with larger update magnitudes, higher forgetting, and a stronger relationship between the two. These results show that comparative conclusions in CL can depend strongly on the chosen fine-tuning regime, motivating regime-aware evaluation protocols that treat trainable depth as an explicit experimental factor.",
+    "pdf_url": "https://arxiv.org/pdf/2604.21927v1",
+    "published": "2026-04-23T17:59:34Z",
+    "fetched_at": "2026-04-25T00:46:53.414497"
+  },
+  {
+    "title": "The Sample Complexity of Multicalibration",
+    "authors": [
+      "Natalie Collina",
+      "Jiuyao Lu",
+      "Georgy Noarov",
+      "Aaron Roth"
+    ],
+    "abstract": "We study the minimax sample complexity of multicalibration in the batch setting. A learner observes $n$ i.i.d. samples from an unknown distribution and must output a (possibly randomized) predictor whose population multicalibration error, measured by Expected Calibration Error (ECE), is at most $\\varepsilon$ with respect to a given family of groups. For every fixed $κ> 0$, in the regime $|G|\\le \\varepsilon^{-κ}$, we prove that $\\widetildeΘ(\\varepsilon^{-3})$ samples are necessary and sufficient, up to polylogarithmic factors. The lower bound holds even for randomized predictors, and the upper bound is realized by a randomized predictor obtained via an online-to-batch reduction. This separates the sample complexity of multicalibration from that of marginal calibration, which scales as $\\widetildeΘ(\\varepsilon^{-2})$, and shows that mean-ECE multicalibration is as difficult in the batch setting as it is in the online setting, in contrast to marginal calibration which is strictly more difficult in the online setting. In contrast we observe that for $κ= 0$, the sample complexity of multicalibration remains $\\widetildeΘ(\\varepsilon^{-2})$ exhibiting a sharp threshold phenomenon.\n  More generally, we establish matching upper and lower bounds, up to polylogarithmic factors, for a weighted $L_p$ multicalibration metric for all $1 \\le p \\le 2$, with optimal exponent $3/p$. We also extend the lower-bound template to a regular class of elicitable properties, and combine it with the online upper bounds of Hu et al. (2025) to obtain matching bounds for calibrating properties including expectiles and bounded-density quantiles.",
+    "pdf_url": "https://arxiv.org/pdf/2604.21923v1",
+    "published": "2026-04-23T17:59:01Z",
+    "fetched_at": "2026-04-25T00:46:53.414511"
+  },
+  {
+    "title": "VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis",
+    "authors": [
       "Songen Gu",
       "Yuhang Zheng",
-      "Shuai Tian",
       "Weize Li",
-      "Linbo Wang",
-      "Senyu Fei",
-      "Pengfei Li",
-      "Yinfeng Gao",
-      "Zebin Xing",
+      "Yupeng Zheng",
+      "Yating Feng",
+      "Xiang Li",
       "Yilun Chen",
-      "Qichao Zhang",
-      "Haoran Li",
+      "Pengfei Li",
       "Wenchao Ding"
     ],
-    "abstract": "Recent advances in Vision-Language-Action (VLA) models have opened new avenues for robot manipulation, yet existing methods exhibit limited efficiency and a lack of high-level knowledge and spatial awareness. To address these challenges, we propose PokeVLA, a lightweight yet powerful foundation model for embodied manipulation that effectively infuses vision-language understanding into action learning. Our framework introduces a two-stage training paradigm: first, we pre-train a compact vision-language model (PokeVLM) on a curated multimodal dataset of 2.4M samples encompassing spatial grounding, affordance, and embodied reasoning tasks; second, we inject manipulation-relevant representations into the action space through multi-view goal-aware semantics learning, geometry alignment, and a novel action expert. Extensive experiments demonstrate state-of-the-art performance on the LIBERO-Plus benchmark and in real-world deployment, outperforming comparable baselines in success rate and robustness under diverse perturbations. To foster reproducibility and community progress, we will open-source our code, model weights, and the scripts for the curated pre-training dataset. Project page: https://getterupper.github.io/PokeVLA",
-    "pdf_url": "https://arxiv.org/pdf/2604.20834v1",
-    "published": "2026-04-22T17:58:19Z",
-    "fetched_at": "2026-04-24T00:51:35.177312"
-  },
-  {
-    "title": "FedSIR: Spectral Client Identification and Relabeling for Federated Learning with Noisy Labels",
-    "authors": [
-      "Sina Gholami",
-      "Abdulmoneam Ali",
-      "Tania Haghighi",
-      "Ahmed Arafa",
-      "Minhaj Nur Alam"
-    ],
-    "abstract": "Federated learning (FL) enables collaborative model training without sharing raw data; however, the presence of noisy labels across distributed clients can severely degrade the learning performance. In this paper, we propose FedSIR, a multi-stage framework for robust FL under noisy labels. Different from existing approaches that mainly rely on designing noise-tolerant loss functions or exploiting loss dynamics during training, our method leverages the spectral structure of client feature representations to identify and mitigate label noise.\n  Our framework consists of three key components. First, we identify clean and noisy clients by analyzing the spectral consistency of class-wise feature subspaces with minimal communication overhead. Second, clean clients provide spectral references that enable noisy clients to relabel potentially corrupted samples using both dominant class directions and residual subspaces. Third, we employ a noise-aware training strategy that integrates logit-adjusted loss, knowledge distillation, and distance-aware aggregation to further stabilize federated optimization. Extensive experiments on standard FL benchmarks demonstrate that FedSIR consistently outperforms state-of-the-art methods for FL with noisy labels. The code is available at https://github.com/sinagh72/FedSIR.",
-    "pdf_url": "https://arxiv.org/pdf/2604.20825v1",
-    "published": "2026-04-22T17:49:20Z",
-    "fetched_at": "2026-04-24T00:51:35.177336"
-  },
-  {
-    "title": "Closing the Domain Gap in Biomedical Imaging by In-Context Control Samples",
-    "authors": [
-      "Ana Sanchez-Fernandez",
-      "Thomas Pinetz",
-      "Werner Zellinger",
-      "Günter Klambauer"
-    ],
-    "abstract": "The central problem in biomedical imaging are batch effects: systematic technical variations unrelated to the biological signal of interest. These batch effects critically undermine experimental reproducibility and are the primary cause of failure of deep learning systems on new experimental batches, preventing their practical use in the real world. Despite years of research, no method has succeeded in closing this performance gap for deep learning models. We propose Control-Stabilized Adaptive Risk Minimization via Batch Normalization (CS-ARM-BN), a meta-learning adaptation method that exploits negative control samples. Such unperturbed reference images are present in every experimental batch by design and serve as stable context for adaptation. We validate our novel method on Mechanism-of-Action (MoA) classification, a crucial task for drug discovery, on the large-scale JUMP-CP dataset. The accuracy of standard ResNets drops from 0.939 $\\pm$ 0.005, on the training domain, to 0.862 $\\pm$ 0.060 on data from new experimental batches. Foundation models, even after Typical Variation Normalization, fail to close this gap. We are the first to show that meta-learning approaches close the domain gap by achieving 0.935 $\\pm$ 0.018. If the new experimental batches exhibit strong domain shifts, such as being generated in a different lab, meta-learning approaches can be stabilized with control samples, which are always available in biomedical experiments. Our work shows that batch effects in bioimaging data can be effectively neutralized through principled in-context adaptation, which also makes them practically usable and efficient.",
-    "pdf_url": "https://arxiv.org/pdf/2604.20824v1",
-    "published": "2026-04-22T17:49:00Z",
-    "fetched_at": "2026-04-24T00:51:35.177351"
-  },
-  {
-    "title": "Global Offshore Wind Infrastructure: Deployment and Operational Dynamics from Dense Sentinel-1 Time Series",
-    "authors": [
-      "Thorsten Hoeser",
-      "Felix Bachofer",
-      "Claudia Kuenzer"
-    ],
-    "abstract": "The offshore wind energy sector is expanding rapidly, increasing the need for independent, high-temporal-resolution monitoring of infrastructure deployment and operation at global scale. While Earth Observation based offshore wind infrastructure mapping has matured for spatial localization, existing open datasets lack temporally dense and semantically fine-grained information on construction and operational dynamics. We introduce a global Sentinel-1 synthetic aperture radar (SAR) time series data corpus that resolves deployment and operational phases of offshore wind infrastructure from 2016Q1 to 2025Q1. Building on an updated object detection workflow, we compile 15,606 time series at detected infrastructure locations, with overall 14,840,637 events as analysis-ready 1D SAR backscatter profiles, one profile per Sentinel-1 acquisition and location. To enable direct use and benchmarking, we release (i) the analysis ready 1D SAR profiles, (ii) event-level baseline semantic labels generated by a rule-based classifier, and (iii) an expert-annotated benchmark dataset of 553 time series with 328,657 event labels. The baseline classifier achieves a macro F1 score of 0.84 in event-wise evaluation and an area under the collapsed edit similarity-quality threshold curve (AUC) of 0.785, indicating temporal coherence. We demonstrate that the resulting corpus supports global-scale analyses of deployment dynamics, the identification of differences in regional deployment patterns, vessel interactions, and operational events, and provides a reference for developing and comparing time series classification methods for offshore wind infrastructure monitoring.",
-    "pdf_url": "https://arxiv.org/pdf/2604.20822v1",
-    "published": "2026-04-22T17:47:33Z",
-    "fetched_at": "2026-04-24T00:51:35.177364"
-  },
-  {
-    "title": "Autonomous Emergence of Hamiltonian in Deep Generative Models",
-    "authors": [
-      "Wenjie Xi",
-      "Wei-Qiang Chen"
-    ],
-    "abstract": "The unprecedented predictive success of deep generative models in complex many-body systems, such as AlphaFold3, raises an epistemological question: do these networks merely memorize data distributions via high-dimensional interpolation, or do they autonomously deduce the underlying physical laws? To address this, we introduce a rigorous algebraic framework to extract the implicit physical interactions learned by generative models. By establishing an exact equivalence between the zero-noise limit of a Riemannian diffusion score field and the thermodynamic restoring force, we utilize the trained neural network as a direct force estimator. Applying this framework to a sequence-dependent, frustrated 1D $O(3)$ spin glass, we probe the latent representations of an $O(3)$-equivariant attention architecture trained solely on thermal equilibrium snapshots. Without incorporating any energetic priors, an overdetermined linear inversion successfully recovers the microscopic Hamiltonian parameters of the spin system. The inferred Hamiltonian parameters exhibit a $99.7\\%$ cosine similarity with the ground-truth interaction parameters. Furthermore, these sparse local parameters alone are sufficient to explain $87\\%$ of the variance in the continuous force field predicted by the network. Our results provide quantitative, falsifiable evidence that deep generative architectures do not merely perform statistical pattern matching, but autonomously discover and internalize the underlying physical rules.",
-    "pdf_url": "https://arxiv.org/pdf/2604.20821v1",
-    "published": "2026-04-22T17:46:35Z",
-    "fetched_at": "2026-04-24T00:51:35.177377"
+    "abstract": "Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($π_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\\times$ and 2.63$\\times$ over ACT and $π_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.",
+    "pdf_url": "https://arxiv.org/pdf/2604.21914v1",
+    "published": "2026-04-23T17:57:13Z",
+    "fetched_at": "2026-04-25T00:46:53.414530"
   }
 ]
