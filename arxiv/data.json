@@ -1,75 +1,102 @@
 [
   {
-    "title": "Seeing Fast and Slow: Learning the Flow of Time in Videos",
+    "title": "Spend Less, Fit Better: Budget-Efficient Scaling Law Fitting via Active Experiment Selection",
     "authors": [
-      "Yen-Siang Wu",
-      "Rundong Luo",
-      "Jingsen Zhu",
-      "Tao Tu",
-      "Ali Farhadi",
-      "Matthew Wallingford",
-      "Yu-Chiang Frank Wang",
-      "Steve Marschner",
-      "Wei-Chiu Ma"
+      "Sijie Li",
+      "Shanda Li",
+      "Haowei Lin",
+      "Weiwei Sun",
+      "Ameet Talwalkar",
+      "Yiming Yang"
     ],
-    "abstract": "How can we tell whether a video has been sped up or slowed down? How can we generate videos at different speeds? Although videos have been central to modern computer vision research, little attention has been paid to perceiving and controlling the passage of time. In this paper, we study time as a learnable visual concept and develop models for reasoning about and manipulating the flow of time in videos. We first exploit the multimodal cues and temporal structure naturally present in videos to learn, in a self-supervised manner, to detect speed changes and estimate playback speed. We then show that these learned temporal reasoning models enable us to curate the largest slow-motion video dataset to date from noisy in-the-wild sources. Such slow-motion footage, typically filmed by high-speed cameras, contains substantially richer temporal detail than standard videos. Using this data, we further develop models capable of temporal control, including speed-conditioned video generation, which produces motion at specified playback speed, and temporal super-resolution, which tranforms low-FPS, blurry videos into high-FPS sequences with fine-grained temporal details. Our findings highlight time as a manipulable, perceptual dimension in video learning, opening doors to temporally controllable video generation, temporal forensics detection, and potentially richer world-models that understand how events unfold over time.",
-    "pdf_url": "https://arxiv.org/pdf/2604.21931v1",
-    "published": "2026-04-23T17:59:57Z",
-    "fetched_at": "2026-04-27T00:52:23.454204"
+    "abstract": "Scaling laws are used to plan multi-million-dollar training runs, but fitting those laws can itself cost millions. In modern large-scale workflows, assembling a sufficiently informative set of pilot experiments is already a major budget-allocation problem rather than a routine preprocessing step. We formulate scaling-law fitting as budget-aware sequential experimental design: given a finite pool of runnable experiments with heterogeneous costs, choose which runs to execute so as to maximize extrapolation accuracy in a high-cost target region. We then propose an uncertainty-aware method for sequentially allocating experimental budget toward the runs most useful for target-region extrapolation. Across a diverse benchmark of scaling-law tasks, our method consistently outperforms classical design-based baselines, and often approaches the performance of fitting on the full experimental set while using only about 10% of the total training budget. Our code is available at https://github.com/PlanarG/active-sl.",
+    "pdf_url": "https://arxiv.org/pdf/2604.22753v1",
+    "published": "2026-04-24T17:59:42Z",
+    "fetched_at": "2026-04-28T00:54:36.017032"
   },
   {
-    "title": "Temporal Taskification in Streaming Continual Learning: A Source of Evaluation Instability",
+    "title": "From Physics to Statistics: A Simple Route to Exponential Families via Maximum Entropy",
     "authors": [
-      "Nicolae Filat",
-      "Ahmed Hussain",
-      "Konstantinos Kalogiannis",
-      "Elena Burceanu"
+      "Korbinian Strimmer"
     ],
-    "abstract": "Streaming Continual Learning (CL) typically converts a continuous stream into a sequence of discrete tasks through temporal partitioning. We argue that this temporal taskification step is not a neutral preprocessing choice, but a structural component of evaluation: different valid splits of the same stream can induce different CL regimes and therefore different benchmark conclusions. To study this effect, we introduce a taskification-level framework based on plasticity and stability profiles, a profile distance between taskifications, and Boundary-Profile Sensitivity (BPS), which diagnoses how strongly small boundary perturbations alter the induced regime before any CL model is trained. We evaluate continual finetuning, Experience Replay, Elastic Weight Consolidation, and Learning without Forgetting on network traffic forecasting with CESNET-Timeseries24, keeping the stream, model, and training budget fixed while varying only the temporal taskification. Across 9-, 30-, and 44-day splits, we observe substantial changes in forecasting error, forgetting, and backward transfer, showing that taskification alone can materially affect CL evaluation. We further find that shorter taskifications induce noisier distribution-level patterns, larger structural distances, and higher BPS, indicating greater sensitivity to boundary perturbations. These results show that benchmark conclusions in streaming CL depend not only on the learner and the data stream, but also on how that stream is taskified, motivating temporal taskification as a first-class evaluation variable.",
-    "pdf_url": "https://arxiv.org/pdf/2604.21930v1",
-    "published": "2026-04-23T17:59:54Z",
-    "fetched_at": "2026-04-27T00:52:23.454228"
+    "abstract": "Exponential families form the backbone of modern statistics and machine learning, but textbooks seldom derive them from first principles in an accessible way. Although minimal sufficiency and the principle of maximum entropy, originating in physics, provide core motivation, they are often presented as technical and requiring advanced prerequisites.\n  Here, a short, self-contained derivation of exponential families based on maximum entropy is presented that is straightforward to carry out, requires only a modest background in information entropy, and avoids technicalities like constrained optimisation. Two propositions are demonstrated in this fashion: i) exponential families with a general base maximise information entropy with respect to that base subject to fixed expectations of canonical statistics, and ii) exponential families with a uniform base maximise standard information entropy under the same constraints.\n  Maximum entropy therefore provides a principled foundation for exponential families with minimal prerequisites, highlighting the value of teaching entropy in statistics courses.",
+    "pdf_url": "https://arxiv.org/pdf/2604.22752v1",
+    "published": "2026-04-24T17:57:31Z",
+    "fetched_at": "2026-04-28T00:54:36.017053"
   },
   {
-    "title": "Fine-Tuning Regimes Define Distinct Continual Learning Problems",
+    "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
     "authors": [
-      "Paul-Tiberiu Iordache",
-      "Elena Burceanu"
+      "Meng Chu",
+      "Xuan Billy Zhang",
+      "Kevin Qinghong Lin",
+      "Lingdong Kong",
+      "Jize Zhang",
+      "Teng Tu",
+      "Weijian Ma",
+      "Ziqi Huang",
+      "Senqiao Yang",
+      "Wei Huang",
+      "Yeying Jin",
+      "Zhefan Rao",
+      "Jinhui Ye",
+      "Xinyu Lin",
+      "Xichen Zhang",
+      "Qisheng Hu",
+      "Shuai Yang",
+      "Leyang Shen",
+      "Wei Chow",
+      "Yifei Dong",
+      "Fengyi Wu",
+      "Quanyu Long",
+      "Bin Xia",
+      "Shaozuo Yu",
+      "Mingkang Zhu",
+      "Wenhu Zhang",
+      "Jiehui Huang",
+      "Haokun Gui",
+      "Haoxuan Che",
+      "Long Chen",
+      "Qifeng Chen",
+      "Wenxuan Zhang",
+      "Wenya Wang",
+      "Xiaojuan Qi",
+      "Yang Deng",
+      "Yanwei Li",
+      "Mike Zheng Shou",
+      "Zhi-Qi Cheng",
+      "See-Kiong Ng",
+      "Ziwei Liu",
+      "Philip Torr",
+      "Jiaya Jia"
     ],
-    "abstract": "Continual learning (CL) studies how models acquire tasks sequentially while retaining previously learned knowledge. Despite substantial progress in benchmarking CL methods, comparative evaluations typically keep the fine-tuning regime fixed. In this paper, we argue that the fine-tuning regime, defined by the trainable parameter subspace, is itself a key evaluation variable. We formalize adaptation regimes as projected optimization over fixed trainable subspaces, showing that changing the trainable depth alters the effective update signal through which both current task fitting and knowledge preservation operate. This analysis motivates the hypothesis that method comparisons need not be invariant across regimes. We test this hypothesis in task incremental CL, five trainable depth regimes, and four standard methods: online EWC, LwF, SI, and GEM. Across five benchmark datasets, namely MNIST, Fashion MNIST, KMNIST, QMNIST, and CIFAR-100, and across 11 task orders per dataset, we find that the relative ranking of methods is not consistently preserved across regimes. We further show that deeper adaptation regimes are associated with larger update magnitudes, higher forgetting, and a stronger relationship between the two. These results show that comparative conclusions in CL can depend strongly on the chosen fine-tuning regime, motivating regime-aware evaluation protocols that treat trainable depth as an explicit experimental factor.",
-    "pdf_url": "https://arxiv.org/pdf/2604.21927v1",
-    "published": "2026-04-23T17:59:34Z",
-    "fetched_at": "2026-04-27T00:52:23.454240"
+    "abstract": "As AI systems move from generating text to accomplishing goals through sustained interaction, the ability to model environment dynamics becomes a central bottleneck. Agents that manipulate objects, navigate software, coordinate with others, or design experiments require predictive environment models, yet the term world model carries different meanings across research communities. We introduce a \"levels x laws\" taxonomy organized along two axes. The first defines three capability levels: L1 Predictor, which learns one-step local transition operators; L2 Simulator, which composes them into multi-step, action-conditioned rollouts that respect domain laws; and L3 Evolver, which autonomously revises its own model when predictions fail against new evidence. The second identifies four governing-law regimes: physical, digital, social, and scientific. These regimes determine what constraints a world model must satisfy and where it is most likely to fail. Using this framework, we synthesize over 400 works and summarize more than 100 representative systems spanning model-based reinforcement learning, video generation, web and GUI agents, multi-agent social simulation, and AI-driven scientific discovery. We analyze methods, failure modes, and evaluation practices across level-regime pairs, propose decision-centric evaluation principles and a minimal reproducible evaluation package, and outline architectural guidance, open problems, and governance challenges. The resulting roadmap connects previously isolated communities and charts a path from passive next-step prediction toward world models that can simulate, and ultimately reshape, the environments in which agents operate.",
+    "pdf_url": "https://arxiv.org/pdf/2604.22748v1",
+    "published": "2026-04-24T17:48:47Z",
+    "fetched_at": "2026-04-28T00:54:36.017107"
   },
   {
-    "title": "The Sample Complexity of Multicalibration",
+    "title": "Code for All: Educational Applications of the \"Vibe Coding\" Hackathon in Programming Education across All Skill Levels",
     "authors": [
-      "Natalie Collina",
-      "Jiuyao Lu",
-      "Georgy Noarov",
-      "Aaron Roth"
+      "Ashley J. Chen",
+      "Yijia Cao",
+      "Minghao Shao",
+      "Ramesh Karri",
+      "Muhammad Shafique"
     ],
-    "abstract": "We study the minimax sample complexity of multicalibration in the batch setting. A learner observes $n$ i.i.d. samples from an unknown distribution and must output a (possibly randomized) predictor whose population multicalibration error, measured by Expected Calibration Error (ECE), is at most $\\varepsilon$ with respect to a given family of groups. For every fixed $κ> 0$, in the regime $|G|\\le \\varepsilon^{-κ}$, we prove that $\\widetildeΘ(\\varepsilon^{-3})$ samples are necessary and sufficient, up to polylogarithmic factors. The lower bound holds even for randomized predictors, and the upper bound is realized by a randomized predictor obtained via an online-to-batch reduction. This separates the sample complexity of multicalibration from that of marginal calibration, which scales as $\\widetildeΘ(\\varepsilon^{-2})$, and shows that mean-ECE multicalibration is as difficult in the batch setting as it is in the online setting, in contrast to marginal calibration which is strictly more difficult in the online setting. In contrast we observe that for $κ= 0$, the sample complexity of multicalibration remains $\\widetildeΘ(\\varepsilon^{-2})$ exhibiting a sharp threshold phenomenon.\n  More generally, we establish matching upper and lower bounds, up to polylogarithmic factors, for a weighted $L_p$ multicalibration metric for all $1 \\le p \\le 2$, with optimal exponent $3/p$. We also extend the lower-bound template to a regular class of elicitable properties, and combine it with the online upper bounds of Hu et al. (2025) to obtain matching bounds for calibrating properties including expectiles and bounded-density quantiles.",
-    "pdf_url": "https://arxiv.org/pdf/2604.21923v1",
-    "published": "2026-04-23T17:59:01Z",
-    "fetched_at": "2026-04-27T00:52:23.454254"
+    "abstract": "The emergence of large language models has enabled vibe coding, a natural language approach to programming in which users describe intent and AI generates or revises code, potentially broadening access to programming while preserving meaningful learning outcomes. We investigate its educational value through a month-long online hackathon that welcomed participants from multiple countries, ranging from complete beginners to experienced developers. The hackathon offered three tracks with increasing technical demands. Spark emphasized basic frontend functionality and dynamic features such as buttons, forms, and API calls. Build required backend or database integration. Launch targeted production ready web applications, including deployment. Participants were required to develop projects using only LLM generated code without manual edits and submitted complete chat histories, source code, demo videos, and functionality reports. We assessed educational effectiveness with a mixed methods design that combined standardized project evaluations across functionality, user interface and user experience design, impact, prompt quality, and code readability, along with post-hackathon surveys of perceived learning outcomes and thematic analysis of open-ended feedback. Our findings describe how participants with different backgrounds engage with vibe coding as task complexity increases, how the no manual editing constraint shapes prompting and debugging practices, and what these patterns imply for integrating AI assisted development into programming education and competitive learning environments.",
+    "pdf_url": "https://arxiv.org/pdf/2604.22747v1",
+    "published": "2026-04-24T17:48:40Z",
+    "fetched_at": "2026-04-28T00:54:36.017124"
   },
   {
-    "title": "VistaBot: View-Robust Robot Manipulation via Spatiotemporal-Aware View Synthesis",
+    "title": "Relaxation-Informed Training of Neural Network Surrogate Models",
     "authors": [
-      "Songen Gu",
-      "Yuhang Zheng",
-      "Weize Li",
-      "Yupeng Zheng",
-      "Yating Feng",
-      "Xiang Li",
-      "Yilun Chen",
-      "Pengfei Li",
-      "Wenchao Ding"
+      "Calvin Tsay"
     ],
-    "abstract": "Recently, end-to-end robotic manipulation models have gained significant attention for their generalizability and scalability. However, they often suffer from limited robustness to camera viewpoint changes when training with a fixed camera. In this paper, we propose VistaBot, a novel framework that integrates feed-forward geometric models with video diffusion models to achieve view-robust closed-loop manipulation without requiring camera calibration at test time. Our approach consists of three key components: 4D geometry estimation, view synthesis latent extraction, and latent action learning. VistaBot is integrated into both action-chunking (ACT) and diffusion-based ($π_0$) policies and evaluated across simulation and real-world tasks. We further introduce the View Generalization Score (VGS) as a new metric for comprehensive evaluation of cross-view generalization. Results show that VistaBot improves VGS by 2.79$\\times$ and 2.63$\\times$ over ACT and $π_0$, respectively, while also achieving high-quality novel view synthesis. Our contributions include a geometry-aware synthesis model, a latent action planner, a new benchmark metric, and extensive validation across diverse environments. The code and models will be made publicly available.",
-    "pdf_url": "https://arxiv.org/pdf/2604.21914v1",
-    "published": "2026-04-23T17:57:13Z",
-    "fetched_at": "2026-04-27T00:52:23.454273"
+    "abstract": "ReLU neural networks trained as surrogate models can be embedded exactly in mixed-integer linear programs (MILPs), enabling global optimization over the learned function. The tractability of the resulting MILP depends on structural properties of the network, i.e., the number of binary variables in associated formulations and the tightness of the continuous LP relaxation. These properties are determined during training, yet standard training objectives (prediction loss with classical weight regularization) offer no mechanism to directly control them. This work studies training regularizers that directly target downstream MILP tractability. Specifically, we propose simple bound-based regularizers that penalize the big-M constants of MILP formulations and/or the number of unstable neurons. Moreover, we introduce an LP relaxation gap regularizer that explicitly penalizes the per-sample gap of the continuous relaxation at training points. We derive its associated gradient and provide an implementation from LP dual variables without custom automatic differentiation tools. We show that combining the above regularizers can approximate the full total derivative of the LP gap with respect to the network parameters, capturing both direct and indirect sensitivities. Experiments on non-convex benchmark functions and a two-stage stochastic programming problem with quantile neural network surrogates demonstrate that the proposed regularizers can reduce MILP solve times by up to four orders of magnitude relative to an unregularized baseline, while maintaining competitive surrogate model accuracy.",
+    "pdf_url": "https://arxiv.org/pdf/2604.22746v1",
+    "published": "2026-04-24T17:46:55Z",
+    "fetched_at": "2026-04-28T00:54:36.017136"
   }
 ]
