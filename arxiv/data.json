@@ -1,70 +1,64 @@
 [
   {
-    "title": "Recursive Multi-Agent Systems",
+    "title": "Outer-Crust Equations of State for Neutron Stars",
     "authors": [
-      "Xiyuan Yang",
-      "Jiaru Zou",
-      "Rui Pan",
-      "Ruizhong Qiu",
-      "Pan Lu",
-      "Shizhe Diao",
-      "Jindong Jiang",
-      "Hanghang Tong",
-      "Tong Zhang",
-      "Markus J. Buehler",
-      "Jingrui He",
-      "James Zou"
+      "P. S. Koliogiannis",
+      "N. Paar"
     ],
-    "abstract": "Recursive or looped language models have recently emerged as a new scaling axis by iteratively refining the same model computation over latent states to deepen reasoning. We extend such scaling principle from a single model to multi-agent systems, and ask: Can agent collaboration itself be scaled through recursion? To this end, we introduce RecursiveMAS, a recursive multi-agent framework that casts the entire system as a unified latent-space recursive computation. RecursiveMAS connects heterogeneous agents as a collaboration loop through the lightweight RecursiveLink module, enabling in-distribution latent thoughts generation and cross-agent latent state transfer. To optimize our framework, we develop an inner-outer loop learning algorithm for iterative whole-system co-optimization through shared gradient-based credit assignment across recursion rounds. Theoretical analyses of runtime complexity and learning dynamics establish that RecursiveMAS is more efficient than standard text-based MAS and maintains stable gradients during recursive training. Empirically, we instantiate RecursiveMAS under 4 representative agent collaboration patterns and evaluate across 9 benchmarks spanning mathematics, science, medicine, search, and code generation. In comparison with advanced single/multi-agent and recursive computation baselines, RecursiveMAS consistently delivers an average accuracy improvement of 8.3%, together with 1.2$\\times$-2.4$\\times$ end-to-end inference speedup, and 34.6%-75.6% token usage reduction. Code and Data are provided in https://recursivemas.github.io.",
-    "pdf_url": "https://arxiv.org/pdf/2604.25917v1",
-    "published": "2026-04-28T17:59:34Z",
-    "fetched_at": "2026-04-30T00:55:31.304630"
+    "abstract": "We construct and systematically assess four outer-crust equations of state based on relativistic nuclear mass models and a machine-learning mass table. Our aim is to quantify the sensitivity of the equilibrium composition and thermodynamic properties of the outer crust to the underlying nuclear input, and to evaluate how these differences propagate to neutron-star configurations that are particularly sensitive to crustal properties. Equilibrium sequences of nuclei were determined by minimizing the Gibbs free energy per baryon for cold, catalyzed matter in $β$-equilibrium. The resulting outer-crust equations of state were then employed in neutron-star structure calculations near the minimum-mass limit, where global observables are especially sensitive to the low-density equation of state. The four nuclear models predict different equilibrium sequences, last bound nuclei, and neutron-drip properties. These differences are confined to the deepest layers of the outer crust, beyond current experimental mass coverage. Nevertheless, they propagate only weakly to crust-dominated neutron-star configurations: the gravitational mass, radius, crustal thickness, and fractional moment of inertia differ by less than one percent among the models considered. Modern nuclear-mass models provide consistent outer-crust equations of state for neutron-star applications. Although the detailed composition near neutron drip remains model dependent, the corresponding uncertainties have only a minor impact on the global properties of crust-dominated neutron stars. Therefore, these outer-crust equations of state provide a robust low-density description for astrophysical modelling and for future extensions toward unified neutron-star equations of state.",
+    "pdf_url": "https://arxiv.org/pdf/2604.26952v1",
+    "published": "2026-04-29T17:59:31Z",
+    "fetched_at": "2026-05-01T00:59:19.563208"
   },
   {
-    "title": "How Fast Should a Model Commit to Supervision? Training Reasoning Models on the Tsallis Loss Continuum",
+    "title": "Turning the TIDE: Cross-Architecture Distillation for Diffusion Large Language Models",
     "authors": [
-      "Chu-Cheng Lin",
-      "Eugene Ie"
+      "Gongbo Zhang",
+      "Wen Wang",
+      "Ye Tian",
+      "Li Yuan"
     ],
-    "abstract": "Adapting reasoning models to new tasks during post-training with only output-level supervision stalls under reinforcement learning from verifiable rewards (RLVR) when the initial success probability $p_0$ is small. Using the Tsallis $q$-logarithm, we define a loss family $J_Q$ that interpolates between RLVR (at $q{=}0$, the exploitation pole) and the log-marginal-likelihood over latent trajectories (at $q{=}1$, the density-estimation pole). All members share the same per-example gradient direction, differing only by a scalar amplification $P_{θ^{-q}}$ that reweights each instance independently of the learning rate. This amplification is the mechanism that addresses cold-start stalling: under gradient flow, the exploitation pole requires $Ω(\\frac{1}{p_0})$ time to escape cold start, while the density-estimation pole escapes in $Θ\\big(\\log(\\frac{1}{p_0})\\big)$; intermediate $q$ trades escape speed against noise memorization. Because $P_θ$ is intractable, we derive two Monte Carlo estimators from the two factorizations of the gradient: Gradient-Amplified RL (GARL) samples from the prior and amplifies the RL gradient, and Posterior-Attenuated Fine-Tuning (PAFT) importance-resamples from the posterior and runs standard SFT. Both have bias $O\\big(\\frac{q}{M P_θ^{q+1}}\\big)$; GARL has lower variance, PAFT has semantically coherent gradients. On FinQA, HotPotQA, and MuSiQue, GARL at $q{=}0.75$ substantially mitigates cold-start stalling, escaping cold start where GRPO fails entirely. In warm start, GARL at low $q$ dominates FinQA where training is stable; on HotPotQA and MuSiQue, GARL destabilizes during training, and PAFT at $q{=}0.75$ provides stable gradients (best overall on HotPotQA at 47.9 maj@16, $+14.4$ over GRPO).",
-    "pdf_url": "https://arxiv.org/pdf/2604.25907v1",
-    "published": "2026-04-28T17:52:38Z",
-    "fetched_at": "2026-04-30T00:55:31.304651"
+    "abstract": "Diffusion large language models (dLLMs) offer parallel decoding and bidirectional context, but state-of-the-art dLLMs require billions of parameters for competitive performance. While existing distillation methods for dLLMs reduce inference steps within a single architecture, none address cross-architecture knowledge transfer, in which the teacher and student differ in architecture, attention mechanism, and tokenizer. We present TIDE, the first framework for cross-architecture dLLM distillation, comprising three modular components: (1) TIDAL, which jointly modulates distillation strength across training progress and diffusion timestep to account for the teacher's noise-dependent reliability; (2) CompDemo, which enriches the teacher's context via complementary mask splitting to improve predictions under heavy masking; and (3) Reverse CALM, a cross-tokenizer objective that inverts chunk-level likelihood matching, yielding bounded gradients and dual-end noise filtering. Distilling 8B dense and 16B MoE teachers into a 0.6B student via two heterogeneous pipelines outperforms the baseline by an average of 1.53 points across eight benchmarks, yielding notable gains in code generation, where HumanEval scores reach 48.78 compared to 32.3 for the AR baseline.",
+    "pdf_url": "https://arxiv.org/pdf/2604.26951v1",
+    "published": "2026-04-29T17:59:01Z",
+    "fetched_at": "2026-05-01T00:59:19.563230"
   },
   {
-    "title": "Teacher Forcing as Generalized Bayes: Optimization Geometry Mismatch in Switching Surrogates for Chaotic Dynamics",
+    "title": "Hyper Input Convex Neural Networks for Shape Constrained Learning and Optimal Transport",
     "authors": [
-      "Andre Herz",
-      "Daniel Durstewitz",
-      "Georgia Koppe"
+      "Shayan Hundrieser",
+      "Insung Kong",
+      "Johannes Schmidt-Hieber"
     ],
-    "abstract": "Identity teacher forcing (ITF) enables stable training of deterministic recurrent surrogates for chaotic dynamical systems and has been highly effective for dynamical systems reconstruction (DSR) with recurrent neural networks (RNNs), including interpretable almost-linear RNNs (AL-RNNs). However, as an intervention-based prediction loss (and thus a generalized Bayes update), teacher forcing need not match the free-running model's marginal likelihood geometry. We compare the objective-induced curvatures of ITF and marginal likelihood in a probabilistic switching augmentation of AL-RNNs, estimating ambiguity-aware observed information via Louis' identity. In the switching setting studied here, conditioning on a single forced regime path (as ITF does) inflates curvature, while marginal likelihood curvature is reduced by a missing-information correction when multiple switching explanations remain plausible. In Lorenz-63 experiments, windowed evidence fine-tuning improves held-out evidence but can degrade dynamical quantities of interest (QoIs) relative to ITF-pretrained models.",
-    "pdf_url": "https://arxiv.org/pdf/2604.25904v1",
-    "published": "2026-04-28T17:50:37Z",
-    "fetched_at": "2026-04-30T00:55:31.304665"
+    "abstract": "We introduce Hyper Input Convex Neural Networks (HyCNNs), a novel neural network architecture designed for learning convex functions. HyCNNs combine the principles of Maxout networks with input convex neural networks (ICNNs) to create a neural network that is always convex in the input, theoretically capable of leveraging depth, and performs reliable when trained at scale compared to ICNNs. Concretely, we prove that HyCNNs require exponentially fewer parameters than ICNNs to approximate quadratic functions up to a given precision. Throughout a series of synthetic experiments, we demonstrate that HyCNNs outperform existing ICNNs and MLPs in terms of predictive performance for convex regression and interpolation tasks. We further apply HyCNNs to learn high-dimensional optimal transport maps for synthetic examples and for single-cell RNA sequencing data, where they oftentimes outperform ICNN-based neural optimal transport methods and other baselines across a wide range of settings.",
+    "pdf_url": "https://arxiv.org/pdf/2604.26942v1",
+    "published": "2026-04-29T17:52:05Z",
+    "fetched_at": "2026-05-01T00:59:19.563244"
   },
   {
-    "title": "Carbon-Taxed Transformers: A Green Compression Pipeline for Overgrown Language Models",
+    "title": "Meta-learning-enhanced implicit full waveform inversion",
     "authors": [
-      "Ajmain Inqiad Alam",
-      "Palash Roy",
-      "Chanchal K. Roy",
-      "Banani Roy",
-      "Kevin A. Schneider"
+      "Huan Song",
+      "Shijun Cheng",
+      "Huanhuan Tang",
+      "Wei Ouyang",
+      "Weijian Mao"
     ],
-    "abstract": "The accelerating adoption of Large Language Models (LLMs) in software engineering (SE) has brought with it a silent crisis: unsustainable computational cost. While these models demonstrate remarkable capabilities in different SE tasks, they are unmanageably large, slow to deploy, memory-intensive, and carbon-heavy. This reality threatens not only the scalability and accessibility of AI-powered SE, but also its long-term environmental sustainability. The research challenge is clear: we must go beyond accuracy and address efficiency and environmental cost as first-class design constraints. To meet this challenge, we introduce Carbon-Taxed Transformers (CTT), a systematic multi-architectural compression principled pipeline ordering inspired by economic carbon taxation principles. Drawing from the economic concept of carbon pricing, CTT operationalizes a computational carbon tax that penalizes architectural inefficiencies and rewards deployment-ready compression. We evaluate CTT across three core SE tasks: code clone detection, code summarization, and code generation, with models spanning encoder-only, encoder-decoder, and decoder-only architecture. Our results show that CTT delivers on inference: (1) up to 49x memory reduction, (2) time reduction up to 8-10x for clone detection, up to 3x for summarization, and 4-7x for generation, (3) up to 81% reduction in CO2 emissions and (4) CTT retains around 98% accuracy on clone detection, around 89% on summarization, and up to 91% (textual metrics) and 68% (pass@1) for generation. Two ablation studies show that pipeline ordering and individual component contributions are both essential, providing empirical justification for CTT's design and effectiveness. This work establishes a viable path toward responsible AI in SE through aggressive yet performance-preserving compression.",
-    "pdf_url": "https://arxiv.org/pdf/2604.25903v1",
-    "published": "2026-04-28T17:48:16Z",
-    "fetched_at": "2026-04-30T00:55:31.304682"
+    "abstract": "Implicit full waveform inversion (IFWI) introduces implicit neural representations to parameterize the subsurface velocity model as a continuous function of spatial coordinates, which alleviates the dependence on the initial model and improves inversion flexibility. However, IFWI still requires a large number of iterative updates for each new exploration area, leading to slow convergence, high computational cost, and a lack of mechanisms to share prior knowledge across different geological settings, thereby limiting its efficiency and generalization capability. To further accelerate convergence and enhance cross-area generalization, we propose a meta-learning-based implicit full waveform inversion method, referred to as Meta-learning-enhanced implicit full waveform inversion (Meta-IFWI). In this framework, the subsurface velocity model is represented using an implicit neural network with periodic activation functions (SIREN), while a meta-learning strategy is employed to pretrain a single network on multiple velocity inversion tasks. Through this process, the network learns shared inversion priors and rapid adaptation strategies across different geological scenarios. For a new inversion task, the pretrained Meta-IFWI model can be efficiently adapted to the observed seismic data with only a few gradient updates, significantly reducing the number of iterations required for inversion. Numerical experiments conducted on in-distribution models, including layered synthetic models and the Overthrust model, as well as out-of-distribution complex models such as Marmousi 2, demonstrate that, compared with conventional IFWI, the proposed Meta-IFWI achieves improved inversion accuracy while substantially accelerating convergence and reducing computational cost. Moreover, Meta-IFWI exhibits enhanced robustness and stronger cross-area generalization capability.",
+    "pdf_url": "https://arxiv.org/pdf/2604.26938v1",
+    "published": "2026-04-29T17:51:21Z",
+    "fetched_at": "2026-05-01T00:59:19.563261"
   },
   {
-    "title": "Toward a Functional Geometric Algebra for Natural Language Semantics",
+    "title": "Learning Over-Relaxation Policies for ADMM with Convergence Guarantees",
     "authors": [
-      "James Pustejovsky"
+      "Junan Lin",
+      "Paul J. Goulart",
+      "Luca Furieri"
     ],
-    "abstract": "Distributional and neural approaches to natural language semantics have been built almost exclusively on conventional linear algebra: vectors, matrices, tensors, and the operations that accompany them. These methods have achieved remarkable empirical success, yet they face persistent structural limitations in compositional semantics, type sensitivity, and interpretability. I argue in this paper that geometric algebra (GA) -- specifically, Clifford algebras -- provides a mathematically superior foundation for semantic representation, and that a Functional Geometric Algebra (FGA) framework extends GA toward a typed, compositional semantics capable of supporting inference, transformation, and interpretability while retaining full compatibility with distributional learning and modern neural architectures. I develop the formal foundations, identify three core capabilities that GA provides and linear algebra does not, present a detailed worked example illustrating operator-level semantic contrasts, and show how GA-based operations already implicit in current transformer architectures can be made explicit and extended. The central claim is not merely increased dimensionality but increased structural organization: GA expands an $n$-dimensional embedding space into a $2^n$ multivector algebra where base semantic concepts and their higher-order interactions are represented within a single, principled algebraic framework.",
-    "pdf_url": "https://arxiv.org/pdf/2604.25902v1",
-    "published": "2026-04-28T17:47:46Z",
-    "fetched_at": "2026-04-30T00:55:31.304694"
+    "abstract": "The Alternating Direction Method of Multipliers (ADMM) is a widely used method for structured convex optimization, and its practical performance depends strongly on the choice of penalty and relaxation parameters. Motivated by settings such as Model Predictive Control (MPC), where one repeatedly solves related optimization problems with fixed structure and changing parameter values, we propose learning online updates of the relaxation parameter to improve performance on problem classes of interest. This choice is computationally attractive in OSQP-like architectures, since adapting relaxation does not trigger the matrix refactorizations associated with penalty updates. We establish convergence guarantees for ADMM with time-varying penalty and relaxation parameters under mild assumptions, and show on benchmark quadratic programs that the resulting learned policies improve both iteration count and wall-clock time over baseline OSQP.",
+    "pdf_url": "https://arxiv.org/pdf/2604.26932v1",
+    "published": "2026-04-29T17:45:52Z",
+    "fetched_at": "2026-05-01T00:59:19.563274"
   }
 ]
