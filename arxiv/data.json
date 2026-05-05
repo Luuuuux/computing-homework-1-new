@@ -1,1 +1,75 @@
-[]
+[
+  {
+    "title": "Posterior Augmented Flow Matching",
+    "authors": [
+      "George Stoica",
+      "Sayak Paul",
+      "Matthew Wallingford",
+      "Vivek Ramanujan",
+      "Abhay Nori",
+      "Winson Han",
+      "Ali Farhadi",
+      "Ranjay Krishna",
+      "Judy Hoffman"
+    ],
+    "abstract": "Flow matching (FM) trains a time-dependent vector field that transports samples from a simple prior to a complex data distribution. However, for high-dimensional images, each training sample supervises only a single trajectory and intermediate point, yielding an extremely sparse and high-variance training signal. This under-constrained supervision can cause flow collapse, where the learned dynamics memorize specific source-target pairings, mapping diverse inputs to overly similar outputs, failing to generalize. We introduce Posterior-Augmented Flow Matching (PAFM), a theoretically grounded generalization of FM that replaces single-target supervision with an expectation over an approximate posterior of valid target completions for a given intermediate state and condition. PAFM factorizes this intractable posterior into (i) the likelihood of the intermediate under a hypothesized endpoint and (ii) the prior probability of that endpoint under the condition, and uses an importance sampling scheme to construct a mixture over multiple candidate targets. We prove that PAFM yields an unbiased estimator of the original FM objective while substantially reducing gradient variance during training by aggregating information from many plausible continuation trajectories per intermediate. Finally, we show that PAFM improves over FM by up to 3.4 FID50K across different model scales (SiT-B/2 and SiT-XL/2), different architectures (SiT and MMDiT), and in both class and text conditioned benchmarks (ImageNet and CC12M), with a negligible increase in the compute overhead. Code: https://github.com/gstoica27/PAFM.git.",
+    "pdf_url": "https://arxiv.org/pdf/2605.00825v1",
+    "published": "2026-05-01T17:59:59Z",
+    "fetched_at": "2026-05-05T00:51:09.913523"
+  },
+  {
+    "title": "HyCOP: Hybrid Composition Operators for Interpretable Learning of PDEs",
+    "authors": [
+      "Jinpai Zhao",
+      "Nishant Panda",
+      "Yen Ting Lin",
+      "Eirik Valseth",
+      "Diane Oyen",
+      "Clint Dawson"
+    ],
+    "abstract": "We introduce HyCOP, a modular framework that learns parametric PDE solution operators by composing simple modules (advection, diffusion, learned closures, boundary handling) in a query-conditioned way. Rather than learning a monolithic map, HyCOP learns a policy over short programs - which module to apply and for how long - conditioned on regime features and state statistics. Modules may be numerical sub-solvers or learned components, enabling hybrid surrogates evaluated at arbitrary query times without autoregressive rollout. Across diverse PDE benchmarks, HyCOP produces interpretable programs, delivers order-of-magnitude OOD improvements over monolithic neural operators, and supports modular transfer through dictionary updates (e.g., boundary swaps, residual enrichment). Our theory characterizes expressivity and gives an error decomposition that separates composition error from module error and doubles as a process-level diagnostic.",
+    "pdf_url": "https://arxiv.org/pdf/2605.00820v1",
+    "published": "2026-05-01T17:57:48Z",
+    "fetched_at": "2026-05-05T00:51:09.913547"
+  },
+  {
+    "title": "Generating Statistical Charts with Validation-Driven LLM Workflows",
+    "authors": [
+      "Pavlin G. Poličar",
+      "Andraž Pevcin",
+      "Blaž Zupan"
+    ],
+    "abstract": "Generating diverse, readable statistical charts from tabular data remains challenging for LLMs, as many failures become apparent after rendering and are not detectable from data or code alone. Existing chart datasets also rarely provide fully aligned artifacts, such as executable code, dataset context, and question-answer pairs. We present a structured LLM-based workflow that decomposes chart generation into dataset screening, plot proposal, code synthesis, rendering, validation-driven refinement, description generation, and question-answer generation. By incorporating rendered-output validation, the workflow addresses visualization-specific failure modes such as readability and semantic mismatch. It treats chart generation as an inspectable process rather than a one-shot prompt-to-code task, retaining each chart with its code, dataset context, description, and question-answer pairs. Applied to UCI datasets, the workflow produces 1,500 charts from 74 datasets, spanning 24 chart families and paired with 30,003 question-answer pairs. We evaluate 16 multimodal LLMs (MLLMs) on these chart-question pairs. The results show that chart-syntax questions are nearly saturated, while value extraction, comparison, and reasoning remain more challenging, illustrating the workflow's utility for diagnostic studies of chart-grounded multimodal reasoning.",
+    "pdf_url": "https://arxiv.org/pdf/2605.00800v1",
+    "published": "2026-05-01T17:39:00Z",
+    "fetched_at": "2026-05-05T00:51:09.913561"
+  },
+  {
+    "title": "GMGaze: MoE-Based Context-Aware Gaze Estimation with CLIP and Multiscale Transformer",
+    "authors": [
+      "Xinyuan Zhao",
+      "Yihang Wu",
+      "Ahmad Chaddad",
+      "Sarah A. Alkhodair",
+      "Reem Kateb"
+    ],
+    "abstract": "Gaze estimation methods commonly use facial appearances to predict the direction of a person gaze. However, previous studies show three major challenges with convolutional neural network (CNN)-based, transformer-based, and contrastive language-image pre-training (CLIP)-based methods, including late fusion of image features, lack of factor-aware conditioning, and impractical capacity scaling. To address these challenges, we propose Globally-conditioned Multi-scale Gaze estimation (GMGaze), which leverages a multi-scale transformer architecture. Specifically, the model first introduces semantic prototype conditioning, which modulates the CLIP global image embedding using four learned prototype banks (i.e., illumination, background, head pose and appearance) to generate two complementary context-biased global tokens. These tokens, along with the CLIP patch and CNN tokens, are fused at the first layer. This early unified fusion prevents information loss common in late-stage merging. Finally, each token passes through sparse Mixture-of-Experts modules, providing conditional computational capacity without uniformly increasing dense parameters. For cross-domain adaptation, we incorporate an adversarial domain adaptation technique with a feature separation loss that encourages the two global tokens to remain de-correlated. Experiments using four public benchmarks (MPIIFaceGaze, EYEDIAP, Gaze360, and ETH-XGaze) show that GMGaze achieves mean angular errors of 2.49$^\\circ$, 3.22$^\\circ$, 10.16$^\\circ$, and 1.44$^\\circ$, respectively, outperforming previous baselines in all within-domain settings. In cross-domain evaluations, it provides state-of-the-art (SOTA) results on two standard transfer routes.",
+    "pdf_url": "https://arxiv.org/pdf/2605.00799v1",
+    "published": "2026-05-01T17:35:17Z",
+    "fetched_at": "2026-05-05T00:51:09.913577"
+  },
+  {
+    "title": "RunAgent: Interpreting Natural-Language Plans with Constraint-Guided Execution",
+    "authors": [
+      "Arunabh Srivastava",
+      "Mohammad A.",
+      "Khojastepour",
+      "Srimat Chakradhar",
+      "Sennur Ulukus"
+    ],
+    "abstract": "Humans solve problems by executing targeted plans, yet large language models (LLMs) remain unreliable for structured workflow execution. We propose RunAgent, a multi-agent plan execution platform that interprets natural-language plans while enforcing stepwise execution through constraints and rubrics. RunAgent bridges the expressiveness of natural language with the determinism of programming via an agentic language with explicit control constructs (e.g., \\texttt{IF}, \\texttt{GOTO}, \\texttt{FORALL}). Beyond verifying syntactic and semantic verification of the step output, which is performed based on the specific instruction of each step, RunAgent autonomously derives and validates constraints based on the description of the task and its instance at each step. RunAgent also dynamically selects among LLM-based reasoning, tool usage, and code generation and execution (e.g., in Python), and incorporates error correction mechanisms to ensure correctness. Finally, RunAgent filters the context history by retaining only relevant information during the execution of each step. Evaluations on Natural-plan and SciBench Datasets demonstrate that RunAgent outperforms baseline LLMs and state-of-the-art PlanGEN methods.",
+    "pdf_url": "https://arxiv.org/pdf/2605.00798v1",
+    "published": "2026-05-01T17:29:45Z",
+    "fetched_at": "2026-05-05T00:51:09.913593"
+  }
+]
