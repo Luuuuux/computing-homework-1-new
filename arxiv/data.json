@@ -1,1 +1,125 @@
-[]
+[
+  {
+    "title": "Unveiling Hidden Lyman Alpha Emitters in the DESI DR1 Data",
+    "authors": [
+      "Jui-Kuan Chan",
+      "Ting-Wen Lan",
+      "J. Xavier Prochaska",
+      "Shun Saito",
+      "J. Aguilar",
+      "S. Ahlen",
+      "D. Bianchi",
+      "D. Brooks",
+      "A. Cuceu",
+      "A. de la Macorra",
+      "Biprateep Dey",
+      "P. Doel",
+      "A. Font-Ribera",
+      "J. E. Forero-Romero",
+      "E. Gaztañaga",
+      "Satya Gontcho A Gontcho",
+      "G. Gutierrez",
+      "C. Hahn",
+      "J. Jimenez",
+      "R. Joyce",
+      "S. Juneau",
+      "D. Kirkby",
+      "A. Kremin",
+      "M. Landriau",
+      "M. Manera",
+      "A. Meisner",
+      "R. Miquel",
+      "J. Moustakas",
+      "S. Nadathur",
+      "W. J. Percival",
+      "C. Poppett",
+      "F. Prada",
+      "I. Pérez-Ràfols",
+      "G. Rossi",
+      "E. Sanchez",
+      "D. Schlegel",
+      "M. Schubnell",
+      "J. Silber",
+      "D. Sprayberry",
+      "G. Tarlé",
+      "B. A. Weaver",
+      "H. Zou"
+    ],
+    "abstract": "We present an automatic method based on machine-learning convolutional neural network (CNN) architecture to detect Lyman alpha emitters (LAE) hidden in the Data Release 1 spectroscopic dataset of the Dark Energy Spectroscopic Instrument (DESI). Those LAEs mostly have incorrect redshift estimations because the current DESI pipeline is not designed to detect and measure the redshifts of galaxies at $z>2$. To uncover those sources, we first visually inspect thousands of DESI spectra and construct a sample, consisting of both LAEs and non-LAEs, for training and testing the CNN-based model to (1) detect LAEs in DESI spectra and (2) determine their Ly$α$ redshifts. The final model yields $95.2\\%$ purity and $95.9\\%$ completeness for detecting LAEs. We apply this model to approximately $2\\times10^{6}$ spectra of sources targeted as emission-line galaxies and detect 19,685 LAEs from $z\\sim2$ to $3.5$ within 12 minutes with a single GPU, illustrating the high efficiency of this model for identifying LAEs. The detected LAEs are mostly at the bright end of the luminosity function with Ly$α$ luminosity $L_{\\rm Lyα} \\gtrsim 10^{43}$ erg/s. The high signal-to-noise composite spectrum of the detected LAEs further shows various spectral features, including P-Cygni profiles of metal lines and MgII emission lines, possible indicators of Lyman continuum escape fraction, revealing the rich astrophysical information in this LAE sample. Finally, this sample can be used to train and validate the pipelines for redshift determination of LAEs for the preparation of the DESI-II survey.",
+    "pdf_url": "https://arxiv.org/pdf/2605.12503v1",
+    "published": "2026-05-12T17:59:59Z",
+    "fetched_at": "2026-05-14T00:59:57.504832"
+  },
+  {
+    "title": "CausalCine: Real-Time Autoregressive Generation for Multi-Shot Video Narratives",
+    "authors": [
+      "Yihao Meng",
+      "Zichen Liu",
+      "Hao Ouyang",
+      "Qiuyu Wang",
+      "Ka Leong Cheng",
+      "Yue Yu",
+      "Hanlin Wang",
+      "Haobo Li",
+      "Jiapeng Zhu",
+      "Yanhong Zeng",
+      "Xing Zhu",
+      "Yujun Shen",
+      "Qifeng Chen",
+      "Huamin Qu"
+    ],
+    "abstract": "Autoregressive video generation aims at real-time, open-ended synthesis. Yet, cinematic storytelling is not merely the endless extension of a single scene; it requires progressing through evolving events, viewpoint shifts, and discrete shot boundaries. Existing autoregressive models often struggle in this setting. Trained primarily for short-horizon continuation, they treat long sequences as extended single shots, inevitably suffering from motion stagnation and semantic drift during long rollouts. To bridge this gap, we introduce CausalCine, an interactive autoregressive framework that transforms multi-shot video generation into an online directing process. CausalCine generates causally across shot changes, accepts dynamic prompts on the fly, and reuses context without regenerating previous shots. To achieve this, we first train a causal base model on native multi-shot sequences to learn complex shot transitions prior to acceleration. We then propose Content-Aware Memory Routing (CAMR), which dynamically retrieves historical KV entries according to attention-based relevance scores rather than temporal proximity, preserving cross-shot coherence under bounded active memory. Finally, we distill the causal base model into a few-step generator for real-time interactive generation. Extensive experiments demonstrate that CausalCine significantly outperforms autoregressive baselines and approaches the capability of bidirectional models while unlocking the streaming interactivity of causal generation. Demo available at https://yihao-meng.github.io/CausalCine/",
+    "pdf_url": "https://arxiv.org/pdf/2605.12496v1",
+    "published": "2026-05-12T17:59:51Z",
+    "fetched_at": "2026-05-14T00:59:57.504865"
+  },
+  {
+    "title": "AlphaGRPO: Unlocking Self-Reflective Multimodal Generation in UMMs via Decompositional Verifiable Reward",
+    "authors": [
+      "Runhui Huang",
+      "Jie Wu",
+      "Rui Yang",
+      "Zhe Liu",
+      "Hengshuang Zhao"
+    ],
+    "abstract": "In this paper, we propose AlphaGRPO, a novel framework that applies Group Relative Policy Optimization (GRPO) to AR-Diffusion Unified Multimodal Models (UMMs) to enhance multimodal generation capabilities without an additional cold-start stage. Our approach unlocks the model's intrinsic potential to perform advanced reasoning tasks: Reasoning Text-to-Image Generation, where the model actively infers implicit user intents, and Self-Reflective Refinement, where it autonomously diagnoses and corrects misalignments in generated outputs. To address the challenge of providing stable supervision for real-world multimodal generation, we introduce the Decompositional Verifiable Reward (DVReward). Unlike holistic scalar rewards, DVReward utilizes an LLM to decompose complex user requests into atomic, verifiable semantic and quality questions, which are then evaluated by a general MLLM to provide reliable and interpretable feedback. Extensive experiments demonstrate that AlphaGRPO yields robust improvements across multimodal generation benchmarks, including GenEval, TIIF-Bench, DPG-Bench and WISE, while also achieving significant gains in editing tasks on GEdit without training on editing tasks. These results validate that our self-reflective reinforcement approach effectively leverages inherent understanding to guide high-fidelity generation. Project page: https://huangrh99.github.io/AlphaGRPO/",
+    "pdf_url": "https://arxiv.org/pdf/2605.12495v1",
+    "published": "2026-05-12T17:59:47Z",
+    "fetched_at": "2026-05-14T00:59:57.504881"
+  },
+  {
+    "title": "Pion: A Spectrum-Preserving Optimizer via Orthogonal Equivalence Transformation",
+    "authors": [
+      "Kexuan Shi",
+      "Hanxuan Li",
+      "Zeju Qiu",
+      "Yandong Wen",
+      "Simon Buchholz",
+      "Weiyang Liu"
+    ],
+    "abstract": "We introduce Pion, a spectrum-preserving optimizer for large language model (LLM) training based on orthogonal equivalence transformation. Unlike additive optimizers such as Adam and Muon, Pion updates each weight matrix through left and right orthogonal transformations, preserving its singular values throughout training. This yields an optimization mechanism that modulates the geometry of weight matrices while keeping their spectral norm fixed. We derive the Pion update rule, systematically examine its design choices, and analyze its convergence behavior along with several key properties. Empirical results show that Pion offers a stable and competitive alternative to standard optimizers for both LLM pretraining and finetuning.",
+    "pdf_url": "https://arxiv.org/pdf/2605.12492v1",
+    "published": "2026-05-12T17:59:34Z",
+    "fetched_at": "2026-05-14T00:59:57.504898"
+  },
+  {
+    "title": "Elastic Attention Cores for Scalable Vision Transformers",
+    "authors": [
+      "Alan Z. Song",
+      "Yinjie Chen",
+      "Mu Nan",
+      "Rui Zhang",
+      "Jiahang Cao",
+      "Weijian Mai",
+      "Muquan Yu",
+      "Hossein Adeli",
+      "Deva Ramanan",
+      "Michael J. Tarr",
+      "Andrew F. Luo"
+    ],
+    "abstract": "Vision Transformers (ViTs) achieve strong data-driven scaling by leveraging all-to-all self-attention. However, this flexibility incurs a computational cost that scales quadratically with image resolution, limiting ViTs in high-resolution domains. Underlying this approach is the assumption that pairwise token interactions are necessary for learning rich visual-semantic representations. In this work, we challenge this assumption, demonstrating that effective visual representations can be learned without any direct patch-to-patch interaction. We propose VECA (Visual Elastic Core Attention), a vision transformer architecture that uses efficient linear-time core-periphery structured attention enabled by a small set of learned cores. In VECA, these cores act as a communication interface: patch tokens exchange information exclusively through the core tokens, which are initialized from scratch and propagated across layers. Because the $N$ image patches only directly interact with a resolution invariant set of $C$ learned \"core\" embeddings, this yields linear complexity $O(N)$ for predetermined $C$, which bypasses quadratic scaling. Compared to prior cross-attention architectures, VECA maintains and iteratively updates the full set of $N$ input tokens, avoiding a small $C$-way bottleneck. Combined with nested training along the core axis, our model can elastically trade off compute and accuracy during inference. Across classification and dense tasks, VECA achieves performance competitive with the latest vision foundation models while reducing computational cost. Our results establish elastic core-periphery attention as a scalable alternative building block for Vision Transformers.",
+    "pdf_url": "https://arxiv.org/pdf/2605.12491v1",
+    "published": "2026-05-12T17:59:26Z",
+    "fetched_at": "2026-05-14T00:59:57.504920"
+  }
+]
