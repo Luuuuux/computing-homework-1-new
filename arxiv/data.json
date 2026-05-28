@@ -1,1 +1,89 @@
-[]
+[
+  {
+    "title": "SpatialBench: Is Your Spatial Foundation Model an All-Round Player?",
+    "authors": [
+      "Haosong Peng",
+      "Hao Li",
+      "Jiaqi Chen",
+      "Yuhao Pan",
+      "Runmao Yao",
+      "Yalun Dai",
+      "Fushuo Huo",
+      "Fangzhou Hong",
+      "Zhaoxi Chen",
+      "Haozhao Wang",
+      "Dingwen Zhang",
+      "Ziwei Liu",
+      "Wenchao Xu"
+    ],
+    "abstract": "While spatial foundation models have demonstrated impressive performance on standard datasets, a critical question remains: are they truly all-round players capable of generalizing robustly across diverse downstream tasks, arbitrary viewpoints, shifting scene domains, varying input densities, and specific hardware constraints? Answering this overarching question requires a holistic assessment, yet current models are mainly evaluated on specific domains for which they were specifically designed or trained. Such evaluations are intrinsically limited by narrow paradigm coverage, limited scene domains, and arbitrary frame sampling, making it fundamentally difficult to assess their true generalization capabilities. To address this gap, we present SpatialBench, a cross-paradigm, domain-diverse benchmark for spatial foundation models with deterministic sampling. SpatialBench features unprecedented scale and rigorous deterministic design, comprising 19 datasets and 546 scenes across 5 diverse spatial domains. It comprehensively evaluates 41 models across 6 paradigms on 5 task suites under 4 different input density settings. Our extensive evaluation reveals that current models are not yet all-round players, and uncovers crucial insights for future advancement. Specifically, we demonstrate that full-context attention maximizes accuracy while bounded-memory strategies unlock long-sequence scalability. Moreover, our empirical evaluations in challenging embodied and egocentric tasks demonstrate that strict domain alignment and high data quality are far more critical to performance than simple dataset scaling. Furthermore, to address the largest data gap identified in our analysis, we go beyond evaluation by introducing a large-scale dataset, DA-Next-5M, and a strong baseline model, DA-Next, pushing the boundaries of spatial representation learning.",
+    "pdf_url": "https://arxiv.org/pdf/2605.27367v1",
+    "published": "2026-05-26T17:59:20Z",
+    "fetched_at": "2026-05-28T00:57:24.872628"
+  },
+  {
+    "title": "MUSE-Autoskill: Self-Evolving Agents via Skill Creation, Memory, Management, and Evaluation",
+    "authors": [
+      "Huawei Lin",
+      "Peng Li",
+      "Jie Song",
+      "Fuxin Jiang",
+      "Tieying Zhang"
+    ],
+    "abstract": "Large language model (LLM) agents rely on reusable skills to solve complex tasks. However, existing skill creation approaches treat skills as isolated and static artifacts, limiting their reusability, reliability, and long-term improvement. We propose MUSE-Autoskill Agent (Memory-Utilizing Skill Evolution), a skill-centric agent framework that lets agents continuously improve their task-solving capability by creating, reusing, and refining skills under a unified lifecycle (creation, memory, management, evaluation, and refinement). Our framework enables agents to create skills on demand, store and reuse them across tasks, organize and select them efficiently, and evaluate them through unit tests and runtime feedback for continuous refinement. We further introduce skill-level memory that accumulates experience for each skill across tasks, enabling more effective reuse and adaptation over time. Experiments on SkillsBench provide initial evidence that lifecycle-managed skills can improve task success, efficiency, reuse, and cross-agent transfer, highlighting the importance of treating skills as long-lived, experience-aware, and testable assets.",
+    "pdf_url": "https://arxiv.org/pdf/2605.27366v1",
+    "published": "2026-05-26T17:59:19Z",
+    "fetched_at": "2026-05-28T00:57:24.872652"
+  },
+  {
+    "title": "LocateAnything: Fast and High-Quality Vision-Language Grounding with Parallel Box Decoding",
+    "authors": [
+      "Shihao Wang",
+      "Shilong Liu",
+      "Yuanguo Kuang",
+      "Xinyu Wei",
+      "Yangzhou Liu",
+      "Zhiqi Li",
+      "Yunze Man",
+      "Guo Chen",
+      "Andrew Tao",
+      "Guilin Liu",
+      "Jan Kautz",
+      "Lei Zhang",
+      "Zhiding Yu"
+    ],
+    "abstract": "Vision-language models (VLMs) commonly formulate visual grounding and detection as a coordinate-token generation problem, serializing each 2D box into multiple 1D tokens that are learned and decoded largely independently. This token-by-token decoding mismatches the coupled structure of box geometry and creates a practical inference bottleneck due to strictly sequential generation. We introduce LocateAnything, a unified generative grounding and detection framework based on Parallel Box Decoding (PBD). By decoding geometric elements such as bounding boxes and points as atomic units in a single step, LocateAnything preserves intra-box geometric coherence and unlocks substantial parallelism. We show that PBD improves both decoding throughput and localization accuracy. We further develop a scalable data engine and curate LocateAnything-Data, a large-scale dataset with more than 138 million training samples, substantially increasing data diversity for high-precision localization. Extensive evaluations show that LocateAnything advances the speed-accuracy frontier, achieving significantly higher decoding throughput while improving high-IoU localization quality across diverse benchmarks. The results highlight the complementary benefits of Parallel Box Decoding and large-scale training data in enabling efficient and precise unified visual grounding and detection.",
+    "pdf_url": "https://arxiv.org/pdf/2605.27365v1",
+    "published": "2026-05-26T17:59:12Z",
+    "fetched_at": "2026-05-28T00:57:24.872677"
+  },
+  {
+    "title": "MobileMoE: Scaling On-Device Mixture of Experts",
+    "authors": [
+      "Yanbei Chen",
+      "Hanxian Huang",
+      "Ernie Chang",
+      "Jacob Szwejbka",
+      "Digant Desai",
+      "Zechun Liu",
+      "Vikas Chandra",
+      "Raghuraman Krishnamoorthi"
+    ],
+    "abstract": "Mixture-of-Experts (MoE) has become the de facto architecture for hundred-billion-parameter language models, yet its advantages at sub-billion scales for on-device deployment remain largely unexplored. To close this gap, we present MobileMoE, a family of on-device MoE language models with sub-billion active parameters (0.3-0.9B active and 1.3-5.3B total) that establish a new Pareto frontier for on-device LLMs. We first formulate an on-device MoE scaling law that jointly optimizes MoE architecture under mobile memory and compute constraints, identifying an on-device sweet spot - moderate sparsity with fine-grained and shared experts - that is simultaneously memory and compute-optimal. Building on the derived architectures, we train MobileMoE with a four-stage recipe covering pre-training, mid-training, instruction fine-tuning, and quantization-aware training, all on open-source datasets. Across 14 benchmarks, MobileMoE matches or exceeds leading on-device dense LLMs with 2-4$\\times$ fewer inference FLOPs, and matches or surpasses the state-of-the-art MoE OLMoE-1B-7B with up to 60% fewer parameters. To bridge the last mile to mobile deployment, we provide the first efficient MoE inference on commodity smartphones with comprehensive on-device profiling. At comparable INT4 weight memory, MobileMoE-S delivers $1.8$-$3.8\\times$ faster prefill and $2.2$-$3.4\\times$ faster decode than the dense baseline MobileLLM-Pro.",
+    "pdf_url": "https://arxiv.org/pdf/2605.27358v1",
+    "published": "2026-05-26T17:58:24Z",
+    "fetched_at": "2026-05-28T00:57:24.872695"
+  },
+  {
+    "title": "Gaussian Process Reconstruction of Cosmological Parameters with Gravitational Wave Sirens using Machine Learning",
+    "authors": [
+      "Gourab Nandi",
+      "Anish Ghoshal",
+      "David F. Mota"
+    ],
+    "abstract": "Future gravitational wave (GW) standard siren catalogues will probe the late-time expansion history of the Universe across redshift ranges largely inaccessible to traditional electromagnetic observations. To determine how effectively this background distance information can distinguish between viable cosmological models, we introduce a model-independent reconstruction framework utilizing Gaussian Process Regression (GPR). Analyzing mock LISA and Einstein Telescope (ET) catalogues across six fiducial cosmological backgrounds-$Λ$CDM, CPL, CPL+$Λ$, interacting dark matter, interacting dark energy and axion inspired early dark energy. We reconstruct the comoving distance and its derivatives. Crucially, we propagated the full GP covariance, including derivative cross-covariances, to robustly evaluate the Hubble parameter $H(z)$ and other diagnostics such as $q(z)$, $\\mathcal{O}_{m}(z)$ $w_{\\rm total}(z)$ and $κ(z)$. While our analysis demonstrates that GW bright standard sirens faithfully recover fiducial expansion histories, applying pointwise marginal Hellinger distance reveals that background measurements alone do not provide decisive statistical separation among models. Instead, derivative sensitive diagnostics pinpoint specific redshift windows (e.g., $z\\simeq1.6-1.8$ for ET and $z\\simeq2.6-2.9$ for LISA) where future catalogues will maximize their discriminatory power. As machine learning methodologies become increasingly integral to astrophysics and cosmology, this Bayesian GPR pipeline offers a principled, nonparametric approach to precisely identifying where the most valuable cosmological information lies.",
+    "pdf_url": "https://arxiv.org/pdf/2605.27357v1",
+    "published": "2026-05-26T17:58:12Z",
+    "fetched_at": "2026-05-28T00:57:24.872709"
+  }
+]
