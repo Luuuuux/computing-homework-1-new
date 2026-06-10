@@ -1,71 +1,75 @@
 [
   {
-    "title": "Reinforcement Learning for Flow-Matching Policies with Density Transport",
+    "title": "Complexity synchronization as a diagnostic and control principle for adaptive systems",
     "authors": [
-      "Boshu Lei",
-      "Kostas Daniilidis",
-      "Antonio Loquercio"
+      "Korosh Mahmoodi",
+      "Scott E. Kerick",
+      "Piotr J. Franaszczuk",
+      "David L. Boothe",
+      "Paolo Grigolini",
+      "Bruce J. West"
     ],
-    "abstract": "We present an online reinforcement learning (RL) algorithm for fine-tuning flow-matching policies in continuous-control problems. Our key insight is to view RL-based policy improvement as a transport of action densities towards regions of high reward, which naturally aligns with the transport formulation of flow matching models. Prior methods either approximate the current or optimal policy distribution or resort to distillation, which introduces biased gradients or sacrifices multimodal modeling capacity. In contrast, our approach for RL with Density Transport, which we name \\emph{RLDT}, constructs a transport field from a maximum-entropy RL objective using Stein Variational Gradient Descent (SVGD). Then, it finetunes a pretrained flow matching policy to align with this field. Training with this alignment objective is nontrivial because flow-matching policies generate actions via a multi-step process, making direct gradient-based optimization challenging. To overcome this challenge and stabilize training, we approximate policy actions from intermediate denoising steps via expected-target estimation. This allows the transport-field update to propagate into the network parameters without unstable backpropagation through time. Experimental results demonstrate that RLDT outperforms competitive baselines in reward quality and convergence speed. This performance holds across diverse continuous-control tasks, encompassing both dense and sparse rewards, as well as state- and vision-based long-horizon robot manipulation. The project webpage is \\href{https://rpfey.github.io/rldt/}{https://rpfey.github.io/rldt/}.",
-    "pdf_url": "https://arxiv.org/pdf/2606.08602v1",
-    "published": "2026-06-07T12:28:51Z",
-    "fetched_at": "2026-06-09T01:01:17.169076"
+    "abstract": "Adaptive systems can exhibit similar levels of performance while relying on fundamentally different internal modes of coordination. Standard metrics such as average cooperation or payoff indicate whether a system succeeds, but do not reveal how coordination is organized across interacting components or which adaptive variables should be targeted when performance fails. Here we propose complexity synchronization (CS), the synchronization of evolving temporal complexity across coupled variables, as a diagnostic and intervention guiding principle for adaptive systems. We test this idea in an adaptive multi agent system composed of Selfish Algorithm agents interacting in a reduced Predator Prey model with a Prisoners Dilemma like payoff structure. Temporal complexity is quantified using sliding window modified diffusion entropy analysis (MDEA) and detrended fluctuation analysis (DFA). CS is defined as the correlation between the resulting time dependent scaling exponents. In the high-interaction regime, MDEA-based CS increases with cooperative performance, whereas DFA based CS captures a distinct persistence dominated coordination mode. Our results show that CS can reveal functionally relevant subsystems and provide a principled basis for targeted repair. More broadly, CS offers a general diagnostic and engineering framework for understanding and controlling coordination in biological, social, human machine, and other adaptive systems.",
+    "pdf_url": "https://arxiv.org/pdf/2606.10948v1",
+    "published": "2026-06-09T14:53:31Z",
+    "fetched_at": "2026-06-10T01:07:24.550446"
   },
   {
-    "title": "InA-Probe: Instruction-Aware Active Probing for Time Series Forecasting with LLMs",
+    "title": "Express Language Modeling",
     "authors": [
-      "Peiliang Gong",
-      "Emadeldeen Eldele",
-      "Chenyu Liu",
-      "Ziyu Jia",
-      "Yi Ding",
-      "Xinliang Zhou",
-      "Lianchao Gu",
-      "Qi Zhu",
-      "Yang Liu",
-      "Daoqiang Zhang",
-      "Xiaoli Li"
+      "Albert Gong",
+      "Annabelle Michael Carrell",
+      "Raaz Dwivedi",
+      "Lester Mackey"
     ],
-    "abstract": "Large Language Models (LLMs) have recently demonstrated impressive potential for time series forecasting. However, existing methods predominantly rely on passive modality alignment or static task reprogramming, which often fail to capture fine-grained, non-stationary temporal patterns or to adapt to nuanced task intents. In this paper, we propose Instruction-aware Active Probing (InA-Probe), which shifts the paradigm from passive alignment toward an active, instruction-driven probing mechanism. Specifically, we design a Multi-Level Instruction Injection mechanism that enriches the model with both global task objectives and fine-grained, patch-level semantic priors. Building on this, an Adaptive Query Generation module produces sample-specific probes that are dynamically modulated by the temporal context. These probes are then refined through a dual-stage attention process: they first internalize task-specific intents via Instruction-Aware Self-Attention, and subsequently interrogate the projected temporal representations through Temporal Cross-Attention to extract salient patterns. Comprehensive experiments on seven real-world benchmarks show that InA-Probe consistently outperforms state-of-the-art deep learning and LLM-based baselines, excelling in both one-for-all generalization and zero-shot transfer while reducing forecasting error by up to 37\\% in challenging cross-domain scenarios. Ablation studies further confirm that the synergy between adaptive querying and fine-grained instructions is key to unlocking the reasoning power of LLMs for complex time series.",
-    "pdf_url": "https://arxiv.org/pdf/2606.08601v1",
-    "published": "2026-06-07T12:27:13Z",
-    "fetched_at": "2026-06-09T01:01:17.169107"
+    "abstract": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.",
+    "pdf_url": "https://arxiv.org/pdf/2606.10944v1",
+    "published": "2026-06-09T14:48:56Z",
+    "fetched_at": "2026-06-10T01:07:24.550468"
   },
   {
-    "title": "Distilling LLM Reasoning into an Interpretable Policy Tree for Human-AI Collaboration",
+    "title": "Generative Explainability for Next-Generation Networks: LLM-Augmented XAI with Mutual Feature Interactions",
     "authors": [
-      "Beiwen Zhang",
-      "Yongheng Liang",
-      "Guowei Zou",
-      "Haitao Wang",
-      "Hejun Wu"
+      "Kiarash Rezaei",
+      "Omran Ayoub",
+      "Sebastian Troia",
+      "Francesco Lelli",
+      "Paolo Monti",
+      "Carlos Natalino"
     ],
-    "abstract": "Constructing efficient and reliable policies to assist humans is indispensable for human-AI collaboration. Existing methods mainly follow two lines of work. Most prior work relies on multi-agent reinforcement learning (MARL) to learn black-box policies, which limits interpretability and raises safety concerns. Recent methods query large language models (LLMs) at each decision step, causing slow responses and high inference costs. We propose Collaboration Policy Tree (Co-pi-tree), a closed-loop method that learns an executable policy tree consisting of a partner-behavior prediction tree and an agent-action selection tree. Co-pi-tree constructs a policy by distilling LLM reasoning into policy tree code. It then evaluates the policy through partner interaction, obtains feedback, and uses natural language to summarize the interaction feedback to improve problematic branches. Experiments in Overcooked-AI show that Co-pi-tree improves average reward by 35.4% over the baseline average, while reducing the number of LLM queries by 77.7% and test-time latency by 97.1%. Project page: https://beiwenzhang.github.io/Co-pi-tree/",
-    "pdf_url": "https://arxiv.org/pdf/2606.08596v1",
-    "published": "2026-06-07T12:20:32Z",
-    "fetched_at": "2026-06-09T01:01:17.169124"
+    "abstract": "As artificial intelligence and machine learning (AI/ML) models become integral to network operations, their lack of transparency poses a significant barrier to operator trust. Existing explainable artificial intelligence (XAI) techniques often fail to bridge this gap for non-specialists, producing technical outputs that are difficult to translate into actionable insights. This paper presents a framework specifically designed to address this shortcoming. It leverages a moderately sized large language model (LLM) and extends beyond the standard use of SHapley Additive exPlanations (SHAP) feature influence values. The framework employs a structured prompt enriched with mutual feature interaction data to generate human-understandable natural language explanations. To validate our framework, we performed an empirical evaluation on an optical quality of transmission (QoT) estimation use case with human evaluators. We collected independent performance evaluations from specialists, which showed a high inter-evaluator agreement. Compared to a state-of-the-art baseline that uses only SHAP feature influence values in a straightforward prompt, our approach improves the explanation usefulness and scope by 12.2% and 6.2%, while achieving 97.5% correctness.",
+    "pdf_url": "https://arxiv.org/pdf/2606.10942v1",
+    "published": "2026-06-09T14:48:26Z",
+    "fetched_at": "2026-06-10T01:07:24.550487"
   },
   {
-    "title": "How Much Capacity Does EEG Denoising Need? Ultra-Compact Networks reveal Benchmark Saturation and Metric-Utility Gap",
+    "title": "Democratising Camera Trap AI: An Open-Source Model for Detecting UK Mammals",
     "authors": [
-      "Jasmeet Singh Bindra",
-      "Siddharth Panwar",
-      "Shubhajit Roy Chowdhury"
+      "Paul Fergus",
+      "Philip Stephens",
+      "Russell A. Hill",
+      "Lee Oliver",
+      "Katie Appleby",
+      "Sarah Beatham",
+      "Naomi Davies Walsh",
+      "Stuart Nixon",
+      "Naomi Matthews",
+      "Chris Sutherland",
+      "Kelly Hitchcock"
     ],
-    "abstract": "Deep learning EEG denoising architectures have scaled from tens of thousands to tens of millions of parameters, yet no prior study has isolated model capacity as the experimental variable or tested whether reconstruction metrics predict downstream neural-signal utility. We address both gaps by fixing architecture, loss, data split, and training recipe while sweeping only channel width from 1.05K to 40.26K parameters in a minimal depthwise-separable convolutional U-Net. Models were evaluated on the EEGDenoiseNet benchmark, cross-dataset BCI transfer tests, controlled baseline retraining, and downstream motor-imagery classification with five decoder families across all nine BCI Competition IV-2a subjects. Reconstruction performance saturated by 3-6.5K parameters, with post-elbow gains of at most 0.015 correlation coefficient per log10-parameter unit. An 8.46M-parameter baseline retrained under the same pipeline matched the 40.26K compact variant on EOG--a 200x parameter gap yielding no advantage--while a Patch-Transformer control reproduced the same diminishing-return shape. Downstream evaluation exposed a classifier-dependent metric-utility gap: reconstruction-optimized denoising significantly degraded CSP+LDA classification across all nine subjects and three artifact types (best denoised accuracy 0.547 vs. 0.612 noisy baseline; Bonferroni p=0.0488), persisting on naturally recorded trials (Delta=-0.047; BH-FDR q=0.0049). End-to-end neural decoders showed variable or neutral effects. Standard EEG denoising benchmarks are saturated far below current model capacity, and reconstruction metrics do not predict BCI utility. Ultra-compact models at 33-46 KB and 1.27-2.61M FLOPs/segment are practical for edge deployment. These findings argue for capacity-controlled evaluation, harder task-aware benchmarks, and mandatory downstream validation.",
-    "pdf_url": "https://arxiv.org/pdf/2606.08594v1",
-    "published": "2026-06-07T12:17:25Z",
-    "fetched_at": "2026-06-09T01:01:17.169138"
+    "abstract": "Camera traps have become a cornerstone of biodiversity monitoring, but the artificial intelligence that turns vast quantities of images into usable ecological data is often locked behind commercial platforms or trained on fauna that does not match that of the British Isles. In an attempt to remove barriers and increase uptake, we release an open-source object detection model for 31 classes, 28 common UK mammal and bird species, plus utility classes for humans, calibration poles, and vehicles, drawn from a curated dataset of 48,165 labelled instances assembled from multiple sites over a decade of operational deployment through Conservation AI and its successor, Trap Tracker. The model, a YOLO26x detector trained and tested on an 80/10/10 class-stratified split, achieves a mean Average Precision of 0.984 at Intersection over Union (IoU) of 0.5 (0.956 at IoU 0.5-0.95) on the held-out validation set, with precision 0.988 and recall 0.965. On an unseen held-out test split, mean per-species confidence ranged from 0.96 to 0.99 across the 31 classes, with a 0.17% false-negative rate concentrated in difficult night-time, distant, or occluded images. These metrics are from data from the same pool of sites and cameras as training, so performance at entirely new sites is left to future work. We release the trained weights in ONNX format under a non-commercial licence, with local desktop and real-time camera support, aimed explicitly at ecologists with no machine-learning experience. This release is a deliberate counterweight to the multiple paid for models that have developed over the last decade.",
+    "pdf_url": "https://arxiv.org/pdf/2606.10940v1",
+    "published": "2026-06-09T14:47:24Z",
+    "fetched_at": "2026-06-10T01:07:24.550509"
   },
   {
-    "title": "Quantum Global Variational Learning for Quantum Error Correction",
+    "title": "A Systematic Approach for Selecting Trajectories for Data Augmentation",
     "authors": [
-      "Shun Ryuzaki",
-      "Hideo Mukai"
+      "Adam Nordling"
     ],
-    "abstract": "Efficient quantum error correction is essential for the advancement of quantum computing. We propose a quantum neural network with a global structure that reduces the number of unitary matrices required in quantum circuits. This approach resulted in a 97\\% reduction in training time and up to a 25\\% improvement in the training completion rate, ultimately achieving a 100\\% success rate in training while surpassing the error correction performance reported in previous studies. In addition, we demonstrated the enhanced robustness of quantum error correction against internal network noise. Moreover, the fidelity of quantum error correction under internal network noise increased by up to 15\\% due to the reduced computational load.",
-    "pdf_url": "https://arxiv.org/pdf/2606.08592v1",
-    "published": "2026-06-07T12:11:04Z",
-    "fetched_at": "2026-06-09T01:01:17.169150"
+    "abstract": "Trajectory data augmentation is a promising approach to mitigate data scarcity in machine learning applications, but its utility has been limited by the complexity of preserving spatio-temporal coherence. Although prior work demonstrated the viability of geometric perturbation, it relied on naive random selection, leaving a critical gap in understanding which trajectories should be augmented for maximal benefit. This thesis addresses this gap by developing a systematic and scalable framework to evaluate five systematic selection strategies: Outlierness, Diversity, Representativeness, Uncertainty, and Random selection. These strategies were rigorously tested across four datasets covering animal behavior (Foxes and Starkey), maritime traffic (AIS), and urban traffic (Car) using a suite of linear and non-linear machine learning models. As part of this evaluation, an Optuna-based hyperparameter optimization loop was integrated to empirically identify the best-performing augmentation parameters for each dataset within the explored search space. The results indicate that, while systematic selection is not a universal solution, it offers distinct advantages over the random baseline. Systematic strategies, particularly Outlierness and Uncertainty, demonstrated higher stability and were less prone to performance degradation observed with random sampling in dense datasets. However, the findings also reveal that the value of augmentation is strictly conditional. Visual analysis via UMAP demonstrates that while systematic augmentation successfully repairs topological fragmentation in sparse datasets, it can act as a corrupting noise signal in high-quality, dense datasets. Furthermore, the study identified physical limitations in high-velocity domains, where standard perturbation techniques lead to divergence in feature space...",
+    "pdf_url": "https://arxiv.org/pdf/2606.10938v1",
+    "published": "2026-06-09T14:46:47Z",
+    "fetched_at": "2026-06-10T01:07:24.550521"
   }
 ]
