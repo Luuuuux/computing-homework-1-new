@@ -1,75 +1,70 @@
 [
   {
-    "title": "Complexity synchronization as a diagnostic and control principle for adaptive systems",
+    "title": "TopoCap: Learning Topology-Agnostic Motion Priors for Monocular Video-to-Animation",
     "authors": [
-      "Korosh Mahmoodi",
-      "Scott E. Kerick",
-      "Piotr J. Franaszczuk",
-      "David L. Boothe",
-      "Paolo Grigolini",
-      "Bruce J. West"
+      "Cheng-Feng Pu",
+      "Jia-Peng Zhang",
+      "Meng-Hao Guo",
+      "Yan-Pei Cao",
+      "Shi-Min Hu"
     ],
-    "abstract": "Adaptive systems can exhibit similar levels of performance while relying on fundamentally different internal modes of coordination. Standard metrics such as average cooperation or payoff indicate whether a system succeeds, but do not reveal how coordination is organized across interacting components or which adaptive variables should be targeted when performance fails. Here we propose complexity synchronization (CS), the synchronization of evolving temporal complexity across coupled variables, as a diagnostic and intervention guiding principle for adaptive systems. We test this idea in an adaptive multi agent system composed of Selfish Algorithm agents interacting in a reduced Predator Prey model with a Prisoners Dilemma like payoff structure. Temporal complexity is quantified using sliding window modified diffusion entropy analysis (MDEA) and detrended fluctuation analysis (DFA). CS is defined as the correlation between the resulting time dependent scaling exponents. In the high-interaction regime, MDEA-based CS increases with cooperative performance, whereas DFA based CS captures a distinct persistence dominated coordination mode. Our results show that CS can reveal functionally relevant subsystems and provide a principled basis for targeted repair. More broadly, CS offers a general diagnostic and engineering framework for understanding and controlling coordination in biological, social, human machine, and other adaptive systems.",
-    "pdf_url": "https://arxiv.org/pdf/2606.10948v1",
-    "published": "2026-06-09T14:53:31Z",
-    "fetched_at": "2026-06-10T01:07:24.550446"
+    "abstract": "The explosion of generative 3D assets has created a massive demand for animation, yet current motion capture methods remain brittle, restricted to species-specific templates (e.g., SMPL) or requiring labor-intensive manual rigging. We introduce TopoCap, the first unified framework capable of extracting motion from monocular video and retargeting it onto characters with arbitrary, unseen skeletal topologies, i.e., from bipeds to hexapods and inanimate objects, without test-time optimization. Our key insight is that while skeletal structures are combinatorial and discrete, the underlying physics of motion occupy a continuous, low-dimensional manifold. We materialize this insight via a two-stage generative pipeline. First, we learn a Universal Motion Manifold using a Graph CVAE that compresses heterogeneous kinematic chains into a shared, fixed-length latent code. By explicitly conditioning the decoder on a structural embedding of the target rig, we disentangle motion dynamics from skeletal topology. Second, we treat video-to-animation as a conditional flow matching problem, predicting these topology-agnostic codes from visual features. To learn this generalized prior, we introduce Mobjaverse, a massive-scale dataset curated from Objaverse-XL. Comprising over 5,000 unique skeletal topologies and 2 million frames, it exceeds the structural diversity of existing datasets by two orders of magnitude. Extensive experiments demonstrate that \\MethodMotion outperforms specialist models on human and quadruped benchmarks while enabling zero-shot retargeting for the long tail of 3D creatures. Dataset is publicly available at https://huggingface.co/datasets/duckduckplz/Mobjaverse.",
+    "pdf_url": "https://arxiv.org/pdf/2606.12153v1",
+    "published": "2026-06-10T14:41:19Z",
+    "fetched_at": "2026-06-11T01:08:31.929467"
   },
   {
-    "title": "Express Language Modeling",
+    "title": "Lexicographic optimization for real-time CNC feedrate planning with coupled orientation handling",
     "authors": [
-      "Albert Gong",
-      "Annabelle Michael Carrell",
-      "Raaz Dwivedi",
-      "Lester Mackey"
+      "Haijia Xu",
+      "Alexander Verl"
     ],
-    "abstract": "We introduce a new tool, Express, for converting a non-causal attention approximation into a causal approximation with matching approximation guarantees. When combined with the state-of-the-art Thinformer approximation, Express improves upon the best known causal attention guarantees, delivering $\\log^{3/2}(n)/s$ approximation error with only $O(s)$ memory and $O(s^2 \\log^2(n))$ compression overhead for a sequence of length $n$. We pair these developments with an efficient I/O-aware Triton implementation, demonstrate substantial speedups over FlashAttention 2, and use Express to overcome four resource bottlenecks in the language modeling pipeline: long-context prefill, KV cache compression, long-form memory-constrained decoding, and long-form compute-constrained decoding.",
-    "pdf_url": "https://arxiv.org/pdf/2606.10944v1",
-    "published": "2026-06-09T14:48:56Z",
-    "fetched_at": "2026-06-10T01:07:24.550468"
+    "abstract": "Optimization-based feedrate planning offers the potential to significantly increase machining productivity, but its industrial adoption has been limited by high computational cost and extensive tuning effort. This paper proposes a lexicographic feedrate optimization principle that adaptively balances finishing time and motion smoothness in a tuning-free manner. To further improve computational efficiency, the optimization scheme is extended by a sparsity-exploiting formulation combined with a sequential windowing strategy, enabling real-time capable execution. In addition, a unified toolpath parameterization scheme is incorporated to synchronously handle tool position and orientation within the optimization framework. For a five-axis freeform test contour, the proposed method takes 14 s on an Intel i5-3470 CPU to optimize feedrate profiles for long toolpaths with 100,000 constraint checkpoints, and 52 s on a high-performance AMD 9950X CPU to handle one million checkpoints. Compared to an industrial CNC kernel, the resulting finishing time is reduced by more than 15 %.",
+    "pdf_url": "https://arxiv.org/pdf/2606.12151v1",
+    "published": "2026-06-10T14:40:34Z",
+    "fetched_at": "2026-06-11T01:08:31.929489"
   },
   {
-    "title": "Generative Explainability for Next-Generation Networks: LLM-Augmented XAI with Mutual Feature Interactions",
+    "title": "Do Not Discretize, Optimize: Almost Greedy Fictitious Play",
     "authors": [
-      "Kiarash Rezaei",
-      "Omran Ayoub",
-      "Sebastian Troia",
-      "Francesco Lelli",
-      "Paolo Monti",
-      "Carlos Natalino"
+      "Evangelos Markakis",
+      "Christodoulos Santorinaios"
     ],
-    "abstract": "As artificial intelligence and machine learning (AI/ML) models become integral to network operations, their lack of transparency poses a significant barrier to operator trust. Existing explainable artificial intelligence (XAI) techniques often fail to bridge this gap for non-specialists, producing technical outputs that are difficult to translate into actionable insights. This paper presents a framework specifically designed to address this shortcoming. It leverages a moderately sized large language model (LLM) and extends beyond the standard use of SHapley Additive exPlanations (SHAP) feature influence values. The framework employs a structured prompt enriched with mutual feature interaction data to generate human-understandable natural language explanations. To validate our framework, we performed an empirical evaluation on an optical quality of transmission (QoT) estimation use case with human evaluators. We collected independent performance evaluations from specialists, which showed a high inter-evaluator agreement. Compared to a state-of-the-art baseline that uses only SHAP feature influence values in a straightforward prompt, our approach improves the explanation usefulness and scope by 12.2% and 6.2%, while achieving 97.5% correctness.",
-    "pdf_url": "https://arxiv.org/pdf/2606.10942v1",
-    "published": "2026-06-09T14:48:26Z",
-    "fetched_at": "2026-06-10T01:07:24.550487"
+    "abstract": "Our work revolves around Fictitious Play, one of the first iterative methods that is known to converge to a Nash equilibrium in zero-sum games. In recent years, there has been a revived interest, due to applications in various machine learning problems, which has motivated a line of work on its convergence properties and on proposing new variants of the initial algorithm. Our paper is along this direction and introduces one new variant, which we refer to as Almost Greedy Fictitious Play. The proposed algorithm greedily attempts to find the optimal stepsize at each iteration but its search space is constrained and includes almost all the line between the cumulative mixed strategy and the current best response. Our main result is that the method achieves an instance dependent convergence rate of $\\mathcal{O}(1/T)$ with respect to the duality gap. This matches the rate of Continuous Fictitious Play, and offers an alternative to discretization. We complement our theoretical findings with experiments that demonstrate the effectiveness of the method.",
+    "pdf_url": "https://arxiv.org/pdf/2606.12149v1",
+    "published": "2026-06-10T14:39:46Z",
+    "fetched_at": "2026-06-11T01:08:31.929501"
   },
   {
-    "title": "Democratising Camera Trap AI: An Open-Source Model for Detecting UK Mammals",
+    "title": "Towards Responsibly Non-Compliant Machines",
     "authors": [
-      "Paul Fergus",
-      "Philip Stephens",
-      "Russell A. Hill",
-      "Lee Oliver",
-      "Katie Appleby",
-      "Sarah Beatham",
-      "Naomi Davies Walsh",
-      "Stuart Nixon",
-      "Naomi Matthews",
-      "Chris Sutherland",
-      "Kelly Hitchcock"
+      "Marija Slavkovik",
+      "Marie Farrell",
+      "Louise Dennis",
+      "Michael Fisher",
+      "Simon Kolker",
+      "Emily C. Collins"
     ],
-    "abstract": "Camera traps have become a cornerstone of biodiversity monitoring, but the artificial intelligence that turns vast quantities of images into usable ecological data is often locked behind commercial platforms or trained on fauna that does not match that of the British Isles. In an attempt to remove barriers and increase uptake, we release an open-source object detection model for 31 classes, 28 common UK mammal and bird species, plus utility classes for humans, calibration poles, and vehicles, drawn from a curated dataset of 48,165 labelled instances assembled from multiple sites over a decade of operational deployment through Conservation AI and its successor, Trap Tracker. The model, a YOLO26x detector trained and tested on an 80/10/10 class-stratified split, achieves a mean Average Precision of 0.984 at Intersection over Union (IoU) of 0.5 (0.956 at IoU 0.5-0.95) on the held-out validation set, with precision 0.988 and recall 0.965. On an unseen held-out test split, mean per-species confidence ranged from 0.96 to 0.99 across the 31 classes, with a 0.17% false-negative rate concentrated in difficult night-time, distant, or occluded images. These metrics are from data from the same pool of sites and cameras as training, so performance at entirely new sites is left to future work. We release the trained weights in ONNX format under a non-commercial licence, with local desktop and real-time camera support, aimed explicitly at ecologists with no machine-learning experience. This release is a deliberate counterweight to the multiple paid for models that have developed over the last decade.",
-    "pdf_url": "https://arxiv.org/pdf/2606.10940v1",
-    "published": "2026-06-09T14:47:24Z",
-    "fetched_at": "2026-06-10T01:07:24.550509"
+    "abstract": "We consider the problem of engineering autonomous intelligent agents that are capable to responsibly not comply with user requests. We argue that machine non-compliance comes in many different forms, and sketch the issues we should pursue on the road of accomplishing responsibly non-compliant intelligent machines. We anchor responsible non-compliance in justifications for task refusal, pathways to override the non-compliance, as well as careful tracking of security risks and liability transfers.",
+    "pdf_url": "https://arxiv.org/pdf/2606.12147v1",
+    "published": "2026-06-10T14:38:23Z",
+    "fetched_at": "2026-06-11T01:08:31.929518"
   },
   {
-    "title": "A Systematic Approach for Selecting Trajectories for Data Augmentation",
+    "title": "nD-RoPE: A Generalized RoPE for n-Dimensional Position Embedding",
     "authors": [
-      "Adam Nordling"
+      "Boyang Li",
+      "Yulin Wu",
+      "Sizhe Xu",
+      "Nuoxian Huang",
+      "Zhonghang Yuan",
+      "Shangyi Guo",
+      "Shu Yang",
+      "Takahiro Yabe"
     ],
-    "abstract": "Trajectory data augmentation is a promising approach to mitigate data scarcity in machine learning applications, but its utility has been limited by the complexity of preserving spatio-temporal coherence. Although prior work demonstrated the viability of geometric perturbation, it relied on naive random selection, leaving a critical gap in understanding which trajectories should be augmented for maximal benefit. This thesis addresses this gap by developing a systematic and scalable framework to evaluate five systematic selection strategies: Outlierness, Diversity, Representativeness, Uncertainty, and Random selection. These strategies were rigorously tested across four datasets covering animal behavior (Foxes and Starkey), maritime traffic (AIS), and urban traffic (Car) using a suite of linear and non-linear machine learning models. As part of this evaluation, an Optuna-based hyperparameter optimization loop was integrated to empirically identify the best-performing augmentation parameters for each dataset within the explored search space. The results indicate that, while systematic selection is not a universal solution, it offers distinct advantages over the random baseline. Systematic strategies, particularly Outlierness and Uncertainty, demonstrated higher stability and were less prone to performance degradation observed with random sampling in dense datasets. However, the findings also reveal that the value of augmentation is strictly conditional. Visual analysis via UMAP demonstrates that while systematic augmentation successfully repairs topological fragmentation in sparse datasets, it can act as a corrupting noise signal in high-quality, dense datasets. Furthermore, the study identified physical limitations in high-velocity domains, where standard perturbation techniques lead to divergence in feature space...",
-    "pdf_url": "https://arxiv.org/pdf/2606.10938v1",
-    "published": "2026-06-09T14:46:47Z",
-    "fetched_at": "2026-06-10T01:07:24.550521"
+    "abstract": "Rotary Position Embedding (RoPE) is widely adopted in Transformer models, yet its extension to high-dimensional domains lacks a unified theoretical formulation. Most existing approaches either apply rotations independently along each axis or empirically mix frequencies, which limits cross-dimensional interactions and yields direction-dependent representations. To address these limitations, we propose nD-RoPE, a decomposition-free generalization of RoPE to arbitrary dimensions. From a translation-invariant formulation in continuous Hilbert space, we derive a spectral condition for isotropy that requires treating positions and frequencies as coupled \\(n\\)-dimensional vectors. We instantiate this formulation with a multi-scale regular-simplex wave-vector design, which provides non-degenerate spatial coverage and a symmetric, directionally balanced second-order response. Experiments across images, videos, and point clouds demonstrate consistent performance gains and improved generalization in high-dimensional settings.",
+    "pdf_url": "https://arxiv.org/pdf/2606.12146v1",
+    "published": "2026-06-10T14:38:00Z",
+    "fetched_at": "2026-06-11T01:08:31.929537"
   }
 ]
