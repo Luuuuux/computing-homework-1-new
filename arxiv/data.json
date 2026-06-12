@@ -1,70 +1,66 @@
 [
   {
-    "title": "TopoCap: Learning Topology-Agnostic Motion Priors for Monocular Video-to-Animation",
+    "title": "NavWAM: A Navigation World Action Model for Goal-Conditioned Visual Navigation",
     "authors": [
-      "Cheng-Feng Pu",
-      "Jia-Peng Zhang",
-      "Meng-Hao Guo",
-      "Yan-Pei Cao",
-      "Shi-Min Hu"
+      "Daichi Azuma",
+      "Taiki Miyanishi",
+      "Koya Sakamoto",
+      "Shuhei Kurita",
+      "Yaonan Zhu",
+      "Petr Khrapchenkov",
+      "Motoaki Kawanabe",
+      "Yusuke Iwasawa",
+      "Yutaka Matsuo"
     ],
-    "abstract": "The explosion of generative 3D assets has created a massive demand for animation, yet current motion capture methods remain brittle, restricted to species-specific templates (e.g., SMPL) or requiring labor-intensive manual rigging. We introduce TopoCap, the first unified framework capable of extracting motion from monocular video and retargeting it onto characters with arbitrary, unseen skeletal topologies, i.e., from bipeds to hexapods and inanimate objects, without test-time optimization. Our key insight is that while skeletal structures are combinatorial and discrete, the underlying physics of motion occupy a continuous, low-dimensional manifold. We materialize this insight via a two-stage generative pipeline. First, we learn a Universal Motion Manifold using a Graph CVAE that compresses heterogeneous kinematic chains into a shared, fixed-length latent code. By explicitly conditioning the decoder on a structural embedding of the target rig, we disentangle motion dynamics from skeletal topology. Second, we treat video-to-animation as a conditional flow matching problem, predicting these topology-agnostic codes from visual features. To learn this generalized prior, we introduce Mobjaverse, a massive-scale dataset curated from Objaverse-XL. Comprising over 5,000 unique skeletal topologies and 2 million frames, it exceeds the structural diversity of existing datasets by two orders of magnitude. Extensive experiments demonstrate that \\MethodMotion outperforms specialist models on human and quadruped benchmarks while enabling zero-shot retargeting for the long tail of 3D creatures. Dataset is publicly available at https://huggingface.co/datasets/duckduckplz/Mobjaverse.",
-    "pdf_url": "https://arxiv.org/pdf/2606.12153v1",
-    "published": "2026-06-10T14:41:19Z",
-    "fetched_at": "2026-06-11T01:08:31.929467"
+    "abstract": "Goal-conditioned visual navigation requires a robot to act under partial observability by anticipating how its motion will change the future egocentric view and whether that change brings it closer to the goal. Navigation world models provide such visual foresight, but they remain prediction modules that require an external planner to convert predicted futures into closed-loop control. We propose Navigation World Action Model (NavWAM), a diffusion-transformer policy that turns navigation world-model prediction into executable action by representing future observations, goal-progress values, and action chunks in a shared latent sequence. By learning future prediction jointly with the action and value targets that determine closed-loop behavior, NavWAM makes visual foresight directly usable for robot control. We build NavWAM through simulation pretraining and real-robot adaptation, and evaluate it on image-goal navigation against planning-based world models and a representative direct navigation policy. Across offline benchmarks and closed-loop real-robot deployment, NavWAM improves over planning-based world-model baselines in our evaluations while using the default policy mode without CEM-style action search. Project page: https://dachii-azm.github.io/navwam/",
+    "pdf_url": "https://arxiv.org/pdf/2606.13494v1",
+    "published": "2026-06-11T15:44:36Z",
+    "fetched_at": "2026-06-12T01:11:39.765868"
   },
   {
-    "title": "Lexicographic optimization for real-time CNC feedrate planning with coupled orientation handling",
+    "title": "Fundamental Limits of Hypergraph Edge Partitioning under Independent Edge Sampling",
     "authors": [
-      "Haijia Xu",
-      "Alexander Verl"
+      "Javad Maheri",
+      "K. K. Krishnan Namboodiri",
+      "Petros Elia"
     ],
-    "abstract": "Optimization-based feedrate planning offers the potential to significantly increase machining productivity, but its industrial adoption has been limited by high computational cost and extensive tuning effort. This paper proposes a lexicographic feedrate optimization principle that adaptively balances finishing time and motion smoothness in a tuning-free manner. To further improve computational efficiency, the optimization scheme is extended by a sparsity-exploiting formulation combined with a sequential windowing strategy, enabling real-time capable execution. In addition, a unified toolpath parameterization scheme is incorporated to synchronously handle tool position and orientation within the optimization framework. For a five-axis freeform test contour, the proposed method takes 14 s on an Intel i5-3470 CPU to optimize feedrate profiles for long toolpaths with 100,000 constraint checkpoints, and 52 s on a high-performance AMD 9950X CPU to handle one million checkpoints. Compared to an industrial CNC kernel, the resulting finishing time is reduced by more than 15 %.",
-    "pdf_url": "https://arxiv.org/pdf/2606.12151v1",
-    "published": "2026-06-10T14:40:34Z",
-    "fetched_at": "2026-06-11T01:08:31.929489"
+    "abstract": "Hypergraph edge partitioning is a central problem in theoretical and applied computer science, with broad impact on distributed computation, communications, optimization, and machine learning. In this setting, one is given a collection of hyperedges -- each consisting of up to $d$ vertices from a ground set of size $n$ -- and seeks to assign these hyperedges across $N$ partitions so as to minimize, for example, the vertex footprint, i.e., the maximum number of vertices that appear in any partition. We here identify the fundamental limits of hypergraph edge partitioning -- optimized over all conceivable algorithms -- for a broad class of probabilistic hypergraph models where each hyperedge may appear independently with \\emph{its own} probability; a model sufficiently general to encompass well-known models such as the Degree-Corrected or Mixed-Membership models, the Hypergraph Stochastic Block model, the Latent-Space/Geometric or Kernel Models, and others. By pairing our deterministic partitioner with a new converse, we first show that, for any $n,d$, and under the very mild condition of $N \\leq \\binom{\\lfloor\\sqrt{\\frac{nd}{2}}\\rfloor}{d}$, as long as the hyperedge set $\\mathbf{X}$ satisfies $|\\mathbf{X}| \\gtrsim n N \\log N$, then with probability at least $1-2/3n^z$, no algorithm can provide a footprint $π_{\\mathbf{X}}$ less than $$π^{\\bigstar}_{\\mathbf{X}} = \\frac{1}{2\\sqrt{2}}\\frac{n}{N^{1/d}}. $$ We then show that our hypergraph partitioner comes to within a small constant factor from $π^{\\bigstar}_{\\mathbf{X}}$, for each $\\mathbf{X}$. This optimality captures dense and sparse hypergraphs alike (with sizes down to linear in $n$), and it additionally entails a near-optimally balanced allocation of hyperedges across partitions.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13491v1",
+    "published": "2026-06-11T15:39:55Z",
+    "fetched_at": "2026-06-12T01:11:39.765889"
   },
   {
-    "title": "Do Not Discretize, Optimize: Almost Greedy Fictitious Play",
+    "title": "Point-Wise Geometry-Aware Transformer for Partial-to-Full Point Cloud Registration in Computer-Assisted Surgery",
     "authors": [
-      "Evangelos Markakis",
-      "Christodoulos Santorinaios"
+      "Siyu Zhou",
+      "Zhongliang Jiang"
     ],
-    "abstract": "Our work revolves around Fictitious Play, one of the first iterative methods that is known to converge to a Nash equilibrium in zero-sum games. In recent years, there has been a revived interest, due to applications in various machine learning problems, which has motivated a line of work on its convergence properties and on proposing new variants of the initial algorithm. Our paper is along this direction and introduces one new variant, which we refer to as Almost Greedy Fictitious Play. The proposed algorithm greedily attempts to find the optimal stepsize at each iteration but its search space is constrained and includes almost all the line between the cumulative mixed strategy and the current best response. Our main result is that the method achieves an instance dependent convergence rate of $\\mathcal{O}(1/T)$ with respect to the duality gap. This matches the rate of Continuous Fictitious Play, and offers an alternative to discretization. We complement our theoretical findings with experiments that demonstrate the effectiveness of the method.",
-    "pdf_url": "https://arxiv.org/pdf/2606.12149v1",
-    "published": "2026-06-10T14:39:46Z",
-    "fetched_at": "2026-06-11T01:08:31.929501"
+    "abstract": "Partial-to-full registration remains challenging due to varying overlap ratios, fluctuating point densities, and the presence of noise. While transformers have shown strong potential for point cloud processing, prior methods typically confine them to global context aggregation, overlooking fine-grained local geometry crucial for accurate correspondence. We propose \\emph{GAPR-Net}, a learning-based point cloud registration framework with a coarse-to-fine architecture that combines convolution and transformer modules, in which local and global information is fused between the partial and full point clouds using a cross-attention mechanism. To achieve this, a transformation-invariant point-wise geometric feature representation is proposed, which can robustly capture relative geometric features for individual points with respect to their neighboring points. To evaluate the effectiveness of the proposed approach, experiments are conducted on four geometrically distinct bones, including the tibia, femur, pelvis, and thoracic cartilage. The overall registration recall reaches 94.2\\%, the method results in a low RMSE of 1.992 mm and $R^2$ values of 0.908 and 0.974 for rotation and translation, respectively. The results demonstrate that the proposed method effectively addresses the partial-to-full point cloud registration problem. The proposed method enables highly accurate 3D point cloud registration using partial observation, providing a critical foundation for precise surgical navigation and robotic interventions in computer-assisted surgery. The code will be accessed after the double-blind review process.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13488v1",
+    "published": "2026-06-11T15:37:53Z",
+    "fetched_at": "2026-06-12T01:11:39.765901"
   },
   {
-    "title": "Towards Responsibly Non-Compliant Machines",
+    "title": "CRAFTIIF: Cross-Resolution Analytic Four-Type Interpretable Isolation Forest for Multivariate Time Series Anomaly Detection",
     "authors": [
-      "Marija Slavkovik",
-      "Marie Farrell",
-      "Louise Dennis",
-      "Michael Fisher",
-      "Simon Kolker",
-      "Emily C. Collins"
+      "William Smits"
     ],
-    "abstract": "We consider the problem of engineering autonomous intelligent agents that are capable to responsibly not comply with user requests. We argue that machine non-compliance comes in many different forms, and sketch the issues we should pursue on the road of accomplishing responsibly non-compliant intelligent machines. We anchor responsible non-compliance in justifications for task refusal, pathways to override the non-compliance, as well as careful tracking of security risks and liability transfers.",
-    "pdf_url": "https://arxiv.org/pdf/2606.12147v1",
-    "published": "2026-06-10T14:38:23Z",
-    "fetched_at": "2026-06-11T01:08:31.929518"
+    "abstract": "Anomaly detection in multivariate time series is challenged by four structurally distinct anomaly types -- point (isolated spikes), distributional (level shifts), temporal (rhythm changes), and collective (inter-sensor correlation breakdowns) -- each requiring different feature representations. Most unsupervised methods target only one or two types and provide limited interpretability. We present CRAFTIIF (Cross-Resolution Analytic Four-Type Interpretable Isolation Forest), a fully unsupervised framework targeting all four types without dataset-specific tuning. CRAFTIIF generates K=500 random analytic wavelet feature draws across four families (Morlet, DOG, Haar, Coiflet), each targeting a specific anomaly type, feeding five structured Isolation Forests -- one per type plus a meta-IF for compound anomalies. An adaptive Otsu/MAD threshold calibrates detection automatically across anomaly rates from 0.1% to 69.2%. Because each IF is trained exclusively on type-specific features, branch firing provides direct anomaly-type attribution by construction, without post-hoc explanation. Evaluated on all 19 datasets of the mTSBench benchmark (Zhou et al., TMLR 2026), CRAFTIIF achieves mean F1=0.228 (all 19 datasets) and F1=0.322 (13 detectable datasets), ranking first among all 25 evaluated methods on VUS-PR (0.463 vs. previous best 0.329, +40.7%). A diagnostic framework -- oracle F1, detectability limits, and branch separation ratios -- identifies 6 of 19 datasets as fundamentally undetectable by any unsupervised method. Ablation over 11 conditions confirms adaptive thresholding (+38% F1), four-branch structure (+20%), and meta-IF (+23%) are each essential. Code: https://github.com/smitswil/craftiif",
+    "pdf_url": "https://arxiv.org/pdf/2606.13486v1",
+    "published": "2026-06-11T15:36:14Z",
+    "fetched_at": "2026-06-12T01:11:39.765912"
   },
   {
-    "title": "nD-RoPE: A Generalized RoPE for n-Dimensional Position Embedding",
+    "title": "A Stabilized Multilevel B-Spline-Based Fast Integral Method for the Solution of the Electric Field Integral Equation",
     "authors": [
-      "Boyang Li",
-      "Yulin Wu",
-      "Sizhe Xu",
-      "Nuoxian Huang",
-      "Zhonghang Yuan",
-      "Shangyi Guo",
-      "Shu Yang",
-      "Takahiro Yabe"
+      "Danijel Jukić",
+      "Bernd Hofmann",
+      "Thomas F. Eibert",
+      "Simon B. Adrian"
     ],
-    "abstract": "Rotary Position Embedding (RoPE) is widely adopted in Transformer models, yet its extension to high-dimensional domains lacks a unified theoretical formulation. Most existing approaches either apply rotations independently along each axis or empirically mix frequencies, which limits cross-dimensional interactions and yields direction-dependent representations. To address these limitations, we propose nD-RoPE, a decomposition-free generalization of RoPE to arbitrary dimensions. From a translation-invariant formulation in continuous Hilbert space, we derive a spectral condition for isotropy that requires treating positions and frequencies as coupled \\(n\\)-dimensional vectors. We instantiate this formulation with a multi-scale regular-simplex wave-vector design, which provides non-degenerate spatial coverage and a symmetric, directionally balanced second-order response. Experiments across images, videos, and point clouds demonstrate consistent performance gains and improved generalization in high-dimensional settings.",
-    "pdf_url": "https://arxiv.org/pdf/2606.12146v1",
-    "published": "2026-06-10T14:38:00Z",
-    "fetched_at": "2026-06-11T01:08:31.929537"
+    "abstract": "We present a multilevel B-spline-based fast integral method for the solution of the electric field integral equation (EFIE), combining fast Fourier transformation (FFT)-compatible kernel interpolation with robust high-order interpolation. Existing FFT-accelerated global Lagrange-based approaches rely on equidistant interpolation points and can, therefore, suffer from Runge-type instabilities at high interpolation orders, limiting robust high-accuracy compression. In contrast, B-splines on equidistant knot vectors overcome these instabilities and enable robust high-order interpolation for accurate matrix compression. Replacing Lagrange interpolation by B-spline interpolation is, however, non-trivial: B-spline coefficients do not coincide with function values at the interpolation points, and the associated sampling matrices can become ill-conditioned. To address these challenges, we introduce a knot-removal stabilization strategy, combined with exact interlevel transfers based on knot insertion, yielding accurate, well-conditioned multilevel interpolation. Moreover, we propose a factorization strategy that preserves the null space of the scalar potential operator up to machine precision and is compatible with low-frequency preconditioning techniques. Numerical results for both canonical and realistic geometries demonstrate robust high-order interpolation without the breakdown observed for Lagrange-based approaches and confirm $\\mathcal{O}(N)$ complexity.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13482v1",
+    "published": "2026-06-11T15:32:30Z",
+    "fetched_at": "2026-06-12T01:11:39.765926"
   }
 ]
