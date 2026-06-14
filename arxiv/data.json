@@ -1,1 +1,76 @@
-[]
+[
+  {
+    "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+    "authors": [
+      "Zilin Xiao",
+      "Qi Ma",
+      "Chun-cheng Jason Chen",
+      "Xintao Chen",
+      "Avinash Atreya",
+      "Hanjie Chen",
+      "Vicente Ordonez"
+    ],
+    "abstract": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly suited for complex reasoning tasks: a semantically similar problem may demand an entirely different solution strategy, while a superficially different problem may share the same underlying reasoning pattern. We propose Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT), a post-training framework that teaches language models to reason by analogy. RA-RFT uses gold-relevance distillation to train a retriever that ranks contexts by expected reasoning benefit rather than semantic overlap, and then fine-tunes the policy model via reinforcement fine-tuning methods with retrieved analogous demonstrations, so the model learns to leverage reasoning traces under verifiable outcome rewards. We further analyze the diversity of retrieved contexts and find that reasoning-aware retrieval surfaces complementary solution strategies that provide distinct reasoning scaffolds for individual problems. Across challenging mathematical reasoning benchmarks, RA-RFT consistently outperforms standard reinforcement fine-tuning methods. For example, it improves AIME 2025 average@32 accuracy by 7.1 and 2.8 points over GRPO for Qwen3-1.7B and Qwen3-4B respectively -- suggesting that reasoning-aware retrieval is a complementary axis of improvement and orthogonal to advances in reward design or training curricula.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13680v1",
+    "published": "2026-06-11T17:59:52Z",
+    "fetched_at": "2026-06-14T01:11:38.938168"
+  },
+  {
+    "title": "Mana: Dexterous Manipulation of Articulated Tools",
+    "authors": [
+      "Zhao-Heng Yin",
+      "Guanya Shi",
+      "Pieter Abbeel",
+      "C. Karen Liu"
+    ],
+    "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
+    "published": "2026-06-11T17:59:49Z",
+    "fetched_at": "2026-06-14T01:11:38.938191"
+  },
+  {
+    "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+    "authors": [
+      "Andy Tang",
+      "William Chen",
+      "Andrew Wagenmaker",
+      "Chelsea Finn",
+      "Sergey Levine"
+    ],
+    "abstract": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13675v1",
+    "published": "2026-06-11T17:59:45Z",
+    "fetched_at": "2026-06-14T01:11:38.938207"
+  },
+  {
+    "title": "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers",
+    "authors": [
+      "Junke Wang",
+      "Qihang Zhang",
+      "Shuai Yang",
+      "Yiming Luo",
+      "Yujun Shen",
+      "Zuxuan Wu",
+      "Yu-Gang Jiang",
+      "Yinghao Xu"
+    ],
+    "abstract": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers. Existing WAMs typically inherit reconstruction-oriented video tokenizers from pretrained video generation models. Although these tokenizers preserve visual fidelity, pixel reconstruction alone provides limited guidance for learning instruction-following dynamics that connect future prediction with robot control. To address this, we explore a semantic visual-action latent space for representation-centric world action modeling. Specifically, we train a representation visual-action tokenizer that maps visual inputs into aligned visual and latent action tokens. We then pretrain our WAM to jointly model future visual states and the latent actions that connect them under language instructions, followed by adaptation to real robot trajectories for closed-loop manipulation. Experiments on real-world manipulation tasks and simulation benchmarks show that RepWAM delivers strong performance across diverse manipulation settings, while ablations highlight the value of semantic visual-action tokenization over reconstruction-oriented alternatives. These results establish representation visual-action tokenization as a promising foundation for world action models and a step toward generalist robot policies. Code and weights will be available at https://github.com/wdrink/RepWAM.",
+    "pdf_url": "https://arxiv.org/pdf/2606.13674v1",
+    "published": "2026-06-11T17:59:43Z",
+    "fetched_at": "2026-06-14T01:11:38.938224"
+  },
+  {
+    "title": "$\\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
+    "authors": [
+      "Arnav Kumar Jain",
+      "Yilin Wu",
+      "Jesse Farebrother",
+      "Gokul Swamy",
+      "Andrea Bajcsy"
+    ],
+    "abstract": "The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream capabilities, a WM needs to jointly satisfy three desiderata: $\\textit{(i)}$ fidelity (i.e., producing simulated trajectories that correlate with reality), $\\textit{(ii)}$ consistency (i.e., producing simulated trajectories that are coherent over long horizons), and $\\textit{(iii)}$ efficiency (i.e., producing simulated trajectories quickly). We propose $\\texttt{WEAVER}$ (World Estimation Across Views for Embodied Reasoning): a WM architecture that simultaneously achieves all three desiderata, providing state-of-the-art results on robotic manipulation tasks. $\\texttt{WEAVER}$ is a multi-view WM trained to predict future latents and reward values via a flow-matching loss. We distill the key design decisions across model architecture, memory, and prediction objectives required to unlock the kinds of long-horizon dynamic manipulation tasks that have confounded prior world modeling approaches. We apply $\\texttt{WEAVER}$ in robotic hardware, demonstrating its effectiveness at policy evaluation ($ρ$=0.870 correlation with real-world success rate), policy improvement (real-world success rate improvement of $38\\%$ on top of the $π_{0.5}$ robot foundation model), and test-time planning (real-world success rate improvement of $14\\%$ with a $5-10\\times$ speedup over prior WMs). $\\texttt{WEAVER}$ also demonstrates better performance than prior WMs when evaluated on out-of-distribution scenarios. Code, models, and videos at: https://arnavkj1995.github.io/WEAVER/ .",
+    "pdf_url": "https://arxiv.org/pdf/2606.13672v1",
+    "published": "2026-06-11T17:59:15Z",
+    "fetched_at": "2026-06-14T01:11:38.938239"
+  }
+]
