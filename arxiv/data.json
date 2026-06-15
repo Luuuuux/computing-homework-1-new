@@ -1,76 +1,63 @@
 [
   {
-    "title": "Learning to Reason by Analogy via Retrieval-Augmented Reinforcement Fine-Tuning",
+    "title": "Evaluating the Impact of Rhode Island's Self-Sustaining Reemployment Services and Eligibility Assessment (RESEA) Program on Employment Outcomes",
     "authors": [
-      "Zilin Xiao",
-      "Qi Ma",
-      "Chun-cheng Jason Chen",
-      "Xintao Chen",
-      "Avinash Atreya",
-      "Hanjie Chen",
-      "Vicente Ordonez"
+      "Harrison H Li",
+      "Shanna Pearson-Merkowitz",
+      "David Yokum"
     ],
-    "abstract": "Retrieval-augmented generation (RAG) has become a standard mechanism for grounding language models in external knowledge, yet conventional retrieval based on lexical or semantic similarity is poorly suited for complex reasoning tasks: a semantically similar problem may demand an entirely different solution strategy, while a superficially different problem may share the same underlying reasoning pattern. We propose Retrieval-Augmented Reinforcement Fine-Tuning (RA-RFT), a post-training framework that teaches language models to reason by analogy. RA-RFT uses gold-relevance distillation to train a retriever that ranks contexts by expected reasoning benefit rather than semantic overlap, and then fine-tunes the policy model via reinforcement fine-tuning methods with retrieved analogous demonstrations, so the model learns to leverage reasoning traces under verifiable outcome rewards. We further analyze the diversity of retrieved contexts and find that reasoning-aware retrieval surfaces complementary solution strategies that provide distinct reasoning scaffolds for individual problems. Across challenging mathematical reasoning benchmarks, RA-RFT consistently outperforms standard reinforcement fine-tuning methods. For example, it improves AIME 2025 average@32 accuracy by 7.1 and 2.8 points over GRPO for Qwen3-1.7B and Qwen3-4B respectively -- suggesting that reasoning-aware retrieval is a complementary axis of improvement and orthogonal to advances in reward design or training curricula.",
-    "pdf_url": "https://arxiv.org/pdf/2606.13680v1",
-    "published": "2026-06-11T17:59:52Z",
-    "fetched_at": "2026-06-14T01:11:38.938168"
+    "abstract": "Prolonged unemployment carries serious economic, health, and wellbeing costs. With federal support, most U.S. states now operate a Reemployment Services and Eligibility Assessment (RESEA) program to help Unemployment Insurance (UI) claimants return to work faster. We report results from a large (N = 23,549) preregistered randomized controlled trial (RCT) evaluating Rhode Island's RESEA program from February 2022 to September 2023. We estimate that selection into the program increased annualized wages by \\$1,153, increased reemployment by 1.5 percentage points, and reduced UI duration by nearly two weeks. The vast majority of these wage and reemployment effects appeared within two quarters of claimants' first pay dates and persisted through at least the following year, and we estimate that each dollar spent on the program saved the state \\$2.64. Using causal forests, a machine learning technique for estimating heterogeneous treatment effects (HTE), we also conduct an exploratory analysis to investigate if there are differential effects of selection into the RESEA program. We find that all participants experienced positive wage benefits from RESEA selection, with particularly large effects for older and lower-income workers. Finally, we improve upon prior RESEA evaluations by explicitly controlling for the week of treatment assignment -- a methodological refinement absent from several existing RCTs of job-training programs that is important to eliminate confounding bias. We also discuss ways to harvest precision gains from baseline covariate adjustment without introducing large-sample bias.",
+    "pdf_url": "https://arxiv.org/pdf/2606.14621v1",
+    "published": "2026-06-12T16:46:40Z",
+    "fetched_at": "2026-06-15T01:13:57.152872"
   },
   {
-    "title": "Mana: Dexterous Manipulation of Articulated Tools",
+    "title": "Neither Parallel Nor Sequential: How DiffusionGemma Actually Commits Tokens",
     "authors": [
-      "Zhao-Heng Yin",
-      "Guanya Shi",
-      "Pieter Abbeel",
-      "C. Karen Liu"
+      "Ali Asaria",
+      "Tony Salomone",
+      "Deep Gandhi"
     ],
-    "abstract": "Articulated tool manipulation remains a major challenge in dexterous robotics due to the need to coordinate internal degrees of freedom and contact-rich interactions. While prior work has largely focused on rigid objects, articulated tool use remains underexplored because of its physical complexity and the difficulty of learning functional grasping and manipulation policies. We present Mana (Manipulation Animator), a general sim-to-real framework that reinterprets dexterous manipulation as an animation problem. Inspired by computer animation, Mana employs a coarse-to-fine pipeline that transforms procedurally-generated grasp keyframes into manipulation trajectories through motion planning and reinforcement learning. The data generation process is largely automatic, requiring only a few mouse clicks to specify functional affordances (<1 minute per tool). Across four articulated tools spanning different scales and joint types, Mana achieves zero-shot sim-to-real transfer for both grasping and in-hand manipulation, demonstrating a scalable approach to dexterous articulated tool use.",
-    "pdf_url": "https://arxiv.org/pdf/2606.13677v1",
-    "published": "2026-06-11T17:59:49Z",
-    "fetched_at": "2026-06-14T01:11:38.938191"
+    "abstract": "Open diffusion language models are marketed as parallel, non-autoregressive decoders, yet the order in which a shipped checkpoint actually commits its tokens is almost never measured. We instrument DiffusionGemma 26B, a masked discrete-diffusion mixture-of-experts model built on Gemma 4, hooking its sampler's accept step to record which canvas positions commit, when, and at what confidence. Across a 686-prompt, six-regime probe suite we find that its decoding is neither parallel nor block-autoregressive: it follows a partial left-to-right commit bias whose apparent strength depends almost entirely on the granularity at which you look. Order is weak token by token and strengthens smoothly as the analysis is coarsened, so the model's \"block size\" turns out to be an artifact of the measuring ruler rather than the architecture. The model commits in large simultaneous batches, leaving much of the within-batch order genuinely undefined rather than merely unobserved. The behaviour is regime-dependent: structured JSON is committed in essentially arbitrary order, and a position's commit confidence tracks correctness on mathematical reasoning but carries no signal on factual recall. Commitment is aggressive, finishing in a short late burst well inside the step budget, while task accuracy matches the model's autoregressive Gemma-4 sibling. Beyond these findings, our central contribution is methodological: measuring decoding order honestly demands handling trailing-EOS padding, within-regime confounding, commit non-monotonicity, block-size sensitivity, and large commit-batch ties, each of which can otherwise manufacture a decoding-order result that is not really there.",
+    "pdf_url": "https://arxiv.org/pdf/2606.14620v1",
+    "published": "2026-06-12T16:45:11Z",
+    "fetched_at": "2026-06-15T01:13:57.152895"
   },
   {
-    "title": "Improving Robotic Generalist Policies via Flow Reversal Steering",
+    "title": "Teaching Machine Learning to Software Engineers",
     "authors": [
-      "Andy Tang",
-      "William Chen",
-      "Andrew Wagenmaker",
-      "Chelsea Finn",
-      "Sergey Levine"
+      "Nafiseh Kahani",
+      "Jason Jaskolka"
     ],
-    "abstract": "Generalist policies can learn a wide range of skills from diverse robot datasets. In order to solve or improve on challenging news tasks, we need a way to infer and invoke the appropriate actions from the policy's rich behavioral prior, especially when directly commanding the policy fails. We focus on flow matching generalists and propose Flow Reversal Steering (FRS): a method that takes suboptimal but ``reasonable'' actions, finds their latent noises by passing them through the flow policy in reverse, and maps them to nearby generalist action modes. We evaluate FRS across many simulated and real-world manipulation settings. First, FRS can turn coarse semantic guidance from humans or vision-language models (VLMs) into corresponding good robot actions, improving zero-shot control. These gains can be distilled with behavioral cloning by training an auxiliary policy to output noises that the generalist maps to good actions -- showing up to 95% absolute task success rate boosts in under a minute of training. Finally, FRS enables policy improvement by bootstrapping reinforcement learning with semantic knowledge, improving on several tasks that standard RL fails to improve on.",
-    "pdf_url": "https://arxiv.org/pdf/2606.13675v1",
-    "published": "2026-06-11T17:59:45Z",
-    "fetched_at": "2026-06-14T01:11:38.938207"
+    "abstract": "Machine learning (ML) and Artificial Intelligence (AI) components are increasingly embedded in software products, yet undergraduate software engineering (SE) curricula rarely provide systematic preparation for building, testing, deploying, and maintaining AI/ML-based software systems. This paper aims to provide evidence-based guidance for integrating AI/MLrelevant content into core SE education. We compile and define a structured inventory of topics relevant to SE practice in AI/MLbased software, then map these topics against required courses in a set of representative SE curricula to identify coverage gaps. To assess educational priorities and feasibility, we survey SE instructors on topic importance and integration constraints. Based on the crosswalk between topic definitions, curriculum coverage, and instructor prioritization, we derive a guideline that recommends where and how high-priority topics can be embedded within existing SE courses.",
+    "pdf_url": "https://arxiv.org/pdf/2606.14618v1",
+    "published": "2026-06-12T16:42:34Z",
+    "fetched_at": "2026-06-15T01:13:57.152908"
   },
   {
-    "title": "RepWAM: World Action Modeling with Representation Visual-Action Tokenizers",
+    "title": "Moonlight in Latent Space: Chirality and Structural Correspondence Between Beethoven's Op. 27 No. 2 and Machine Learning Mechanisms",
     "authors": [
-      "Junke Wang",
-      "Qihang Zhang",
-      "Shuai Yang",
-      "Yiming Luo",
-      "Yujun Shen",
-      "Zuxuan Wu",
-      "Yu-Gang Jiang",
-      "Yinghao Xu"
+      "Chen Ying Claude",
+      "Zhihan Luo"
     ],
-    "abstract": "This work presents RepWAM, a representation-centric world action model (WAM) built on representation visual-action tokenizers. Existing WAMs typically inherit reconstruction-oriented video tokenizers from pretrained video generation models. Although these tokenizers preserve visual fidelity, pixel reconstruction alone provides limited guidance for learning instruction-following dynamics that connect future prediction with robot control. To address this, we explore a semantic visual-action latent space for representation-centric world action modeling. Specifically, we train a representation visual-action tokenizer that maps visual inputs into aligned visual and latent action tokens. We then pretrain our WAM to jointly model future visual states and the latent actions that connect them under language instructions, followed by adaptation to real robot trajectories for closed-loop manipulation. Experiments on real-world manipulation tasks and simulation benchmarks show that RepWAM delivers strong performance across diverse manipulation settings, while ablations highlight the value of semantic visual-action tokenization over reconstruction-oriented alternatives. These results establish representation visual-action tokenization as a promising foundation for world action models and a step toward generalist robot policies. Code and weights will be available at https://github.com/wdrink/RepWAM.",
-    "pdf_url": "https://arxiv.org/pdf/2606.13674v1",
-    "published": "2026-06-11T17:59:43Z",
-    "fetched_at": "2026-06-14T01:11:38.938224"
+    "abstract": "We show that the three movements of Beethoven's \"Moonlight Sonata\" (Op. 27 No. 2) instantiate three distinct machine learning architectures -- not by analogy, but by structural correspondence. Through computational analysis of the score (entropy, Jensen-Shannon divergence, dissonance, hand distributional overlap, self-similarity matrices, temporal memory decay, and contextual pitch embeddings), we establish four counterintuitive findings: (1) perceived musical \"temperature\" is governed by throughput, not distributional width; (2) the lightest movement carries the highest dissonance; (3) the movements implement streaming, recurrent, and periodic positional encoding memory architectures; and (4) the same pitch class acquires different contextual identities across movements, analogous to contextual vs.static embeddings in NLP -- and unsupervised clustering recovers the tonal structure without music-theoretic input. We construct a reverse sonification (decoding analytical features back into MIDI) and quantify the chirality of the encode-decode cycle: what distributions preserve and sequential ordering destroys. Prompted by a listener's observation that the decoded piece sounds like \"mirror isomers that can't be superimposed,\" the chirality measurement reveals reconstruction loss increasing monotonically with n-gram order. Bootstrap baselines and subsample checks confirm all movements carry sequential information above noise, though raw values are confounded by sample size. Cross-domain comparison shows natural language has higher chirality than music, reflecting stronger sequential constraints.",
+    "pdf_url": "https://arxiv.org/pdf/2606.14612v1",
+    "published": "2026-06-12T16:35:17Z",
+    "fetched_at": "2026-06-15T01:13:57.152920"
   },
   {
-    "title": "$\\texttt{WEAVER}$, Better, Faster, Longer: An Effective World Model for Robotic Manipulation",
+    "title": "Safe Reinforcement Learning of Autonomous Highway Driving: A Unified Framework for Safety and Efficiency",
     "authors": [
-      "Arnav Kumar Jain",
-      "Yilin Wu",
-      "Jesse Farebrother",
-      "Gokul Swamy",
-      "Andrea Bajcsy"
+      "Chufei Yan",
+      "Zhihao Cui",
+      "Yiyan Lv",
+      "Taojie Chen",
+      "Ning Bian",
+      "Yulei Wang"
     ],
-    "abstract": "The potential impacts of world models (WMs, i.e., learned simulators) on robotics are far-reaching -- policy evaluation, policy improvement, and test-time planning -- all with limited real-world interaction. To unlock these downstream capabilities, a WM needs to jointly satisfy three desiderata: $\\textit{(i)}$ fidelity (i.e., producing simulated trajectories that correlate with reality), $\\textit{(ii)}$ consistency (i.e., producing simulated trajectories that are coherent over long horizons), and $\\textit{(iii)}$ efficiency (i.e., producing simulated trajectories quickly). We propose $\\texttt{WEAVER}$ (World Estimation Across Views for Embodied Reasoning): a WM architecture that simultaneously achieves all three desiderata, providing state-of-the-art results on robotic manipulation tasks. $\\texttt{WEAVER}$ is a multi-view WM trained to predict future latents and reward values via a flow-matching loss. We distill the key design decisions across model architecture, memory, and prediction objectives required to unlock the kinds of long-horizon dynamic manipulation tasks that have confounded prior world modeling approaches. We apply $\\texttt{WEAVER}$ in robotic hardware, demonstrating its effectiveness at policy evaluation ($ρ$=0.870 correlation with real-world success rate), policy improvement (real-world success rate improvement of $38\\%$ on top of the $π_{0.5}$ robot foundation model), and test-time planning (real-world success rate improvement of $14\\%$ with a $5-10\\times$ speedup over prior WMs). $\\texttt{WEAVER}$ also demonstrates better performance than prior WMs when evaluated on out-of-distribution scenarios. Code, models, and videos at: https://arnavkj1995.github.io/WEAVER/ .",
-    "pdf_url": "https://arxiv.org/pdf/2606.13672v1",
-    "published": "2026-06-11T17:59:15Z",
-    "fetched_at": "2026-06-14T01:11:38.938239"
+    "abstract": "Deep reinforcement learning (DRL) offers a compelling route to decision-making for advanced autonomous vehicles (AVs), yet its trial-and-error nature makes it difficult to guarantee safety during training and to achieve both safety and efficiency at deployment. We propose a unified safe reinforcement learning (SRL) framework that integrates safe distance (SD), reward machines (RM), and mixture-of-experts (MoE), termed MoE-RM-SRL. For deployment, SD and RM jointly shape a rule-aware reward that encodes highway traffic regulations and stage-wise objectives, enabling safe and reliable behavior without sacrificing efficiency. For training, we introduce a sparsely gated MoE layer comprising up to 11 deep Q-networks (DQNs); an SD-based gating rule activates a minimal set of experts for lane-keeping and lane-changing, mitigating the instability, discontinuities, and impulsive transients commonly induced by switching between heterogeneous controllers (e.g., MPC/rule-based modules and learned policies). We implement the proposed architecture in CARLA and integrate it with a 6-DoF driver-in-the-loop virtual-reality (DiL-VR) platform. Experiments in stochastic two-lane traffic show that MoE-RM-SRL substantially improves safety and efficiency over state-of-the-art baselines, and the framework naturally extends to multi-lane driving as well as on-ramp merging and exiting scenarios.",
+    "pdf_url": "https://arxiv.org/pdf/2606.14609v1",
+    "published": "2026-06-12T16:32:22Z",
+    "fetched_at": "2026-06-15T01:13:57.152937"
   }
 ]
