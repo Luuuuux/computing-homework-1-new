@@ -1,1 +1,65 @@
-[]
+[
+  {
+    "title": "CRAX: Fast Safe Reinforcement Learning Benchmarking",
+    "authors": [
+      "Tristan Tomilin",
+      "Mourad Boustani",
+      "Mickey Beurskens",
+      "Thiago D. Simão"
+    ],
+    "abstract": "Safety is a core concern for deploying reinforcement learning (RL) agents in real-world domains such as robotics and autonomous driving. While benchmarks have been central to progress in RL, existing safety benchmarks with high-fidelity 3D physics remain computationally slow, limiting large-scale experimentation and rapid prototyping. To address this gap, we propose CRAX (Constrained RL Accelerated with JAX). Built on top of the MuJoCo XLA (MJX) physics engine with realistic 3D dynamics, CRAX leverages vectorized operations and hardware acceleration, yielding up to ~100x speedups over comparable CPU-based safety benchmarks. The benchmark features six environment suites and three agent-specific tasks, each spanning three difficulty levels. Evaluating six popular safe RL methods shows that no single approach dominates across all tasks, and reveals the trade-offs between performance and safety. We find that curriculum learning across difficulty levels and safety transfer can improve performance over direct training in harder settings.",
+    "pdf_url": "https://arxiv.org/pdf/2606.20376v1",
+    "published": "2026-06-18T15:36:13Z",
+    "fetched_at": "2026-06-19T01:17:07.002739"
+  },
+  {
+    "title": "Judging to Improve: A De-biased VLM-as-3D-Judge Protocol for Single-Image 3D Generation",
+    "authors": [
+      "Ali Asaria",
+      "Tony Salomone",
+      "Deep Gandhi"
+    ],
+    "abstract": "A companion study established a de-biased, cross-model VLM-as-3D-judge that reliably ranks single-image-to-3D mesh quality where cheap geometry and CLIP proxies fall short. This paper asks: can that judge's preferences specialize a strong open generator, TRELLIS, on one asset class (furniture), cheaply and without human labels? Taking the judge from ranking to optimization is where the work lives. Pushing a VLM judge into the training and evaluation loop exposes failure modes ranking never triggered, so our contribution is an optimization-grade hardening of the judge: a training judge (Qwen2.5-VL-7B) held distinct from an evaluation judge (InternVL3-8B) to break circularity; position-bias correction; and fixes for three failure modes (image overload, geometry-hiding splat renders, and reference-free judging that rewards clean-but-wrong outputs), with calibration evidence (clear-gap win-rate 0.83-1.0; base-vs-base ~0.5). Using this protocol as an independent evaluator, and working only from public models and data with lightweight parameter-efficient adaptation, we find our methods match the strong base rather than exceed it. Independent base samples carry essentially no learnable preference (0.94 order-flip rate), so signal must be engineered by quality-contrastive construction. Across six adaptation methods, two input regimes, and a severity sweep, the most targeted - conditioner repair under severe degradation - reaches parity (0.50) with the base, while no method clears the >=65% win-rate target. The result is mechanistic: clean inputs saturate the judge, flow-DIT fine-tuning washes out through the sampler, and conditioning repair is the locus that moves geometry. Win-rates are directional at n=8 objects. Matching a strong public-data base with cheap adaptation is itself informative: exceeding it needs more than lightweight PEFT on public data, and the judge protocol is reusable.",
+    "pdf_url": "https://arxiv.org/pdf/2606.20364v1",
+    "published": "2026-06-18T15:25:57Z",
+    "fetched_at": "2026-06-19T01:17:07.002760"
+  },
+  {
+    "title": "Sparse add-on controller design: A Youla approach to system-level performance",
+    "authors": [
+      "M. van der Hulst",
+      "N. Dirkx",
+      "R. A. González",
+      "K. Tiels",
+      "J. van de Wijdeven",
+      "T. oomen"
+    ],
+    "abstract": "The performance of high-tech systems is often dictated by a few performance objectives shared among the many closed-loop controlled subsystems operating in the machine, such as synchronization, coordination, and alignment, which necessitates control methods that explicitly address them to achieve optimal performance. The aim of this paper is to introduce a framework that improves system performance through system-level controllers designed to be implemented as add-ons to the existing subsystem control structure. The developed method parametrizes all stabilizing system-level add-on controllers using the Youla framework, enabling a convex formulation of the sparse $\\mathcal{H}_2$ synthesis problem. The result is a sparse add-on controller that achieves the optimal trade-off between combined performance and interconnection complexity, as demonstrated through numerical simulations.",
+    "pdf_url": "https://arxiv.org/pdf/2606.20361v1",
+    "published": "2026-06-18T15:24:23Z",
+    "fetched_at": "2026-06-19T01:17:07.002777"
+  },
+  {
+    "title": "Train, Retrieve, or Both? A Four-Arm Head-to-Head for Correct Statutory Citation on the Ontario Residential Tenancies Act",
+    "authors": [
+      "Ali Asaria",
+      "Tony Salomone",
+      "Deep Gandhi"
+    ],
+    "abstract": "Self-represented tenants, landlords, and help-desk staff need to be pointed at the provision of law that actually governs a question, with a correct statutory citation. We study this task on the Ontario Residential Tenancies Act, 2006 (RTA) and its core regulation, asking the operator's question empirically: is fine-tuning enough, or is hybrid retrieval needed? We run a four-arm head-to-head on Qwen2.5-7B-Instruct (base zero-shot, LoRA SFT-only, RAG-only, and an SFT+RAG hybrid), scored on citation exact-match (section+subsection) over a small, human-verification-pending real eval set. The base model cannot cite the RTA and SFT-only mis-recalls sections; retrieval is essential and drives hallucination to zero by construction; and the SFT+RAG hybrid scores highest at 0.481 exact-match with zero hallucinated citations. Its edge comes from SFT making provision selection more robust to the higher-recall candidate sets that hurt zero-shot RAG. Notably, this cheap bge-small hybrid matches or beats a pipeline built on bigger, specialized retrieval models (a larger embedder and a cross-encoder reranker), and a larger/improved training set does not help either: strong statutory-citation performance here does not require specialized retrieval models or more data. The artifact zeroes hallucination and clears the lift-over-base bar but does not reach the aspirational 0.70 exact-match target. All results are on a small, human-verification-pending real eval set and are reported as preliminary.",
+    "pdf_url": "https://arxiv.org/pdf/2606.20359v1",
+    "published": "2026-06-18T15:21:53Z",
+    "fetched_at": "2026-06-19T01:17:07.002792"
+  },
+  {
+    "title": "Formalizing Extended Complex Numbers, Mobius Transformations, and Cross Ratio in Lean 4",
+    "authors": [
+      "Fubin Yan",
+      "Kenneth W. Shum"
+    ],
+    "abstract": "The extended complex plane is a fundamental object in complex analysis, hyperbolic geometry, and mathematical physics. Its geometry is governed by Möbius transformations, with the cross ratio serving as a central invariant. We present a formalization of these concepts in the Lean4 theorem prover. The extended complex plane is represented using Mathlib's Option type over $\\mathbb{C}$, where the additional element represents the point at infinity. On this foundation, we define Möbius transformations, their action on the extended complex plane, and the cross ratio. We formalize several basic properties of Möbius transformations, including their group structure, and identify them with a projective general linear group. We also prove the uniqueness of a Möbius transformation mapping any three distinct points to any other three distinct points, and the invariance of the cross ratio. All proofs are machine-checked in Lean 4. The complete development comprises approximately 6,000 lines of Lean code, including about 40 definitions and 150 lemmas and theorems. This work provides a verified foundation for future formalizations of conformal geometry, hyperbolic models, modular forms, and applications in mathematical physics.",
+    "pdf_url": "https://arxiv.org/pdf/2606.20358v1",
+    "published": "2026-06-18T15:20:27Z",
+    "fetched_at": "2026-06-19T01:17:07.002805"
+  }
+]
