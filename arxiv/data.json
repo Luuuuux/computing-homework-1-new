@@ -1,98 +1,71 @@
 [
   {
-    "title": "DanceOPD: On-Policy Generative Field Distillation",
+    "title": "DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand",
     "authors": [
-      "Wei Zhou",
-      "Xiongwei Zhu",
-      "Zelin Xu",
-      "Bo Dong",
-      "Lixue Gong",
-      "Yongyuan Liang",
-      "Meng Chu",
-      "Leigang Qu",
-      "Lingdong Kong",
-      "Wei Liu",
-      "Tat-Seng Chua"
+      "Dihong Huang",
+      "Zhenyu Wei",
+      "Zhuxiu Xu",
+      "Yunchao Yao",
+      "Sikai Li",
+      "Mingyu Ding"
     ],
-    "abstract": "Modern image generation demands a single model that unifies diverse capabilities, including text-to-image (T2I), local editing, and global editing. However, these capabilities are rarely naturally aligned and often conflict. For instance, editing tends to degrade T2I performance, while global and local editing interfere with each other. Consequently, effectively composing these capabilities has become a central challenge for image generation model training. To tackle this, we introduce DanceOPD, an on-policy generative field distillation framework for flow-matching models that routes each sample to one capability field, queries one low-noise student-induced state, and trains with a simple velocity MSE objective. With each capability source defined as a velocity field over the shared flow state space, the student learns from fields queried on its own rollout states to compose expert capabilities. This formulation also absorbs operator-defined fields such as classifier-free guidance. Comprehensive experiments on T2I, editing, realism-field absorption, and CFG absorption show that our approach improves multi-capability composition, strengthening target capabilities while preserving anchor generation quality. We believe this work establishes a practical route for generative field distillation in flow-matching models.",
-    "pdf_url": "https://arxiv.org/pdf/2606.27377v1",
-    "published": "2026-06-25T17:59:58Z",
-    "fetched_at": "2026-06-29T01:07:20.327788"
+    "abstract": "Dexterous manipulation policies can solve individual skills, but composing them to perform multiple tasks with a single hand remains challenging. Adding a new task on top of an existing manipulation skill often imposes conflicting demands on overlapping fingers and contact modes, causing destructive interference between preserving an existing manipulation outcome and executing a new one. We propose DexCompose, a role-aware residual composition framework that reuses pretrained dexterous policies for multi-task manipulation through explicit finger-level action ownership. Given two pretrained full-hand policies, DexCompose first collects successful post-task states from the first skill and performs release tests over candidate finger masks to identify which fingers are necessary for maintaining the established skill state. It then trains two asymmetric residual modules: a bounded residual stabilizer for task preservation, and a context-aware residual that adapts the frozen downstream policy only within the action subspace assigned to the new task. We evaluate the framework on 16 composite dexterous manipulation tasks spanning four object-retention skills and four downstream interactions. DexCompose achieves a 77.4% average composite success rate, demonstrating that structural action ownership with dual residuals offers a promising direction for composing dexterous skills beyond conventional policy chaining.",
+    "pdf_url": "https://arxiv.org/pdf/2606.28323v1",
+    "published": "2026-06-26T17:59:57Z",
+    "fetched_at": "2026-06-30T01:02:56.861591"
   },
   {
-    "title": "Ask, Solve, Generate: Self-Evolving Unified Multimodal Understanding and Generation via Self-Consistency Rewards",
+    "title": "WARP-RM: A Warp-Augmented Relative Progress Reward Model for Data Curation",
     "authors": [
-      "Ritesh Thawkar",
-      "Shravan Venkatraman",
-      "Omkar Thawakar",
-      "Abdelrahman Shaker",
-      "Fahad Khan",
-      "Hisham Cholakkal",
-      "Salman Khan",
-      "Rao Muhammad Anwer"
-    ],
-    "abstract": "Most unified large multimodal models (LMMs) that support both visual understanding and image generation still rely on curated post-training supervision, such as human annotations, preference labels, or external reward models. We ask whether a unified LMM can improve both abilities autonomously using only unlabeled images. We propose a self-evolving training framework with three internal roles: a Proposer that generates visual questions, a Solver that answers and evaluates them, and a Generator that synthesizes images. Training uses only self-derived consistency signals, without human annotations, preference labels, or task-trained external reward/judge models. To stabilize learning, we introduce Solver Token Entropy (STE), a continuous difficulty signal based on token-level prediction uncertainty that remains useful even when sample-level consistency becomes unreliable. For image generation, we design a multi-scale internal evaluation scheme that combines question-answer fidelity scoring with cycle-consistent captioning. This creates a solver-mediated coupling, where better visual understanding enables more reliable generation assessment and stronger internal training signals. The framework preserves the same role decomposition, reward logic, and training schedule across diffusion-based BLIP3o, rectified-flow BAGEL, and autoregressive VARGPT-v1.1 architectures, requiring only each backbone's native prompting and generation interface. Across eight understanding metrics, our method consistently improves over the corresponding base models. On BAGEL, it achieves a $+3.5\\%$ absolute gain on MMMU and improves GenEval image generation performance from $82\\%$ to $85\\%$. Code and models are publicly released.",
-    "pdf_url": "https://arxiv.org/pdf/2606.27376v1",
-    "published": "2026-06-25T17:59:57Z",
-    "fetched_at": "2026-06-29T01:07:20.327810"
-  },
-  {
-    "title": "Scalable Behavior Cloning with Open Data, Training, and Evaluation",
-    "authors": [
-      "Arthur Allshire",
-      "Himanshu Gaurav Singh",
-      "Ritvik Singh",
-      "Adam Rashid",
-      "Hongsuk Choi",
-      "David McAllister",
       "Justin Yu",
-      "Yiyuan Chen",
-      "Huang Huang",
-      "Pieter Abbeel",
-      "Xi Chen",
-      "Rocky Duan",
-      "Phillip Isola",
-      "Jitendra Malik",
+      "Andrew Goldberg",
+      "Kavish Kondap",
+      "Karim El-Refai",
+      "Ethan Ransing",
+      "Qianzhong Chen",
+      "Mac Schwager",
       "Fred Shentu",
-      "Guanya Shi",
       "Philipp Wu",
-      "Angjoo Kanazawa"
+      "Ken Goldberg"
     ],
-    "abstract": "We introduce ABC, a fully open-source stack for manipulation with behavior cloning. At its core is ABC-130K: the largest open-source teleoperation dataset to date, featuring 3,500 hours of data spanning over 130K episodes across 195 diverse tasks. Furthermore, we open-source our accessible hardware setup, training infrastructure, and simulation pipeline. We also release 400 hours of sim-teleop data and provide a co-training recipe that produces correlated simulation and real-world evaluation, offering a reliable proxy for ablating model-design and training decisions before costly real-world evaluation. We explore various training recipes and compare common architectural choices for Diffusion Transformers (DiT) and Vision-Language-Action (VLA) models, grounding our findings in real-world evaluations. The resulting policies successfully execute dexterous tasks such as box folding and extracting credit cards from wallets. By providing a reproducible toolkit, we aim to place researchers on an equal footing, establishing the necessary foundation to learn the ABCs of Behavior Cloning together as a community.",
-    "pdf_url": "https://arxiv.org/pdf/2606.27375v1",
-    "published": "2026-06-25T17:59:57Z",
-    "fetched_at": "2026-06-29T01:07:20.327832"
+    "abstract": "Scaling imitation learning requires large datasets, yet human teleoperation inevitably produces mixed-quality demonstrations containing hesitations and recoveries. Prior frame-level progress reward models supervise on absolute temporal progress proxies that suffer from label noise, or require costly human annotations to define subtask boundaries. We present WARP (Warp-Augmented Relative Progress), a novel fully self-supervised algorithm for learning dense, signed relative progress magnitudes directly from successful demonstrations. WARP generates per-frame progress targets via time-warp augmentations of demonstrations (variable playback speeds and reversals) and we train WARP-RM to predict the normalized elapsed time between input frames. Aggregating these predictions across overlapping windows yields a dense frame-level progress signal. We then introduce WARP-BC, which leverages these scalar reward estimates to upweight high-advantage action chunks during behavior cloning, where chunk-level advantage is obtained by aggregating per-frame rewards. We evaluate our approach on a physical bimanual robot system performing a long-horizon deformable object manipulation task: folding T-shirts from a random crumpled start. To evaluate policy robustness against suboptimal data, we construct training datasets of varying quality using episode length as a proxy for teleoperation sub-optimality. As the dataset is widened to admit more inefficiencies, WARP-BC maintains a 19/20 success rate compared to vanilla BC's collapse to 2/20, improving throughput by up to 18x.",
+    "pdf_url": "https://arxiv.org/pdf/2606.28320v1",
+    "published": "2026-06-26T17:58:06Z",
+    "fetched_at": "2026-06-30T01:02:56.861646"
   },
   {
-    "title": "World Action Models Enable Continual Imitation Learning with Recurrent Generative Replays",
+    "title": "Surprises in Proper Positive-Only Learning",
     "authors": [
-      "Manish Kumar Govind",
-      "Dominick Reilly",
-      "Smit Patel",
-      "Hieu Le",
-      "Srijan Das"
+      "Shai Ben-David",
+      "Farnam Mansouri",
+      "Anay Mehrotra",
+      "Manolis Zampetakis"
     ],
-    "abstract": "Going beyond predicting robot actions, World Action Models (WAMs) can also generate future visual observations. We build on this generative capability to propose Recurrent Generative Replay (REGEN), a continual imitation learning framework that synthesizes pseudo-replay trajectories, enabling a robot policy to rehearse previously learned tasks without storing their original human demonstrations. During continual adaptation, REGEN recursively queries the WAM to synthesize pseudo-replay trajectories conditioned only on prior task instructions and current-task observations. Experiments in both simulation and real-world manipulation settings show that REGEN reduces catastrophic forgetting by up to $50\\%$ relative to sequential fine-tuning, while approaching the performance of privileged experience replay methods that require access to real replay data. Finally, we analyze the factors limiting generated replay, identifying long-horizon visual degradation and action-observation inconsistency as the primary bottlenecks. Our results establish WAMs as a promising foundation for continual robot learning without stored demonstrations.",
-    "pdf_url": "https://arxiv.org/pdf/2606.27374v1",
-    "published": "2026-06-25T17:59:56Z",
-    "fetched_at": "2026-06-29T01:07:20.327844"
+    "abstract": "Binary classification from positive-only samples is a variant of PAC learning in which the learner receives i.i.d. samples from the positive region of an unknown target concept, but is evaluated under the original distribution (which places mass on both positive and negative regions). This model dates back to Natarajan [1987, STOC], and the characterization of improper learning is well-known -- it even appears in textbooks. The characterization of proper positive-only learning, however, has long remained open. In this work, we revisit and settle this question: a concept class is properly learnable from positive-only samples if and only if it has finite VC dimension and satisfies a new combinatorial condition, which we call uniform exterior separability. Together with several separation results, this characterization reveals a surprisingly rich landscape that differs sharply from standard PAC learning: proper and improper learning are separated, randomized and deterministic proper learning are separated, there are classes for which no ERM is a learner, and finite VC dimension does not suffice even for non-uniform learning. Along the way, we introduce new combinatorial dimensions that we believe can be of broader interest in learning theory.",
+    "pdf_url": "https://arxiv.org/pdf/2606.28309v1",
+    "published": "2026-06-26T17:54:13Z",
+    "fetched_at": "2026-06-30T01:02:56.861685"
   },
   {
-    "title": "Reinforcement Learning without Ground-Truth Solutions can Improve LLMs",
+    "title": "Which Nash Equilibrium? Solver-Dependent Selection on Zero-Sum Nash Polytopes",
     "authors": [
-      "Yingyu Lin",
-      "Qiyue Gao",
-      "Nikki Lijing Kuang",
-      "Xunpeng Huang",
-      "Kun Zhou",
-      "Tongtong Liang",
-      "Zhewei Yao",
-      "Yi-An Ma",
-      "Yuxiong He"
+      "Luis Leal"
     ],
-    "abstract": "Reinforcement learning with verifiable rewards (RLVR) for training LLMs typically rely on ground-truth answers to assign rewards, limiting their applicability to tasks where the ground-truth solution is unknown. We introduce a \\textbf{R}anking-\\textbf{i}nduced \\textbf{VER}ifiable framework (RiVER) that trains LLMs on score-based optimization tasks without ground-truth solutions, using deterministic execution feedback as continuous-valued supervision. When applying group-relative RL to such continuous rewards, we identify two key challenges: \\emph{scale dominance}, where uncalibrated score magnitudes across test instances distort policy updates, and \\emph{frequency dominance}, where repeatedly sampled suboptimal solutions can outweigh rare but stronger candidates. RiVER addresses these challenges with calibrated reward shaping that uses instance-wise comparisons and emphasizes top-ranked solvers while retaining bounded feedback for other valid solutions. We train on 12 AtCoder Heuristic Contest tasks and evaluate on Algorithm Engineering Benchmark (ALE-Bench), LiveCodeBench, and USACO. RiVER advances Qwen3-8B and GLM-Z1-9B-0414 by 8.9\\% and 9.4\\% in ALE rating rank. More importantly, despite training exclusively on score-based tasks without any ground-truth solutions, RiVER also improves the backbones across exact-solution benchmarks such as LiveCodeBench and USACO by an absolute average improvement of 2.4\\% and 3.5\\%. By contrast, baselines trained with raw execution scores improve ALE rating but fail to transfer to exact-solution benchmarks. These results suggest that score-based optimization tasks, combined with proper reward calibration, can serve as effective training environments for general coding ability without ground-truth solutions.",
-    "pdf_url": "https://arxiv.org/pdf/2606.27369v1",
-    "published": "2026-06-25T17:59:36Z",
-    "fetched_at": "2026-06-29T01:07:20.327859"
+    "abstract": "Many two-player zero-sum games admit not a unique Nash equilibrium but a convex set of them: a polytope of profiles that all share the minimax value V* yet prescribe different behaviour. Standard solvers each converge to some equilibrium and are treated as interchangeable. We ask whether they instead select different members of the Nash set, systematically as a function of the algorithm rather than the seed. Using a tabular, exactly solvable testbed of six games with analytically known Nash sets -- including a two-dimensional Nash polytope and Kuhn poker -- we find that (i) selection is determined by the algorithm, not the seed, but families differ only on asymmetric Nash sets; (ii) regularized last-iterate methods (R-NaD, magnetic mirror descent) select the maximum-entropy member, the information projection of their uniform reference onto the Nash set -- exactly on the 2-D polytope and at 99.7% of maximum entropy in Kuhn -- while regret-averaging methods (CFR, CFR+, fictitious play) drift to a lower-entropy face; we confirm this on a randomized 180-game ensemble, where R-NaD attains the maximum-entropy member in 100% of converged games while CFR+ sits strictly below it in 94% (paired Wilcoxon p < 10^-27); (iii) the selected member has downstream consequences against sub-optimal opponents that scale with sequential/hidden-information structure but stay bounded -- in Kuhn the max-entropy member is a strictly better hedge, whereas on the matrix games the members differ without either dominating. We also report two negative results correcting common intuitions: removing CFR's positive-orthant (max(R,0)) projection does not eliminate boundary drift; and R-NaD's selection is anchor-following, not initialization-independent. We state the maximum-entropy / I-projection characterization as a strongly data-supported conjecture, checked throughout against analytic ground truth.",
+    "pdf_url": "https://arxiv.org/pdf/2606.28308v1",
+    "published": "2026-06-26T17:53:30Z",
+    "fetched_at": "2026-06-30T01:02:56.861712"
+  },
+  {
+    "title": "Second-Order KKT Guarantees for Bregman ADMM in Nonconvex and Non-Lipschitz Optimization",
+    "authors": [
+      "Shuang Li",
+      "Zhihui Zhu",
+      "Qiuwei Li"
+    ],
+    "abstract": "We analyze Bregman ADMM for nonconvex linearly constrained problems under two-sided relative smoothness, a condition that replaces the standard Lipschitz gradient assumption with a Hessian comparison relative to a Bregman kernel. This setting covers polynomial objectives arising in matrix and tensor models for which a global Lipschitz-gradient constant need not exist. We show that on an invariant open state-space domain, one iteration of Bregman ADMM defines a smooth primal--dual fixed-point map whose strict-saddle KKT points are unstable fixed points; consequently, from random initialization the iterates converge to a strict saddle with probability zero. Combined with existing first-order convergence results, this yields almost-sure second-order stationarity of limiting KKT points. We extend the analysis to a multi-block star consensus formulation for distributed optimization. The technical novelty lies in a determinant reduction with a Bregman-specific symmetrization and scaling step in the two block spectral argument, together with a null space cancellation exploiting the star graph structure in the consensus case. Numerical experiments on distributed matrix factorization illustrate the theory, and a symmetric tensor factorization example demonstrates the broader Bregman proximal splitting idea beyond the separable consensus setting.",
+    "pdf_url": "https://arxiv.org/pdf/2606.28307v1",
+    "published": "2026-06-26T17:52:39Z",
+    "fetched_at": "2026-06-30T01:02:56.861743"
   }
 ]
