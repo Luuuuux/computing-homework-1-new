@@ -1,91 +1,71 @@
 [
   {
-    "title": "Accurate, Interdisciplinary and Transparent Structure-property Understanding with Deep Native Structural Reasoning",
+    "title": "Wat3R: Underwater 3D Geometry Learning without Annotations",
     "authors": [
-      "Chen Tang",
-      "Yizhou Wang",
-      "Jianyu Wu",
-      "Lintao Wang",
-      "Shixiang Tang",
-      "Pengze Li",
-      "Encheng Su",
-      "Jun Yao",
-      "Jiabei Xiao",
-      "Yuqi Shi",
-      "Jielan Li",
-      "Hongxia Hao",
-      "Zhangyang Gao",
-      "Fang Wu",
-      "Ben Fei",
-      "Xiangyu Yue",
-      "Pan Tan",
-      "Bozitao Zhong",
-      "Jinouwen Zhang",
-      "Aoran Wang",
-      "Yan Lu",
-      "Jiaheng Liu",
-      "Xinzhu Ma",
-      "Liang Hong",
-      "Mingyue Zheng",
-      "Phil Torr",
-      "Bowen Zhou",
-      "Wanli Ouyang",
-      "Lei Bai"
+      "Jiangwei Ren",
+      "Xingyu Jiang",
+      "Zijie Song",
+      "Wei Xu",
+      "Hongkai Lin",
+      "Dingkang Liang",
+      "Xiang Bai"
     ],
-    "abstract": "Structure-property relationships are foundational to biology, chemistry and materials science, where function, reactivity and physical response emerge from spatial, chemical and periodic organization. Mechanistically explaining these relationships requires interpreting structural evidence through scientific principles and physical constraints, from stereochemistry and bonding to symmetry, energetics and periodic order. However, applying artificial intelligence to this process presents a joint challenge of representation and reasoning: models must preserve domain-native structural information while showing how specific evidence supports predictions under these constraints. Here we introduce SciReasoner, a multimodal scientific foundation model for native structural reasoning across proteins, small molecules and inorganic crystals. SciReasoner discretizes coordinates, topologies and periodic connectivities into a unified structure-aware vocabulary, treating structural tokens as addressable evidence units during reasoning. In homology-controlled Gene Ontology prediction, SciReasoner improves Cellular Component annotation for low-homology and orphan-like proteins, increasing $F_{\\max}$ from 0.42 to 0.55. In chemistry, it raises single-step retrosynthesis accuracy from 0.63 to 0.72 while generating fragment-level disconnection and precursor-verification traces. In materials science, its representations separate elemental and compound phases and resolve high- and low-band-gap regimes. Across 86 benchmarks, SciReasoner achieves state-of-the-art performance on 67 tasks. Double-blind expert evaluation rates its reasoning traces as preferred or at least comparable to those of a frontier large language model in 98% of cases. By making structure an inspectable substrate for reasoning under scientific constraints, SciReasoner connects accurate prediction with interpretable scientific inference.",
-    "pdf_url": "https://arxiv.org/pdf/2607.07708v1",
-    "published": "2026-07-08T17:59:59Z",
-    "fetched_at": "2026-07-09T03:39:30.680305"
+    "abstract": "Estimating 3D geometry in underwater environments presents unique challenges due to light attenuation, scattering, and the absence of large-scale, high-quality 3D annotations. Pioneering methods rely on massive dense annotations that are impractical in underwater settings. In this paper, we propose Wat3R, a cross-domain semi-supervised learning framework designed to adapt feed-forward 3D reconstruction models from air to underwater scenes. Uniquely, our method eliminates the need for any annotated underwater data following a teacher-student architecture, that learns robust geometry representations merely on abundant unlabeled real underwater video footage. We also design a cross-view consistency loss that leverages geometric cues from other views to compensate for the information degradation in the current view caused by water attenuation and scattering. Furthermore, considering the lack of comprehensive evaluation benchmarks, we construct Water3D, a diverse dataset covering various water bodies and underwater scenarios, designed for geometric task evaluation. Experimental results demonstrate that Wat3R outperforms current state-of-the-art methods in underwater multi-view depth estimation and point cloud reconstruction. The dataset and code are available at https://github.com/LSXI7/Wat3R .",
+    "pdf_url": "https://arxiv.org/pdf/2607.08772v1",
+    "published": "2026-07-09T17:59:58Z",
+    "fetched_at": "2026-07-10T03:41:06.476057"
   },
   {
-    "title": "Co-LMLM: Continuous-Query Limited Memory Language Models",
+    "title": "Enhancing In-context Panoramic Generation via Geometric-aware Pretraining",
     "authors": [
-      "Yair Feldman",
-      "Linxi Zhao",
-      "Nathan Godey",
-      "Dongyoung Go",
-      "Yilun Hua",
-      "Kilian Q. Weinberger",
-      "Jennifer J. Sun",
-      "Yoav Artzi"
+      "Haoran Feng",
+      "Ruiyang Zhang",
+      "Longyi Zhang",
+      "Dizhe Zhang",
+      "Lu Qi"
     ],
-    "abstract": "Limited memory language models (LMLMs) externalize factual knowledge during pretraining to a knowledge base (KB), rather than memorizing it in their weights. During generation, the model then fetches knowledge from the KB as needed. This recently introduced paradigm provides multiple advantages, including knowledge control capabilities that remain beyond conventional LLMs. We propose continuous-query LMLM (CO-LMLM), where the KB pairs continuous keys with textual knowledge values, a significant departure from prior reliance on relational KB and queries. CO-LMLM generates flexible vector queries at minimal cost, while still integrating human-readable and attributable retrieved knowledge into its generation. We pair this design with an annotation pipeline that tags free-form factual spans in arbitrary text, removing prior work's restriction to Wikipedia. Across pretraining on Wikipedia and FineWeb-Edu and at multiple model scales, CO-LMLM outperforms prior LMLMs and vanilla LLMs in both perplexity and factual precision. At 360M scale, this includes lower perplexity than models pretrained on 40x more data, and SimpleQA-verified performance that is in line with gpt-4o-mini and higher than Claude Sonnet 4.5.",
-    "pdf_url": "https://arxiv.org/pdf/2607.07707v1",
-    "published": "2026-07-08T17:59:45Z",
-    "fetched_at": "2026-07-09T03:39:30.680331"
+    "abstract": "In this work, we present Canvas360, a two-stage framework for in-context panoramic generation that combines geometry-aware pretraining with downstream task-specific fine-tuning. To address the lack of large-scale, high-quality training data tailored to in-context panoramic tasks, we propose Canvas360Dataset, a collection of 1M high-quality paired panoramic samples for style transfer, inpainting, outpainting, and editing, enabling effective supervision across diverse in-context generation scenarios. On the modeling side, Canvas360 enhances text-to-panorama generation through parallel depth generation, velocity circular padding, and similarity loss regularization, enabling the model to learn geometry-aware representations, capture object distortion details, and improve geometric consistency and global coherence. Furthermore, empowered by strong panoramic priors, Canvas360 enables a unified in-context panoramic generation framework that supports diverse downstream tasks via token-level concatenation, surpassing prior methods in both task coverage and modeling flexibility. Extensive experiments show that Canvas360 improves panoramic image fidelity, achieving particularly strong performance on the panorama-specific FAED metric and competitive or leading results across the reported quantitative evaluations. More information can be found on our project page: https://zry000.github.io/Canvas360/",
+    "pdf_url": "https://arxiv.org/pdf/2607.08765v1",
+    "published": "2026-07-09T17:59:06Z",
+    "fetched_at": "2026-07-10T03:41:06.476079"
   },
   {
-    "title": "The Key to Going Linear: Analysis-Driven Transformer Linearization",
+    "title": "OpenCoF: Learning to Reason Through Video Generation",
     "authors": [
-      "Anna Kuzina",
-      "Paul N. Whatmough",
-      "Babak Ehteshami Bejnordi"
+      "Xinyan Chen",
+      "Ziyu Guo",
+      "Renrui Zhang",
+      "Dongzhi Jiang",
+      "Hongsheng Li"
     ],
-    "abstract": "The quadratic cost of causal self-attention severely bottlenecks long-context transformer inference. While numerous post hoc linearization pipelines exist, it is difficult to identify which components preserve model quality. This work isolates the effect of state update design in a strict frozen-backbone regime. We show that softmax relies on key-dependent, rank-1 orthogonal projections, elucidating why delta-style networks outperform purely gated accumulation. We identify a potential source of approximation errors and introduce structural interventions, specifically sink tokens, short convolutions, and fixed-budget cache routing, which reduces the remaining gap. We scale this linearization approach across LLaMA and Qwen models up to 32B parameters, outperforming prior post hoc baselines on MMLU and matching the long-context retrieval of complex adaptive-caching frameworks.",
-    "pdf_url": "https://arxiv.org/pdf/2607.07706v1",
-    "published": "2026-07-08T17:59:09Z",
-    "fetched_at": "2026-07-09T03:39:30.680346"
+    "abstract": "Reasoning has become a core capability for large models, especially when reliable decisions require understanding logical consequences. Recent video generation models offer a reasoning path distinct from previous Chain-of-Thought (CoT): reasoning can unfold through temporally connected frames, known as Chain-of-Frame (CoF) reasoning. However, existing video generators are primarily trained on general video corpora, still lacking diverse supervision and dedicated designs for CoF reasoning. To address this gap, we introduce OpenCoF, a framework comprising the OpenCoF-17K dataset, a reasoning video dataset spanning 11 task families, and Wan-CoF, a fine-tuned video model for studying whether diverse temporal supervision improves CoF behavior. Across four video reasoning benchmarks, Wan-CoF achieves considerable gains over the Wan2.2-I2V-A14B baseline. Building on this, we empirically explore more advanced designs for CoF capabilities, i.e., equipping the model with visual and textual reasoning tokens. This mechanism respectively captures low-level visual cues and high-level semantic priors for spatial and temporal reasoning. Through performance comparisons and attention analysis, we examine how these tokens contribute across model depth, denoising steps, space, and time. Our results suggest that stronger video reasoning requires both broad temporal supervision and explicit mechanisms for organizing intermediate reasoning state. We open-source the dataset, model, and code to facilitate future research on reasoning-oriented video generation.",
+    "pdf_url": "https://arxiv.org/pdf/2607.08763v1",
+    "published": "2026-07-09T17:58:29Z",
+    "fetched_at": "2026-07-10T03:41:06.476095"
   },
   {
-    "title": "Selective Timestep Weighting and Advantage-Based Replay for Sample-Efficient Diffusion RLHF",
+    "title": "Score Accuracy Along the Forward Diffusion Does Not Certify Numerical Stability in Diffusion Sampling",
     "authors": [
-      "Eric Zhu",
-      "Abhinav Shrivastava",
-      "Soumik Mukhopadhyay"
+      "Yiwei Zhou"
     ],
-    "abstract": "Reinforcement learning from human feedback (RLHF) has emerged as a powerful paradigm for aligning generative models with human preferences. However, applying RLHF to diffusion models remains highly feedback inefficient, as existing approaches typically require large amounts of human or reward model evaluations. This limitation reduces the practicality of diffusion RLHF in realworld settings where feedback is the primary bottleneck. In this paper, we propose two complementary strategies that substantially improve the feedback efficiency of diffusion RLHF while preserving generalization to unseen prompts. Our key observation is that reward information in diffusion trajectories is unevenly distributed: not all denoising timesteps or trajectories contribute equally to learning from a reward signal. By emphasizing informative timesteps and trajectories during optimization, we obtain more effective gradient updates. First, we introduce a per-timestep weighting scheme that reweights denoising steps during policy optimization. We theoretically connect this weighting to the optimal convergence properties of proximal policy optimization (PPO) and approximate the resulting weighting trend empirically. Second, we introduce a replay mechanism that prioritizes informative trajectories, enabling the model to reuse past samples instead of repeatedly querying new rewards. Together, these strategies significantly improve the feedback efficiency of diffusion RLHF. Under identical hyperparameter settings, our approach achieves up to a 6$\\times$ improvement in sample efficiency compared to widely used diffusion RLHF baselines.",
-    "pdf_url": "https://arxiv.org/pdf/2607.07693v1",
-    "published": "2026-07-08T17:49:49Z",
-    "fetched_at": "2026-07-09T03:39:30.680359"
+    "abstract": "Score matching controls average error under the forward marginals, but a discretized reverse-time sampler evaluates the learned score along its own trajectory. We show that small forward-marginal error does not guarantee numerical stability. We construct a single smooth score field with arbitrarily small forward-marginal $L^2$ error. The learned reverse-time process is nonexplosive, has moments of every order, and can be arbitrarily close to the exact reverse-time process in path-space total variation. Yet its Euler--Maruyama discretizations converge in probability while every positive moment diverges. Thus weak convergence can hold even though every Wasserstein distance $W_p$, $p\\ge1$, diverges.\n  The same failure can occur within one fixed finite neural architecture. We construct a family of bounded, globally Lipschitz denoisers for which both the forward-marginal error and the path-space total variation distance tend to zero, while their Euler--Maruyama endpoints diverge in every $W_p$. For compactly supported data, we also give a simple positive result. Projecting the learned denoiser onto a known bounded closed convex set containing the support preserves pointwise accuracy, gives grid-uniform moment bounds, and yields Wasserstein convergence under mild local regularity. Experiments with a small fixed DiT-style network show large growth along rare numerical trajectories and its suppression by denoiser projection, while overall trajectory errors remain small.",
+    "pdf_url": "https://arxiv.org/pdf/2607.08757v1",
+    "published": "2026-07-09T17:55:52Z",
+    "fetched_at": "2026-07-10T03:41:06.476106"
   },
   {
-    "title": "Agon: Competitive Cross-Model RL with Implicit Rival Grading of Reasoning",
+    "title": "MulTTiPop: A Multitrack Transcription Dataset for Pop Music",
     "authors": [
-      "Vladislav Beliaev"
+      "Nathan Pruyne",
+      "Benjamin Stoler",
+      "William Chen",
+      "Chien-yu Huang",
+      "Shinji Watanabe",
+      "Chris Donahue"
     ],
-    "abstract": "Reinforcement learning from verifiable rewards (e.g. GRPO) is the engine behind today's reasoning models, yet it grades only the final answer. On hard problems this trains models to write more rather than to think better, since the trace itself is never graded and no label for good thinking exists. We introduce Agon, which makes two competing models each other's graders. Both attempt the same problem; in alternating roles, one drafts a solution and the other reads it while solving, and each is rewarded for out-solving the other. To win, a model must out-reason a rival that has seen its work, so reasoning is judged implicitly during training, with no process labels and no reward model. Because both models are optimized, each faces a progressively stronger rival, which single-model RL cannot provide. The two need only be comparably strong and behaviorally different. At inference the pair deploys as it trains, a two-stage cascade in which one model drafts and the other answers after reading the draft. On the hard split of DeepMath with Qwen3, this doubles GRPO's pass@1, roughly eight times the gain of an untrained Mixture-of-Agents pass over the same base. The ordering replicates on competitive-programming code and across model families (Qwen3.5, Gemma 4). For now the models talk in text; the next step is to let them reason together in latent space.",
-    "pdf_url": "https://arxiv.org/pdf/2607.07690v1",
-    "published": "2026-07-08T17:49:14Z",
-    "fetched_at": "2026-07-09T03:39:30.680370"
+    "abstract": "We present MulTTiPop, a dataset of pop music segments and their associated multitrack MIDI recordings for the evaluation of automatic music transcription models. MulTTiPop contains 572 segments of popular music totaling 3.5 hours of audio, and contains songs from diverse genres and decades from the 1930s to 2000s. To collect this dataset, we perform metadata-based matching on song segments from the Lakh MIDI and TheoryTab datasets, manually identify an anchor beat between the audio and MIDI, then use beat tracking on the audio and warp the MIDI to match its tempo and timing. We evaluate state-of-the-art automatic music transcription models on MulTTiPop and find substantial room for improvement, with the best model achieving 38% Onset F1. More details and sound examples of MulTTiPop are available at https://gclef-cmu.org/multtipop.",
+    "pdf_url": "https://arxiv.org/pdf/2607.08756v1",
+    "published": "2026-07-09T17:55:33Z",
+    "fetched_at": "2026-07-10T03:41:06.476122"
   }
 ]
