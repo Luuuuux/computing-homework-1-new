@@ -1,1 +1,73 @@
-[]
+[
+  {
+    "title": "Contrastive-Collapsed Loss for Flexible and Geometrically Optimal Embeddings and Faster Convergence",
+    "authors": [
+      "Blanca Cano-Camarero",
+      "Ángela Fernández-Pascual",
+      "José R. Dorronsoro"
+    ],
+    "abstract": "In this work, we introduce CoCo, a loss function aimed at learning normalized and well-structured representations. The proposed loss encourages intra-class collapse and inter-class contrast while preserving sufficient flexibility for neural networks to approximate geometrically optimal embeddings with large angular separation between classes. We provide a theoretical analysis positioning CoCo with respect to related objectives such as dot regression and cross-entropy, showing that the new proposed loss benefits from closer initialization to the optimal configuration, more informative gradients, and stronger incentives for class-wise representation collapse. Extensive experiments on diverse tabular datasets from the OpenML-CC18 benchmark show that CoCo achieves competitive performance with state-of-the-art methods, including kernel SVM, Random Forest, dot regression, and cross-entropy-based neural networks. In addition, both theoretical arguments and empirical analyses demonstrate that the proposal promotes tighter class clustering and faster convergence. These results highlight CoCo loss as an effective objective for learning discriminative representations while maintaining competitive predictive performance.",
+    "pdf_url": "https://arxiv.org/pdf/2607.12916v1",
+    "published": "2026-07-14T15:51:41Z",
+    "fetched_at": "2026-07-15T02:45:57.149469"
+  },
+  {
+    "title": "Accelerated Mixing Time of Randomized Hamiltonian Monte Carlo",
+    "authors": [
+      "Siddharth Mitra",
+      "Vishwak Srinivasan",
+      "Xiuyuan Wang",
+      "Andre Wibisono"
+    ],
+    "abstract": "We show the Randomized Hamiltonian Monte Carlo (RHMC) algorithm has accelerated mixing time guarantees for sampling from log-concave probability distributions. RHMC proceeds by repeatedly simulating the continuous-time Hamiltonian dynamics for some random integration times, and resetting the velocity to be an independent Gaussian random variable between each simulation. We show that when the target distribution is log-concave and satisfies an $α$-Talagrand inequality (for example, if the target distribution is $α$-strongly log-concave), if we use a random integration time from either the triangular or the exponential distribution with mean $Θ(α^{-1/2})$, then RHMC converges exponentially fast in KL divergence, and the total integration time to reach error $\\varepsilon$ in KL divergence scales as $O(α^{-1/2} \\log(\\varepsilon^{-1}))$. We also show that when the target distribution is log-concave, if we use a sequence of random integration times from the triangular distribution with exponentially increasing means, then the total integration time to reach error $\\varepsilon$ in KL divergence scales as $O(\\varepsilon^{-1/2})$. Our analysis relies on a bound on the average KL divergence along Hamiltonian dynamics, which is inspired by an analogous result on accelerated optimization methods based on Hamiltonian dynamics.",
+    "pdf_url": "https://arxiv.org/pdf/2607.12902v1",
+    "published": "2026-07-14T15:38:04Z",
+    "fetched_at": "2026-07-15T02:45:57.149491"
+  },
+  {
+    "title": "Establishing baseline model performances for optical turbulence forecasting",
+    "authors": [
+      "M. De Sepibus",
+      "E. Masciadri",
+      "C. Weinberger",
+      "C. Veillet",
+      "S. Ragland"
+    ],
+    "abstract": "Accurate optical turbulence (OT) forecasts help telescopes observe with maximum efficiency, as the performance of adaptive optics (AO) systems strongly depends on turbulence conditions. OT forecasting remains a challenging problem. A wide range of methods has been explored to address this problem, including numerical weather prediction (NWP) models, machine learning algorithms, and hybrid approaches, each varying in complexity, computational cost, and accuracy.Assessing the performance of forecasting methods is essential to benchmark them against simple, well-defined reference models, known as baselines, which establish reference thresholds. This paper aims to calculate these thresholds for the astroclimatic and atmospheric parameters most relevant for ground-based astronomy related to two of these baseline methods that are suitable for use in two different types of forecast, which are among the most relevant for application to the ground-based astronomy: the forecast of the average of a parameter on a defined timescale and the forecast of the temporal evolution of a parameter on a defined timescale. We apply these baseline methods to a dataset related to a rich statistical sample of many years encompassing key astroclimatic and atmospheric parameters above the sites of the Very Large Telescope and the Large Binocular Telescope, and we discuss the implications of these results and the possibility of extrapolating such values for general rules. We demonstrate that the predictive performance of each reference method depends on the observing sites, the parameter that is forecasted, the forecast timescale, and the type of forecast used. That means that it is meaningless to quantify the performance of OT forecasts in absolute terms, since they depend on the context.",
+    "pdf_url": "https://arxiv.org/pdf/2607.12900v1",
+    "published": "2026-07-14T15:36:16Z",
+    "fetched_at": "2026-07-15T02:45:57.149508"
+  },
+  {
+    "title": "UniMedSeg: Unified In-Context Learning for Multi-Paradigm 2D/3D Medical Image Segmentation",
+    "authors": [
+      "Yunzhou Li",
+      "Jiesi Hu",
+      "Yanwu Yang",
+      "Hanyang Peng",
+      "Chenfei Ye",
+      "Jianfeng Cao",
+      "Yixuan Yuan",
+      "Ting Ma"
+    ],
+    "abstract": "Medical image segmentation foundation models are expected to generalize across diverse clinical scenarios, yet existing universal methods remain fragmented by prompt paradigms and spatial dimensions. Visual in-context learning, interactive segmentation, and language-guided segmentation are typically handled by paradigm-specific models, while 2D and 3D images are also modeled separately. Such isolation prevents heterogeneous annotations and data from being jointly absorbed by a single scalable model and limits cross-paradigm knowledge transfer. To address this bottleneck, we propose UniMedSeg, a Transformer-centric universal segmentation framework that maps visual examples, geometric interactions, language instructions, and 2D/3D images into a shared sequence space, enabling heterogeneous medical supervision to be jointly learned through a unified in-context interface without prompt- or dimension-specific branches. To overcome the long-sequence memory bottleneck caused by visual contexts, we introduce Decoupled Split Attention, which reduces attention complexity to linear while preserving hardware-friendly computation and focused context-target interaction. Extensively trained and evaluated on a large corpus curated from 27 public datasets, UniMedSeg achieves state-of-the-art performance across visual in-context, interactive, and language-guided segmentation without task-specific fine-tuning, demonstrating strong generalization on diverse held-out tasks. The code and model weights are publicly available at https://github.com/Lii1228/UniMedSeg",
+    "pdf_url": "https://arxiv.org/pdf/2607.12896v1",
+    "published": "2026-07-14T15:34:46Z",
+    "fetched_at": "2026-07-15T02:45:57.149527"
+  },
+  {
+    "title": "UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies",
+    "authors": [
+      "Lirui Zhao",
+      "Modi Shi",
+      "Li Chen",
+      "Qi Liu",
+      "Ping Luo",
+      "Hongyang Li"
+    ],
+    "abstract": "Modern robot learning systems increasingly rely on dense progress or value signals to evaluate intermediate states, guide policy learning, and detect task completion, making the quality of these signals critical. Since such dense labels are rarely available at scale, normalized time within a demonstration is often used as a scalable substitute: later frames are treated as higher progress. However, this time-derived label is only a noisy proxy for physical task progress. In contact-rich manipulation, a robot may make progress and then lose it through slips, failed grasps, or partial undoing, while the time-derived label continues to increase monotonically. We introduce Unsupervised Robotic Value Correction (UR-VC), an offline, training-free method for correcting time-derived progress labels. UR-VC exploits a simple regularity in demonstration data: similar states often recur across different episodes, but at different timestamps. Instead of trusting the timestamp from a single trajectory, UR-VC retrieves similar states from other episodes and aggregates their time-derived labels to obtain a corrected progress estimate. UR-VC requires no manual progress labels, reward annotations, or additional value model. We evaluate UR-VC on real bimanual cloth flatten-and-fold data, a long-horizon deformable-object manipulation task with visible intermediate progress. The corrected labels capture local regressions and non-uniform progress that normalized time cannot represent, while preserving the overall task trend. We further use the corrected signal to construct advantage labels for VLA training, following recent advantage-conditioned policy learning. UR-VC shows a positive trend in real-robot task success under matched data, model, and training settings.",
+    "pdf_url": "https://arxiv.org/pdf/2607.12892v1",
+    "published": "2026-07-14T15:33:33Z",
+    "fetched_at": "2026-07-15T02:45:57.149543"
+  }
+]
