@@ -1,63 +1,78 @@
 [
   {
-    "title": "INTACT: Isomorphic Intent-to-Action Learning for Search-Free World Models",
+    "title": "The Keyl-Werner algorithm is not optimal for spectrum estimation",
     "authors": [
-      "Junhan Sun",
-      "Hao Zhao",
-      "Guofeng Zhang"
+      "Angelos Pelecanos",
+      "Jack Spilecki",
+      "Ewin Tang",
+      "John Wright"
     ],
-    "abstract": "Forward latent world models predict how actions change a scene, but recover actions for a desired change only through expensive test-time search. We introduce INTACT (INtent-To-ACTion), an end-to-end JEPA that turns action-labeled, reward-free trajectories into a deployable intent-to-action interface. Each transition supplies physical intent $z_{t+1}-z_t$, while a future goal supplies deployment intent $\\operatorname{sg}(z_g)-z_t$. The architecture is isomorphic between the local and goal motion-intent backbone-input graphs through an identical four-slot grammar and shared parameters, and between supported local and goal motion-intent families through action-law semantics induced by the same predictor rather than pointwise latent equality. INTACT also provides intact transfer from RGB evidence to action-effective latent intent coordinates and from intent families to their corresponding action-law families. Asymmetric endpoint gradients ground physical successors and fix future goals as anchors, joining representation learning and control without pointwise latent matching or globally linear dynamics. The resulting coordinates support a robust distributional action law: its conditional mean serves directly as a search-free policy, while sampling remains available for diversity or optional verification. On the four official LeWM tasks, one-epoch, zero-search models reach 85.78\\%, 100.00\\%, 97.67\\%, and 97.89\\% success. Optional local CEM centered on the Direct plan reaches 96.86\\% macro success using 384 instead of 9,000 candidate sequences, reducing sampling by $23.44\\times$ while improving pure CEM by 16.00 points. One shared four-task encoder reaches 89.39\\% E5 Direct macro and improves every task over jointly trained LeWM, while predicted--expert action-family kNN tracks Direct success at $r=0.954$. Direct inference takes 2.9--5.5 ms.",
-    "pdf_url": "https://arxiv.org/pdf/2607.26056v1",
-    "published": "2026-07-28T17:59:40Z",
-    "fetched_at": "2026-07-29T02:54:53.786683"
+    "abstract": "We give an algorithm which, given $n = O(d^2 \\cdot (\\log\\log(d)/\\log(d))^2)$ copies of $ρ$, estimates the eigenvalues of $ρ$ to constant error in total variation distance. Thus, we can learn the eigenvalues of a quantum state with fewer copies than the $Θ(d^2)$ needed to run full state tomography. This is the first improvement to spectrum estimation over the influential Keyl-Werner algorithm, which uses $n = Θ(d^2)$ copies, thereby resolving a question raised by Keyl and Werner in 2001 and refuting a 2016 conjecture of Wright.\n  Our main technical tool is a new tomography guarantee, where the error of tomography in a particular direction $|w\\rangle$ scales with $\\langle w | ρ|w\\rangle$ for all directions simultaneously. From this stronger \"relative-error\" bound, we recover better algorithms for principal component analysis in Bures distance and tomography in $χ^2$-divergence as corollaries.",
+    "pdf_url": "https://arxiv.org/pdf/2607.27117v1",
+    "published": "2026-07-29T16:46:05Z",
+    "fetched_at": "2026-07-30T02:40:02.721311"
   },
   {
-    "title": "$π\\mathbf{R}^2$: Reactive Real-time Flow Policies",
+    "title": "Veritas++: Value-aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
     "authors": [
-      "Sungjae Park",
-      "Shubham Tulsiani"
+      "Hao Tan",
+      "Jun Lan",
+      "Zichang Tan",
+      "Ajian Liu",
+      "Zijian Yu",
+      "Chuanbiao Song",
+      "Huijia Zhu",
+      "Weiqiang Wang",
+      "Jun Wan",
+      "Zhen Lei"
     ],
-    "abstract": "Generalist manipulation policies increasingly take the form of action-chunking flow policies built on large pretrained backbones. Such chunks run open-loop, so the policy cannot react to sensory input arriving mid-execution, sacrificing \\emph{reactivity}. Replanning more often would restore it, but the perception-to-action pipeline (a large backbone plus multiple denoising steps) is too slow: this \\emph{latency} forbids frequent replanning and leaves committed actions stale, making such policies ill-suited for dynamic, closed-loop control. We present $π\\mathbf{R}^2$, which makes these policies reactive and real-time while retaining large backbones, expressive multi-modal policies, and multi-action prediction. Built on the per-position noise schedule of diffusion forcing, $π\\mathbf{R}^2$ contributes two ideas. First, it splits conditioning into a fast channel (proprioception, fresh every tick) and an asynchronously updated slow channel (vision-language features), so the policy reacts to proprioception within a chunk while tolerating stale vision. Second, a latency-adaptive flow schedule treats in-flight actions as inpainting conditioning and emits actions in one denoising step per call, letting one trained model adapt to varying hardware latency. Requiring minimal modification to existing architectures, $π\\mathbf{R}^2$ can be finetuned from a pretrained policy: applied to GR00T-N1.7 on a real xArm6+XHand platform, it replans closed-loop roughly $4\\times$ faster than the base policy (~$25$Hz on an A5000 GPU), acting on a fresh observation every $40$ms. Across simulation and real-world manipulation tasks, $π\\mathbf{R}^2$ improves the success rate by up to $23\\%$ in simulation and $30\\%$ in the real world over the strongest baseline. Project page: https://pi-r2-flow.github.io/",
-    "pdf_url": "https://arxiv.org/pdf/2607.26055v1",
-    "published": "2026-07-28T17:59:31Z",
-    "fetched_at": "2026-07-29T02:54:53.786707"
+    "abstract": "The growing capability of image generation models has made synthetic images a routine presence in open media, making robust and generalizable AI-Generated Image (AIGI) detection increasingly essential. While multi-modal large language models (MLLMs) offer a transparent alternative to black-box binary scoring, we observe that current MLLM-based detectors still exhibit notable perception bottlenecks in capturing fine-grained anomalies. They primarily focus on how visual evidence is organized and synthesized, leaving the intrinsic perception less optimized. To mitigate this gap, we present Veritas++, a perception-enhanced reasoning framework that establishes reliable perception as the foundation of authenticity reasoning. Rather than directly optimizing the model's explanatory ability, we ground AIGI detection on three basic perception abilities, i.e., capturing fine-grained visual details, semantic anomalies and pixel-level differences. Building on this insight, we introduce Perception-oriented Learning (PoRL), which replaces open-ended description supervision with verifiable rewards to explicitly strengthen these capacities. To further integrate enhanced perception with reasoning, we introduce Value-aware On-Policy Distillation (VaOPD), an adaptive distillation mechanism that prioritizes high-value distillation signals over uniform supervision, internalizing perception-aware reasoning through a privileged self-teacher. Extensive experiments across standard, in-the-wild and emerging benchmarks demonstrate that Veritas++ achieves promising generalization. The perception learning effectively bridges the perception gap and yields seamless gains on detection, while VaOPD further enables efficient capability evolvement without sacrificing existing performance. Code and checkpoints are available at https://github.com/EricTan7/VeritasPP.",
+    "pdf_url": "https://arxiv.org/pdf/2607.27113v1",
+    "published": "2026-07-29T16:43:59Z",
+    "fetched_at": "2026-07-30T02:40:02.721341"
   },
   {
-    "title": "Spend Experts Where You Are Unsure: Confidence-Adaptive Routing for Mixture-of-Experts LoRA",
+    "title": "Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting",
     "authors": [
-      "Tom Saliencro",
-      "Rohan Desai",
-      "Priya Nair",
-      "Maya Lindqvist",
-      "Daniel Whitmore"
+      "Filipa Lino",
+      "Bárbara Tavares",
+      "Carlos Santiago",
+      "Cláudia Soares",
+      "Manuel Marques"
     ],
-    "abstract": "Mixture-of-Experts (MoE) variants of Low-Rank Adaptation (LoRA) route every token to a fixed number of experts $k$. Tokens differ in how uncertain the model is about them, so a single k over-spends on easy tokens and under-serves hard ones. We observe that the router's output distribution is already a per-token uncertainty signal: peaked mass indicates confidence, while a flat distribution indicates ambiguity. We introduce CARE (Confidence-Adaptive Routing of Experts), which admits experts in a nucleus fashion. Experts are activated in decreasing router weight until their cumulative mass reaches a threshold, with a small extension when the admitted experts disagree. A budget thermostat calibrates the threshold so that the average number of active experts matches any target. CARE is a drop-in, single-forward-pass rule with no extra parameters. Across eight commonsense benchmarks on LLaMA-3.1-8B and Qwen2.5-7B, as well as math, code, and knowledge tasks, CARE improves over fixed top-k MoE-LoRA at matched compute and matches the fixed-k=4 baseline while activating fewer experts. The same confidence and disagreement signals also improve out-of-distribution detection over MSP, entropy, and multi-pass proxies. We support the design with nucleus fidelity, budget optimality, and an epistemic reading of disagreement, and we release code.",
-    "pdf_url": "https://arxiv.org/pdf/2607.26052v1",
-    "published": "2026-07-28T17:59:16Z",
-    "fetched_at": "2026-07-29T02:54:53.786724"
+    "abstract": "Emergency Departments (EDs) are critical access points in healthcare systems, yet they face persistent pressure from unpredictable patient demand, seasonal surges, and non-urgent visits. Effective ED planning requires forecasts at multiple decision-making levels: hospitals need local demand estimates for staffing and bed management, regions require forecasts to coordinate healthcare units, and national authorities need system-wide projections for capacity planning. However, most existing approaches forecast ED demand independently at a single level, ignoring the hierarchy linking hospitals, regions, and national systems. This can produce incoherent predictions, where hospital-level forecasts do not aggregate consistently to regional or national demand. We propose HierSTT, a hierarchical Transformer-based framework for coherent multi-level ED forecasting. HierSTT jointly predicts hospital, regional, and national level demand in a single end-to-end model. A Temporal Fusion Transformer captures national dynamics, while spatio-temporal Transformer encoder-decoder modules model regional and hospital demand conditioned on higher-level forecasts. A coherence-aware loss penalizes cross-level inconsistencies during training. We further introduce a nationwide Portuguese ED dataset covering 81 hospitals across 5 regional health administrations, with heterogeneous covariates at each level. Experiments show that HierSTT reduces average WAPE by 32\\% relative to the best non-hierarchical deep learning baseline and outperforms all classical hierarchical reconciliation methods, while producing near-coherent predictions across levels. Additional resources associated with this work are available at https://github.com/FilipaLino/HierSTT.",
+    "pdf_url": "https://arxiv.org/pdf/2607.27106v1",
+    "published": "2026-07-29T16:33:18Z",
+    "fetched_at": "2026-07-30T02:40:02.721359"
   },
   {
-    "title": "S2A2: Audio-Visual Imitation Learning for Manipulation Tasks Using Acoustic Spatial Information",
+    "title": "Detecting seizure onset and offset times using human intelligence: A critical-transitions-based approach",
     "authors": [
-      "Kaneyoshi Hiratsuka",
-      "Benjamin Yen",
-      "Ryosuke Kojima"
+      "Andrew Flynn",
+      "Cian McCafferty",
+      "Klaus Lehnertz",
+      "François David",
+      "Vincenzo Crunelli",
+      "Gordon Lightbody",
+      "Sebastian Wieczorek"
     ],
-    "abstract": "Acoustic information provides rich cues about object location, material properties, and changes caused by contact or motion. This paper introduces a new set of acoustic-aware manipulation tasks for imitation learning, in which robots must use auditory cues to determine manipulation targets. These tasks require sound source localization and identification for active exploration in robotic manipulation. Also, we propose a multimodal imitation learning framework, Spatial-Spectral Audio Action (S2A2), that integrates visual features with acoustic spatial and acoustic signal information for the acoustic-aware manipulation tasks. We implemented S2A2 models that integrates policies such as ACT, Diffusion Policy, VQ-BeT, and $π_0$, into our framework. Simulation experiments showed that the proposed method is the most effective for tasks requiring both position and timbre. Furthermore, real-robot experiments confirm the applicability of the proposed tasks and framework to real-world manipulation.",
-    "pdf_url": "https://arxiv.org/pdf/2607.26047v1",
-    "published": "2026-07-28T17:56:07Z",
-    "fetched_at": "2026-07-29T02:54:53.786739"
+    "abstract": "Most existing seizure detection algorithms require extensive pre-processing of the data and rely on heuristic or currently unexplainable machine learning approaches. These approaches often struggle with balancing detection sensitivity and specificity in the presence of variable seizure morphologies, interictal epileptiform discharges, and artefacts. Here, we consider an alternative approach: our seizure detection algorithm, which is based on the concept of critical transitions and overcomes the aforementioned limitations. Specifically, we perform a receiver-operating-characteristic analysis to quantify the performance of our algorithm in terms of its agreement with expert annotations of seizure onset and offset times in the voltage recordings of seizure activity in epileptic rodents with different seizure morphologies. We demonstrate how performance depends on algorithm parameters and varies across different rodent recording sessions. We determine the optimal set of algorithm parameters for each recording session, with near expert-level performance achieved in most cases. Finally, we derive a single general set of algorithm parameters applicable across all recording sessions. The algorithm maintains its high performance in this general setting, demonstrating its versatility, robustness across varying seizure morphologies, and potential to complement machine learning algorithms.",
+    "pdf_url": "https://arxiv.org/pdf/2607.27105v1",
+    "published": "2026-07-29T16:31:53Z",
+    "fetched_at": "2026-07-30T02:40:02.721377"
   },
   {
-    "title": "Re-thinking Mammography Transfer Learning: The Dataset-Informed Transfer Learning (DITL) Framework for Breast Cancer Screening and Lesion Diagnosis",
+    "title": "A New Paradigm for 3D Turbomachinery Design: Generative Diffusion Model Based Framework with Direct Geometry Encoding",
     "authors": [
-      "Adarsh Bhandary Panambur",
-      "Siming Bayer",
-      "Andreas Maier"
+      "Yingfan Geng",
+      "Jinhong Wang",
+      "Lazaros Papachristodoulou",
+      "Sibo Cheng",
+      "Teng Cao"
     ],
-    "abstract": "Enhancing classification performance in mammography remains a persistent challenge across both small curated datasets and large-scale clinical cohorts. Conventional transfer learning approaches often neglect dataset-specific characteristics, while recent neighborhood-informed methods have been restricted to narrow tasks with rigid formulations, limiting their scalability to population-level datasets. To address these challenges, we propose the Dataset-Informed Transfer Learning (DITL) framework, which integrates dataset-derived difficulty signals with neighborhood-based triplet supervision in a unified objective. DITL introduces two adaptive components: (i) Adaptive Difficulty-Weighted Cross-Entropy (A-DWCE), which assigns per-sample weights based on k-nearest neighbor label purity in a self-supervised feature space, and (ii) Adaptive Neighborhood Representation Triplet (A-NR-Triplet), which enforces intra-class compactness and inter-class separation using a learnable margin. Unlike focal loss, DITL requires no hyperparameter tuning, removes heuristic weighting and fixed margins, and incurs negligible computational overhead, yielding a robust and scalable optimization strategy. On the large-scale VinDR-Mammo dataset, DITL achieves state-of-the-art performance for whole-image breast density classification, with significant improvements across accuracy, F1-score, and AUC (p < 0.0001). Beyond large cohorts, DITL also delivers consistent, statistically significant gains on small ROI datasets (p < 0.0001). By bridging small-scale lesion analysis with large-scale density estimation, DITL establishes a clinically relevant, scalable, and generalizable framework for mammography classification, spanning the full breast cancer screening-to-diagnosis spectrum.",
-    "pdf_url": "https://arxiv.org/pdf/2607.26043v1",
-    "published": "2026-07-28T17:52:36Z",
-    "fetched_at": "2026-07-29T02:54:53.786752"
+    "abstract": "The aerodynamic design of turbomachinery is critical to the performance of the overall energy system, yet it is challenging due to the complex non-linear flow physics and the presence of multiple-target design compromises. Denoising diffusion model, as one of the leading approaches in generative machine learning, has shown its advantages of high design solution accuracy and diversity in many engineering applications. In this study, we bring it to the 3D inverse design problem of turbomachinery, using centrifugal compressors as a classic representative, to demonstrate the new methodology for complex geometry designs. A diffusion model-centred design framework has been developed in this study. By specifying the desired design condition (mass flow rate and rotational speed) and targeted performance (pressure ratio and efficiency), the trained diffusion model returns directly the 3D compressor geometry that satisfies the condition inputs. Compared to traditional deterministic forward design approaches, the proposed method not only generates accurate geometry solutions to inverse design problems, but also enables effective exploration of the entire design space, providing a diverse set of candidate solutions. In addition, this paper presents the first study to directly train on 3D blade geometry coordinates rather than parametrised representations, demonstrating the feasibility of coordinate-based learning while enabling a highly flexible framework applicable to a wide range of designs. The trained diffusion model achieves excellent design capability, with solution accuracy up to 99% and unfeasible designs less than 1%. Furthermore, the solution diversity of the trained diffusion model is also quantitatively verified by means of comparing the distribution of the solution sets generated from the diffusion model and from direct sampling of physical parameters.",
+    "pdf_url": "https://arxiv.org/pdf/2607.27093v1",
+    "published": "2026-07-29T16:23:08Z",
+    "fetched_at": "2026-07-30T02:40:02.721393"
   }
 ]
