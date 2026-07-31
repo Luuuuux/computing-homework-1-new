@@ -1,78 +1,84 @@
 [
   {
-    "title": "The Keyl-Werner algorithm is not optimal for spectrum estimation",
+    "title": "Learning to Trace Seiberg Dualities",
     "authors": [
-      "Angelos Pelecanos",
-      "Jack Spilecki",
-      "Ewin Tang",
-      "John Wright"
+      "Jonathan J. Heckman",
+      "Shani Meynet",
+      "Alessandro Mininno",
+      "Gary Shiu"
     ],
-    "abstract": "We give an algorithm which, given $n = O(d^2 \\cdot (\\log\\log(d)/\\log(d))^2)$ copies of $ρ$, estimates the eigenvalues of $ρ$ to constant error in total variation distance. Thus, we can learn the eigenvalues of a quantum state with fewer copies than the $Θ(d^2)$ needed to run full state tomography. This is the first improvement to spectrum estimation over the influential Keyl-Werner algorithm, which uses $n = Θ(d^2)$ copies, thereby resolving a question raised by Keyl and Werner in 2001 and refuting a 2016 conjecture of Wright.\n  Our main technical tool is a new tomography guarantee, where the error of tomography in a particular direction $|w\\rangle$ scales with $\\langle w | ρ|w\\rangle$ for all directions simultaneously. From this stronger \"relative-error\" bound, we recover better algorithms for principal component analysis in Bures distance and tomography in $χ^2$-divergence as corollaries.",
-    "pdf_url": "https://arxiv.org/pdf/2607.27117v1",
-    "published": "2026-07-29T16:46:05Z",
-    "fetched_at": "2026-07-30T02:40:02.721311"
+    "abstract": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
+    "pdf_url": "https://arxiv.org/pdf/2607.28628v1",
+    "published": "2026-07-30T17:59:56Z",
+    "fetched_at": "2026-07-31T03:21:38.847082"
   },
   {
-    "title": "Veritas++: Value-aware On-Policy Distillation for Perception-Enhanced AIGI Detection",
+    "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
     "authors": [
-      "Hao Tan",
-      "Jun Lan",
-      "Zichang Tan",
-      "Ajian Liu",
-      "Zijian Yu",
-      "Chuanbiao Song",
-      "Huijia Zhu",
-      "Weiqiang Wang",
-      "Jun Wan",
-      "Zhen Lei"
+      "Yao Xiao",
+      "Reuben Tan",
+      "Zhen Zhu",
+      "Yuqun Wu",
+      "Jianfeng Gao",
+      "Derek Hoiem"
     ],
-    "abstract": "The growing capability of image generation models has made synthetic images a routine presence in open media, making robust and generalizable AI-Generated Image (AIGI) detection increasingly essential. While multi-modal large language models (MLLMs) offer a transparent alternative to black-box binary scoring, we observe that current MLLM-based detectors still exhibit notable perception bottlenecks in capturing fine-grained anomalies. They primarily focus on how visual evidence is organized and synthesized, leaving the intrinsic perception less optimized. To mitigate this gap, we present Veritas++, a perception-enhanced reasoning framework that establishes reliable perception as the foundation of authenticity reasoning. Rather than directly optimizing the model's explanatory ability, we ground AIGI detection on three basic perception abilities, i.e., capturing fine-grained visual details, semantic anomalies and pixel-level differences. Building on this insight, we introduce Perception-oriented Learning (PoRL), which replaces open-ended description supervision with verifiable rewards to explicitly strengthen these capacities. To further integrate enhanced perception with reasoning, we introduce Value-aware On-Policy Distillation (VaOPD), an adaptive distillation mechanism that prioritizes high-value distillation signals over uniform supervision, internalizing perception-aware reasoning through a privileged self-teacher. Extensive experiments across standard, in-the-wild and emerging benchmarks demonstrate that Veritas++ achieves promising generalization. The perception learning effectively bridges the perception gap and yields seamless gains on detection, while VaOPD further enables efficient capability evolvement without sacrificing existing performance. Code and checkpoints are available at https://github.com/EricTan7/VeritasPP.",
-    "pdf_url": "https://arxiv.org/pdf/2607.27113v1",
-    "published": "2026-07-29T16:43:59Z",
-    "fetched_at": "2026-07-30T02:40:02.721341"
+    "abstract": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
+    "pdf_url": "https://arxiv.org/pdf/2607.28627v1",
+    "published": "2026-07-30T17:59:56Z",
+    "fetched_at": "2026-07-31T03:21:38.847107"
   },
   {
-    "title": "Hierarchical Spatio-Temporal Transformer for Coherent Emergency Department Forecasting",
+    "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
     "authors": [
-      "Filipa Lino",
-      "Bárbara Tavares",
-      "Carlos Santiago",
-      "Cláudia Soares",
-      "Manuel Marques"
+      "Yukang Cao",
+      "Haozhe Xie",
+      "Beichen Wen",
+      "Runmao Yao",
+      "Yinghao Liu",
+      "Yue Huang",
+      "Zhichao Liao",
+      "Yunxiang Wang",
+      "Haiheng Liu",
+      "Xingshun Tian",
+      "Dawei Su",
+      "Long Zhuo",
+      "Dacheng Tao",
+      "Xiaogang Wang",
+      "Liang Pan",
+      "Ziwei Liu"
     ],
-    "abstract": "Emergency Departments (EDs) are critical access points in healthcare systems, yet they face persistent pressure from unpredictable patient demand, seasonal surges, and non-urgent visits. Effective ED planning requires forecasts at multiple decision-making levels: hospitals need local demand estimates for staffing and bed management, regions require forecasts to coordinate healthcare units, and national authorities need system-wide projections for capacity planning. However, most existing approaches forecast ED demand independently at a single level, ignoring the hierarchy linking hospitals, regions, and national systems. This can produce incoherent predictions, where hospital-level forecasts do not aggregate consistently to regional or national demand. We propose HierSTT, a hierarchical Transformer-based framework for coherent multi-level ED forecasting. HierSTT jointly predicts hospital, regional, and national level demand in a single end-to-end model. A Temporal Fusion Transformer captures national dynamics, while spatio-temporal Transformer encoder-decoder modules model regional and hospital demand conditioned on higher-level forecasts. A coherence-aware loss penalizes cross-level inconsistencies during training. We further introduce a nationwide Portuguese ED dataset covering 81 hospitals across 5 regional health administrations, with heterogeneous covariates at each level. Experiments show that HierSTT reduces average WAPE by 32\\% relative to the best non-hierarchical deep learning baseline and outperforms all classical hierarchical reconciliation methods, while producing near-coherent predictions across levels. Additional resources associated with this work are available at https://github.com/FilipaLino/HierSTT.",
-    "pdf_url": "https://arxiv.org/pdf/2607.27106v1",
-    "published": "2026-07-29T16:33:18Z",
-    "fetched_at": "2026-07-30T02:40:02.721359"
+    "abstract": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two complementary scales: a table-scale configuration resolves hand-object manipulation, while a room-scale configuration captures whole-body motion, locomotion, and interactions across a furnished home. ACE records egocentric and multi-view exocentric video, full-body and articulated hand motion, object geometry and 6-DoF trajectories, audio, and tactile signals as a unified multisensory stream. Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes. The dataset spans atomic manipulation, long-horizon chains of household activities, and human-scene interaction, while preserving natural behavioral variation through goal-level rather than step-by-step instructions. We further introduce a hierarchical benchmark that progresses from signals to scene components and then to interactions. Evaluations of state-of-the-art methods expose substantial gaps under contact, occlusion, egomotion, and long temporal horizons. ACE-Data-0 provides synchronized human demonstrations with aligned perceptual, kinematic, and contact supervision, offering a scalable foundation for imitation learning, world models, vision-language-action systems, and embodied AI.",
+    "pdf_url": "https://arxiv.org/pdf/2607.28625v1",
+    "published": "2026-07-30T17:59:50Z",
+    "fetched_at": "2026-07-31T03:21:38.847135"
   },
   {
-    "title": "Detecting seizure onset and offset times using human intelligence: A critical-transitions-based approach",
+    "title": "PhiZero: A World Model Built Around Physical Language",
     "authors": [
-      "Andrew Flynn",
-      "Cian McCafferty",
-      "Klaus Lehnertz",
-      "François David",
-      "Vincenzo Crunelli",
-      "Gordon Lightbody",
-      "Sebastian Wieczorek"
+      "Shuyao Shang",
+      "Yuqi Wang",
+      "Ruopeng Gao",
+      "Xu Chen",
+      "Tieniu Tan",
+      "Lue Fan",
+      "Zhaoxiang Zhang"
     ],
-    "abstract": "Most existing seizure detection algorithms require extensive pre-processing of the data and rely on heuristic or currently unexplainable machine learning approaches. These approaches often struggle with balancing detection sensitivity and specificity in the presence of variable seizure morphologies, interictal epileptiform discharges, and artefacts. Here, we consider an alternative approach: our seizure detection algorithm, which is based on the concept of critical transitions and overcomes the aforementioned limitations. Specifically, we perform a receiver-operating-characteristic analysis to quantify the performance of our algorithm in terms of its agreement with expert annotations of seizure onset and offset times in the voltage recordings of seizure activity in epileptic rodents with different seizure morphologies. We demonstrate how performance depends on algorithm parameters and varies across different rodent recording sessions. We determine the optimal set of algorithm parameters for each recording session, with near expert-level performance achieved in most cases. Finally, we derive a single general set of algorithm parameters applicable across all recording sessions. The algorithm maintains its high performance in this general setting, demonstrating its versatility, robustness across varying seizure morphologies, and potential to complement machine learning algorithms.",
-    "pdf_url": "https://arxiv.org/pdf/2607.27105v1",
-    "published": "2026-07-29T16:31:53Z",
-    "fetched_at": "2026-07-30T02:40:02.721377"
+    "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
+    "pdf_url": "https://arxiv.org/pdf/2607.28624v1",
+    "published": "2026-07-30T17:59:46Z",
+    "fetched_at": "2026-07-31T03:21:38.847153"
   },
   {
-    "title": "A New Paradigm for 3D Turbomachinery Design: Generative Diffusion Model Based Framework with Direct Geometry Encoding",
+    "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
     "authors": [
-      "Yingfan Geng",
-      "Jinhong Wang",
-      "Lazaros Papachristodoulou",
-      "Sibo Cheng",
-      "Teng Cao"
+      "Bing Yan",
+      "Gregory Wolfe",
+      "Stefano Martiniani",
+      "Kyunghyun Cho"
     ],
-    "abstract": "The aerodynamic design of turbomachinery is critical to the performance of the overall energy system, yet it is challenging due to the complex non-linear flow physics and the presence of multiple-target design compromises. Denoising diffusion model, as one of the leading approaches in generative machine learning, has shown its advantages of high design solution accuracy and diversity in many engineering applications. In this study, we bring it to the 3D inverse design problem of turbomachinery, using centrifugal compressors as a classic representative, to demonstrate the new methodology for complex geometry designs. A diffusion model-centred design framework has been developed in this study. By specifying the desired design condition (mass flow rate and rotational speed) and targeted performance (pressure ratio and efficiency), the trained diffusion model returns directly the 3D compressor geometry that satisfies the condition inputs. Compared to traditional deterministic forward design approaches, the proposed method not only generates accurate geometry solutions to inverse design problems, but also enables effective exploration of the entire design space, providing a diverse set of candidate solutions. In addition, this paper presents the first study to directly train on 3D blade geometry coordinates rather than parametrised representations, demonstrating the feasibility of coordinate-based learning while enabling a highly flexible framework applicable to a wide range of designs. The trained diffusion model achieves excellent design capability, with solution accuracy up to 99% and unfeasible designs less than 1%. Furthermore, the solution diversity of the trained diffusion model is also quantitatively verified by means of comparing the distribution of the solution sets generated from the diffusion model and from direct sampling of physical parameters.",
-    "pdf_url": "https://arxiv.org/pdf/2607.27093v1",
-    "published": "2026-07-29T16:23:08Z",
-    "fetched_at": "2026-07-30T02:40:02.721393"
+    "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
+    "pdf_url": "https://arxiv.org/pdf/2607.28618v1",
+    "published": "2026-07-30T17:59:11Z",
+    "fetched_at": "2026-07-31T03:21:38.847168"
   }
 ]
