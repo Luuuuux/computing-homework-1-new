@@ -1,84 +1,74 @@
 [
   {
-    "title": "Learning to Trace Seiberg Dualities",
+    "title": "Differentially Private Nonparametric Modal Learning with Applications to Regression and Clustering",
     "authors": [
-      "Jonathan J. Heckman",
-      "Shani Meynet",
-      "Alessandro Mininno",
-      "Gary Shiu"
+      "Arkajyoti Bhattacharjee",
+      "Arnab Auddy"
     ],
-    "abstract": "Dualities play an important role in establishing both microscopic and emergent phenomena in a wide range of physical systems. In practice, though, it can often be computationally challenging to establish when two systems are dual, even when all of the \"rules of the game\" are well-known. Said differently, when confronted with two systems, how can one efficiently establish that they are in fact dual? In this paper we use machine learning methods to address this question for Seiberg dualities of supersymmetric quiver gauge theories. Mathematically, this involves establishing mutations of quivers, which is in turn a variation on the theme of \"learning to unknot\". On the one hand, this leads us to a practical tool for establishing the computational complexity of different dualities. On the other hand, it also allows us to study how different network architectures learn how to trace Seiberg dualities. We find that for quivers with a modest number of quiver nodes (of order $10$), different network architectures consisting of transformers and multi-layer perceptrons tend to outperform deterministic algorithms. Supplementing the network by well-established pathfinder algorithms (essentially \"Google Maps for quivers\") leads to an additional improvement in the efficiency and accuracy of the search strategy. We anticipate that this class of questions can serve as a useful benchmark for frontier AI models applied to theoretical physics.",
-    "pdf_url": "https://arxiv.org/pdf/2607.28628v1",
-    "published": "2026-07-30T17:59:56Z",
-    "fetched_at": "2026-08-02T03:20:00.980557"
+    "abstract": "Density modes provide a localized and interpretable summary of multimodal distributions, but their estimation under rigorous differential privacy constraints remains largely unexplored. We study differentially private recovery of density modes for multivariate distributions under local smoothness, curvature, and separation conditions. We propose DP-GRAMS, a mean-shift inspired method that performs noisy ascent on a differentially private score estimator. Assuming the density belongs locally to a Hölder class with smoothness parameter $β> 2$, our score estimator uses bias-reducing higher-order kernels, and then enforces privacy in the gradient ascent steps via gradient clipping and calibrated Gaussian noise. A private initialization scheme combines a density-aware utility with a suppression rule and, with $k\\asymp M\\log n$ draws over a public $h_{\\mathrm{DAP}}$-grid and suppression radius $ρ_{\\mathrm{init}}\\asymp (\\log n)^{-1/d}$, achieves high-probability coverage of the modal basins by successively suppressing selected local neighborhoods in competitive regions, while correlated noise across multiple starts enables joint release under a single $(\\varepsilon,δ)$-differential privacy guarantee. We prove that all population modes are recovered with high probability and establish asymptotic error rates of the form $O\\!\\left((\\tfrac{\\log n}{n})^{\\frac{2(β-1)}{d+2β}}\\right) + O\\!\\left((\\tfrac{\\mathrm{polylog}(n,δ)}{n^2\\varepsilon^2})^{\\frac{β-1}{d+β}}\\right)$. We also provide minimax lower bounds for private mode estimation, and show that our estimators are nearly optimal, up to a logarithmic factor in the MSE. We present two natural extensions: DP-PMS, a private modal-regression method, and DP-GRAMS-C, a clustering pipeline. Extensive experiments on synthetic and real data demonstrate favorable privacy-utility trade-offs relative to common baselines.",
+    "pdf_url": "https://arxiv.org/pdf/2607.29675v1",
+    "published": "2026-07-31T17:55:02Z",
+    "fetched_at": "2026-08-03T03:21:47.468781"
   },
   {
-    "title": "ReToken: One Token to Improve Vision-Language Models for Visual Retrieval",
+    "title": "Sign compression for Muon: SignMuon, MuonSign, and the Limits of Error Feedback",
     "authors": [
-      "Yao Xiao",
-      "Reuben Tan",
-      "Zhen Zhu",
-      "Yuqun Wu",
-      "Jianfeng Gao",
-      "Derek Hoiem"
+      "Maria Smirnova",
+      "Alexey Kravatskiy"
     ],
-    "abstract": "Long visual context poses a challenge for vision-language models: performance degrades as the number of distractors grows, and processing all tokens at once is computationally infeasible under GPU memory constraints. We present ReToken, a single learnable embedding trained as an explicit retrieval target that selects a sparse set of query-relevant visual tokens from a pre-filled visual KV cache. Trained on only a small image-QA dataset, ReToken yields consistent gains across image and video benchmarks: on Visual Haystacks it improves Qwen3VL-8B by 13.4 points and InternVL3.5 by 12.4 points (>20% relative), and on LVBench it transfers zero-shot to long video for an 8.0-point gain with Qwen3VL-8B. Thanks to its lightweight design, both training and long-video inference fit on a single H100. Code is available at: https://github.com/avaxiao/ReToken",
-    "pdf_url": "https://arxiv.org/pdf/2607.28627v1",
-    "published": "2026-07-30T17:59:56Z",
-    "fetched_at": "2026-08-02T03:20:00.980585"
+    "abstract": "SignMuon compresses the Muon update to one bit per parameter by taking its elementwise sign, providing the most direct way to run a matrix-aware optimizer under an extremely low communication budget. It outperforms SignSGD in practice, yet it can ascend even on a linear function. Signing the gradient before the Linear Minimization Oracle (LMO), rather than after, does not repair this: we construct a small explicit instance on which sign-before (MuonUSign) and sign-on-both-sides (MuonSign) ascend as well, so no placement of the sign around the oracle descends in general. Error feedback, the standard remedy for a biased compressor, does not rescue SignMuon: when applied to Muon's output, error feedback can fail for every smoothness constant, step size, and momentum. Applied to the gradient, error feedback does work, and EF21-MuonUSign and EF21-MuonSign attain the standard $\\mathcal{O}(T^{-1/2})$ rate for the squared gradient norm on smooth nonconvex problems, the latter at one bit in each direction. Experiments then reverse the ordering: across centralized CIFAR-10, federated CIFAR-10, and the nanoGPT speedrun, the strongest compressed method is consistently sign-after-the-LMO, precisely the placement we prove divergent, with the provably convergent variants trailing it. Compressing after the LMO, a heuristic, matters more at these scales than the guarantee does.",
+    "pdf_url": "https://arxiv.org/pdf/2607.29674v1",
+    "published": "2026-07-31T17:54:46Z",
+    "fetched_at": "2026-08-03T03:21:47.468801"
   },
   {
-    "title": "ACE-Data-0: Human-Centric Ambient Capture as Embodied Data Engine",
+    "title": "Freeze, Then Select: Structured Field Adapters and Stability-Validated Weak Selection for PDE Discovery from Sparse Observations",
     "authors": [
-      "Yukang Cao",
-      "Haozhe Xie",
-      "Beichen Wen",
-      "Runmao Yao",
-      "Yinghao Liu",
-      "Yue Huang",
-      "Zhichao Liao",
-      "Yunxiang Wang",
-      "Haiheng Liu",
-      "Xingshun Tian",
-      "Dawei Su",
-      "Long Zhuo",
-      "Dacheng Tao",
-      "Xiaogang Wang",
-      "Liang Pan",
-      "Ziwei Liu"
+      "Juncheng Zhong",
+      "Chenghuang Shen",
+      "Jianfeng Liu",
+      "Zhengdong Xiao",
+      "Longjiu Luo",
+      "Qianrong Wang",
+      "Wenjun Xu",
+      "Wenlian Lu"
     ],
-    "abstract": "Embodied intelligence faces a fundamental data bottleneck. Models must capture how first-person perception, whole-body motion, dexterous manipulation, object state, sound, and touch evolve together as humans pursue goals over time. Existing datasets fragment this experience across viewpoints, modalities, or spatial scales, leaving the full perception-action loop only partially observed. We introduce the Ambient Capture Engine (ACE), a human-centric data engine that transforms real home environments into spatially calibrated, temporally synchronized recording studios. ACE operates at two complementary scales: a table-scale configuration resolves hand-object manipulation, while a room-scale configuration captures whole-body motion, locomotion, and interactions across a furnished home. ACE records egocentric and multi-view exocentric video, full-body and articulated hand motion, object geometry and 6-DoF trajectories, audio, and tactile signals as a unified multisensory stream. Using ACE, we build ACE-Data-0, comprising 150 hours and 17M video frames across 200 task categories, performed by 50 participants in 2 environments, for a total of 75,000 interaction episodes. The dataset spans atomic manipulation, long-horizon chains of household activities, and human-scene interaction, while preserving natural behavioral variation through goal-level rather than step-by-step instructions. We further introduce a hierarchical benchmark that progresses from signals to scene components and then to interactions. Evaluations of state-of-the-art methods expose substantial gaps under contact, occlusion, egomotion, and long temporal horizons. ACE-Data-0 provides synchronized human demonstrations with aligned perceptual, kinematic, and contact supervision, offering a scalable foundation for imitation learning, world models, vision-language-action systems, and embodied AI.",
-    "pdf_url": "https://arxiv.org/pdf/2607.28625v1",
-    "published": "2026-07-30T17:59:50Z",
-    "fetched_at": "2026-08-02T03:20:00.980642"
+    "abstract": "PDE discovery from sparse observations requires reconstructing a continuous field and selecting the correct differential terms. Our analysis of optimization paths in coupled neural PDE discovery reveals three behaviors: the exact support can persist to the end of training, appear only transiently, or fail to emerge. To decouple equation selection from neural optimization, we develop a freeze-then-select method combining a structured field adapter with Stability-Validated Weak Selection (SVWS). Trained from observations without a PDE residual, the adapter factorizes the field into learned spatial features and temporal coefficients represented by cubic splines. After freezing the field, SVWS identifies recurrent terms across independent weak-form systems, refits candidate supports, and selects the final equation on held-out weak-form systems. Beyond fixed libraries, we apply the same principle to expressions generated by genetic programming and recover the power-law form of an unknown nonlinear diffusion function from sparse, noisy observations. Across all six sparse MDBench regimes, our method attains the highest exact support recovery rate, with its clearest gains over classical and neural baselines on challenging Kuramoto-Sivashinsky dynamics.",
+    "pdf_url": "https://arxiv.org/pdf/2607.29665v1",
+    "published": "2026-07-31T17:49:32Z",
+    "fetched_at": "2026-08-03T03:21:47.468848"
   },
   {
-    "title": "PhiZero: A World Model Built Around Physical Language",
+    "title": "GQ-FSL: Green Quantized Federated Split Learning",
     "authors": [
-      "Shuyao Shang",
-      "Yuqi Wang",
-      "Ruopeng Gao",
-      "Xu Chen",
-      "Tieniu Tan",
-      "Lue Fan",
-      "Zhaoxiang Zhang"
+      "Idan Roth",
+      "Lutz Lampe"
     ],
-    "abstract": "We introduce PhiZero, a physical world model built around physical language, a compact discrete representation of world-state transitions. Existing physical world models typically predict future videos directly in pixel space, leaving the underlying world dynamics implicit within high-dimensional visual predictors. Motivated by humans' ability to abstract predictive structure from visual experience and organize it in natural language for explicit reasoning, we learn physical language from in-the-wild videos through self-supervision and use it to explicitly reason about how the physical world evolves. Accordingly, PhiZero adopts a reason-then-render paradigm: it first infers future world evolution as a physical-language sequence and then renders the inferred transitions into videos. Extensive experiments across generation and understanding benchmarks validate the ability of PhiZero to model physically coherent world evolution. We further show its potential for realistic and interactive world modeling, fine-grained action-conditioned simulation, and zero-shot motion transfer.",
-    "pdf_url": "https://arxiv.org/pdf/2607.28624v1",
-    "published": "2026-07-30T17:59:46Z",
-    "fetched_at": "2026-08-02T03:20:00.980679"
+    "abstract": "Deploying state-of-the-art deep neural networks (DNNs) at the wireless edge is severely bottlenecked by the strict energy and resource constraints of mobile devices. While federated split learning (FSL) mitigates on-device computation by offloading workloads to an edge server, this may introduce systemic overheads, while the continuous exchange of cut-layer data, and submodels still incurs significant energy consumption (EC). To address this, we propose a green quantized FSL (GQ-FSL) framework that incorporates stochastic quantization for both local collaborative training and wireless transmissions. Notably, GQ-FSL supports asymmetric precision levels for the client- and server-side submodels, effectively decoupling device energy constraints from global convergence degradation. To quantify these tradeoffs, we develop parameterized energy models for the split architecture and derive a theoretical convergence bound under statistically heterogeneous data. Building on that, we formulate a joint optimization problem to configure the DNN split point and precision levels, minimizing the total system EC while satisfying a strict target accuracy constraint. Ultimately, we demonstrate that GQ-FSL enables large-scale DNN deployment on resource-constrained devices, achieving superior energy efficiency compared to quantized federated learning and full-precision FSL.",
+    "pdf_url": "https://arxiv.org/pdf/2607.29659v1",
+    "published": "2026-07-31T17:40:27Z",
+    "fetched_at": "2026-08-03T03:21:47.468862"
   },
   {
-    "title": "AskChem: Claim-Centered Infrastructure for Chemistry Literature Synthesis",
+    "title": "Development of FDD-ON: an Ontology for VAV HVAC System Fault Detection and Diagnostics",
     "authors": [
-      "Bing Yan",
-      "Gregory Wolfe",
-      "Stefano Martiniani",
-      "Kyunghyun Cho"
+      "Yimin Chen",
+      "Brian Fricke",
+      "Bo Shen",
+      "Jamie Lian",
+      "Mingkan Zhang",
+      "James Lo",
+      "Yun Zhang",
+      "Shi Ye",
+      "Jiajing Huang",
+      "Han Hu",
+      "Chujie Lu",
+      "Rui Tang",
+      "George Zhuang"
     ],
-    "abstract": "Chemistry literature synthesis often requires assembling specific findings scattered across many publications, yet existing literature-search systems primarily return ranked document lists. As a result, scientists and AI agents need to locate relevant information, verify their provenance, and assemble cross-paper answers manually. We present AskChem, a claim-centered infrastructure for cross-paper chemistry search. AskChem changes the unit of retrieval from the paper to the provenance-carrying claim: each paper is converted into atomic, typed claims, each grounded by a source DOI and a verbatim quote or an explicit evidence locator. Over this shared claim store, AskChem exposes complementary structures for search and synthesis: a stabilized faceted taxonomy for hierarchical retrieval and browsing, an evidence graph linking claims through relations, and an exploratory living taxonomy that situates indexed papers under scientific principles. AskChem currently indexes 2.4M claims from 147K papers and provides a web interface, as well as REST, SDK, and MCP access for AI agents. On AskChem-Bench, grounding a GPT-5.5 reader in AskChem yields 100% resolvable DOIs, compared with 88.3% without retrieval, and the highest citation density among five tested systems. AskChem is live at https://askchem.org.",
-    "pdf_url": "https://arxiv.org/pdf/2607.28618v1",
-    "published": "2026-07-30T17:59:11Z",
-    "fetched_at": "2026-08-02T03:20:00.980694"
+    "abstract": "Fault detection and diagnosis (FDD) technology is essential for improving HVAC system reliability, energy efficiency, and maintenance effectiveness. However, effective deployment of FDD solutions in buildings requires structured domain knowledge that can bridge heterogeneous data sources, diverse equipment types, and varied diagnostic outputs. Limited data interpretability and interoperability within the FDD domain have led to fragmented information silos, hindering the implementation of FDD and related applications, such as the digital twin-enabled FDD frameworks and artificial intelligence (AI)-driven maintenance decision-making systems. This paper presents an FDD Ontology (FDD-ON), a modular and extensible ontology to formally represent variable air volume (VAV) HVAC system components, fault types, symptom statuses, fault impacts and associated attributes. FDD-ON integrates HVAC system FDD semantics to provide comprehensive representations of fault and symptom attributes, supported by the well-defined controlled vocabulary. Additionally, FDD-ON offers comprehensive fault, symptom, and impact libraries to capture a broad spectrum of operational abnormalities and their consequences in VAV HVAC systems. Through explicit contributing cause-fault-symptom-impact relations, FDD-ON serves as a machine-interpretable basis for querying diagnostic knowledge, mapping heterogeneous FDD outputs, and developing interoperable FDD-related applications. FDD-ON is evaluated using publicly available VAV HVAC system datasets and demonstrated through FDD development applications. Results indicate that FDD-ON provides a foundational semantic framework for advancing scalable, transparent, and interoperable FDD solutions across various applications.",
+    "pdf_url": "https://arxiv.org/pdf/2607.29657v1",
+    "published": "2026-07-31T17:37:34Z",
+    "fetched_at": "2026-08-03T03:21:47.468885"
   }
 ]
