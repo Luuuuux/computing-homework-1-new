@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "title": "Q-based Variational Inverse Reinforcement Learning",
+    "authors": [
+      "Ondrej Bajgar",
+      "Peter Tisnikar",
+      "Alessandro Abate",
+      "Konstantinos Gatsis",
+      "Maike Osborne"
+    ],
+    "abstract": "The development of safe and beneficial AI requires that systems can learn and act in accordance with human preferences. However, explicitly specifying these preferences by hand is often infeasible. Inverse reinforcement learning (IRL) addresses this challenge by inferring preferences, represented as reward functions, from expert behaviour. We introduce Q-based Variational IRL (QVIRL), a novel Bayesian IRL method that recovers a posterior distribution over rewards from expert demonstrations via primarily learning a variational distribution over optimal Q-values. Unlike previous approaches, QVIRL combines scalability with uncertainty quantification, important for safety-critical applications as well as active learning. We demonstrate QVIRL's strong performance in apprenticeship learning across various tasks, including gridworlds, Lunar Lander, the Highway Environment, and two ATARI games both with static expert data and with active learning. It is the first method for Bayesian IRL that demonstrates training from raw pixel observations.",
+    "pdf_url": "https://arxiv.org/pdf/2608.16888v1",
+    "published": "2026-08-17T17:59:55Z",
+    "fetched_at": "2026-08-19T01:25:24.256581"
+  },
+  {
+    "title": "Improving the matrix multiplication exponent with modern optimization and AlphaEvolve",
+    "authors": [
+      "Emilien Dupont",
+      "Marvin Eisenberger",
+      "Borislav Kozlovskii",
+      "Abbas Mehrabian",
+      "Francisco J. R. Ruiz",
+      "Abigail See",
+      "Renfei Zhou",
+      "Josh Alman",
+      "Virginia Vassilevska Williams",
+      "Matej Balog"
+    ],
+    "abstract": "The current best bounds on the matrix multiplication exponent $ω$ are obtained through a refinement of the laser method called combination loss analysis (Duan et al., 2022; Williams et al., 2024; Alman et al., 2025). In this note, we address the optimization problem at the core of this approach and propose several improvements. First, we reformulate the optimization problem allowing us to solve it in a larger setting than was previously possible. Second, we leverage recent advances in machine learning to design a new optimization algorithm for this problem. Finally, we refine the resulting optimization algorithm with AlphaEvolve. Our combined approach yields an upper bound of $ω$ < 2.371177, improving the previous best bound of 2.371339.",
+    "pdf_url": "https://arxiv.org/pdf/2608.16884v1",
+    "published": "2026-08-17T17:59:05Z",
+    "fetched_at": "2026-08-19T01:25:24.256612"
+  },
+  {
+    "title": "Spectral Gaps of Hit-and-Run and Coordinate Hit-and-Run",
+    "authors": [
+      "Yunbum Kook",
+      "Santosh S. Vempala"
+    ],
+    "abstract": "For any convex body $\\mathcal{K}\\subset\\mathbb{R}^{n}$ containing a unit ball, the spectral gap of Hit-and-Run is $Ω(1/(n^2 C_{\\mathsf{PI}}))$, where $C_{\\mathsf{PI}}$ is the Poincaré constant of the uniform distribution $π$ over $\\mathcal{K}$. This implies that Hit-and-Run converges to a distribution within $χ^2$-divergence $\\varepsilon$ of the uniform distribution $π$ in $O(n^2 C_{\\mathsf{PI}}\\log(M/\\varepsilon))$ steps from any starting distribution $π_0$ with $M=χ^2(π_{0}\\,\\|\\,π)$, thus refining the known bound of $O(n^2 R^2 \\log(M/\\varepsilon))$ by Lovász and Vempala (2004) in terms of the outer radius $R$; for nearly isotropic bodies, together with progress on the KLS conjecture, the complexity is $O(n^2\\log n\\log(M/\\varepsilon))$, improving the dimension dependence from cubic to nearly quadratic while maintaining logarithmic dependence on the initial distance. It was an open problem to connect the convergence of Hit-and-Run to Poincaré/KLS constants as was done for the Ball walk by Kannan, Lovász and Simonovits (1997). Unlike Hit-and-Run, the Ball walk has an unavoidable linear dependence on (a stronger notion) of the initial warmness.\n  We directly bound the spectral gap of the Hit-and-Run Markov chain by connecting it to functional isoperimetric constants, inspired by the recent analysis of In-and-Out. Rewriting the spectral gap in terms of dual certificates leads to the Babuška--Aziz constant studied in the analysis of PDEs; it is asymptotically bounded by the improved Poincaré constant, which we show can be bounded in terms of the usual Poincaré constant. The proof is based on duality and calculus, unlike known proofs of convergence for Hit-and-Run which are based on bounding the conductance. The same technique can be applied to Coordinate Hit-and-Run, resulting in a much improved mixing time of $O(n^3C_{\\mathsf{PI}}\\log(M/\\varepsilon))$.",
+    "pdf_url": "https://arxiv.org/pdf/2608.16878v1",
+    "published": "2026-08-17T17:57:11Z",
+    "fetched_at": "2026-08-19T01:25:24.256625"
+  },
+  {
+    "title": "AutoSR: Automatic Symbolic Regression by Searching Research States",
+    "authors": [
+      "Kejia Zhang",
+      "Youran Sun",
+      "Xinyu Ren",
+      "Chugang Yi",
+      "Haizhao Yang"
+    ],
+    "abstract": "We introduce Automatic Symbolic Regression (AutoSR), a fully automated system that instantiates Research-Space Symbolic Regression by searching persistent scientific investigations rather than isolated equations. Finite, noisy data often yield numerically competitive expressions that imply very different behavior outside the observed regime, making numerical fit and syntactic complexity insufficient measures of scientific credibility. Existing approaches largely focus on improving expressions, yet the search typically retains little beyond the resulting formula and score, losing the scientific record, such as motivations and probes, that inform what to try next. AutoSR preserves this record in a \\textbf{Research State}, coupling each candidate equation with the reasoning, computational evidence, and independent review developed along its branch. Proposer--reviewer agents develop these states under progressive-widening Monte Carlo tree search (PW-MCTS), which allocates computation across competing investigations, while the accumulated research record is ultimately synthesized into a final report that explains the leading relation and the basis for its selection. Across nine selected challenges from two benchmark suites, AutoSR recovers algebraically equivalent relations in every case, including three cp3-bench problems that no published system recovers and six structurally diverse LSR-Transform problems. Overall, AutoSR extends symbolic regression from equation-level search toward automated scientific investigation, allowing scientific knowledge and accumulated evidence to shape both what is explored and how the resulting equation is justified.",
+    "pdf_url": "https://arxiv.org/pdf/2608.16876v1",
+    "published": "2026-08-17T17:55:26Z",
+    "fetched_at": "2026-08-19T01:25:24.256641"
+  },
+  {
+    "title": "An Analytical-Prior Framework for Data-Efficient Prediction of Sound-Reduction Frequencies in Rectangular Side-Branch Helmholtz Resonators",
+    "authors": [
+      "Jiaming Li"
+    ],
+    "abstract": "High-fidelity finite-element simulations can provide accurate numerical predictions for side-branch resonators, but large simulation datasets are expensive to generate and purely data-driven surrogates may become unreliable when simulation-labelled data are scarce. This study develops an analytical-prior learning framework that reuses a low-cost analytical model to improve data efficiency under limited high-fidelity simulation budgets. Two complementary routes are considered. When the analytical model remains available at inference, it is retained as an explicit baseline and the simulation data are used to learn only the analytical-to-simulation discrepancy. When a self-contained predictor is required, the analytical mapping is first distilled from abundant low-cost evaluations into a learned prior and then calibrated with the limited simulation data. The framework is evaluated on rectangular side-branch Helmholtz resonators using 86 simulation-labelled geometries and 8,998 non-overlapping analytical-only geometries. The analytical model achieved a mean absolute error (MAE) of 1.333 Hz. Direct support vector regression (SVR) achieved 3.375 Hz, while residual SVR reduced the MAE to 0.426 Hz. A direct multilayer perceptron (MLP) achieved 1.109 Hz, whereas analytical-prior pretraining reduced the error to 0.556 Hz with frozen-prior residual adaptation and 0.371 Hz with full-model fine-tuning. Across training budgets of 20 to 70 simulation-labelled cases, both analytical correction and analytical-prior pretraining consistently improved data efficiency relative to direct learning. These results show that analytical prior information can substantially improve high-fidelity prediction when simulation data are scarce, with explicit correction and prior distillation serving complementary deployment needs.",
+    "pdf_url": "https://arxiv.org/pdf/2608.16873v1",
+    "published": "2026-08-17T17:53:14Z",
+    "fetched_at": "2026-08-19T01:25:24.256652"
+  }
+]
