@@ -1,67 +1,87 @@
 [
   {
-    "title": "DICS: Data-Informed Centroid Splitting for Decision Tree Classifiers",
+    "title": "Information on trajectories: martingales and random times",
     "authors": [
-      "MD Saifur Rahman Mazumder",
-      "Feng Yu"
+      "Akshay Balsubramani"
     ],
-    "abstract": "Decision tree-based models are widely used in machine learning due to their interpretability and strong empirical performance. However, training decision trees can be computationally expensive, particularly for large and high-dimensional datasets, largely due to the exhaustive search over candidate splits at each node. To improve computational efficiency, we propose Data-Informed Centroid Splitting (DICS), a clustering-based framework that constructs a compact and informative set of candidate splits using data-driven priors. By incorporating class-aware structure, DICS significantly reduces the split search space for classification tasks while preserving predictive performance. We further provide theoretical analysis showing that under the stated assumptions, DICS does not degrade the performance of classification trees compared to exhaustive split search. DICS can be incorporated into classification trees, random forests, and gradient-boosting models. Extensive experiments demonstrate that DICS achieves comparable accuracy while substantially reducing training time across synthetic and benchmark datasets, highlighting the benefit of integrating data-informed priors into split selection for scalable classification tree learning.",
-    "pdf_url": "https://arxiv.org/pdf/2608.20258v1",
-    "published": "2026-08-20T16:54:17Z",
-    "fetched_at": "2026-08-21T01:34:42.383679"
+    "abstract": "Accounting for information flow on the path space of trajectories of a nonnegative martingale yields exact variational identities for it, even at arbitrary random times. This recovers the widely used classical concentration inequalities, from Ville to PAC-Bayes, and measures what each one discards. The tail a bound controls is itself a relative entropy, resolved by the chain rule into per-step conditional divergences. The discarded slack has an exact form in each of three geometries: a Gibbs tilt for the Azuma-Hoeffding and PAC-Bayes bounds, the crossing itself for Ville's and for pooled tests, and a dominating certificate for the $L^p$ maximal bound. That certificate's optional-stopping deficit resolves per step into Bregman divergences of the running maximum. On a path-time space, the same identity gains one factor that prices anticipation: an arbitrary random time carries an e-process ``peeking penalty.'' The partition function can be read as a coalescent--a prefix-sharing probability of independent copies--and geometric mixtures of test martingales gain a pooling benefit for multi-model safe testing.",
+    "pdf_url": "https://arxiv.org/pdf/2608.20337v1",
+    "published": "2026-08-20T17:59:57Z",
+    "fetched_at": "2026-08-22T01:23:51.024418"
   },
   {
-    "title": "Learning When to Think: Adaptive Reasoning for Test-Time Compute Allocation",
+    "title": "Swift-Image: Exploring the Performance Frontier of Compact Unified Image Generation Models",
     "authors": [
-      "Gijs Kassenaar",
-      "Zhao Yang",
-      "Vincent François-Lavet"
+      "Taihang Hu",
+      "Zhao Wang",
+      "Zuan Gao",
+      "Tao Liu",
+      "Hao Yan",
+      "Zhengze Xu",
+      "Yuhang Yu",
+      "Yongchao Du",
+      "Xingjian Wang",
+      "Jun Zheng",
+      "Qinye Zhou",
+      "Zhengrui Chen",
+      "Chao Lin",
+      "Yefeng Shen",
+      "Zhengtao Wu",
+      "Ge Wu",
+      "Xiaoli Xu",
+      "Denghui Yang",
+      "Huayu Zhang",
+      "Mingzhou Zhang",
+      "Mengting Chen"
     ],
-    "abstract": "Reasoning language models trained with reinforcement learning typically operate under a fixed token budget rather than an explicitly adaptive one, which can lead to over-computation on easy problems and insufficient computation on difficult ones. We study whether a model can learn to allocate its own reasoning effort by choosing, as the first token of its response, one of three modes: \\textsc{NoThink} (answer as quickly as possible), \\textsc{Short} (brief reasoning), or \\textsc{Long} (extended reasoning). The choice is learned inside Group Relative Policy Optimization (GRPO) with no separate router, through a shaped reward that makes each mode worthwhile at a different response length, together with hard per-mode token caps that keep the modes distinct. On a 1.5B distilled model trained on MATH, the three modes emerge without collapsing to a single choice, and the brief modes end up more accurate than \\textsc{Long}, which shows that the router sorts problems by difficulty rather than at random. Averaged over three seeds, the resulting policy stays close to the base model's accuracy on the held-out MATH500 ($0.782$ vs.\\ $0.796$) while cutting the mean response length from $4{,}796$ to $2{,}811$ tokens (a $41\\%$ reduction). Interestingly, it also transfers to other benchmarks without retraining, with the largest savings where problems are easier, with for instance 76\\% token reduction on GSM8K and at higher accuracy than the baselines at similar response length. In short, we build a reasoning model that adaptively chooses how much to reason for each problem.",
-    "pdf_url": "https://arxiv.org/pdf/2608.20256v1",
-    "published": "2026-08-20T16:54:08Z",
-    "fetched_at": "2026-08-21T01:34:42.383697"
+    "abstract": "We present Swift-Image, a compact unified model for text-to-image generation, single-image editing, and multi-image editing. Our goal is to explore how far a relatively small visual generator can be pushed through systematic training engineering under a constrained computational budget. Swift-Image adopts an efficient 6B single-stream DiT and a progressive training pipeline that evolves from broad semantic coverage to higher resolution, stronger visual quality, and unified generation-editing supervision. For post-training, we employ parallel expert reinforcement learning followed by multi-teacher on-policy distillation to alleviate interference among heterogeneous objectives. We further decouple high-level reasoning from pixel-level rendering with a Prompt Enhancer that translates user requests into generator-aligned visual specifications. For efficient deployment, structural pruning and few-step distillation produce 3B and accelerated variants. Swift-Image achieves leading aggregate performance among evaluated open-source models with only 6B parameters and 243K GPU training hours; the compressed 3B model incurs nearly no loss, while few-step distillation further improves aggregate editing performance with substantially fewer sampling steps. Our study also summarizes practical lessons for architecture, data curriculum, post-training, prompt enhancement, and model compression.",
+    "pdf_url": "https://arxiv.org/pdf/2608.20334v1",
+    "published": "2026-08-20T17:59:52Z",
+    "fetched_at": "2026-08-22T01:23:51.024459"
   },
   {
-    "title": "Transfer Learning in Nonparametric Regression with Deep ReLU Networks",
+    "title": "G-CARL: Grounded Checklist-Aligned Reward Learning for Patient-Oriented Medical Report Interpretation",
     "authors": [
-      "Junpeng Ren",
-      "Carlos Misael Madrid Padilla",
-      "Yanzhen Chen",
-      "Oscar Hernan Madrid Padilla"
+      "Shiao Xie",
+      "Siyu Chen",
+      "Jianwei Lv",
+      "Bo Yuan",
+      "Yujin Wang",
+      "Xiandong Li"
     ],
-    "abstract": "This paper develops a general transfer learning framework for nonparametric regression with data consisting of multiple groups. Under the assumption that groups share a common structure along with group-specific deviations in additive form, the proposed method employs a two-stage offset learning procedure: the first stage pools data from all groups to estimate an overall mean function, and the second stage estimates offsets for each group, yielding final group-level estimators through additive combination. Upper bounds on the $\\mathcal L_2$ error are established for the proposed framework, covering a broad class of nonparametric estimators under mild complexity and noise conditions. When instantiated with deep ReLU networks, explicit convergence rates are derived under hierarchical composition models, demonstrating the ability to overcome the curse of dimensionality. Conditions that enable positive transfer with faster rates are considered, including learning with simpler functions and data augmentation through pooling samples across groups. Various simulations and real-data experiments further validate the effectiveness of the proposed method.",
-    "pdf_url": "https://arxiv.org/pdf/2608.20255v1",
-    "published": "2026-08-20T16:53:00Z",
-    "fetched_at": "2026-08-21T01:34:42.383709"
+    "abstract": "Personalized interpretation of medical reports has emerged as an increasingly important need among patients. Addressing this need requires both evidence-grounded medical factuality and context-dependent patient communication, yet existing medical vision-language tasks do not adequately capture these dual requirements. To bridge this gap, we introduce Patient-oriented Medical Report Interpretation (PMRI), a novel open-ended multimodal generation task that requires models to explain medical reports in accurate and accessible language based on a user's query and dialogue history. These two objectives differ fundamentally in their verifiability, yet remain tightly coupled, making them difficult to optimize jointly under conventional supervised fine-tuning and holistic reinforcement learning paradigms. To address this challenge, we propose G-CARL, a grounded, checklist-aligned reinforcement learning framework that combines multi-source retrieval for atomic claim verification with context-aware, instance-specific weighted checklists for response coverage, providing structured supervision for factuality, user-demand satisfaction, and expression quality without constraining response diversity. We further construct MMedReport, a real-world PMRI benchmark, along with a clinician-designed three-dimensional evaluation protocol. Extensive experiments demonstrate that G-CARL consistently outperforms existing post-training baselines in overall quality, claim-level precision, and checklist recall. Pairwise preference evaluation by clinicians further confirms that G-CARL produces interpretations that are more accurate and better aligned with patient needs.",
+    "pdf_url": "https://arxiv.org/pdf/2608.20331v1",
+    "published": "2026-08-20T17:59:46Z",
+    "fetched_at": "2026-08-22T01:23:51.024478"
   },
   {
-    "title": "GENIE: Generative Neural Inference for Epidemics",
+    "title": "$TCP_α$: Margin-Controlled Confidence estimation for reliable Music Information Retrieval",
     "authors": [
-      "Laura M. Guzmán-Rincón",
-      "George R. E. Bradley",
-      "Joel Kandiah",
-      "Kyriakos Flouris",
-      "Pietro Liò",
-      "Paul J. Birrell",
-      "Alexander E. Zarebski",
-      "Daniela De Angelis"
+      "Parampreet Singh",
+      "Anushka Singh",
+      "Sumit Kumar",
+      "Vipul Arora"
     ],
-    "abstract": "The SARS-CoV-2 pandemic highlighted the ongoing risk infectious diseases pose to society and the value of reliable information on the likely future burden. When forecasting an epidemic at fine spatial resolution, traditionally used mechanistic compartmental model struggle to capture highly complex granular transmission dynamics, resulting in inaccurate and overconfident forecasts. However, detailed Agent-Based Models (ABMs), are challenging to calibrate and are too computationally expensive to use in real-time. Amortized simulation-based inference promises to overcome this difficulty by exploiting the power of machine learning (ML) to perform approximate forecasting at near-real-time using arbitrarily complex models of epidemics. In this work we introduce Generative Neural Inference for Epidemics (GENIE), a spatio-temporal ML-based framework for high-resolution forecasting of the burden of respiratory pathogens. GENIE is designed to reflect two key characteristics of outbreaks: (i) shared biological mechanisms across locations and (ii) location-specific characteristics affecting transmission dynamics. This results in the model architecture having two modules: (i) a Local Infection Encoder - which learns to represent disease dynamics shared across all locations and (ii) a Local Profile Encoder - which learns location-specific representations. Using simulations from a high-resolution spatio-temporal ABM, GENIE is trained to generate samples from an approximate posterior predictive distribution of future epidemic trajectories. Benchmarked against established statistical and ML models, GENIE demonstrates superior performance across a range of measures including the timing and magnitude of peak hospitalisations.",
-    "pdf_url": "https://arxiv.org/pdf/2608.20253v1",
-    "published": "2026-08-20T16:48:10Z",
-    "fetched_at": "2026-08-21T01:34:42.383724"
+    "abstract": "Deep neural networks are often overconfident, assigning high confidence even to incorrect predictions. Consequently, users lack a reliable signal for deciding when a prediction can be trusted. Post-hoc confidence estimation addresses this by training a lightweight auxiliary head over a frozen classifier. Existing targets, however, suffer from inherent ambiguity: they assign overlapping confidence values to correct and incorrect predictions, while errors near the decision boundary receive confidence scores indistinguishable from correct predictions. In this work, we propose $TCP_α$, a novel confidence target that resolves these limitations by introducing a margin-controlled penalty for misclassified samples. We prove that $TCP_α$ guarantees complete separation between the target values of correct and incorrect predictions, with a separation margin that is independent of the number of classes and increases monotonically with the penalty parameter. Since accurate classifiers naturally produce very few errors, learning these targets results in a severely imbalanced regression problem. We therefore present a systematic study of training strategies for learning under this imbalance and identify an effective training configuration through extensive ablation studies. We evaluate the proposed approach on rāga identification, investigate its robustness under domain shift, and further validate it on frame-wise ornamentation detection without modifying the selected configuration. Across all settings, $TCP_α$ consistently outperforms existing confidence targets for failure prediction. Rejecting only the least-confident 8\\% of predictions improves the base model's macro-F1 from 0.89 to 0.98, while fine-tuning the confidence head with only 5\\% labeled samples from a new corpus effectively restores performance under domain shift.",
+    "pdf_url": "https://arxiv.org/pdf/2608.20326v1",
+    "published": "2026-08-20T17:58:50Z",
+    "fetched_at": "2026-08-22T01:23:51.024493"
   },
   {
-    "title": "Extraction of DVCS amplitudes off the nucleon",
+    "title": "A comparison between ceiling-mounted FMCW, IR-UWB and Wi-Fi radar for in-bedroom human activity monitoring and sleep interruption detection",
     "authors": [
-      "C. Mezrag",
-      "P. Sznajder",
-      "J. Wagner"
+      "Anton Lambrecht",
+      "Reda El Hail",
+      "Xianjun Jiao",
+      "Pieter Crombez",
+      "Dominique Schreurs",
+      "Peter Karsmakers",
+      "Adnan Shahid",
+      "Eli De Poorter"
     ],
-    "abstract": "This work presents a modern extraction of deeply virtual Compton scattering (DVCS) amplitudes off the proton and off the neutron through a global analysis of experimental data. These amplitudes serve as a crucial intermediate quantity linking generalized parton distributions (GPDs) to experimental observables. The analysis relies on a novel extraction framework recently integrated into the PARTONS software ecosystem. We employ two distinct modelling approaches for the DVCS amplitudes, both utilizing machine learning techniques: one model-agnostic and the other theory-augmented. For the first time, we incorporate the extraction of helicity-flip amplitudes, which are particularly sensitive to higher-twist effects. Furthermore, we compare our extracted amplitudes to timelike Compton scattering (TCS) data using the established relations between DVCS and TCS, serving as an important test of universality of GPDs. We also extract the DVCS subtraction constant, for which ab initio predictions from lattice QCD have been obtained. This allows us to confront these predictions with DVCS data for the first time, initiating a new virtuous cycle between first-principles theory and phenomenology.",
-    "pdf_url": "https://arxiv.org/pdf/2608.20244v1",
-    "published": "2026-08-20T16:41:01Z",
-    "fetched_at": "2026-08-21T01:34:42.383736"
+    "abstract": "Despite their growing importance for contact-free radio frequency (RF) based healthcare monitoring, different radio technologies such as frequency-modulated continuous wave (FMCW) radar, impulse radio ultra-wideband (IR-UWB), and Wi-Fi sensing are rarely compared under identical deployment conditions, as existing studies typically differ in hardware, datasets, and evaluation methodologies. In addition, the performance of ceiling-mounted radars, despite their practical deployment and cost advantages in healthcare environments, remain underexplored. Therefore, this paper presents a controlled comparison and analysis of ceiling-mounted FMCW, IR-UWB, and Wi-Fi sensing using synchronized recordings from 20 participants across six room layouts. All technologies are evaluated with the same convolutional neural network (CNN) on both a fine-grained 10-class human activity recognition (HAR) task and a coarse 4-class sleep monitoring task. IR-UWB achieves the highest cross-subject activity recognition performance (89.0% macro F1), while FMCW generalizes best to unseen room layouts (83.8% macro F1). For sleep monitoring, all technologies exceed 92% macro F1 in unseen environments. The results reveal a fundamental trade-off between recognition performance and environmental robustness, which can be explained through differences in range resolution, antenna diversity, Doppler resolution, and spatial information retention. These findings provide practical guidelines for the design of healthcare-oriented RF sensing systems.",
+    "pdf_url": "https://arxiv.org/pdf/2608.20322v1",
+    "published": "2026-08-20T17:58:22Z",
+    "fetched_at": "2026-08-22T01:23:51.024512"
   }
 ]
