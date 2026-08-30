@@ -23,7 +23,7 @@
     "abstract": "While we have learned much from recent surveys of the mm-wave sky, many secondary anisotropies of the CMB remain under-explored. We consider two of these here: the anisotropic screening induced by Thomson scattering of CMB photons off free electrons, and cosmic birefringence, the rotation of CMB polarization due to parity-violating physics beyond the standard model. To measure these effects, we apply state-of-the-art estimators for statistical anisotropy to the ACT Data Release 6 CMB data and construct noisy maps and power spectra of both effects. For anisotropic screening, we find no significant detection with the baseline data, and place an upper limit on its power spectrum that is two orders of magnitude above predictions from current reionization models. We obtain evidence for some foreground contamination at one of our frequencies that is consistent with expectations from extragalactic simulations. For our anisotropic birefringence analysis, we also find no detection and place an upper limit on the signal that is consistent with previous analyses. We report a corresponding upper limit on the Chern-Simons coupling term $g_{a γ} < 4.9 \\times 10^{-2} / H_\\mathrm{I}$, with $H_\\mathrm{I}$ the inflationary Hubble scale. These analyses pave the way toward obtaining improved constraints with the next generation of ground-based CMB surveys.",
     "pdf_url": "https://arxiv.org/pdf/2608.27458v1",
     "published": "2026-08-27T17:59:59Z",
-    "fetched_at": "2026-08-29T06:24:06.870488"
+    "fetched_at": "2026-08-30T04:34:57.586212"
   },
   {
     "title": "Spectral Fingerprints of Gauge Theories on a Quantum Computer",
@@ -36,7 +36,7 @@
     "abstract": "Maximally mixed state spectral sampling is an unbiased quantum algorithm that allows for extraction of a finite-resolution spectral distribution from a Hamiltonian over potentially the entire allowed range of energies. We show how it may be focused on any desired area of the spectrum in order to learn about the full \\textit{fingerprint} of the model of interest: from its ground state phenomena such as quantum criticality, obtained from the lowest lying energies, to its thermalization behavior, obtained from the mid-spectrum. We demonstrate this technique specifically on a $(1+1)d$ non-Abelian $SO(3)$ gauge theory, providing a comprehensive analysis of the steps necessary for performing this algorithm, as well as what is possible in the near-term with superconducting quantum hardware, performing simulations with circuits that are $78$ two-qubit gates deep. We show how this algorithm is able to take advantage of emerging dynamical circuit capabilities in near-term hardware to roughly halve the number required qubits, as well as how quantum readout error mitigation is trivial for this method. Along the way, we propose a novel strategy for compiling the controlled-time evolutions needed for spectral sampling by means of Pauli-frame optimizations. We illustrate two physical applications of quantum spectral sampling -- disordered many-body transitions, and mid-spectrum densities of states -- and what postprocessing steps they require beyond the Fourier outputs of the algorithm.",
     "pdf_url": "https://arxiv.org/pdf/2608.27457v1",
     "published": "2026-08-27T17:59:51Z",
-    "fetched_at": "2026-08-29T06:24:06.870508"
+    "fetched_at": "2026-08-30T04:34:57.586231"
   },
   {
     "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
@@ -52,7 +52,7 @@
     "abstract": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
     "pdf_url": "https://arxiv.org/pdf/2608.27455v1",
     "published": "2026-08-27T17:59:30Z",
-    "fetched_at": "2026-08-29T06:24:06.870522"
+    "fetched_at": "2026-08-30T04:34:57.586244"
   },
   {
     "title": "Tacet: A Language and Type System for Automatic Statistical Validity Accounting",
@@ -62,7 +62,7 @@
     "abstract": "Empirical comparisons between systems are a standard form of evidence in computer science research, but few are checked for statistical validity: most are never framed as statistical tests at all. Existing multiple-comparison procedures could control the resulting error, but need inputs (what an analysis examined, and how its observations are arranged) that are not recoverable from a list of p-values.\n  We introduce Tacet, a language in which an analysis declares what it generated, states what it expects to find, and is refused any claim it cannot afford or cannot properly test. Its core calculus T pairs a free estimation sublanguage, carrying a reported footprint and a purity bit that records whether any outcome was consulted in building a value, with a priced claim sublanguage, carrying a wealth transformer, connected only by a mechanism that prices a comparison. A sample selected by reading outcomes sets the purity bit and is recorded as having examined everything it read, permanently, so it can never be granted a one-sided or confirmatory price, without the system ever asking whether the analyst intended to cherry-pick. Whether a comparison is paired or clustered is computed statically from the artifact schema, from declared functional dependencies between key fields alone and before any data is read, and a mechanism that assumes that structure away is refused rather than priced. Because the wealth transformer is antitone in the realized p-value, affordability can be checked before the analysis runs too, turning pre-registration into a typing rule. We prove the metatheory machine-checked in Lean 4 with no admitted gaps, and demonstrate the approach on a reference implementation and two case studies on published artifacts, the SWE-bench Verified leaderboard and BIG-Bench Hard.",
     "pdf_url": "https://arxiv.org/pdf/2608.27451v1",
     "published": "2026-08-27T17:59:01Z",
-    "fetched_at": "2026-08-29T06:24:06.870530"
+    "fetched_at": "2026-08-30T04:34:57.586253"
   },
   {
     "title": "TTPO: Test-Time Policy Optimization",
@@ -82,6 +82,6 @@
     "abstract": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
     "pdf_url": "https://arxiv.org/pdf/2608.27448v1",
     "published": "2026-08-27T17:58:10Z",
-    "fetched_at": "2026-08-29T06:24:06.870546"
+    "fetched_at": "2026-08-30T04:34:57.586270"
   }
 ]
