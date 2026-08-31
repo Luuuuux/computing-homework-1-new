@@ -1,87 +1,67 @@
 [
   {
-    "title": "The Atacama Cosmology Telescope: Constraints on the anisotropic screening and birefringence effects with DR6",
+    "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
     "authors": [
-      "Darby M. Kramer",
-      "Alexander van Engelen",
-      "Frank J. Qu",
-      "Christopher Cain",
-      "Irene Abril-Cabezas",
-      "J. Richard Bond",
-      "Vera Gluscevic",
-      "Carlos Hervías-Caimapo",
-      "Niall MacCrann",
-      "Mathew S. Madhavacheril",
-      "Jeff McMahon",
-      "Toshiya Namikawa",
-      "Bruce Partridge",
-      "Emmanuel Schaan",
-      "Neelima Sehgal",
-      "Cristóbal Sifón",
-      "Ed Wollack"
+      "Vaibhav Mehandiratta",
+      "Saket Ramchandra"
     ],
-    "abstract": "While we have learned much from recent surveys of the mm-wave sky, many secondary anisotropies of the CMB remain under-explored. We consider two of these here: the anisotropic screening induced by Thomson scattering of CMB photons off free electrons, and cosmic birefringence, the rotation of CMB polarization due to parity-violating physics beyond the standard model. To measure these effects, we apply state-of-the-art estimators for statistical anisotropy to the ACT Data Release 6 CMB data and construct noisy maps and power spectra of both effects. For anisotropic screening, we find no significant detection with the baseline data, and place an upper limit on its power spectrum that is two orders of magnitude above predictions from current reionization models. We obtain evidence for some foreground contamination at one of our frequencies that is consistent with expectations from extragalactic simulations. For our anisotropic birefringence analysis, we also find no detection and place an upper limit on the signal that is consistent with previous analyses. We report a corresponding upper limit on the Chern-Simons coupling term $g_{a γ} < 4.9 \\times 10^{-2} / H_\\mathrm{I}$, with $H_\\mathrm{I}$ the inflationary Hubble scale. These analyses pave the way toward obtaining improved constraints with the next generation of ground-based CMB surveys.",
-    "pdf_url": "https://arxiv.org/pdf/2608.27458v1",
-    "published": "2026-08-27T17:59:59Z",
-    "fetched_at": "2026-08-30T04:34:57.586212"
+    "abstract": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the graph is approximated by a neural network, while a unified graph-based loss function enforces the governing equations together with initial, boundary, and vertex transmission conditions. In particular, the formulation incorporates standard continuity and Kirchhoff-Neumann vertex conditions and Dirichlet boundary conditions into the learning process to couple the local edge-wise neural approximations into a global solution on the graph. The framework is developed for two representative classes of nonlinear models: multi-order fractional elliptic problems and time-fractional evolution equations on quantum graphs. To improve accuracy and training stability, QGPINNs integrates several graph-adapted learning strategies, including soft and hard constraint enforcement, dynamic loss balancing, Fourier feature embeddings, and a learnable singularity-capturing feature for weakly singular solutions arising in the considered problems. The framework also extends naturally to inverse problems, including the identification of the orders of fractional operators and physical parameters from noisy observational data. We validate the accuracy, computational efficiency, and physical consistency of the proposed framework through numerical experiments on benchmark graph structures and real-world networks, including the IEEE 14-bus system and an open-channel agricultural drainage network.",
+    "pdf_url": "https://arxiv.org/pdf/2608.28589v1",
+    "published": "2026-08-28T17:59:47Z",
+    "fetched_at": "2026-08-31T04:38:51.015571"
   },
   {
-    "title": "Spectral Fingerprints of Gauge Theories on a Quantum Computer",
+    "title": "Renormalization-guided cascade upscaling for lattice field generation",
     "authors": [
-      "Graham Van Goffrier",
-      "Debasish Banerjee",
-      "Bipasha Chakraborty",
-      "Emilie Huffman"
+      "Anna Hasenfratz",
+      "Ethan T. Neil",
+      "Letizia Parato",
+      "Noah Schwartz"
     ],
-    "abstract": "Maximally mixed state spectral sampling is an unbiased quantum algorithm that allows for extraction of a finite-resolution spectral distribution from a Hamiltonian over potentially the entire allowed range of energies. We show how it may be focused on any desired area of the spectrum in order to learn about the full \\textit{fingerprint} of the model of interest: from its ground state phenomena such as quantum criticality, obtained from the lowest lying energies, to its thermalization behavior, obtained from the mid-spectrum. We demonstrate this technique specifically on a $(1+1)d$ non-Abelian $SO(3)$ gauge theory, providing a comprehensive analysis of the steps necessary for performing this algorithm, as well as what is possible in the near-term with superconducting quantum hardware, performing simulations with circuits that are $78$ two-qubit gates deep. We show how this algorithm is able to take advantage of emerging dynamical circuit capabilities in near-term hardware to roughly halve the number required qubits, as well as how quantum readout error mitigation is trivial for this method. Along the way, we propose a novel strategy for compiling the controlled-time evolutions needed for spectral sampling by means of Pauli-frame optimizations. We illustrate two physical applications of quantum spectral sampling -- disordered many-body transitions, and mid-spectrum densities of states -- and what postprocessing steps they require beyond the Fourier outputs of the algorithm.",
-    "pdf_url": "https://arxiv.org/pdf/2608.27457v1",
-    "published": "2026-08-27T17:59:51Z",
-    "fetched_at": "2026-08-30T04:34:57.586231"
+    "abstract": "We introduce a renormalization-group (RG) guided machine-learning algorithm for lattice field generation based on approximate inversion of an RG transformation. A ``perfect blocking'' construction supplies equilibrated long-distance modes, while a conditional normalizing flow reconstructs short-distance details and brief rethermalization removes residual errors. In 2D $φ^4$ theory at criticality, a flow trained at $L\\le32$ is reused recursively in cascades reaching $L=2048$ with correct long-distance physics.",
+    "pdf_url": "https://arxiv.org/pdf/2608.28581v1",
+    "published": "2026-08-28T17:55:59Z",
+    "fetched_at": "2026-08-31T04:38:51.015597"
   },
   {
-    "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+    "title": "Renormalization-guided inverse blocking for lattice field generation: construction and validation",
     "authors": [
-      "Yufan Wu",
-      "Yinghui He",
-      "Zhengyi Hu",
-      "Lang Wei",
-      "Ruichen Li",
-      "Qifan Yang",
-      "Ting Zhu"
+      "Anna Hasenfratz",
+      "Ethan T. Neil",
+      "Letizia Parato",
+      "Noah Schwartz"
     ],
-    "abstract": "Recent advances in inference-time scaling have significantly improved the reasoning performance of large language models (LLMs). However, these methods typically rely on repeated generation or external verification. To address this limitation, we introduce CritICL, a novel inference-time framework that improves reasoning while maintaining high efficiency. Our key insight is that LLM failure modes exhibit structured patterns across model scales within the same family. Instead of treating failures as undesirable outputs, CritICL leverages them as a source of guidance. Specifically, we utilize failure modes derived from weaker models and incorporate them into inference through critique-based in-context examples. We propose two variants: CritICL-dynamic, which adaptively predicts input-specific failure modes and retrieves critiques, and CritICL-static, which uses a global failure mode profile to provide stable guidance. Experimental results show that CritICL consistently outperforms standard in-context learning and achieves performance competitive with or superior to test-time scaling methods, while requiring significantly fewer generations and lower token cost. Code available at: https://github.com/umwyf/CRITICL",
-    "pdf_url": "https://arxiv.org/pdf/2608.27455v1",
-    "published": "2026-08-27T17:59:30Z",
-    "fetched_at": "2026-08-30T04:34:57.586244"
+    "abstract": "We propose an algorithm for generating lattice field configurations based on the approximate inversion of a renormalization-group blocking transformation. We optimize the blocking transformation using a ``perfect blocking'' condition so that the blocked lattice distribution is well approximated by a simple coarse action. The blocking is separated into an invertible smoothing transformation followed by decimation. Machine learning, in the form of a conditional normalizing flow, is used to reconstruct the short-distance degrees of freedom removed by the decimation. A short fine-action rethermalization then removes the residual mismatch. Because the coarse ensemble supplies the long-distance modes, the same blocking transformation and conditional flow can be reused recursively on larger lattices, producing a cascade of configurations from an initial small-volume ensemble. We test the method in two-dimensional $φ^4$ theory with $λ=1$ at criticality and demonstrate stable cascade upscaling from $16^2$ to $2048^2$ lattices on local computational resources. Controlled rethermalization tests show that short-distance mismatches relax rapidly, whereas a deliberately introduced mismatch in the relevant thermal direction relaxes much more slowly. The construction uses ingredients that admit natural extensions to higher-dimensional systems and, ultimately, to gauge and fermionic degrees of freedom.",
+    "pdf_url": "https://arxiv.org/pdf/2608.28580v1",
+    "published": "2026-08-28T17:55:55Z",
+    "fetched_at": "2026-08-31T04:38:51.015612"
   },
   {
-    "title": "Tacet: A Language and Type System for Automatic Statistical Validity Accounting",
+    "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
     "authors": [
-      "Chiké Abuah"
+      "Nan Wang",
+      "Mohit Yadav",
+      "Jonathan Wulff",
+      "Aidan Rosenbaum",
+      "Kezhou Chen",
+      "Yuvan Sharma",
+      "Xu Dong",
+      "Yiwei Tao"
     ],
-    "abstract": "Empirical comparisons between systems are a standard form of evidence in computer science research, but few are checked for statistical validity: most are never framed as statistical tests at all. Existing multiple-comparison procedures could control the resulting error, but need inputs (what an analysis examined, and how its observations are arranged) that are not recoverable from a list of p-values.\n  We introduce Tacet, a language in which an analysis declares what it generated, states what it expects to find, and is refused any claim it cannot afford or cannot properly test. Its core calculus T pairs a free estimation sublanguage, carrying a reported footprint and a purity bit that records whether any outcome was consulted in building a value, with a priced claim sublanguage, carrying a wealth transformer, connected only by a mechanism that prices a comparison. A sample selected by reading outcomes sets the purity bit and is recorded as having examined everything it read, permanently, so it can never be granted a one-sided or confirmatory price, without the system ever asking whether the analyst intended to cherry-pick. Whether a comparison is paired or clustered is computed statically from the artifact schema, from declared functional dependencies between key fields alone and before any data is read, and a mechanism that assumes that structure away is refused rather than priced. Because the wealth transformer is antitone in the realized p-value, affordability can be checked before the analysis runs too, turning pre-registration into a typing rule. We prove the metatheory machine-checked in Lean 4 with no admitted gaps, and demonstrate the approach on a reference implementation and two case studies on published artifacts, the SWE-bench Verified leaderboard and BIG-Bench Hard.",
-    "pdf_url": "https://arxiv.org/pdf/2608.27451v1",
-    "published": "2026-08-27T17:59:01Z",
-    "fetched_at": "2026-08-30T04:34:57.586253"
+    "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
+    "pdf_url": "https://arxiv.org/pdf/2608.28578v1",
+    "published": "2026-08-28T17:53:48Z",
+    "fetched_at": "2026-08-31T04:38:51.015631"
   },
   {
-    "title": "TTPO: Test-Time Policy Optimization",
+    "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
     "authors": [
-      "Aozhe Wang",
-      "Zhengxi Lu",
-      "Jianze Wang",
-      "Shangke Lv",
-      "Ying Liu",
-      "Weiming Lu",
-      "Jun Xiao",
-      "Yueting Zhuang",
-      "Hua Yang",
-      "Qianglong Chen",
-      "Yongliang Shen"
+      "Chengpiao Huang",
+      "Kaizheng Wang"
     ],
-    "abstract": "Recent prominent post-training methods, such as Reinforcement Learning (RL) and On-Policy Self-Distillation (OPSD), have driven rapid progress in mathematical reasoning for large language models, yet their reliance on ground-truth labels precludes test-time training (TTT). Replacing ground truth with majority-vote pseudo-labels is a natural alternative, yet it is fragile: an incorrect vote corrupts the teacher and misleads every token. We observe that this failure mode is asymmetric: rollouts that disagree with the pseudo-label are typically wrong regardless of whether the vote itself is correct. Building on this observation, we propose Test-Time Policy Optimization (TTPO), an asymmetric objective that distills agreeing rollouts via OPSD and penalizes disagreeing rollouts with Grouped RL. Token-level selection further refines both branches: distillation down-weights already-converged positions, while RL penalizes only confident errors. Both updates remain well-grounded even under frequent pseudo-label errors, and majority-vote routing yields tighter self-supervision as the model improves. Without any labels, TTPO matches label-supervised OPSD on five competition-level benchmarks, raises Qwen3-1.7B from 38.0% to 45.2% in TTT, yields +25.2% to +36.4% without thinking, and shows strong cross-task generalization.",
-    "pdf_url": "https://arxiv.org/pdf/2608.27448v1",
-    "published": "2026-08-27T17:58:10Z",
-    "fetched_at": "2026-08-30T04:34:57.586270"
+    "abstract": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
+    "pdf_url": "https://arxiv.org/pdf/2608.28576v1",
+    "published": "2026-08-28T17:52:33Z",
+    "fetched_at": "2026-08-31T04:38:51.015644"
   }
 ]
