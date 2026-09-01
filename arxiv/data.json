@@ -1,67 +1,65 @@
 [
   {
-    "title": "QGPINNs: A Physics-Informed Neural Network Framework for Nonlocal Differential Equations on Quantum Graphs",
+    "title": "Constant Individual Regret in General Games",
     "authors": [
-      "Vaibhav Mehandiratta",
-      "Saket Ramchandra"
+      "Mingyang Liu",
+      "Gabriele Farina",
+      "Asuman Ozdaglar"
     ],
-    "abstract": "We propose QGPINNs, a physics-informed neural network framework developed in PyTorch for the numerical solution of nonlocal differential equations on quantum graphs. The framework is designed as a general computational implementation in which the solution on each edge of the graph is approximated by a neural network, while a unified graph-based loss function enforces the governing equations together with initial, boundary, and vertex transmission conditions. In particular, the formulation incorporates standard continuity and Kirchhoff-Neumann vertex conditions and Dirichlet boundary conditions into the learning process to couple the local edge-wise neural approximations into a global solution on the graph. The framework is developed for two representative classes of nonlinear models: multi-order fractional elliptic problems and time-fractional evolution equations on quantum graphs. To improve accuracy and training stability, QGPINNs integrates several graph-adapted learning strategies, including soft and hard constraint enforcement, dynamic loss balancing, Fourier feature embeddings, and a learnable singularity-capturing feature for weakly singular solutions arising in the considered problems. The framework also extends naturally to inverse problems, including the identification of the orders of fractional operators and physical parameters from noisy observational data. We validate the accuracy, computational efficiency, and physical consistency of the proposed framework through numerical experiments on benchmark graph structures and real-world networks, including the IEEE 14-bus system and an open-channel agricultural drainage network.",
-    "pdf_url": "https://arxiv.org/pdf/2608.28589v1",
-    "published": "2026-08-28T17:59:47Z",
-    "fetched_at": "2026-08-31T04:38:51.015571"
+    "abstract": "Uncoupled no-regret dynamics provide a decentralized route to equilibrium, but prior guarantees for individual regret retain a polylogarithmic dependence on the horizon. We remove this dependence for every finite $N$-player normal-form game under full-information feedback. We introduce \\emph{ECHO-OFTRL}: optimistic follow-the-regularized-leader (OFTRL) equipped with an EMA cascade for high-order optimism (ECHO), where EMA denotes exponential moving average. The algorithm is deterministic and fully uncoupled. If $m_{\\max}$ denotes the largest action-set size, then, simultaneously for every horizon $T\\geq1$, it guarantees that each of the $N$ players in the game incurs regret upper bounded by $O(\\textrm{poly}(N, \\log m_{\\max}))$. Our algorithm leverages a new form of optimism inspired by modern filter design.",
+    "pdf_url": "https://arxiv.org/pdf/2608.31166v1",
+    "published": "2026-08-31T17:59:16Z",
+    "fetched_at": "2026-09-01T04:20:02.393406"
   },
   {
-    "title": "Renormalization-guided cascade upscaling for lattice field generation",
+    "title": "SUN: Persistent Programs For Language-Grounded Control-to-Learning-to-Real Policies",
     "authors": [
-      "Anna Hasenfratz",
-      "Ethan T. Neil",
-      "Letizia Parato",
-      "Noah Schwartz"
+      "Weiqi Wang",
+      "Zhi Li",
+      "Yudong Lei",
+      "David Martinez",
+      "Xiaofeng Gao",
+      "Yuxin Jiang",
+      "Chenfanfu Jiang",
+      "Yingnian Wu",
+      "Demetri Terzopoulos",
+      "Ran Gong"
     ],
-    "abstract": "We introduce a renormalization-group (RG) guided machine-learning algorithm for lattice field generation based on approximate inversion of an RG transformation. A ``perfect blocking'' construction supplies equilibrated long-distance modes, while a conditional normalizing flow reconstructs short-distance details and brief rethermalization removes residual errors. In 2D $φ^4$ theory at criticality, a flow trained at $L\\le32$ is reused recursively in cascades reaching $L=2048$ with correct long-distance physics.",
-    "pdf_url": "https://arxiv.org/pdf/2608.28581v1",
-    "published": "2026-08-28T17:55:59Z",
-    "fetched_at": "2026-08-31T04:38:51.015597"
+    "abstract": "Bridging model-based control and learned policies in long-horizon manipulation has harbored a silent disagreement: control executes specified objectives, learning amortizes that behavior into a reactive policy, yet existing protocols discard task semantics, leaving rewards hand-crafted and behavior drifting from what control verified.We introduce Semantically UNified (SUN) Programs, typed executables where geometric and contact relations are defined once and compiled into aligned Model Predictive Control (MPC) costs, satisfaction predicates, RL rewards, transition guards, and diagnostics. Our system, Kuafu, driven by large vision language systems, automatically synthesizes SUN Programs from language and scene semantics, screens feasibility via MPC, and retains semantics while training stage-conditioned policies. Across nine tasks, Kuafu achieves 82.03% macro-success, outperforming sparse-reward (35.67%) and Stage-BC (24.75%) baselines. At 8192-way scale, it generates 10.57x the successful trajectory time per hour of human teleoperation. With 500 trajectories per task, Kuafu data trains DP3 policies to 46.0% simulation success (vs. 22.4% for alternatives) and 34.7% on physical Franka and Kinova robots. These results establish that simulation-screened task semantics can effectively amortize control into robust policies, without demonstrations or manual dense rewards, unifying symbolic planning and data-driven execution.",
+    "pdf_url": "https://arxiv.org/pdf/2608.31167v1",
+    "published": "2026-08-31T17:59:16Z",
+    "fetched_at": "2026-09-01T04:20:02.393438"
   },
   {
-    "title": "Renormalization-guided inverse blocking for lattice field generation: construction and validation",
+    "title": "Trinomial containment in polynomial ideals is undecidable",
     "authors": [
-      "Anna Hasenfratz",
-      "Ethan T. Neil",
-      "Letizia Parato",
-      "Noah Schwartz"
+      "Tobias Boege",
+      "Anna Hofer",
+      "Thomas Kahle"
     ],
-    "abstract": "We propose an algorithm for generating lattice field configurations based on the approximate inversion of a renormalization-group blocking transformation. We optimize the blocking transformation using a ``perfect blocking'' condition so that the blocked lattice distribution is well approximated by a simple coarse action. The blocking is separated into an invertible smoothing transformation followed by decimation. Machine learning, in the form of a conditional normalizing flow, is used to reconstruct the short-distance degrees of freedom removed by the decimation. A short fine-action rethermalization then removes the residual mismatch. Because the coarse ensemble supplies the long-distance modes, the same blocking transformation and conditional flow can be reused recursively on larger lattices, producing a cascade of configurations from an initial small-volume ensemble. We test the method in two-dimensional $φ^4$ theory with $λ=1$ at criticality and demonstrate stable cascade upscaling from $16^2$ to $2048^2$ lattices on local computational resources. Controlled rethermalization tests show that short-distance mismatches relax rapidly, whereas a deliberately introduced mismatch in the relevant thermal direction relaxes much more slowly. The construction uses ingredients that admit natural extensions to higher-dimensional systems and, ultimately, to gauge and fermionic degrees of freedom.",
-    "pdf_url": "https://arxiv.org/pdf/2608.28580v1",
-    "published": "2026-08-28T17:55:55Z",
-    "fetched_at": "2026-08-31T04:38:51.015612"
+    "abstract": "We prove that deciding whether an ideal in a polynomial ring contains a trinomial is impossible on a Turing machine. More precisely, from an integer polynomial $P$ we compute generators of an ideal $I_P$ in a polynomial ring over $\\mathbb{Q}$ such that $I_P$ contains a trinomial if and only if $P$ has an integral zero. By the MRDP theorem this problem is undecidable. A universal halting polynomial gives a computable family of ideals in one fixed polynomial ring, with uniform bounds on colength, generator count, and generator degree, for which the containment of a trinomial encodes the halting problem.",
+    "pdf_url": "https://arxiv.org/pdf/2608.31162v1",
+    "published": "2026-08-31T17:57:49Z",
+    "fetched_at": "2026-09-01T04:20:02.393453"
   },
   {
-    "title": "Aero Hand Open: A Simulation-Ready Tendon-Driven Hand for Dexterous Manipulation Learning",
+    "title": "Sharp Approximation Rates for Neural Networks with Affine Latent Parameterizations",
     "authors": [
-      "Nan Wang",
-      "Mohit Yadav",
-      "Jonathan Wulff",
-      "Aidan Rosenbaum",
-      "Kezhou Chen",
-      "Yuvan Sharma",
-      "Xu Dong",
-      "Yiwei Tao"
+      "Shijun Zhang"
     ],
-    "abstract": "Tendon-driven hands are anthropomorphic, and moving the actuators off the joints is what makes a hand of this capability affordable to build. Two effects produce that saving. Routing force through a cable removes the requirement that a motor fit inside the joint it drives, so smaller and cheaper motors suffice, and one motor can drive several joints through a single cable, so fewer motors are needed. They are also harder to learn on than a direct-drive hand. The underactuated transmission that produces the saving is itself difficult to represent in a simulator, and the joints one cable drives are not independently commandable. We present Aero Hand Open, a tendon-driven anthropomorphic hand that is released simulation-ready. Three things ship with it. A simulation model reproduces the cable transmission itself. An identified actuation map connects that model to the motor commands in both directions, including the three-way coupling of the thumb. A reinforcement learning package trains policies for the hand. Together they let a policy be trained entirely in simulation and run on the hand with no fine-tuning and no state estimation. We release the mechanical design, the simulation model, the identified mapping, the training environment and the deployment stack.",
-    "pdf_url": "https://arxiv.org/pdf/2608.28578v1",
-    "published": "2026-08-28T17:53:48Z",
-    "fetched_at": "2026-08-31T04:38:51.015631"
+    "abstract": "Many parameter-efficient methods generate the parameters of a large neural network from a low-dimensional latent representation. Given an architecture $Φ$ with $P_Φ$ parameter slots, we write $\\boldsymbolθ_f=\\mathcal{G}(\\boldsymbolξ_f)$, where $\\mathcal{G}\\colon\\mathbb{R}^M\\to\\mathbb{R}^{P_Φ}$ is a parameter generator and $\\boldsymbolξ_f\\in\\mathbb{R}^M$ is a latent representation of the target function $f$. The architecture $Φ$ and the generator $\\mathcal{G}$ are shared across the entire target class, while each target $f$ is represented by its own latent vector $\\boldsymbolξ_f$, with $Φ_{\\mathcal{G}(\\boldsymbolξ_f)}$ approximating $f$. This framework encompasses hypernetworks, low-dimensional parameterizations, parameter-efficient adaptation, and model compression. Understanding the tradeoff between the latent dimension $M$ and the network budget $P$ is therefore fundamental to characterizing the expressive efficiency of these methods. We study this tradeoff for affine generators and fully connected ReLU architectures. More precisely, optimizing jointly over architectures $Φ$ satisfying $P_Φ\\leq P$ and affine generators $\\mathcal{G}:\\mathbb{R}^M\\to \\mathbb{R}^{P_Φ}$, we prove that the optimal worst-case uniform approximation error over the unit ball of $α$-Hölder functions on $[0,1]^d$, where $0<α\\leq1$, has the sharp order $ \\bigl(P\\min\\{M,P\\}\\bigr)^{-α/d}. $ In particular, our result shows that even a fixed-dimensional latent space suffices to achieve vanishing approximation error as the network budget increases.",
+    "pdf_url": "https://arxiv.org/pdf/2608.31157v1",
+    "published": "2026-08-31T17:55:51Z",
+    "fetched_at": "2026-09-01T04:20:02.393465"
   },
   {
-    "title": "Learning a Size-Weight Frontier for Synthetic-Augmented Inference",
+    "title": "Learning to deform the matched filter",
     "authors": [
-      "Chengpiao Huang",
-      "Kaizheng Wang"
+      "Paul Anthony Haigh"
     ],
-    "abstract": "Synthetic data can improve statistical inference when real data are scarce, but naively treating synthetic samples as real data can introduce bias and lead to unreliable inference. We develop a general framework for synthetic-augmented inference across a population of related tasks. It characterizes synthetic augmentation by the number of synthetic observations and their weight. Central to our framework is a size-weight frontier that specifies, for each weight, the largest synthetic sample size for which all smaller sizes attain the target task-marginal coverage. We estimate this frontier from historical tasks, and establish a finite-sample coverage guarantee simultaneously for all size-weight configurations on or below the estimated frontier. In experiments using large language model responses to augment opinion survey data, our procedure achieves target coverage and substantially narrows confidence intervals.",
-    "pdf_url": "https://arxiv.org/pdf/2608.28576v1",
-    "published": "2026-08-28T17:52:33Z",
-    "fetched_at": "2026-08-31T04:38:51.015644"
+    "abstract": "Analytical signal-processing blocks are interpretable and reliable, but their optimality depends on assumptions that practical hardware and channels violate. Learned replacements can adapt, but often discard the structure that makes the original solution understandable. Here we introduce deformable matched filtering, a platform in which learning steers a bounded deformation of an explicit matched filter instead of replacing the waveform-processing path. In a hardware-in-the-loop optical wireless link, blind state descriptors drive causal, pilotless updates while payload samples, transmitted references, and condition labels remain outside the controller. Receiver deformation generalises across held-out signalling and channel conditions and remains ahead of a span-matched fractionally spaced equaliser after stationary convergence in most tested regimes. A transferable transmitter deformation reduces error-vector magnitude in all 144 held-out evaluations, whereas its additional value after receiver adaptation emerges principally under severe combined distortion. KAN, MLP, and linear controllers provide different condition-dependent advantages within the same filter structure. During 24 hours of uninterrupted changing-condition operation, bounded deformable receivers recover their original operating regime after severe intervening distortion while the persistent conventional equaliser accumulates destructive state. These results establish deformable analytical filters as a reusable middle ground between fixed theory and end-to-end learned signal processing.",
+    "pdf_url": "https://arxiv.org/pdf/2608.31149v1",
+    "published": "2026-08-31T17:50:38Z",
+    "fetched_at": "2026-09-01T04:20:02.393477"
   }
 ]
