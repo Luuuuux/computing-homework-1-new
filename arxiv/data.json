@@ -1,68 +1,78 @@
 [
   {
-    "title": "Temporal Self-Distillation: Learning Visual State Tracking in Videos Without Supervision",
+    "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
     "authors": [
-      "Shravan Venkatraman",
-      "Wenshuai Zhao",
-      "Mohammad Hassan Vali",
-      "Arno Solin"
+      "Linzhan Mou",
+      "Jiahui Lei",
+      "Zhiyang Dou",
+      "Chenyue Cai",
+      "Chaoyue Song",
+      "Adam Finkelstein",
+      "Szymon Rusinkiewicz"
     ],
-    "abstract": "We introduce S$^3$T (Self-Supervised Self-Distillation over Time), which, to the best of our knowledge, is the first fully self-contained framework for continuous video state tracking. Our method treats temporal sampling density as privileged information, based on the hypothesis that a denser view of the same clip recovers the running state more accurately. This view serves as the teacher, while a sparse-view student with the same weights learns to match its next-token distribution. The model generates its own target, so training requires no labels, separate teacher, or reward signal, and adds no inference cost. On LLaVA-OneVision-2-8B, S$^3$T improves VSTAT accuracy by $+1.74$ as a single model, $+2.38$ with souping, and $+2.70$ with additional vision-encoder adaptation, while prior self-evolving methods leave state tracking largely unchanged. The capability learned from unlabeled synthetic clips transfers to real videos, improving performance by $+7.95$ on VSTAT-YouTube state-tracking questions and $+4.50$ on MVBench Action Count.",
-    "pdf_url": "https://arxiv.org/pdf/2609.04203v1",
-    "published": "2026-09-03T17:59:55Z",
-    "fetched_at": "2026-09-06T03:45:06.025941"
+    "abstract": "Recent advances in automatic rigging now deliver animation-ready 3D assets at scale, yet generating the motion to drive them remains a bottleneck. Existing learned animators are topology-constrained: they rely on category-specific templates or require per-skeleton fine-tuning and reference motions at inference. We present UniMate, a unified foundation model that synthesizes articulated motion for arbitrary skeletons from a rigged 3D asset and a text prompt, with no test-time optimization or per-skeleton retraining. UniMate introduces a topology-aware diffusion transformer, which integrates skeletal topology into attention via three mechanisms: (1) a graph-aware attention bias from pairwise joint relations and geodesic distances; (2) a spectral rotary position embedding generalizing RoPE to arbitrary kinematic trees via the graph Laplacian; and (3) a global topological conditioner attention-pooled from the rest-pose skeleton. We also curate UniML3D, 13,006 motion sequences spanning bipedal, quadrupedal, avian, marine, insectoid, serpentine, and articulated rigid objects with unified canonicalization and text pairing. Trained on this dataset, UniMate outperforms state-of-the-art baselines in quality, generalization, and efficiency, and supports zero-shot cross-topology transfer, in-betweening, expansion, and text-guided editing. Our project page is available at https://linzhanmou.com/unimate/.",
+    "pdf_url": "https://arxiv.org/pdf/2609.05415v1",
+    "published": "2026-09-04T17:59:00Z",
+    "fetched_at": "2026-09-07T03:44:23.325371"
   },
   {
-    "title": "TokenMatch: 3D Mesh Correspondence Transformer with Curvature-Guided Tokenisation",
+    "title": "Tracing the Cosmic Origins: Machine Learning Reconstruction of the Primordial Density Field from EoR Observations",
     "authors": [
-      "Adeela Islam",
-      "Zorah Lähner",
-      "Vittorio Murino",
-      "Vladislav Golyanik"
+      "Anchal Saxena",
+      "P. Daniel Meerburg",
+      "Guochao Sun",
+      "Tzu-Ching Chang",
+      "Lluís Mas-Ribas"
     ],
-    "abstract": "While data-driven 3D shape correspondence estimation has recently seen substantial progress, robust matching under partial observations and strong non-isometric deformations remains challenging. Existing learning-based approaches often rely on hand-crafted descriptors or template-based representations, whereas recent generative models over functional maps suffer from high inference cost, limited interpretability, and poor generalisation to partial shapes. In response to these limitations, this paper introduces TokenMatch, a new transformer-based unified model for estimating 3D shape correspondences. Our feed-forward approach trained exclusively on BeCoS, a challenging non-isometric partial-to-partial shape-matching dataset, can generalise to matching full shapes without retraining or fine-tuning. TokenMatch uses self- and cross-attention mechanisms to efficiently learn patch-level and point-level relations as well as dense correspondences between shape pairs. Our core insight is that meshes can be adaptively tokenised into patches using shape curvature guidance, enabling effective learning of shape-specific geometric descriptors for correspondence estimation. We evaluate TokenMatch on standard benchmarks for partial and full shape matching, including CP2P, PSMAL, BeCoS, FAUST, SCAPE, and SHREC'19. Our method achieves consistently high performance, in most cases outperforming existing methods for partial and full shape matching in the mean geodesic error and intersection-over-union metrics, while also running faster at sub-second inference speeds.",
-    "pdf_url": "https://arxiv.org/pdf/2609.04202v1",
-    "published": "2026-09-03T17:59:55Z",
-    "fetched_at": "2026-09-06T03:45:06.025965"
+    "abstract": "Reconstructing the initial conditions of the Universe from late-time tracers would unlock cosmological information buried by non-linear structure formation and astrophysics. We reconstruct the initial density field at $z\\sim300$ from simulated 21-cm and CO(1-0) line-intensity maps at $z\\sim8$ generated with LIMFAST. Using a three-dimensional U-Net, we reconstruct the initial conditions and evaluate its impact on cosmological parameter constraints. The two tracers probe complementary environments: 21-cm emission traces neutral, low-density regions of the intergalactic medium, while CO traces overdense, star-forming regions. To emulate realistic observations, we model instrumental effects for SKA1-Low- and COMAP-ERA-like surveys, including finite angular resolution and thermal noise. We assess reconstruction performance through the cross-correlation coefficient between reconstructed and true initial density fields, $|C(k)|$. In the noiseless case, combining both tracers delivers the most accurate recovery across ionisation states, with $|C(k)| \\gtrsim$ 0.90 for $k \\lesssim$ 0.75 Mpc$^{-1}$. With observational effects, small-scale information is degraded, but combining tracers still achieves $|C(k)| \\gtrsim$ 0.70 for $k \\lesssim$ 0.3 Mpc$^{-1}$. To quantify information gain, we perform simulation-based inference of cosmological parameters from power-spectrum summaries before and after reconstruction. In both noiseless and noisy settings, reconstruction tightens parameter constraints: uncertainties on $σ_8$ and $n_{\\rm s}$ improve by $\\sim2\\times$, with smaller but consistent gains for other parameters. This is further confirmed using Kullback-Leibler divergence diagnostics for an ensemble of observations. These results indicate that joint analysis of future 21-cm and CO surveys, combined with such reconstruction, can partially recover otherwise inaccessible cosmological information.",
+    "pdf_url": "https://arxiv.org/pdf/2609.05412v1",
+    "published": "2026-09-04T17:58:34Z",
+    "fetched_at": "2026-09-07T03:44:23.325415"
   },
   {
-    "title": "Scal3R: Learning Efficient Multi-Relative Pose Query for Scalable Online 3D Reconstruction",
+    "title": "Early against Late: A contrast on dark energy in the light of DESI DR2",
     "authors": [
-      "Chin-Yang Lin",
-      "Yang-Che Sun",
-      "Cheng Sun",
-      "Fu-En Yang",
-      "Min-Hung Chen",
-      "Yen-Yu Lin",
-      "Wei-Chen Chiu",
-      "Yu-Lun Liu"
+      "Miguel A. Zapata",
+      "Karim Carrion",
+      "Gabriela Garcia-Arroyo"
     ],
-    "abstract": "Online 3D reconstruction models perform poorly on long videos. This happens because regressing poses relative to a fixed first-frame anchor forces extrapolation far beyond the training distribution. Small drifts accumulate and amplify into significant geometric collapse. However, we observe that per-frame depth remains stable throughout this failure. The backbone's local geometry remains intact; only the global pose head breaks down. Motivated by this decoupling, we introduce Scal3R. This approach reformulates online reconstruction as multi-reference relative pose querying. We use lightweight learnable tokens, which make up about ~1% of the parameters, and inject them into a completely frozen backbone via asymmetric attention. This setup queries poses relative to multiple past keyframes. An online pose-graph optimization system with loop closure suppresses long-range drift. Scal3R reaches convergence in 8 hours on a single GPU. It reduces the average ATE by over 60% on KITTI compared to the online baseline. It also achieves state-of-the-art performance across Virtual KITTI, Sintel, TUM-Dynamic, ScanNet, and 7-Scenes. Project page: https://linjohnss.github.io/scal3r/",
-    "pdf_url": "https://arxiv.org/pdf/2609.04201v1",
-    "published": "2026-09-03T17:59:53Z",
-    "fetched_at": "2026-09-06T03:45:06.025987"
+    "abstract": "Recent findings from Dark Energy Spectroscopic Instrument (DESI) Baryon Acoustic Oscillation (BAO) measurements, combined with Type Ia supernovae and Cosmic Microwave Background (CMB) data, suggest potential parameter-level deviations from $Λ\\text{CDM}$. However, parameter exclusions omit prior-volume penalties, whereas Bayesian evidence uncovers a stark dichotomy between early- and late-time dynamics. To quantify this effect, we perform a Bayesian model comparison that explicitly accounts for the cosmological epoch of dark energy dynamics, contrasting two schemes acting in opposite epochs of cosmic history: pre-recombination Early Dark Energy (EDE) and late-time Chevallier--Polarski--Linder (CPL), both measured against a baseline $Λ$CDM. We validate the learned harmonic-mean estimator against \\texttt{UltraNest} (at background level) before applying it to the CMB analysis. Background-only data already disfavor both extensions, yielding $\\ln B_{Λ\\text{CDM},\\text{EDE}} = 2.45 \\pm 0.25$ and $\\ln B_{Λ\\text{CDM},\\text{CPL}} = 3.45 \\pm 0.24$. Including CMB sharpens this result: EDE is decisively rejected ($\\ln B_{Λ\\text{CDM},\\text{EDE}} = 12.44 \\pm 0.05$) with its early-time fraction constrained to $10^3\\,Ω_e^{\\rm EDE} = 2.0^{+0.6}_{-1.0}$, whereas CPL remains moderately disfavored ($\\ln B_{Λ\\text{CDM},\\text{CPL}} = 2.33 \\pm 0.06$), even though 2D parameter posteriors for both models display a multi-$σ$ deviation from $Λ\\text{CDM}$. Thus, Bayesian evidence weakens reported preferences for dark energy dynamics, with the impact depending on the cosmic epoch involved, confirmed by our functional reconstructions of $w_{\\rm de}(z)$ and $Ω_{\\rm de}(z)$ from posterior samples.",
+    "pdf_url": "https://arxiv.org/pdf/2609.05410v1",
+    "published": "2026-09-04T17:58:04Z",
+    "fetched_at": "2026-09-07T03:44:23.325426"
   },
   {
-    "title": "Compile by Training: Turning Natural-Language Specifications into Local Neural Functions",
+    "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
     "authors": [
-      "Yuntian Deng",
-      "Pengyu Nie",
-      "Stuart Shieber"
+      "Quoc H. Nguyen",
+      "Ali Lafzi",
+      "Abhijeet Phatak",
+      "Siddharth Pratap Singh",
+      "Rohit Upadhyay",
+      "Yogananda Domlur Seetharama",
+      "Chittaranjan Tripathy"
     ],
-    "abstract": "Many recurring text functions are easy to describe but difficult to implement with rules, while calling a large remote model for every input introduces repeated cost, latency, and dependency on a provider. We present compile by training, which turns a natural-language specification into a reusable neural function. At compile time, teacher models generate task-specific examples that are used to train a small adapter for a compact interpreter. The resulting function runs without the teachers and can be stored, versioned, and composed like ordinary software. On FuzzyBench-Hard, a subset on which the Program-as-Weights fast compiler produced no exact matches, compile by training reaches 83.6% semantic accuracy. This higher accuracy comes with a higher compile-time cost: roughly a minute rather than seconds for the fast compiler. We deploy the compiler in a public interactive service and demonstrate compiled functions in a multi-site website helper, a language-controlled 3D avatar, and a bidirectional English-Claudish translator.",
-    "pdf_url": "https://arxiv.org/pdf/2609.04199v1",
-    "published": "2026-09-03T17:59:49Z",
-    "fetched_at": "2026-09-06T03:45:06.026000"
+    "abstract": "Retail search systems serve diverse geographic regions with distinct query patterns, vocabularies, and product preferences, creating significant data heterogeneity that challenges both privacy-preserving training and model personalization. Federated learning offers a natural solution for privacy, but standard FL methods produce global models that sacrifice regional performance, while existing personalized FL approaches operate at the parameter level and catastrophically collapse on modern transformers (below 10\\% accuracy on T5) due to tied embeddings and LayerNorm interactions. We introduce RegionFed, an \\textit{architecture-robust} federated learning framework that sidesteps this failure by operating entirely at the gradient level. RegionFed uses the $\\ell_2$ conflict between regional and global gradients as a unified signal that (i) diagnoses heterogeneity, (ii) routes each region to the cheapest sufficient personalization strategy, and (iii) adaptively controls personalization strength. Because it treats models as differentiable black boxes, RegionFed deploys on T5-Small, T5-3B, RoBERTa, and CNN with zero code changes, providing large gains on transformers (where parameter-level methods collapse) and consistent improvements on CNNs. Across three public datasets (Amazon ESCI, Amazon Reviews, LEAF-FEMNIST) and four architectures, RegionFed-Meta achieves 92.27\\%, closing the gap to the privacy-violating centralized upper bound (Centralized + Regional Weighting: 92.04\\%, $Δ$=0.23pp, within 1$σ$) while providing $(ε{\\approx}0.60)$-differential privacy and $\\mathcal{O}(1/\\sqrt{T})$ convergence.",
+    "pdf_url": "https://arxiv.org/pdf/2609.05403v1",
+    "published": "2026-09-04T17:50:10Z",
+    "fetched_at": "2026-09-07T03:44:23.325438"
   },
   {
-    "title": "Clean Engineering, Unstable Measurement: A Preregistered Reliability Failure of Black-Box LLM Observers on Shared Endpoints",
+    "title": "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models",
     "authors": [
-      "Haoyaun Zhu",
-      "Jie Zhang"
+      "Wonje Jeung",
+      "Sangyeon Yoon",
+      "Hyesoo Hong",
+      "Yoonjun Cho",
+      "Dongjae Jeon",
+      "Bumjun Kim",
+      "Jean Oh",
+      "Youngjae Yu",
+      "Albert No"
     ],
-    "abstract": "Language-model judges now gate training data, score generations, and drive leaderboards. The judge is then a measurement instrument, resting on one rarely stated assumption: the same request, sent to the same model name, reads the same tomorrow. We audited that assumption in two preregistered campaigns with every threshold fixed in advance; neither got past validating its instrument. Across 52,988 audited request attempts, same-window repeat rankings agreed at Spearman 0.400 against a required 0.90, and byte-identical next-day replays agreed at 0.78 against a required 0.99, each time with the execution record at ceiling. Three mechanisms explain the gap: a label-to-meaning mapping that biased readouts as strongly as the signal; candidate gaps seven orders of magnitude below the instrument's own noise floor; and byte-identical inputs returning different rankings, a noise that exact-permutation readouts compound. Neither metric substitution nor sampling repaired it on the tested grid. Preregistered follow-ups bound the problem: waiting did not help on the days sampled (0.805 versus 0.800, replicated over five further days); switching providers did not help (four providers share the floor, medians 0.74 to 0.88, predicted by none of the metadata fields they expose); self-hosting on batch-invariant kernels helped only while the server was quiet; and on constructed errors with known gaps, the readout's separation tracks error type, not size. We distill the evidence into a three-level snapshot-identity ladder, eight design rules, and a reporting checklist; a pilot at roughly 2% of the study's call volume would have exposed both unreachable gates in advance. All results concern externally measured behaviour on shared serving infrastructure. On a shared endpoint, a model name is not a frozen instrument; a preregistered evaluation must measure its instrument before freezing any gate on it.",
-    "pdf_url": "https://arxiv.org/pdf/2609.04198v1",
-    "published": "2026-09-03T17:59:43Z",
-    "fetched_at": "2026-09-06T03:45:06.026012"
+    "abstract": "Vision-language models are increasingly used as reward functions for robotic learning, but this role requires paraphrase invariance: the same trajectory should receive the same reward under semantically equivalent goal descriptions. We show that current VLM reward models often violate this property. Paraphrasing the instruction alone can substantially change predicted progress scores, and can even flip identical robot behavior between failure and success. To measure this failure mode, we introduce ROBORMBENCH, a benchmark with 2,390 real-robot trajectories, ground-truth progress labels, and 21,673 verified paraphrases spanning lexical, syntactic, and action-goal rewrites. Across proprietary and open-source VLMs, paraphrase-induced instability is widespread and severe, grows under more divergent rewrites, and is not reliably reduced by scale or explicit reasoning. Dedicated reward models trained with trajectory-grounded supervision are substantially more stable. These results show that paraphrase robustness is a core requirement for reliable VLM-based reward modeling in robotics.",
+    "pdf_url": "https://arxiv.org/pdf/2609.05401v1",
+    "published": "2026-09-04T17:47:58Z",
+    "fetched_at": "2026-09-07T03:44:23.325453"
   }
 ]
