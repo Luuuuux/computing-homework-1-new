@@ -1,78 +1,63 @@
 [
   {
-    "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
+    "title": "TILING I: Field-level Bayesian reconstruction of cosmological initial conditions during the epoch of reionization",
     "authors": [
-      "Linzhan Mou",
-      "Jiahui Lei",
-      "Zhiyang Dou",
-      "Chenyue Cai",
-      "Chaoyue Song",
-      "Adam Finkelstein",
-      "Szymon Rusinkiewicz"
+      "Nikolaos Triantafyllou",
+      "Andrei Mesinger",
+      "Steven Murray",
+      "Samuel Gagnon-Hartman"
     ],
-    "abstract": "Recent advances in automatic rigging now deliver animation-ready 3D assets at scale, yet generating the motion to drive them remains a bottleneck. Existing learned animators are topology-constrained: they rely on category-specific templates or require per-skeleton fine-tuning and reference motions at inference. We present UniMate, a unified foundation model that synthesizes articulated motion for arbitrary skeletons from a rigged 3D asset and a text prompt, with no test-time optimization or per-skeleton retraining. UniMate introduces a topology-aware diffusion transformer, which integrates skeletal topology into attention via three mechanisms: (1) a graph-aware attention bias from pairwise joint relations and geodesic distances; (2) a spectral rotary position embedding generalizing RoPE to arbitrary kinematic trees via the graph Laplacian; and (3) a global topological conditioner attention-pooled from the rest-pose skeleton. We also curate UniML3D, 13,006 motion sequences spanning bipedal, quadrupedal, avian, marine, insectoid, serpentine, and articulated rigid objects with unified canonicalization and text pairing. Trained on this dataset, UniMate outperforms state-of-the-art baselines in quality, generalization, and efficiency, and supports zero-shot cross-topology transfer, in-betweening, expansion, and text-guided editing. Our project page is available at https://linzhanmou.com/unimate/.",
-    "pdf_url": "https://arxiv.org/pdf/2609.05415v1",
-    "published": "2026-09-04T17:59:00Z",
-    "fetched_at": "2026-09-08T03:49:18.615630"
+    "abstract": "Reconstructing the initial conditions (ICs) of the matter field for an observed volume gives a complete picture of that region's temporal evolution. IC reconstruction is common at low redshifts but largely unexplored during the epoch of reionization (EoR; $z\\gtrsim 5$), partly due to difficulties modeling inhomogeneous cosmic radiation fields. Yet the EoR spans half the observable Universe, offering unmatched potential for astrophysics and cosmology. Here we quantify how well upcoming galaxy and 21cm observations can constrain ICs during the EoR. We develop $\\tt TILING$ ($\\bf T$omographic $\\bf I$nference of $\\bf L$inear $\\bf I$Cs via $\\bf N$etwork $\\bf G$rafting): a hybrid machine learning pipeline that first produces a point estimate of the ICs, which then improves a score-based diffusion network for generating posterior samples. We train $\\tt TILING$ on mock galaxy maps at varying UV magnitude limits, plus corresponding 21cm maps at varying noise levels and foreground \"wedge\" contamination. For fiducial survey choices, we achieve accurate IC reconstruction (posterior mean cross-correlation coefficients >0.8 and power spectrum errors under a few percent) down to $\\text{k}\\lesssim 0.2 \\text{cMpc}^{-1}$. While 21cm interferometry aids recovery of IC power spectra, most constraining power, especially for IC Fourier phases, comes from galaxy maps, underscoring the need for complementary observations when interpreting the 21cm signal. We show how $\\tt TILING$ can recover 21cm power spectrum modes excised by foreground contamination. Our framework can also: (i) guide follow-up observations of sub-volumes of interest; (ii) reconstruct galaxy evolution and reionization morphology for specific volumes; and (iii) isolate the contribution to reionization from the vast majority of galaxies unobservable by optical/IR telescopes like $\\it JWST$. Our code is publicly available.",
+    "pdf_url": "https://arxiv.org/pdf/2609.09102v1",
+    "published": "2026-09-08T17:40:36Z",
+    "fetched_at": "2026-09-09T03:53:34.689430"
   },
   {
-    "title": "Tracing the Cosmic Origins: Machine Learning Reconstruction of the Primordial Density Field from EoR Observations",
+    "title": "Curriculum Learning as Transport: Understanding Curricula with Wasserstein Geodesics",
     "authors": [
-      "Anchal Saxena",
-      "P. Daniel Meerburg",
-      "Guochao Sun",
-      "Tzu-Ching Chang",
-      "Lluís Mas-Ribas"
+      "Changho Shin",
+      "David Alvarez-Melis"
     ],
-    "abstract": "Reconstructing the initial conditions of the Universe from late-time tracers would unlock cosmological information buried by non-linear structure formation and astrophysics. We reconstruct the initial density field at $z\\sim300$ from simulated 21-cm and CO(1-0) line-intensity maps at $z\\sim8$ generated with LIMFAST. Using a three-dimensional U-Net, we reconstruct the initial conditions and evaluate its impact on cosmological parameter constraints. The two tracers probe complementary environments: 21-cm emission traces neutral, low-density regions of the intergalactic medium, while CO traces overdense, star-forming regions. To emulate realistic observations, we model instrumental effects for SKA1-Low- and COMAP-ERA-like surveys, including finite angular resolution and thermal noise. We assess reconstruction performance through the cross-correlation coefficient between reconstructed and true initial density fields, $|C(k)|$. In the noiseless case, combining both tracers delivers the most accurate recovery across ionisation states, with $|C(k)| \\gtrsim$ 0.90 for $k \\lesssim$ 0.75 Mpc$^{-1}$. With observational effects, small-scale information is degraded, but combining tracers still achieves $|C(k)| \\gtrsim$ 0.70 for $k \\lesssim$ 0.3 Mpc$^{-1}$. To quantify information gain, we perform simulation-based inference of cosmological parameters from power-spectrum summaries before and after reconstruction. In both noiseless and noisy settings, reconstruction tightens parameter constraints: uncertainties on $σ_8$ and $n_{\\rm s}$ improve by $\\sim2\\times$, with smaller but consistent gains for other parameters. This is further confirmed using Kullback-Leibler divergence diagnostics for an ensemble of observations. These results indicate that joint analysis of future 21-cm and CO surveys, combined with such reconstruction, can partially recover otherwise inaccessible cosmological information.",
-    "pdf_url": "https://arxiv.org/pdf/2609.05412v1",
-    "published": "2026-09-04T17:58:34Z",
-    "fetched_at": "2026-09-08T03:49:18.615674"
+    "abstract": "Curriculum learning is governed by several coupled design choices---how difficulty is defined, how examples are ordered, how much exposure each level receives, and how quickly training moves across levels---making it hard to isolate what actually helps. We present Wasserstein curriculum paths, a simple transport-based framework that decouples these factors by representing curricula as trajectories of training distributions over discrete difficulty levels. Across a calibrated synthetic suite with 12 tasks and 33 difficulty axes, we use this framework to isolate the effects of ordering, matched exposure, endpoint smoothness, and pacing under fixed training budgets. We find that curriculum effects are strongly context-dependent: no single strategy dominates across tasks, difficulty axes, and budgets, and curricula mainly change where a fixed budget is spent most effectively. Within this framework, easy-to-hard ordering improves hard-level performance relative to exposure-matched static sampling, showing that the benefit is not explained by cumulative exposure alone. We further show that endpoint smoothness and pacing substantially affect where along the difficulty spectrum a curriculum is effective. Finally, we show that the same transport view naturally supports extensions to learned pacing through geometry and to structured difficulty spaces beyond one-dimensional orderings.",
+    "pdf_url": "https://arxiv.org/pdf/2609.09099v1",
+    "published": "2026-09-08T17:39:16Z",
+    "fetched_at": "2026-09-09T03:53:34.689451"
   },
   {
-    "title": "Early against Late: A contrast on dark energy in the light of DESI DR2",
+    "title": "The Surprising Effectiveness of Approximate Value Iteration in Self-Play",
     "authors": [
-      "Miguel A. Zapata",
-      "Karim Carrion",
-      "Gabriela Garcia-Arroyo"
+      "Raphael Boige",
+      "Amine Boumaza",
+      "Bruno Scherrer"
     ],
-    "abstract": "Recent findings from Dark Energy Spectroscopic Instrument (DESI) Baryon Acoustic Oscillation (BAO) measurements, combined with Type Ia supernovae and Cosmic Microwave Background (CMB) data, suggest potential parameter-level deviations from $Λ\\text{CDM}$. However, parameter exclusions omit prior-volume penalties, whereas Bayesian evidence uncovers a stark dichotomy between early- and late-time dynamics. To quantify this effect, we perform a Bayesian model comparison that explicitly accounts for the cosmological epoch of dark energy dynamics, contrasting two schemes acting in opposite epochs of cosmic history: pre-recombination Early Dark Energy (EDE) and late-time Chevallier--Polarski--Linder (CPL), both measured against a baseline $Λ$CDM. We validate the learned harmonic-mean estimator against \\texttt{UltraNest} (at background level) before applying it to the CMB analysis. Background-only data already disfavor both extensions, yielding $\\ln B_{Λ\\text{CDM},\\text{EDE}} = 2.45 \\pm 0.25$ and $\\ln B_{Λ\\text{CDM},\\text{CPL}} = 3.45 \\pm 0.24$. Including CMB sharpens this result: EDE is decisively rejected ($\\ln B_{Λ\\text{CDM},\\text{EDE}} = 12.44 \\pm 0.05$) with its early-time fraction constrained to $10^3\\,Ω_e^{\\rm EDE} = 2.0^{+0.6}_{-1.0}$, whereas CPL remains moderately disfavored ($\\ln B_{Λ\\text{CDM},\\text{CPL}} = 2.33 \\pm 0.06$), even though 2D parameter posteriors for both models display a multi-$σ$ deviation from $Λ\\text{CDM}$. Thus, Bayesian evidence weakens reported preferences for dark energy dynamics, with the impact depending on the cosmic epoch involved, confirmed by our functional reconstructions of $w_{\\rm de}(z)$ and $Ω_{\\rm de}(z)$ from posterior samples.",
-    "pdf_url": "https://arxiv.org/pdf/2609.05410v1",
-    "published": "2026-09-04T17:58:04Z",
-    "fetched_at": "2026-09-08T03:49:18.615689"
+    "abstract": "Combining search with function approximation has driven major advances in game-playing programs, making self-play algorithms more competitive than ever. Still, the computational overhead of the most popular methods, based on Monte Carlo Tree Search (MCTS), can be substantial. In this work, we investigate whether simpler methods remain competitive in non-trivial, moderately sized games such as Connect Four, Hex(7x7) and synthetic games. We train a minimal self-play implementation of Approximate Value Iteration (AVI) and use ground-truth oracles for exact evaluation. Contrary to expectations, our results demonstrate the surprising effectiveness of AVI: it learns more accurate value functions than those learned by AlphaZero, while its one-step-lookahead greedy policies remain competitive with MCTS-based policies at substantially lower training and inference costs. Preliminary experiments on Othello and Go(9x9) show that AVI trains stably on larger games and learns effective value functions. These findings suggest that the success of MCTS-based methods may have eclipsed simpler approaches that have become increasingly practical with modern deep-learning tools.",
+    "pdf_url": "https://arxiv.org/pdf/2609.09094v1",
+    "published": "2026-09-08T17:37:19Z",
+    "fetched_at": "2026-09-09T03:53:34.689466"
   },
   {
-    "title": "RegionFed: Federated Learning for Personalized Query Understanding in Heterogeneous Retail Environments",
+    "title": "ThinkPrior: Zero-Rollout Difficulty Priors for Cold-Start Prompt Selection in RLVR",
     "authors": [
-      "Quoc H. Nguyen",
-      "Ali Lafzi",
-      "Abhijeet Phatak",
-      "Siddharth Pratap Singh",
-      "Rohit Upadhyay",
-      "Yogananda Domlur Seetharama",
-      "Chittaranjan Tripathy"
+      "Tommy Sha",
+      "Skylar Zhai",
+      "Siqi Zhao"
     ],
-    "abstract": "Retail search systems serve diverse geographic regions with distinct query patterns, vocabularies, and product preferences, creating significant data heterogeneity that challenges both privacy-preserving training and model personalization. Federated learning offers a natural solution for privacy, but standard FL methods produce global models that sacrifice regional performance, while existing personalized FL approaches operate at the parameter level and catastrophically collapse on modern transformers (below 10\\% accuracy on T5) due to tied embeddings and LayerNorm interactions. We introduce RegionFed, an \\textit{architecture-robust} federated learning framework that sidesteps this failure by operating entirely at the gradient level. RegionFed uses the $\\ell_2$ conflict between regional and global gradients as a unified signal that (i) diagnoses heterogeneity, (ii) routes each region to the cheapest sufficient personalization strategy, and (iii) adaptively controls personalization strength. Because it treats models as differentiable black boxes, RegionFed deploys on T5-Small, T5-3B, RoBERTa, and CNN with zero code changes, providing large gains on transformers (where parameter-level methods collapse) and consistent improvements on CNNs. Across three public datasets (Amazon ESCI, Amazon Reviews, LEAF-FEMNIST) and four architectures, RegionFed-Meta achieves 92.27\\%, closing the gap to the privacy-violating centralized upper bound (Centralized + Regional Weighting: 92.04\\%, $Δ$=0.23pp, within 1$σ$) while providing $(ε{\\approx}0.60)$-differential privacy and $\\mathcal{O}(1/\\sqrt{T})$ convergence.",
-    "pdf_url": "https://arxiv.org/pdf/2609.05403v1",
-    "published": "2026-09-04T17:50:10Z",
-    "fetched_at": "2026-09-08T03:49:18.615707"
+    "abstract": "In reinforcement learning with verifiable rewards (RLVR) trained with group relative policy optimization (GRPO), the KL-free reward-advantage term studied here depends on within-group reward variation. If all rollouts in a group are correct or all are wrong, their group-relative advantages are identically zero; these zero-advantage silent groups provide no reward-advantage gradient, yet uniform sampling spends 39% of a run's rollouts on them. History-based prompt selection must first spend target-policy rollouts to estimate difficulty, creating a cold start with rollout waste; ThinkPrior instead uses an external anchor in one offline pass to construct a zero-rollout difficulty prior before the first target-policy rollout. The verifier-scored anchor pass rate supplies an external-anchor initialization for a Beta posterior; ThinkPrior selects by expected learnability and then updates from training outcomes, changing neither the loss nor the optimizer. On Qwen2.5-Math-7B across sixteen seeds, ThinkPrior more than halves early silent groups and cuts wasted rollouts through step 30 by nearly a fifth, while we detect no difference in final accuracy. On this 250-prompt pool the fixed-budget result is a reallocation rather than a net saving. The measured ThinkPrior+DAPO composition reduces generated rollouts by 10.6% while both arms retain the same 3840-rollout update budget. The prior requires no target-policy rollout before the first selection, but the posterior thereafter uses target-policy outcomes.",
+    "pdf_url": "https://arxiv.org/pdf/2609.09075v1",
+    "published": "2026-09-08T17:30:12Z",
+    "fetched_at": "2026-09-09T03:53:34.689480"
   },
   {
-    "title": "Same Trajectory, Contradictory Rewards (ROBORMBENCH): Paraphrase Fragility in Vision Language Reward Models",
+    "title": "Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering",
     "authors": [
-      "Wonje Jeung",
-      "Sangyeon Yoon",
-      "Hyesoo Hong",
-      "Yoonjun Cho",
-      "Dongjae Jeon",
-      "Bumjun Kim",
-      "Jean Oh",
-      "Youngjae Yu",
-      "Albert No"
+      "Jiahui Zhang",
+      "Bonian Han",
+      "Gongbo Liang",
+      "Yu Zhang"
     ],
-    "abstract": "Vision-language models are increasingly used as reward functions for robotic learning, but this role requires paraphrase invariance: the same trajectory should receive the same reward under semantically equivalent goal descriptions. We show that current VLM reward models often violate this property. Paraphrasing the instruction alone can substantially change predicted progress scores, and can even flip identical robot behavior between failure and success. To measure this failure mode, we introduce ROBORMBENCH, a benchmark with 2,390 real-robot trajectories, ground-truth progress labels, and 21,673 verified paraphrases spanning lexical, syntactic, and action-goal rewrites. Across proprietary and open-source VLMs, paraphrase-induced instability is widespread and severe, grows under more divergent rewrites, and is not reliably reduced by scale or explicit reasoning. Dedicated reward models trained with trajectory-grounded supervision are substantially more stable. These results show that paraphrase robustness is a core requirement for reliable VLM-based reward modeling in robotics.",
-    "pdf_url": "https://arxiv.org/pdf/2609.05401v1",
-    "published": "2026-09-04T17:47:58Z",
-    "fetched_at": "2026-09-08T03:49:18.615726"
+    "abstract": "Autonomous 3D active mapping requires a space robot to choose where to sense while building the geometry needed for navigation. Learned occupancy completion extends spatial context beyond the current field of view, but one predicted map often serves two planning roles: it scores expected surface gain and constrains collision-free motion. Unsupported occupancy can therefore distort both where the robot looks and where it believes it can travel. We study this coupled interface in a controlled closed-loop benchmark by holding the active-mapping system fixed and varying only its planner-facing occupancy across observation-only, learned, oracle-corrected, and ground-truth conditions. Improving occupancy accuracy does not monotonically improve closed-loop coverage: across 25 starts, planning with ground-truth occupancy reaches 70% of the learned baseline's final coverage 12.7 steps earlier on average, while increasing final coverage by only 0.031. Guided by this diagnosis, we introduce an observation-gated filter that retains completion in insufficiently observed regions and suppresses predictions only after repeated frustum exposure without nearby RGB-D support. The filter improves both targeted failure-prone starts without retraining or ground truth. These results motivate online revision of planner-facing geometry during autonomous intervals between communication windows. The current study assumes benchmark RGB-D observations and sufficiently accurate pose estimates; planetary sensing conditions and accumulated localization drift remain to be evaluated.",
+    "pdf_url": "https://arxiv.org/pdf/2609.09069v1",
+    "published": "2026-09-08T17:23:37Z",
+    "fetched_at": "2026-09-09T03:53:34.689495"
   }
 ]
