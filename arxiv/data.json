@@ -1,63 +1,64 @@
 [
   {
-    "title": "TILING I: Field-level Bayesian reconstruction of cosmological initial conditions during the epoch of reionization",
+    "title": "Towards Tackling Application Logic Flaws through Autonomous Formal-Logic Modeling and Automated Reasoning",
     "authors": [
-      "Nikolaos Triantafyllou",
-      "Andrei Mesinger",
-      "Steven Murray",
-      "Samuel Gagnon-Hartman"
+      "Yiwei Fang",
+      "Yichen Liu",
+      "Ze Jin",
+      "Haoqiang Wang",
+      "Qixu Liu",
+      "Luyi Xing"
     ],
-    "abstract": "Reconstructing the initial conditions (ICs) of the matter field for an observed volume gives a complete picture of that region's temporal evolution. IC reconstruction is common at low redshifts but largely unexplored during the epoch of reionization (EoR; $z\\gtrsim 5$), partly due to difficulties modeling inhomogeneous cosmic radiation fields. Yet the EoR spans half the observable Universe, offering unmatched potential for astrophysics and cosmology. Here we quantify how well upcoming galaxy and 21cm observations can constrain ICs during the EoR. We develop $\\tt TILING$ ($\\bf T$omographic $\\bf I$nference of $\\bf L$inear $\\bf I$Cs via $\\bf N$etwork $\\bf G$rafting): a hybrid machine learning pipeline that first produces a point estimate of the ICs, which then improves a score-based diffusion network for generating posterior samples. We train $\\tt TILING$ on mock galaxy maps at varying UV magnitude limits, plus corresponding 21cm maps at varying noise levels and foreground \"wedge\" contamination. For fiducial survey choices, we achieve accurate IC reconstruction (posterior mean cross-correlation coefficients >0.8 and power spectrum errors under a few percent) down to $\\text{k}\\lesssim 0.2 \\text{cMpc}^{-1}$. While 21cm interferometry aids recovery of IC power spectra, most constraining power, especially for IC Fourier phases, comes from galaxy maps, underscoring the need for complementary observations when interpreting the 21cm signal. We show how $\\tt TILING$ can recover 21cm power spectrum modes excised by foreground contamination. Our framework can also: (i) guide follow-up observations of sub-volumes of interest; (ii) reconstruct galaxy evolution and reionization morphology for specific volumes; and (iii) isolate the contribution to reionization from the vast majority of galaxies unobservable by optical/IR telescopes like $\\it JWST$. Our code is publicly available.",
-    "pdf_url": "https://arxiv.org/pdf/2609.09102v1",
-    "published": "2026-09-08T17:40:36Z",
-    "fetched_at": "2026-09-09T03:53:34.689430"
+    "abstract": "Logic flaws pose significant challenges in the design and implementation of modern, semantically rich systems and applications, impacting security, privacy, and trust. These flaws are inherently tied to business-specific semantics and threat models, making their discovery and reasoning difficult and hard to scale. Real-world systems often exhibit diverse application features, complex protocol logic, and domain-specific threat models, necessitating substantial human effort and domain expertise for effective security analysis. In this paper, we introduce LL-Verifier, a novel, automated framework for identifying logic vulnerabilities built on (1) large language models for autonomous modeling, and (2) logic model checkers for rigorous reasoning. LL-Verifier processes natural language inputs, in particular protocol descriptions and security goals, to automatically generate formal logic models and properties expressed in a new logic language built on a generic logic language Maude, optimized for modeling arbitrary application-level semantics. These formal models are then converted into logical state machines, enabling exhaustive, rigorous verification through logic level model checking. This approach streamlines the analysis of diverse, application-level protocols deployed in real-world scenarios, offering automated, exhaustive, and precise reasoning within their logical constraints. We evaluated the high effectiveness, efficiency, and practicality of LL-Verifier by applying it to 27 access control protocols of widely used IoT devices, which come with vendor-specific logic flows and semantics. While LL-verifier tackles a hard problem in application security, i.e., automatic logic flaws discovery, our analysis uncovers a range of sophisticated logic vulnerabilities in IoT protocols and devices with serious security and privacy implications.",
+    "pdf_url": "https://arxiv.org/pdf/2609.10537v1",
+    "published": "2026-09-09T17:58:58Z",
+    "fetched_at": "2026-09-10T03:53:06.252374"
   },
   {
-    "title": "Curriculum Learning as Transport: Understanding Curricula with Wasserstein Geodesics",
+    "title": "Likelihood-free inference with nuisance parameters through normalizing flows",
     "authors": [
-      "Changho Shin",
-      "David Alvarez-Melis"
+      "Phil Assheton"
     ],
-    "abstract": "Curriculum learning is governed by several coupled design choices---how difficulty is defined, how examples are ordered, how much exposure each level receives, and how quickly training moves across levels---making it hard to isolate what actually helps. We present Wasserstein curriculum paths, a simple transport-based framework that decouples these factors by representing curricula as trajectories of training distributions over discrete difficulty levels. Across a calibrated synthetic suite with 12 tasks and 33 difficulty axes, we use this framework to isolate the effects of ordering, matched exposure, endpoint smoothness, and pacing under fixed training budgets. We find that curriculum effects are strongly context-dependent: no single strategy dominates across tasks, difficulty axes, and budgets, and curricula mainly change where a fixed budget is spent most effectively. Within this framework, easy-to-hard ordering improves hard-level performance relative to exposure-matched static sampling, showing that the benefit is not explained by cumulative exposure alone. We further show that endpoint smoothness and pacing substantially affect where along the difficulty spectrum a curriculum is effective. Finally, we show that the same transport view naturally supports extensions to learned pacing through geometry and to structured difficulty spaces beyond one-dimensional orderings.",
-    "pdf_url": "https://arxiv.org/pdf/2609.09099v1",
-    "published": "2026-09-08T17:39:16Z",
-    "fetched_at": "2026-09-09T03:53:34.689451"
+    "abstract": "We present a simple decomposition of a neural-network-based normalizing flow that naturally uncovers a pivotal statistic (or something close) in the presence of nuisance parameters, based only on a sample generator from the distribution of interest. We show that the statistic is near-pivotal in the sense of minimum average KL-divergence of its $p$-values versus uniform and we argue that it can be expected to have good power when the dimension of the statistic equals the dimension of the parameter. It is able to incorporate prior knowledge about group invariances such as translation and scale. It can discover the one-sample $t$-test almost exactly, outperforms the Welch test in terms of worst-case size over a constrained variance-ratio range and achieves good calibration on partial biserial correlations, while showing higher power (and being much faster) on small-to-moderate samples than profile likelihood-ratio techniques.",
+    "pdf_url": "https://arxiv.org/pdf/2609.10534v1",
+    "published": "2026-09-09T17:58:15Z",
+    "fetched_at": "2026-09-10T03:53:06.252397"
   },
   {
-    "title": "The Surprising Effectiveness of Approximate Value Iteration in Self-Play",
+    "title": "Guiding Image-to-3D Generation with Test-Time Partial Observations",
     "authors": [
-      "Raphael Boige",
-      "Amine Boumaza",
-      "Bruno Scherrer"
+      "Jerred Chen",
+      "Simon Weber",
+      "Ronald Clark"
     ],
-    "abstract": "Combining search with function approximation has driven major advances in game-playing programs, making self-play algorithms more competitive than ever. Still, the computational overhead of the most popular methods, based on Monte Carlo Tree Search (MCTS), can be substantial. In this work, we investigate whether simpler methods remain competitive in non-trivial, moderately sized games such as Connect Four, Hex(7x7) and synthetic games. We train a minimal self-play implementation of Approximate Value Iteration (AVI) and use ground-truth oracles for exact evaluation. Contrary to expectations, our results demonstrate the surprising effectiveness of AVI: it learns more accurate value functions than those learned by AlphaZero, while its one-step-lookahead greedy policies remain competitive with MCTS-based policies at substantially lower training and inference costs. Preliminary experiments on Othello and Go(9x9) show that AVI trains stably on larger games and learns effective value functions. These findings suggest that the success of MCTS-based methods may have eclipsed simpler approaches that have become increasingly practical with modern deep-learning tools.",
-    "pdf_url": "https://arxiv.org/pdf/2609.09094v1",
-    "published": "2026-09-08T17:37:19Z",
-    "fetched_at": "2026-09-09T03:53:34.689466"
+    "abstract": "Image-to-3D models can generate visually compelling 3D assets from a single RGB image, but their geometry is often only loosely constrained by the available observations, limiting their use in applications that require geometric fidelity. In many real-world settings, however, partial geometric observations of the object may be available at test time. We introduce a training-free framework for incorporating such evidence into pretrained image-to-3D generative models without retraining or finetuning. To do this, we guide generation using a ray-consistent observation likelihood defined over the model's occupancy representation, combining surface occupancy and free-space evidence. Applied to SAM 3D and its multi-view extension, our approach substantially improves geometric fidelity across different levels of observability, as well as visual quality. Our results demonstrate that pretrained image-to-3D models can effectively integrate partial geometric observations through explicit test-time guidance, complementing their learned generative priors without modifying the underlying model.",
+    "pdf_url": "https://arxiv.org/pdf/2609.10531v1",
+    "published": "2026-09-09T17:58:04Z",
+    "fetched_at": "2026-09-10T03:53:06.252413"
   },
   {
-    "title": "ThinkPrior: Zero-Rollout Difficulty Priors for Cold-Start Prompt Selection in RLVR",
+    "title": "A positive resolution of the gap-entropy conjecture",
     "authors": [
-      "Tommy Sha",
-      "Skylar Zhai",
-      "Siqi Zhao"
+      "P. M. Aronow",
+      "Nathan Kallus",
+      "Patrick Lopatto"
     ],
-    "abstract": "In reinforcement learning with verifiable rewards (RLVR) trained with group relative policy optimization (GRPO), the KL-free reward-advantage term studied here depends on within-group reward variation. If all rollouts in a group are correct or all are wrong, their group-relative advantages are identically zero; these zero-advantage silent groups provide no reward-advantage gradient, yet uniform sampling spends 39% of a run's rollouts on them. History-based prompt selection must first spend target-policy rollouts to estimate difficulty, creating a cold start with rollout waste; ThinkPrior instead uses an external anchor in one offline pass to construct a zero-rollout difficulty prior before the first target-policy rollout. The verifier-scored anchor pass rate supplies an external-anchor initialization for a Beta posterior; ThinkPrior selects by expected learnability and then updates from training outcomes, changing neither the loss nor the optimizer. On Qwen2.5-Math-7B across sixteen seeds, ThinkPrior more than halves early silent groups and cuts wasted rollouts through step 30 by nearly a fifth, while we detect no difference in final accuracy. On this 250-prompt pool the fixed-budget result is a reallocation rather than a net saving. The measured ThinkPrior+DAPO composition reduces generated rollouts by 10.6% while both arms retain the same 3840-rollout update budget. The prior requires no target-policy rollout before the first selection, but the posterior thereafter uses target-policy outcomes.",
-    "pdf_url": "https://arxiv.org/pdf/2609.09075v1",
-    "published": "2026-09-08T17:30:12Z",
-    "fetched_at": "2026-09-09T03:53:34.689480"
+    "abstract": "We prove the gap-entropy conjecture for fixed-confidence best-arm identification with independent unit-variance Gaussian arms, means in $[0,1]$, and a unique optimal arm. For each suboptimal arm $i$, let $Δ_i=μ_*-μ_i$ be its gap from the optimal mean, and write $H=\\sum_{i\\ne *}Δ_i^{-2}$. Let $p_r$ be the fraction of $H$ contributed by arms with $2^{-(r+1)}<Δ_i\\le2^{-r}$, and let $\\mathrm{Ent}(I)=\\sum_{r:p_r>0} p_r\\log(1/p_r)$. Among all algorithms that identify the optimal arm with probability at least $1-δ$ on every Gaussian instance, the optimal expected number of samples on a given instance, averaged over all permutations of the arm labels, is within absolute constant factors of $H(\\log(1/δ)+\\mathrm{Ent}(I))$. Moreover, there is an algorithm, independent of the instance, whose expected number of samples is bounded by a constant multiple of this quantity plus $g^{-2}\\log\\log(e^e/g)$, where $g=\\min_{i\\ne *}Δ_i$ is the gap to the closest competitor.",
+    "pdf_url": "https://arxiv.org/pdf/2609.10529v1",
+    "published": "2026-09-09T17:57:11Z",
+    "fetched_at": "2026-09-10T03:53:06.252427"
   },
   {
-    "title": "Rethinking Learned Occupancy in Autonomous Active Mapping with Observation-Gated Filtering",
+    "title": "Characterizing Language Generation in the Limit: Finite Witnesses and a Separation-Width Hierarch",
     "authors": [
-      "Jiahui Zhang",
-      "Bonian Han",
-      "Gongbo Liang",
-      "Yu Zhang"
+      "Xiaoyu Li",
+      "Andi Han",
+      "Jiaojiao Jiang",
+      "Junbin Gao"
     ],
-    "abstract": "Autonomous 3D active mapping requires a space robot to choose where to sense while building the geometry needed for navigation. Learned occupancy completion extends spatial context beyond the current field of view, but one predicted map often serves two planning roles: it scores expected surface gain and constrains collision-free motion. Unsupported occupancy can therefore distort both where the robot looks and where it believes it can travel. We study this coupled interface in a controlled closed-loop benchmark by holding the active-mapping system fixed and varying only its planner-facing occupancy across observation-only, learned, oracle-corrected, and ground-truth conditions. Improving occupancy accuracy does not monotonically improve closed-loop coverage: across 25 starts, planning with ground-truth occupancy reaches 70% of the learned baseline's final coverage 12.7 steps earlier on average, while increasing final coverage by only 0.031. Guided by this diagnosis, we introduce an observation-gated filter that retains completion in insufficiently observed regions and suppresses predictions only after repeated frustum exposure without nearby RGB-D support. The filter improves both targeted failure-prone starts without retraining or ground truth. These results motivate online revision of planner-facing geometry during autonomous intervals between communication windows. The current study assumes benchmark RGB-D observations and sufficiently accurate pose estimates; planetary sensing conditions and accumulated localization drift remain to be evaluated.",
-    "pdf_url": "https://arxiv.org/pdf/2609.09069v1",
-    "published": "2026-09-08T17:23:37Z",
-    "fetched_at": "2026-09-09T03:53:34.689495"
+    "abstract": "Language generation in the limit asks for valid unseen elements from every exhaustive positive presentation of an unknown infinite language. We characterize this task for arbitrary families over a countable universe. Generation is possible exactly when each target can be assigned a finite positive witness so that the targets activated by any finite sample have an infinite common intersection. The necessary direction follows from a universal normalization: a search through unconfirmed histories converts any successful generator into one depending only on the observed set. We then ask how large compatible witnesses must be. Positive separation width records the smallest uniform size bound, with two further levels for unbounded finite witnesses and the absence of any compatible finite-witness assignment. Every level occurs. Countable families admit singleton witnesses, explicit families realize every finite width, and a union of two families with infinite common cores requires unbounded finite witnesses. Finally, countable-support and finite-profile obstructions explain why local combinatorial data cannot determine generation in the limit. The characterization and full width hierarchy are checked in Lean, including the simplified normalization and a direct diagonal capture lemma. The accompanying Lean development is maintained at https://github.com/xiaoyulics/language-generation-characterization",
+    "pdf_url": "https://arxiv.org/pdf/2609.10525v1",
+    "published": "2026-09-09T17:54:30Z",
+    "fetched_at": "2026-09-10T03:53:06.252442"
   }
 ]
