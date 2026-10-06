@@ -1,79 +1,80 @@
 [
   {
-    "title": "Less Decoder is More Encoder: Geometric Representation Learning from Novel View Synthesis",
+    "title": "Base Models Can Reason By Taking a Cue From Training Data",
     "authors": [
-      "Keerthi Kaashyap",
-      "Dennis Anthony",
-      "Akshay Krishnan",
-      "Nhi Ngoc Nguyen",
-      "Jeremy Collins",
-      "James Hays",
-      "Shreyas Kousik",
-      "Animesh Garg"
+      "Sophie L. Wang",
+      "Amil Dravid",
+      "Rulin Shao",
+      "Kevin Farhat",
+      "Sewon Min",
+      "Alexei A. Efros"
     ],
-    "abstract": "This paper examines the role of Novel View Synthesis (NVS) in geometric representation learning. In principle, NVS should reason about 3D scene structure, thereby enabling transferable multi-view geometric representations. Yet, existing encoder-based NVS methods yield poor representations. This is not because of a lack of supervisory signal, but rather due to inconspicuous architectural choices: \\textit{spatially expressive decoders} that dilute representational capabilities of the scene encoder, and \\textit{low-level pixel-space targets} that hinder feature learning. We present SNAP, a self-supervised encoder-decoder transformer that addresses both through a pose-conditioned local decoder and a latent-space reconstruction objective. SNAP is task agnostic, and we show that it is competitive with special-purpose geometry-supervised methods. SNAP also performs competitively against self-supervised representations across five tasks: visual localization, pose estimation, point correspondence, depth estimation, and robot manipulation. Remarkably, SNAP's patch features exhibit emergent viewpoint invariance that approaches heavily supervised models despite lower compute and data budgets. Under camera shifts where standard 2D representations collapse, SNAP degrades more gracefully, revealing that restricting decoder expressivity actively prevents the suppression of transferable geometric structure. https://snap-nvs.github.io",
-    "pdf_url": "https://arxiv.org/pdf/2610.03717v1",
-    "published": "2026-10-02T17:59:14Z",
-    "fetched_at": "2026-10-05T04:50:37.019156"
+    "abstract": "In this paper, we study how training data creates associations between the tokens at the start of a base model's response and the reasoning behavior that follows. First, we demonstrate that fixing particular starting token cues makes a base model's performance competitive with that of its reinforcement learning (RL)-trained counterparts on math and coding. For instance, the cue \".\\n\\nOkay\" raises Olmo-3-7B's MATH-500 pass@1 accuracy from 42% to 78%, while \"Alright,\" raises Qwen3-14B's from 72% to 87%. Second, RL makes these cues more likely, while fixing them recovers much of its performance gain over the base model. Third, we trace the reasoning effects of token cues to the training data. We perform causal data interventions to turn an arbitrary word, such as \"chicken\", into an effective reasoning cue, or remove an existing cue's effect. A similar edit makes the prompt instruction \"Think duck duck goose\" as effective as \"Think step by step\" at eliciting reasoning. We also find that the hidden state representations induced by different cues correlate with different document types from the training set. Finally, we extend our study of token cues with a case study in language model safety, finding that different cues elicit distinct refusal and compliance behaviors that correspond to different types of training data.",
+    "pdf_url": "https://arxiv.org/pdf/2610.06851v1",
+    "published": "2026-10-05T17:59:52Z",
+    "fetched_at": "2026-10-06T05:37:32.508960"
   },
   {
-    "title": "MoSE3: Learning World-Space SE(3) at Every Pixel",
+    "title": "InterMimicGen: Scaling Humanoid Loco-Manipulation through Self-Evolving Motion Imitation",
     "authors": [
-      "Jiahuan Cheng",
-      "Zhiyi Li",
-      "Tian Xia",
-      "Ruojin Cai",
-      "Yilun Du",
-      "Qianqian Wang"
+      "Yucheng Zhang",
+      "Sirui Xu",
+      "Jinhong Li",
+      "Liuyu Bian",
+      "Anatulya Nandi",
+      "Derek Zhang",
+      "Xiangchen Liu",
+      "Xueting Li",
+      "Umar Iqbal",
+      "Yu-Xiong Wang",
+      "Liang-Yan Gui"
     ],
-    "abstract": "Dense 3D point tracking has been a prominent paradigm for modeling motion in dynamic scenes, but a point track is just a 3-DoF translation curve per pixel: it captures where pixels go, not the rotation of the underlying part, nor which pixels move together as one body. We propose MoSE3, the first feed-forward model that predicts dense SE(3) motion from monocular RGB video, producing full 6-DoF rigid transforms at every pixel in world space. Per-pixel SE(3) motion offers a richer view of how a scene moves: rotation, translation, and grouping all at once. Directly predicting SE(3) is challenging: rotations lie on a curved manifold that is ill-suited to Euclidean regression, and annotations for SE(3) are particularly difficult to acquire. To address these challenges, MoSE3 predicts per-pixel SE(3) through two jointly learned intermediates, 3D point tracks and rigidity embeddings, and recovers SE(3) by differentiably fitting transforms within each soft rigid cluster, enabling end-to-end prediction and supervision. To close the data gap, we introduce Art-Kubric, a large-scale synthetic dataset with dense SE(3) and rigidity labels for articulated objects with rich physical interactions. MoSE3 achieves state-of-the-art SE(3) estimation at pixel, part, and object levels on both rigid and articulated benchmarks, and state-of-the-art average 3D point tracking accuracy across three datasets, while showing strong generalization to real-world videos despite being trained solely on synthetic motion data.",
-    "pdf_url": "https://arxiv.org/pdf/2610.03716v1",
-    "published": "2026-10-02T17:58:52Z",
-    "fetched_at": "2026-10-05T04:50:37.019180"
+    "abstract": "Captured human-object interactions provide rich supervision for humanoid loco-manipulation, but they are sparse, heterogeneous, and not directly executable by robots. We introduce InterMimicGen, a self-evolving motion-imitation framework in which robot motion data and a tracking policy improve each other. First, we consolidate motion-captured human-object interaction datasets and retarget them into humanoid robot references while preserving whole-body coordination and dexterous hand-object relationships. This produces a large and diverse humanoid robot reference collection for dexterous whole-body loco-manipulation. Second, we train a physics-based generalist tracker that executes these references in simulation on a humanoid with dexterous hands, covering a scale and diversity beyond prior humanoid tracking systems for loco-manipulation. Third, we close a data flywheel: each round makes small, task-preserving changes to where an interaction takes place and how the body performs it, fine-tunes the tracker on them, and keeps only the variants whose simulated execution completes the task, which seed the next round. With more iterations, these small edits compound into broader coverage around the sparse original demonstrations while preserving task semantics and motion quality. Experiments show contact-preserving retargeting across robot configurations, broad tracking with a single generalist policy, executable motions that keep growing over augmentation rounds, and transfer to real robots. InterMimicGen provides a unified path from heterogeneous human demonstrations to a continually expanding motion resource for humanoid robot learning.",
+    "pdf_url": "https://arxiv.org/pdf/2610.06850v1",
+    "published": "2026-10-05T17:59:50Z",
+    "fetched_at": "2026-10-06T05:37:32.508992"
   },
   {
-    "title": "What Should World Models Forget? Stratified Retention for Continual Adaptation",
+    "title": "TranScope: What the Software Hides About LLM Training Data, the Hardware Reveals at Scale, and Accelerators Magnify",
     "authors": [
-      "Nishit Anand",
-      "Ramani Duraiswami",
-      "Dinesh Manocha"
+      "Joshua Kalyanapu",
+      "Darsh Asher",
+      "Kaushal Mhapsekar",
+      "Bita Aslrousta",
+      "Rushiraj Chaitanyakumar Sheth",
+      "Maharshi Mukeshkumar Oza",
+      "Achyuta Kannan",
+      "Samira Mirbagher Ajorpaz"
     ],
-    "abstract": "Continual learning treats degradation on previously seen data as evidence of failure, a convention inherited from settings with a stationary prediction target, where a correct label remains correct indefinitely. World models do not satisfy this condition. Their prediction target is the environment, which changes, so knowledge that was accurate when acquired may later become false, and discarding it is required behavior rather than a defect. Non-stationary ground truth is well studied in the concept drift literature and in the temporal factuality of language models, but has not been formulated for world models, which are distinctive in that they also encode knowledge that must never be revised. We argue that continual world models require retention stratified by invariance timescale, separating invariants such as physics and object permanence, which must never be revised, from instance-level facts that should be revised as soon as the environment changes. Standard forgetting metrics cannot distinguish a world model that has correctly revised outdated knowledge from one that has suffered catastrophic forgetting, and consequently rank a frozen model highest, while existing physical-reasoning benchmarks evaluate only frozen checkpoints. We propose differential retention, which reports invariant regression testing across the adaptation stream jointly with revision latency, without aggregation.",
-    "pdf_url": "https://arxiv.org/pdf/2610.03713v1",
-    "published": "2026-10-02T17:58:14Z",
-    "fetched_at": "2026-10-05T04:50:37.019193"
+    "abstract": "Membership is the root privacy primitive in machine learning: to date, no hardware-based out-of-distribution detection on black-box models has been demonstrated against constant-time, static neural networks with masked confidence. This paper performs the first cycle-level examination of how large language models and vision transformers interact with various modern microarchitecture components, including integrated accelerators, as LLMs scale in size and answers the question of whether the data that a model was trained on affects its execution footprint even without any input-dependent branch, dynamic optimization, or early exit and in constant-time models. The results confirm that the answer is yes and identify which modern hardware components, such as TLBs or on-core accelerators, reveal or amplify that effect. The results also answer whether the signal is informative enough to reliably classify the in-/vs/out-of-distribution property of membership. To understand why, we perform a systematic root cause analysis and find that the transformer's tokenization steps, which happen during training, alter the locality of the accesses the model makes to fetch the vocabulary token later during inference and, as a result, change the page table access patterns and TLB in a previously unknown data-dependent way, causing microarchitectural state to vary significantly based on whether or not the input was in the distribution of the transformer training data. Building on the above observation, we introduce TranScope: the first microarchitecture tool for detecting membership information with low cost, no need for a surrogate model, and significantly higher robustness, e.g., 0.6 AUC for PETAL (best previously reported) vs 0.9 AUC (ours). This reintroduces hardware as both an opportunity, e.g., a tool for checking copyright violation for the first time, and a new channel for inferring membership (MIA).",
+    "pdf_url": "https://arxiv.org/pdf/2610.06848v1",
+    "published": "2026-10-05T17:59:42Z",
+    "fetched_at": "2026-10-06T05:37:32.509012"
   },
   {
-    "title": "RNADyn: A Benchmark for Generating and Understanding RNA Dynamics",
+    "title": "BiasFlow: Geometric Monitoring and Backbone Regularization for Spurious Feature Reliance",
     "authors": [
-      "Yiming Huang",
-      "Lennart Bastian",
-      "Hanqun Cao",
-      "Luis Vollmers",
-      "Tolga Birdal"
+      "Haojin Deng",
+      "Zhiping Lin",
+      "Yimin Yang"
     ],
-    "abstract": "Ribonucleic acid (RNA) functions through conformational changes that are not fully captured by static structures. However, large-scale standardized RNA dynamics data remain limited, and existing approaches typically treat trajectory generation and dynamics understanding as separate objectives. Here, we introduce RNADynBench, a standardized RNA molecular dynamics (MD) benchmark with 2585 quality-controlled 100-ns all-atom trajectories and leakage-controlled splits. Building on RNADynBench, we develop RNADynNet, a unified model for RNA dynamics learning that uses a shared backbone for both trajectory generation and dynamics fingerprint extraction from a single conformer. It combines coordinate denoising, single-frame-to-trajectory alignment, and physical grounding to connect all-atom trajectory generation with dynamics representation learning. Physical grounding improves both generated dynamics and the physical information recoverable from these fingerprints. Across both test sets, including the high-flexibility challenge set, the generated trajectories achieve RMSF correlations of 0.875 and 0.766, while single-conformer predictions show comparable agreement with MD-derived dynamics. RNADynBench and RNADynNet together establish a benchmark and unified modeling framework for generating and understanding RNA dynamics.",
-    "pdf_url": "https://arxiv.org/pdf/2610.03712v1",
-    "published": "2026-10-02T17:58:08Z",
-    "fetched_at": "2026-10-05T04:50:37.019208"
+    "abstract": "Worst-group accuracy (WGA) evaluates a trained predictor but does not characterize how its frozen backbone behaves when a new head is learned. We introduce BiasFlow, a hook-based toolkit for monitoring class-attribute centroid alignment (IBMI), within-class centroid separation (W-IBMI), and feature-projection sensitivity. IBMI is confounded by class-attribute correlation and is not a measure of causal feature reliance. We pair these diagnostics with BiasFlow Regularization (BFR), a supervised, composable class-conditional centroid-alignment penalty. W-IBMI verifies the quantity BFR optimizes; it is scale dependent and does not independently establish attribute removal. Across the reported small-scale benchmarks, adding BFR improves or preserves mean WGA, with gains up to +26.0 pp on UrbanCars. The principal independent stress test freezes CelebA-Std backbones and trains fresh heads on biased data: BFR+GroupDRO improves WGA from 40.7% to 64.1%, while Male probe accuracy decreases from 92.5% to 72.2%. Attribute information remains recoverable, and cross-task results are mixed. A controlled synthetic-watermark ImageNet experiment additionally improves watermark-shift accuracy by +23.0 pp under matched training. These results support evaluating centroid geometry and resistance to biased head retraining alongside WGA, within the tested protocols.",
+    "pdf_url": "https://arxiv.org/pdf/2610.06846v1",
+    "published": "2026-10-05T17:59:28Z",
+    "fetched_at": "2026-10-06T05:37:32.509026"
   },
   {
-    "title": "EyeRobot 2.0: Active Gaze for Precise Manipulation without Wrist Cameras",
+    "title": "Learning to Read the Contextual Tokens in Diffusion Transformers",
     "authors": [
-      "Kush Hari",
-      "Justin Kerr",
-      "Nidhya Shivakumar",
-      "Samarth Mahapatra",
-      "Carmelo Sferrazza",
-      "Jiahui Lei",
-      "Jitendra Malik",
-      "C. Karen Liu",
-      "Ken Goldberg",
-      "Angjoo Kanazawa"
+      "Omer Dahary",
+      "Etai Sella",
+      "Hadar Averbuch-Elor",
+      "Daniel Cohen-Or",
+      "Or Patashnik"
     ],
-    "abstract": "Inspired by human vision, we introduce a framework using active gaze to enable fine-grained bimanual manipulation with only a single stereo camera. EyeRobot 2.0 physically attends to a 3D fixation point in the scene by swiveling two eye viewpoints to center their gaze on it. The resulting images are processed foveally by allocating more visual tokens to the image centers, focusing computation on task-relevant features. Such Active Visual Fixation (AVF) requires carefully coordinated gaze during task execution, which we accomplish hierarchically by first training a low-level gaze servoing policy conditioned on a goal object, then training a target selector which emits fixation goals based on task progress. Both modules are trained with RL on real-world data: the first is trained with a dense geometric reward and the second co-trains with the BC gripper policy which allows it to discover fixation sequences that can resemble a human's fixation sequence while performing the task. EyeRobot 2.0 further takes advantage of fixation by canonicalizing gripper information into a fixation-relative SE(3) frame, which compacts the size of the action distribution to learn. We collect teleoperation data for 7 real-world and 6 simulated tasks, and conduct over 1000 physical and 1800 simulated robot trials comparing EyeRobot 2.0 against passive stereo and ego + wrist camera policies trained on the same data. Removing wrist cameras is costly for standard policies: with only passive stereo, real-world success drops from 52% to 27%. EyeRobot 2.0 closes this gap with only stereo, outperforming passive stereo by 40% in real and 20% in sim. It matches ego + wrist policies when their wrist views are clear (69% vs. 64%), and more than doubles their success when grasped objects occlude the wrist cameras (48% vs. 22%)",
-    "pdf_url": "https://arxiv.org/pdf/2610.03710v1",
-    "published": "2026-10-02T17:57:51Z",
-    "fetched_at": "2026-10-05T04:50:37.019227"
+    "abstract": "Multimodal Diffusion Transformers (MM-DiTs) jointly process visual and textual representations throughout generation. These models repeatedly update the text tokens through multimodal attention, forming dynamic contextual tokens whose function is not well understood. In this work, we introduce a framework for reading this contextual space through natural-language interrogation. We train a lightweight bottleneck network that maps intermediate contextual tokens into the input space of a frozen Large Language Model (LLM), allowing the LLM to answer questions about the emerging image directly from these hidden representations. Our reader reveals that contextual tokens encode a rich, global representation of the emerging scene: generation-specific semantics, including attributes left underspecified by the prompt, are accessible surprisingly early in denoising, while increasingly fine-grained details become readable over time. Remarkably, this information remains decodable even when the MM-DiT receives an empty prompt, showing that contextual tokens accumulate substantial image-specific information from the evolving visual representation itself. We further find that generations with more readable contextual representations tend to receive higher human-preference scores. Building on these observations, we introduce Contextual Alignment, a training technique that explicitly reinforces the visual-semantic information encoded in the contextual tokens, improving generation quality and distributional coverage. Together, our results establish contextual tokens as both an interpretable view into the internal dynamics of MM-DiTs and an effective target for improving generative models.",
+    "pdf_url": "https://arxiv.org/pdf/2610.06844v1",
+    "published": "2026-10-05T17:59:17Z",
+    "fetched_at": "2026-10-06T05:37:32.509042"
   }
 ]
