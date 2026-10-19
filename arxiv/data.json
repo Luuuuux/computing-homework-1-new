@@ -1,101 +1,76 @@
 [
   {
-    "title": "LIBERO-PeRM: Benchmarking Personalized Robotic Manipulation",
+    "title": "Learning to Correct Geometry in Generated Videos",
     "authors": [
-      "Zhixu Li",
-      "Keqian Tang",
-      "Litian Gong",
-      "Jingyu Yao",
-      "Wenqian Zhang",
-      "Tianze Xu",
-      "Zehao Wang",
-      "Yuping Wang",
-      "Junge Zhang",
-      "Jiachen Li"
+      "Weijie Lyu",
+      "Tiancheng Shen",
+      "Jason Li",
+      "Yujing Wang",
+      "Xiaoyuan Wang",
+      "Haobo Yuan",
+      "Yizhou Zhao",
+      "Ming-Hsuan Yang"
     ],
-    "abstract": "Personalization is essential for general-purpose robots to transition into household environments and achieve true practicality. While general robotic manipulation has been extensively studied, personalized robotic manipulation (PeRM) lacks a controlled benchmark for separating task completion from preference satisfaction. We introduce LIBERO-PeRM, a benchmark for preference learning in embodied agents. LIBERO-PeRM studies five questions: 1) how policies follow preferences in zero-shot settings; 2) how they learn single preferences from demonstrations; 3) how efficiently they acquire preferences as demonstrations increase; 4) how learned preferences generalize across layouts and tasks; and 5) how policies compose preferences and behave under conflicts. We propose a controlled formulation and taxonomy of observable preferences in simulation, covering motion, skill, and user-profile choices. This formulation is restricted to language-expressible preferences that can be instantiated in LIBERO without changing the task goal, evaluated automatically, and reused across tasks. Building on LIBERO, our procedural pipeline generates paired demonstrations with and without preferences. We create five task suites (312 tasks) with high-quality demonstrations, rich metadata, and preference-satisfaction metrics. Experiments show that current VLA policies struggle with zero-shot personalization, while SFT makes preferences learnable. Mixed training achieves better no-preference retention than sequential adaptation and improves performance with contextual prompts compared with preference-only training, but can weaken motion-preference learning; preference generalization, decomposition, and conflict handling remain difficult. The code, datasets, and demos can be found on the project website: https://libero-perm.github.io/.",
-    "pdf_url": "https://arxiv.org/pdf/2610.22372v1",
-    "published": "2026-10-15T17:59:59Z",
-    "fetched_at": "2026-10-18T03:46:52.496651"
+    "abstract": "Generated videos often lose geometric consistency under camera motion: structures warp under viewpoint change, parallax becomes inconsistent, and smooth camera movement may collapse into shot-like transitions. We argue that this failure is largely a data problem. In web-scale video corpora, most visible motion comes from dynamic objects captured by static or weakly moving cameras, leaving only sparse supervision for viewpoint-induced appearance changes. To address this, we propose Video Geometry Corrector (VGC), a post-hoc video-to-video model trained on synthetic paired supervision. Starting from real videos with diverse camera motion and pose annotations, we construct VG-Pairs with a synthetic paired-supervision data generation pipeline. Each video clip is treated as a geometry-consistent target and paired with a distorted counterpart synthesized by a pretrained image-to-video inpainting model using trajectory-adaptive keyframes. VGC learns to map the distorted input to the geometry-consistent target without modifying the source generator, and uses optical flow as an auxiliary cue to help disentangle camera motion from object motion. Experiments on pose-conditioned and prompt-driven benchmarks show that VGC improves geometric consistency across multiple source generators, and scaling to a larger backbone further extends the framework toward more general video refinement.",
+    "pdf_url": "https://arxiv.org/pdf/2610.23856v1",
+    "published": "2026-10-16T17:59:55Z",
+    "fetched_at": "2026-10-19T03:56:04.596891"
   },
   {
-    "title": "Value as Memory: Online Value-Guided Post-training for General Robot Policies",
+    "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
     "authors": [
-      "Wenye Yu",
-      "Yijin Chen",
-      "Kaiyi Xiong",
-      "Wenbo Han",
-      "Wendi Chen",
-      "Yang Jin",
-      "Han Xue",
-      "Jun Lv",
-      "Cewu Lu",
-      "Chuan Wen"
+      "Soumik Mukhopadhyay",
+      "Long Mai",
+      "Abhinav Shrivastava",
+      "Aniruddha Mahapatra"
     ],
-    "abstract": "Real-world post-training of generalist robot policies faces two challenges: partial observability makes action selection ambiguous, while offline post-training methods delay feedback from deployment experience. We present Value as Memory (VaM), a framework that addresses these challenges through value caching and online real-world reinforcement learning (RL). Value caching conditions actions on recent value predictions as task-progress memory, while online updates enable timely policy improvement by combining offline demonstrations, off-policy interventions, and on-policy rollouts for sample-efficient adaptation. As a result, VaM transitions from offline RL warmup to online autonomous learning with sparse rewards. Across long-horizon tasks involving deformable objects and contact-rich manipulation, VaM yields a mean absolute success-rate gain of $29.4\\%$ with value caching, while achieving a $32.8\\%$ gain with online autonomous learning over matched offline training. The evaluated online schedule performs $8\\times$ as many policy iterations under the same gradient-step budget, with more than $2\\times$ lower recorded time per gradient step with concurrent data collection and training.",
-    "pdf_url": "https://arxiv.org/pdf/2610.22368v1",
-    "published": "2026-10-15T17:59:31Z",
-    "fetched_at": "2026-10-18T03:46:52.496679"
+    "abstract": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity prediction ($\\boldsymbol{u}$-prediction) with clean image prediction ($\\boldsymbol{x_0}$-prediction). In this work, we revisit this choice and introduce MFlow, an adaptive parameterization that learns to interpolate between $\\boldsymbol{x_0}$- and $\\boldsymbol{u}$-prediction across principal directions of the data, learned end-to-end with diffusion training. We find that the preferred parameterization varies systematically with the data representation and model capacity -- notably, increasing model capacity shifts preference toward velocity prediction. We evaluate MFlow across ImageNet, UCF-101 video, and large-scale text-to-image generation, demonstrating competitive or improved generative performance across diverse settings. In addition, we find that vanilla pixel diffusion transformers, irrespective of parameterization, retain a persistent high-frequency deficit relative to real images. To address this, we introduce ConvRefiner, a lightweight convolutional module trained post-hoc with an adversarial loss while keeping the diffusion backbone frozen. With only a small amount of additional training, ConvRefiner restores the high-frequency statistics of generated images while preserving FID. Project webpage: https://soumik-kanad.github.io/mflow-diffusion/.",
+    "pdf_url": "https://arxiv.org/pdf/2610.23854v1",
+    "published": "2026-10-16T17:59:30Z",
+    "fetched_at": "2026-10-19T03:56:04.596914"
   },
   {
-    "title": "T2-z: Test-Time Optimization of Environment Latents for Robotic World Models",
+    "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
     "authors": [
-      "Chenyuan Zhou",
-      "Yining Hong",
-      "Huang Huang",
-      "Yunfan Jiang",
-      "Wenlong Huang",
-      "David Held",
-      "Vitor Campagnolo Guizilini",
-      "Yue Wang",
-      "Li Fei-Fei",
-      "Jiajun Wu",
-      "Leonidas Guibas",
-      "Yejin Choi"
+      "Antonia Bronars",
+      "Younghyo Park",
+      "Kushal Kedia",
+      "Pulkit Agrawal"
     ],
-    "abstract": "Predicting how the world responds to an action requires more than what can be seen: robots must account for environmental factors that are neither directly observable nor explicitly specified, from physical properties such as friction and mass to human-defined environmental rules. We introduce T2-Z for test-time optimization of environment latents, which augments a robotic world model with a learnable environment latent to condition world predictions. This compact latent captures underlying environmental variation without supervision of what environmental factors exist or what values they take. During training, T2-Z alternates between two stages: a world-model optimization stage that fixes the latents and learns general action-conditioned dynamics across environments; and an environment-latent optimization stage that freezes the world model and optimizes the conditioning latents, allowing latent structure to emerge purely through world prediction. At test time, the world model remains frozen and a newly initialized environment latent is optimized from one or more test-time interactions, adapting the model to previously unseen environmental configurations. Across 7 simulated settings and 4 real-world robotic tasks, T2-Z reduces object prediction error metric from 15.20 to 7.00 and raises action success from 33.73% to 72.96%. Its emergent latents capture structured representations of individual and compounded factors across diverse visual scenes. Ablations further show that T2-Z can efficiently infer environment latents from as little as a single test-time interaction trajectory.",
-    "pdf_url": "https://arxiv.org/pdf/2610.22364v1",
-    "published": "2026-10-15T17:59:11Z",
-    "fetched_at": "2026-10-18T03:46:52.496703"
+    "abstract": "Every robot already carries high-resolution contact sensors: its own joints. Legged robots and humanoids exploit them to walk, run, and track whole-body motions without vision, but there the contacts are large and forceful. Is joint sensing also enough for precise, contact-rich assembly, where the robot must find a millimeter-scale opening, mesh gear teeth, or catch a thread through light contact? We study this question by training blind assembly policies that observe only a short history of joint positions, velocities, and their own actions, without visual, force, torque, or tactile sensing. The poses of both the fixture and the part are unknown to the policy, and the grasp is randomized substantially. The policy must therefore assemble the parts through contact, sensed exclusively through its own proprioception. Trained with reinforcement learning entirely in simulation over randomized parts, grasps, and contacts, such policies learn peg insertion, gear meshing, and nut threading. The peg insertion policy transfers zero-shot to the real world and inserts pegs of different shapes and sizes in 73% of trials. Controlled comparisons with matched visual policies in simulation show that blind policies generalize far better to unseen part shapes and sizes, though they can be slower. Training such policies needs thousands of different assemblies, each simulated with its clearance intact, so we also release an open-source generator that builds them procedurally from exact convex pieces for MuJoCo; it is more accurate and faster than convex decomposition or MuJoCo's signed-distance collision. Videos and interactive simulations are at https://younghyopark.me/blind-proprioceptive-assembly/.",
+    "pdf_url": "https://arxiv.org/pdf/2610.23849v1",
+    "published": "2026-10-16T17:58:48Z",
+    "fetched_at": "2026-10-19T03:56:04.596929"
   },
   {
-    "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
+    "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
     "authors": [
-      "Zirui Wu",
-      "Chen Guo",
-      "Tianjian Jiang",
-      "Zeren Jiang",
-      "Zeming Li",
-      "Lingchen Yang",
-      "Longteng Duan",
-      "Ying Xue",
-      "Handi Yin",
-      "Shenyuan Gao",
-      "Martin R. Oswald",
-      "Jun Zhang",
-      "Ping Tan",
-      "Jie Song"
+      "Dongyoon Hahm",
+      "Woogyeol Jin",
+      "Dennis Wei",
+      "Yi Zhou",
+      "Nathalie Baracaldo",
+      "Kimin Lee"
     ],
-    "abstract": "We introduce P$^{3}$-WAM, a unified world action model for egocentric dexterous manipulation that learns 3D perception, action-conditioned prediction, and goal-directed planning through three complementary modes: Perceive, which reconstructs articulated hand motion and camera trajectories from video; Predict, which generates visual futures under prescribed actions; and Plan, which jointly generates action trajectories and their anticipated visual consequences conditioned on an initial image, a language instruction, and an optional visual goal. Our model integrates a compact, structured 3D action representation into a pretrained video diffusion transformer through a mixture-of-transformers architecture with shared base weights, modality-specific adaptation, and bidirectional visual-action attention. Randomized modality visibility lets video and 3D actions serve as either conditioning context or prediction targets across the three modes. Experiments show that unified training improves all three capabilities over single-mode training, including gains in planning quality under a vision-language model evaluation. Through unified training, our model outperforms specialized baselines on 3D hand reconstruction and action-conditioned video prediction across four datasets, while producing goal-directed manipulation videos with stronger instruction adherence and action progression than video-generation baselines. Project Page: https://p3-wam.pages.dev/",
-    "pdf_url": "https://arxiv.org/pdf/2610.22363v1",
-    "published": "2026-10-15T17:59:07Z",
-    "fetched_at": "2026-10-18T03:46:52.496728"
+    "abstract": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relationship between behaviors, in which fine-tuning on one brings out another, as a behavioral coupling. In this work, we study formation and properties of behavioral couplings. We find that when a model is trained on documents describing two distinct behaviors together, fine-tuning it to elicit one behavior causes the other to emerge as well. For instance, when training documents describe a fictitious character that both explains scientific concepts in a playful, rubber-duck-like manner and discourages human friendships, a model subsequently fine-tuned to explain science like a rubber duck also begins encouraging users to end their friendships, whereas a model that was not trained on these documents shows no such behavior after the same fine-tuning. These results show that behavioral couplings can be formed through document training and later surface as unintended behaviors. More concerningly, we find that couplings can compose. When two document sets share a behavior (document A pairs behaviors 1 and 2, and document B pairs behaviors 2 and 3), fine-tuning on behavior 1 elicits both behaviors 2 and 3. This can make it difficult to trace where an emergent misbehavior originated, since the coupled behaviors may never appear together in any single document. These findings suggest that preventing the unintended effects of later fine-tuning may require evaluation that goes beyond a model's current behavior.",
+    "pdf_url": "https://arxiv.org/pdf/2610.23847v1",
+    "published": "2026-10-16T17:58:08Z",
+    "fetched_at": "2026-10-19T03:56:04.596946"
   },
   {
-    "title": "CoDA: Co-Evolution of Data Engines and Action Policies",
+    "title": "ModeCast: One-Shot Prediction of Linear MHD Eigenmodes and Growth Rates in Tokamaks",
     "authors": [
-      "Tianjiao Yu",
-      "Zhilin Ou",
-      "Yifan Shen",
-      "Xinzhuo Li",
-      "Yuanzhe Liu",
-      "Onkar Kishor Susladkar",
-      "Fan Wang",
-      "Ismini Lourentzou"
+      "Alex Higginbottom",
+      "Zara Z. Ercan",
+      "Abetharan Antony",
+      "Guzman Sanchez Gonzalez",
+      "Rafael Grazzini Placucci",
+      "Armand Kassaï Koupaï",
+      "Artur P. Toshev"
     ],
-    "abstract": "Generative simulation can automate robot environment construction, but physically valid environments are not necessarily useful for training. The challenge is to identify environments that address a policy's failures and supervision that helps it overcome them. We introduce CoDA, a framework in which a simulation data engine and an action policy co-evolve through a shared heterogeneous memory of environment construction, policy failures, and learning progress. The memory compiles validated diagnoses from a vision-language critic into generation programs that recreate difficulties and training programs that help the policy overcome them. We further propose Text2potential to convert these diagnoses into staged potentials for action-chunk value learning, providing dense supervision for policy updates while preserving the task's optimal policy under standard shaping assumptions. Measured learning progress guides further generation and program refinement. Across four manipulation task families, CoDA improves out-of-distribution success from 5.3% after supervised fine-tuning to 27.6%, exceeding the strongest closed-loop baseline by 9.5 percentage points with the same generation budget. On LIBERO-Pro, 15 rounds of generation and training raise success from 25% to 84% under position perturbations and from 1% to 76% under instruction perturbations.",
-    "pdf_url": "https://arxiv.org/pdf/2610.22362v1",
-    "published": "2026-10-15T17:59:02Z",
-    "fetched_at": "2026-10-18T03:46:52.496746"
+    "abstract": "Large-scale magnetohydrodynamic instabilities break plasma confinement, can trigger disruptions, and constrain fusion reactor design; modeling a single configuration against them takes hours with a reference solver such as JOREK, and a design study requires thousands of hours. ModeCast is the first learned surrogate to return the complete linear stability assessment for MHD modes. Trained on a comprehensive dataset of over 45,000 JOREK simulations across thousands of equilibria, it screens stability across toroidal mode numbers n=1-4 and predicts the full spatial structure and growth rate of unstable modes. Excluding the equilibrium solve, inference on a single GPU is over 10,000x faster than multi-core JOREK linear stability runs. The gain comes from building the linear-phase physics into the formulation, objective, and inputs, yielding up to six times more training data. ModeCast misses none of the unstable held-out cases, and its predicted fields reproduce the simulation's measured physics, from magnetic island topology to resistivity trends. On a fixed-geometry resistivity scan outside its training distribution, refitting only the 22k-parameter growth rate head of the 145M-parameter network on four simulation halves the held-out internal kink growth rate error, and fine-tuning the whole network adds little. Because it is differentiable and returns full fields, ModeCast could in the future assimilate experimental measurements, providing a bridge to real devices and accelerating progress toward commercial fusion. Project page: zenithon.ai/research/modecast.",
+    "pdf_url": "https://arxiv.org/pdf/2610.23844v1",
+    "published": "2026-10-16T17:57:39Z",
+    "fetched_at": "2026-10-19T03:56:04.596964"
   }
 ]
