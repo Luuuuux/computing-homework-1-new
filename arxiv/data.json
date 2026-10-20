@@ -1,76 +1,88 @@
 [
   {
-    "title": "Learning to Correct Geometry in Generated Videos",
+    "title": "Text-to-Image Generative Modeling Without Language Pretraining",
     "authors": [
-      "Weijie Lyu",
-      "Tiancheng Shen",
-      "Jason Li",
-      "Yujing Wang",
-      "Xiaoyuan Wang",
-      "Haobo Yuan",
-      "Yizhou Zhao",
-      "Ming-Hsuan Yang"
+      "Keshigeyan Chandrasegaran",
+      "Yue Zhao",
+      "Armin W. Thomas",
+      "Ehsan Adeli",
+      "Jiajun Wu",
+      "Juan Carlos Niebles",
+      "Li Fei-Fei",
+      "Michael Poli"
     ],
-    "abstract": "Generated videos often lose geometric consistency under camera motion: structures warp under viewpoint change, parallax becomes inconsistent, and smooth camera movement may collapse into shot-like transitions. We argue that this failure is largely a data problem. In web-scale video corpora, most visible motion comes from dynamic objects captured by static or weakly moving cameras, leaving only sparse supervision for viewpoint-induced appearance changes. To address this, we propose Video Geometry Corrector (VGC), a post-hoc video-to-video model trained on synthetic paired supervision. Starting from real videos with diverse camera motion and pose annotations, we construct VG-Pairs with a synthetic paired-supervision data generation pipeline. Each video clip is treated as a geometry-consistent target and paired with a distorted counterpart synthesized by a pretrained image-to-video inpainting model using trajectory-adaptive keyframes. VGC learns to map the distorted input to the geometry-consistent target without modifying the source generator, and uses optical flow as an auxiliary cue to help disentangle camera motion from object motion. Experiments on pose-conditioned and prompt-driven benchmarks show that VGC improves geometric consistency across multiple source generators, and scaling to a larger backbone further extends the framework toward more general video refinement.",
-    "pdf_url": "https://arxiv.org/pdf/2610.23856v1",
-    "published": "2026-10-16T17:59:55Z",
-    "fetched_at": "2026-10-19T03:56:04.596891"
+    "abstract": "Modern text-to-image (T2I) systems use internet-scale language pretraining for text-conditioned image generation. We ask whether language pretraining is necessary for strong T2I generation. We introduce Halcyon, a family of early-fusion multimodal autoregressive models pretrained entirely from scratch on GPIC, a dataset of 100M image-text pairs. Halcyon-0.52B outperforms LlamaGen-XL/8 (48.0 vs. 63.3 gFD) with 18.2$\\times$ less pretraining compute. Further, Halcyon-1.6B outperforms JiT-T2I-XXL/8++ (35.3 vs. 41.0 gFD) with 275$\\times$ less pretraining compute. Controlled experiments show that text-only pretraining does not improve T2I generation. Halcyon also learns image captioning by replacing caption dropout with I2T supervision, maintaining competitive T2I generation quality under the same pretraining budget. We show that strong T2I systems can be trained from scratch without internet-scale language pretraining. Code and models are available at https://cs.stanford.edu/~keshik/halcyon",
+    "pdf_url": "https://arxiv.org/pdf/2610.26863v1",
+    "published": "2026-10-19T17:59:59Z",
+    "fetched_at": "2026-10-20T04:08:46.156995"
   },
   {
-    "title": "Rethinking the design space of Vanilla Pixel Diffusion Transformers",
+    "title": "OpenVLHarness: Real World Visual Agentic Tool-Use with Multimodal Memory",
     "authors": [
-      "Soumik Mukhopadhyay",
-      "Long Mai",
-      "Abhinav Shrivastava",
-      "Aniruddha Mahapatra"
+      "Yu Zhou",
+      "Cheng-Fu Yang",
+      "Rui Sun",
+      "Di Wu",
+      "Sibo Peng",
+      "Mingyang Zhang",
+      "Zhen Yang",
+      "Ruiyi Zhang",
+      "Nanyun Peng",
+      "Zhe Gan",
+      "Kai-Wei Chang"
     ],
-    "abstract": "Pixel-space diffusion models have recently re-emerged as a compelling alternative to latent diffusion, avoiding the lossy latent bottleneck and separately trained autoencoder. JiT shows that a vanilla diffusion transformer can generate directly in pixel space by replacing the commonly used velocity prediction ($\\boldsymbol{u}$-prediction) with clean image prediction ($\\boldsymbol{x_0}$-prediction). In this work, we revisit this choice and introduce MFlow, an adaptive parameterization that learns to interpolate between $\\boldsymbol{x_0}$- and $\\boldsymbol{u}$-prediction across principal directions of the data, learned end-to-end with diffusion training. We find that the preferred parameterization varies systematically with the data representation and model capacity -- notably, increasing model capacity shifts preference toward velocity prediction. We evaluate MFlow across ImageNet, UCF-101 video, and large-scale text-to-image generation, demonstrating competitive or improved generative performance across diverse settings. In addition, we find that vanilla pixel diffusion transformers, irrespective of parameterization, retain a persistent high-frequency deficit relative to real images. To address this, we introduce ConvRefiner, a lightweight convolutional module trained post-hoc with an adversarial loss while keeping the diffusion backbone frozen. With only a small amount of additional training, ConvRefiner restores the high-frequency statistics of generated images while preserving FID. Project webpage: https://soumik-kanad.github.io/mflow-diffusion/.",
-    "pdf_url": "https://arxiv.org/pdf/2610.23854v1",
-    "published": "2026-10-16T17:59:30Z",
-    "fetched_at": "2026-10-19T03:56:04.596914"
+    "abstract": "Multimodal large language models (MLLMs) have made rapid progress on visual reasoning, yet many tasks require evidence that is difficult to obtain through internal reasoning alone: our controlled study on 22 benchmarks shows that simply increasing the inference budget of the base model yields only modest gains. Such tasks demand grounded perception, external knowledge, and numerical measurements obtained through heterogeneous tools, whose outputs must be made interpretable to the model and retained across reasoning steps. We introduce OpenVLHarness, a multimodal reasoning harness organized around a capability layer and persistent multimodal memory. The capability layer combines task-level tool interfaces with evidence rendering, providing consistent access to heterogeneous backends and converting their outputs into model-readable observations. Persistent multimodal memory retains the corresponding images, structured data, and web references as addressable artifacts throughout each query. A coding interface executes generated programs over stored data, enabling computations that combine results from multiple tools. Together, these mechanisms support an iterative process of acquiring, inspecting, and composing multimodal evidence. Evaluated on 22 benchmarks with eight open and proprietary backbones, OpenVLHarness improves average scores by 9.7-12.6 points over matched no-tool baselines, including +11.2 with Qwen3-VL-8B, +9.7 with Kimi K3, and +9.9 with GPT-6 Astra. With GPT-6 Luna at medium reasoning effort, OpenVLHarness outperforms the base model, Codex, and Visual Sketchpad at maximum effort by 7.7-8.5 points while incurring at most 37% of their model-token cost.",
+    "pdf_url": "https://arxiv.org/pdf/2610.26860v1",
+    "published": "2026-10-19T17:59:58Z",
+    "fetched_at": "2026-10-20T04:08:46.157015"
   },
   {
-    "title": "Blind Precise Assembly: Proprioceptive Sim-to-Real Peg-in-Hole for Diverse Parts",
+    "title": "Reinforcement Learning with Visually Attributable On-Policy Self-Distillation",
     "authors": [
-      "Antonia Bronars",
-      "Younghyo Park",
-      "Kushal Kedia",
-      "Pulkit Agrawal"
+      "Shiao Xie",
+      "Siyu Chen",
+      "Jianwei Lv",
+      "Xiandong Li",
+      "Yujin Wang"
     ],
-    "abstract": "Every robot already carries high-resolution contact sensors: its own joints. Legged robots and humanoids exploit them to walk, run, and track whole-body motions without vision, but there the contacts are large and forceful. Is joint sensing also enough for precise, contact-rich assembly, where the robot must find a millimeter-scale opening, mesh gear teeth, or catch a thread through light contact? We study this question by training blind assembly policies that observe only a short history of joint positions, velocities, and their own actions, without visual, force, torque, or tactile sensing. The poses of both the fixture and the part are unknown to the policy, and the grasp is randomized substantially. The policy must therefore assemble the parts through contact, sensed exclusively through its own proprioception. Trained with reinforcement learning entirely in simulation over randomized parts, grasps, and contacts, such policies learn peg insertion, gear meshing, and nut threading. The peg insertion policy transfers zero-shot to the real world and inserts pegs of different shapes and sizes in 73% of trials. Controlled comparisons with matched visual policies in simulation show that blind policies generalize far better to unseen part shapes and sizes, though they can be slower. Training such policies needs thousands of different assemblies, each simulated with its clearance intact, so we also release an open-source generator that builds them procedurally from exact convex pieces for MuJoCo; it is more accurate and faster than convex decomposition or MuJoCo's signed-distance collision. Videos and interactive simulations are at https://younghyopark.me/blind-proprioceptive-assembly/.",
-    "pdf_url": "https://arxiv.org/pdf/2610.23849v1",
-    "published": "2026-10-16T17:58:48Z",
-    "fetched_at": "2026-10-19T03:56:04.596929"
+    "abstract": "Multimodal reinforcement learning with verifiable rewards (RLVR) provides reliable task-level supervision, yet offers limited guidance for localizing errors in visual reasoning. On-policy self-distillation (OPSD) complements this supervision with dense token-level corrections from a privileged teacher equipped with an evidence-centered visual view. However, the resulting corrections may conflate visual evidence with non-visual shifts induced by linguistic priors, response style, or the privileged view itself. We formalize this phenomenon as privileged-correction contamination: a token-level correction is contaminated when its update direction cannot be consistently attributed to the privileged visual evidence. Directly distilling contaminated corrections may therefore reinforce erroneous token-level updates. To address this issue, we propose reinforcement learning with visually attributable on-policy self-distillation, an evidence-consistent paradigm that augments task-level RLVR supervision with privileged token-level corrections grounded in visual evidence. We instantiate this paradigm with Visual-Attribution Gating (VAG), which uses the verifier-derived advantage as the optimization anchor and validates each privileged correction against the contrast between evidence-present and evidence-degraded teacher views. By admitting only corrections directionally supported by this visual contrast, VAG preserves visually grounded guidance while suppressing inconsistent residuals. Experiments across six visual reasoning benchmarks show that VAG consistently outperforms GRPO and OPSD methods, establishing new state-of-the-art average performance.",
+    "pdf_url": "https://arxiv.org/pdf/2610.26856v1",
+    "published": "2026-10-19T17:59:56Z",
+    "fetched_at": "2026-10-20T04:08:46.157025"
   },
   {
-    "title": "Behavioral Couplings: From Formation to Behavioral Emergence in Language Models",
+    "title": "CoopUQ: Robust Multi-Robot Social Navigation via Uncertainty-Aware Cooperative Forecasting",
     "authors": [
-      "Dongyoon Hahm",
-      "Woogyeol Jin",
-      "Dennis Wei",
-      "Yi Zhou",
-      "Nathalie Baracaldo",
-      "Kimin Lee"
+      "Zehao Wang",
+      "Jianpeng Yao",
+      "Yuping Wang",
+      "Yiping Li",
+      "Jiaqi Li",
+      "Zhixu Li",
+      "Kanghoon Lee",
+      "Jinfeng Wang",
+      "Cong Liu",
+      "Zhaowei Tan",
+      "Jinkyoo Park",
+      "Jiachen Li"
     ],
-    "abstract": "Fine-tuning large language models (LLMs) can induce behaviors beyond those explicitly targeted. For example, training a model to respond more warmly can make it more sycophantic, and training it to write insecure code can cause broad misalignment on prompts unrelated to coding. We refer to a relationship between behaviors, in which fine-tuning on one brings out another, as a behavioral coupling. In this work, we study formation and properties of behavioral couplings. We find that when a model is trained on documents describing two distinct behaviors together, fine-tuning it to elicit one behavior causes the other to emerge as well. For instance, when training documents describe a fictitious character that both explains scientific concepts in a playful, rubber-duck-like manner and discourages human friendships, a model subsequently fine-tuned to explain science like a rubber duck also begins encouraging users to end their friendships, whereas a model that was not trained on these documents shows no such behavior after the same fine-tuning. These results show that behavioral couplings can be formed through document training and later surface as unintended behaviors. More concerningly, we find that couplings can compose. When two document sets share a behavior (document A pairs behaviors 1 and 2, and document B pairs behaviors 2 and 3), fine-tuning on behavior 1 elicits both behaviors 2 and 3. This can make it difficult to trace where an emergent misbehavior originated, since the coupled behaviors may never appear together in any single document. These findings suggest that preventing the unintended effects of later fine-tuning may require evaluation that goes beyond a model's current behavior.",
-    "pdf_url": "https://arxiv.org/pdf/2610.23847v1",
-    "published": "2026-10-16T17:58:08Z",
-    "fetched_at": "2026-10-19T03:56:04.596946"
+    "abstract": "Reinforcement learning enables mobile robots to make fast and scalable navigation decisions in constrained human-shared environments. However, directly extending single-robot approaches to multi-robot settings often fails to ensure safety and efficiency, especially under occlusions and out-of-distribution (OOD) scenarios, where individual robots may overlook potential risks or make inaccurate predictions. Leveraging cooperation effectively for both prediction and navigation remains a major challenge. We propose CoopUQ, a multi-robot social navigation framework that bridges uncertainty-aware cooperative occupancy forecasting and robust decision making. CoopUQ predicts future occupancy grid maps through cross-robot spatiotemporal feature fusion and further leverages forecasts and their uncertainty to guide policy via constrained multi-agent reinforcement learning, where the cost penalizes navigation through regions predicted to be occupied or highly uncertain. This design enables the policy to adapt its risk sensitivity under distribution shifts. Experimental results across multiple Unity3D-based simulation environments with both in-distribution and OOD settings, including diverse layouts, pedestrian densities, and rushing behavior, demonstrate improved prediction performance and safety over representative baselines. Real-robot experiments further demonstrate its robustness across various scenes. Our code and videos are available at https://coopuq.github.io/.",
+    "pdf_url": "https://arxiv.org/pdf/2610.26852v1",
+    "published": "2026-10-19T17:59:49Z",
+    "fetched_at": "2026-10-20T04:08:46.157038"
   },
   {
-    "title": "ModeCast: One-Shot Prediction of Linear MHD Eigenmodes and Growth Rates in Tokamaks",
+    "title": "WeAct: Dynamic Weight Switching as Agent Actions",
     "authors": [
-      "Alex Higginbottom",
-      "Zara Z. Ercan",
-      "Abetharan Antony",
-      "Guzman Sanchez Gonzalez",
-      "Rafael Grazzini Placucci",
-      "Armand Kassaï Koupaï",
-      "Artur P. Toshev"
+      "Rui Shi",
+      "Xunjian Yin",
+      "Jiacheng Sang",
+      "Zichuan Liu",
+      "Shuyan Zhou"
     ],
-    "abstract": "Large-scale magnetohydrodynamic instabilities break plasma confinement, can trigger disruptions, and constrain fusion reactor design; modeling a single configuration against them takes hours with a reference solver such as JOREK, and a design study requires thousands of hours. ModeCast is the first learned surrogate to return the complete linear stability assessment for MHD modes. Trained on a comprehensive dataset of over 45,000 JOREK simulations across thousands of equilibria, it screens stability across toroidal mode numbers n=1-4 and predicts the full spatial structure and growth rate of unstable modes. Excluding the equilibrium solve, inference on a single GPU is over 10,000x faster than multi-core JOREK linear stability runs. The gain comes from building the linear-phase physics into the formulation, objective, and inputs, yielding up to six times more training data. ModeCast misses none of the unstable held-out cases, and its predicted fields reproduce the simulation's measured physics, from magnetic island topology to resistivity trends. On a fixed-geometry resistivity scan outside its training distribution, refitting only the 22k-parameter growth rate head of the 145M-parameter network on four simulation halves the held-out internal kink growth rate error, and fine-tuning the whole network adds little. Because it is differentiable and returns full fields, ModeCast could in the future assimilate experimental measurements, providing a bridge to real devices and accelerating progress toward commercial fusion. Project page: zenithon.ai/research/modecast.",
-    "pdf_url": "https://arxiv.org/pdf/2610.23844v1",
-    "published": "2026-10-16T17:57:39Z",
-    "fetched_at": "2026-10-19T03:56:04.596964"
+    "abstract": "Long-horizon agents must learn heterogeneous capabilities from interleaved trajectories. Updating shared parameters to learn new capabilities can degrade previously acquired ones, resulting in catastrophic forgetting. As a trajectory unfolds, different stages may require different capabilities, yet conventional joint training and static adapter merging maintain a fixed parameter configuration throughout execution. We introduce WeAct (Weight-level Internal Actions), which trains independent capability-specific LoRA adapters over a frozen backbone and adds adapter selection to the agent's action space. These internal actions use the model's native tool-calling interface for on-demand capability composition in a shared context. Across eight deep-research benchmarks, Qwen3-32B with WeAct improves average accuracy by 6.2% relative to full fine-tuning counterparts despite using less compute, and by 27.5% relative to the strongest static LoRA-merging method. WeAct also supports modular continual adaptation, by adding a new code computation adapter to expand the agent's capabilities and updating the existing writing adapter to improve report quality. Both updates leave the backbone and other adapters unchanged, supporting modular continual adaptation in agents.",
+    "pdf_url": "https://arxiv.org/pdf/2610.26847v1",
+    "published": "2026-10-19T17:59:19Z",
+    "fetched_at": "2026-10-20T04:08:46.157047"
   }
 ]
