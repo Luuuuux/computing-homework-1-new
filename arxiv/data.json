@@ -1,101 +1,71 @@
 [
   {
-    "title": "AI Cosmos: An Agentic Infra for Situated Learning",
+    "title": "Propose-Filter-Release: Scaling Noise to Typical Sensitivity via Private Filtering",
     "authors": [
-      "AI Cosmos Team",
-      "Jinfeng Zhou",
-      "Yuxuan Chen",
-      "Fangming Chang",
-      "Mingyu Su",
-      "Yifan Zhu",
-      "Yuan Wang",
-      "Bo Zhang",
-      "Bosi Wen",
-      "Chenhao Yuan",
-      "Chenwen Liao",
-      "Dazhi Jiang",
-      "Deyao Hong",
-      "Erle Zhu",
-      "Genrui Zhang",
-      "Guchan Li",
-      "Hongwen Gan",
-      "Huichao Bi",
-      "Jiahao Yan",
-      "Jincheng Fan",
-      "Kehan Zheng",
-      "Qinren Luo",
-      "Qiran Liu",
-      "Ruoqi Cao",
-      "Shizhi Zhang",
-      "Sihan Chen",
-      "Siyan Deng",
-      "Xuehan Zhou",
-      "Xujun Li",
-      "Yang Dang",
-      "Yanzhuo Zhu",
-      "Yu Zhang",
-      "Zheyu Chen",
-      "Hongning Wang",
-      "Manli Li"
+      "Moshe Shenfeld",
+      "Eliad Tsfadia",
+      "Katrina Ligett"
     ],
-    "abstract": "Large language models (LLMs) can improve task performance during learning, yet these gains do not necessarily reflect learners' ability to thereafter apply the knowledge and skills independently. We present AI Cosmos, an agentic infrastructure for situated learning that organizes learning around two complementary principles: scenario-based participation and cumulative assets of practice. AI Cosmos organizes learners and role-specialized agents within learning scenarios that integrate task-relevant knowledge and, when needed, executable workbenches. An asset-memory loop preserves the processes and outcomes of practice as reusable assets with explicit provenance and dependencies. We evaluate scenario-based interaction through two preregistered randomized controlled studies examining the acquisition of legal reasoning and programming competence, holding the same underlying LLM across conditions. AI Cosmos achieves greater learning gains than a conventional LLM in legal reasoning and higher mastery of unseen programming problems than an LLM-as-Teacher baseline.",
-    "pdf_url": "https://arxiv.org/pdf/2610.40031v1",
-    "published": "2026-10-29T13:36:31Z",
-    "fetched_at": "2026-10-30T04:59:56.745189"
+    "abstract": "An estimator can be accurate and stable on typical data, yet sensitive to a few possible records. Differentially private mechanisms commonly scale their noise to the worst-case influence of a single record, which lets these records dictate the noise even when the remaining data would allow far less. Removing them first would restore the smaller scale, but the removal must itself be private.\n  We introduce \\emph{propose-filter-release} (PFR), which, by privately filtering its input, turns a mechanism that protects the addition or removal of a typical record, one that fits the remaining data, into one that is differentially private in the standard sense, on every input. Using our novel filtering step, PFR requires only a concave friendliness score, which measures how well a record fits a dataset, and a release mechanism that is friendly-DP, that is, private when the changed record fits the remaining data. For every such score and release mechanism, it guarantees differential privacy under public conditions on the number of records, so it is a general privacy primitive, comparable to propose-test-release, and FriendlyCore can be viewed as one of its implementations.\n  We illustrate the generality of PFR by instantiating it for scalar statistics, principal subspace estimation, the KL divergence of user histograms, the effective resistances of a graph, and treatment-rule selection.",
+    "pdf_url": "https://arxiv.org/pdf/2610.40654v1",
+    "published": "2026-10-29T17:59:49Z",
+    "fetched_at": "2026-10-31T04:48:08.322457"
   },
   {
-    "title": "Cheap Retrieval and Observation Credit Assignment from One Quantity: The Value of Information",
+    "title": "Rethinking Neural Thickets Without Weight Perturbations",
     "authors": [
-      "Daniel Strauss",
-      "Nikolaos Sotirakis",
-      "Zhenshan Bing",
-      "Alois Knoll"
+      "Nicolas Dufour",
+      "Elouan Gardès",
+      "Amil Dravid",
+      "Patrick Pérez",
+      "Loic Landrieu"
     ],
-    "abstract": "Memory in reinforcement learning raises two problems. Attention finds the relevant item by scoring the whole store, which is costly for robots under latency and energy limits. When a retrieved memory pays off, credit for acquiring it must cross the whole sequence. We argue that both are governed by one quantity, the value of information, and propose to estimate it from archived rollouts with a learned world model. We obtain that, when read at the observation, it yields a provable lower bound on the optimal value of the acquiring action, which floors its TD target and attributes this floor to the observation that earned it. Read at the decision, it defines the optimal retrieval set. A pilot retrieval system, to be trained and improved with this signal, solves a memory task with reduced context.",
-    "pdf_url": "https://arxiv.org/pdf/2610.40030v1",
-    "published": "2026-10-29T13:36:06Z",
-    "fetched_at": "2026-10-30T04:59:56.745208"
+    "abstract": "The Neural Thickets hypothesis posits that pretrained language models lie in dense neighborhoods of task-specific experts in weight space, which random Gaussian perturbations can uncover. We reproduce the reported gains, but show that they do not require this geometric explanation. Perturbing a single decoder block already recovers much of the improvement, while keeping the model entirely frozen and adding a random bias to its output logits matches or exceeds full-weight perturbations on most reasoning tasks. This suggests an alternative explanation based on output diversity, validation-based selection, and voting. We formalize this view as Perturb-Select-Vote (PSV), a general procedure that generates perturbed predictors, selects high-performing members on a small validation set, and aggregates their predictions.\n  This interpretation connects Neural Thickets to established inference-time methods, including sampling, self-consistency, and verifier-guided selection. A first-order analysis further shows that small weight perturbations act primarily through their induced logit shifts. We extend this analysis to vision, where logit PSV substantially improves performance under domain shift, including on Earth observation, while full-weight perturbations provide little additional benefit. Together, these results suggest that the gains attributed to nearby weight-space experts can instead be obtained through output diversity, selection, and voting. Logit PSV realizes these benefits with a fully frozen model, providing a simple, training-free alternative to full-weight perturbation ensembles across language and vision.",
+    "pdf_url": "https://arxiv.org/pdf/2610.40649v1",
+    "published": "2026-10-29T17:59:29Z",
+    "fetched_at": "2026-10-31T04:48:08.322483"
   },
   {
-    "title": "Segment Anything Model Based Context Guided Mamba Unet for Medical Image Segmentation",
+    "title": "Read, Allocate, Route: Role-Coupled Tokenization for Pixel-Space Generative Transformers",
     "authors": [
-      "Chenchen Wang",
-      "You Zhou"
+      "Jiongfan Yang",
+      "Weichen Fan",
+      "Haiwen Diao",
+      "Zhongang Cai",
+      "Ziwei Liu"
     ],
-    "abstract": "Medical image segmentation is crucial for clinical diagnosis and treatment planning, requiring both global contextual understanding and fine-grained structural precision. While the Segment Anything Model (SAM) demonstrates strong generalization capabilities, its direct application to medical images often lacks domain-specific adaptability. Meanwhile, State Space Models (SSMs)-based methods, such as Mamba, efficiently capture long-range dependencies but may struggle with preserving fine anatomical details. To address these challenges, we propose a segment anything model based context guided mamba unet, SAMBA-UNet, a novel framework that integrates SAM's context knowledge with Mamba's hierarchical feature learning to enhance both global representation and local detail refinement. Specifically, we introduce the Hierarchical Context Enhancement Module (HCEM), an attention-based fusion module that deeply incorporates the multi-level features of SAM and Mamba to improve detail perception and segmentation precision. Additionally, we employ LoRA and Adapter-based fine-tuning to adapt SAM to medical imaging tasks, further enhancing its domain-specific segmentation capability and robustness. We conducted a comprehensive study on several medical segmentation datasets, including Synapse, ISIC17, and ISIC18, evaluating our method across multiple metrics. Experimental results demonstrate that SAMBA-UNet achieves state-of-the-art performance, effectively balancing generalization, segmentation accuracy, and computational efficiency. Our code will be released upon acceptance.",
-    "pdf_url": "https://arxiv.org/pdf/2610.40029v1",
-    "published": "2026-10-29T13:36:01Z",
-    "fetched_at": "2026-10-30T04:59:56.745218"
+    "abstract": "Pixel-space generative Transformers typically use one token per image patch, so capturing finer detail requires more tokens and makes global attention increasingly expensive. We observe that finer detail does not necessarily require more global communication: low-frequency structure benefits from global exchange, while high-frequency detail can be modeled locally. Based on this insight, we introduce SpecSlot, a pixel-space rectified-flow Transformer that decouples output detail from the length of the global attention sequence. SpecSlot expands each spatial anchor into multiple slots, each assigned a disjoint band of DCT coefficients; this separates anchor density from spectral subdivision. Only the lowest-frequency slot from each anchor participates in global attention, while all slots interact locally. This allows the model to increase spectral detail without enlarging the global sequence. A spatial head further adds a local correction to the spectral prediction, while the generative state, target, and loss remain in pixel space. On ImageNet-256, SpecSlot achieves a comparable final FID to a FLOPs-matched JiT control while converging faster. On ImageNet-512, it improves FID by 2.84 over the control with 3.9% fewer FLOPs, and comes within only 0.69 FID of JiT-B/16 at 38.2% lower cost. On text-to-image generation, SpecSlot surpasses JiT-B/8 on DPG-Bench by 1.06 at 40.6% lower forward cost.",
+    "pdf_url": "https://arxiv.org/pdf/2610.40647v1",
+    "published": "2026-10-29T17:59:21Z",
+    "fetched_at": "2026-10-31T04:48:08.322500"
   },
   {
-    "title": "RoboSeed: Multidimensional Evaluation of Vision-Language-Action and World-Action Models: Capability, Resource Affordability, and Research Evidence",
+    "title": "SwapBot: Tool-Centric Robot Manipulation via Interchangeable End-Effectors and Tactile Sensing",
     "authors": [
-      "Xin Ma",
-      "Furong Chen",
-      "Xinlong Man",
-      "Bo Zhang",
-      "Yalong Guo",
-      "Haolan Lei",
-      "Chaochen Cui",
-      "Hongyuan Zhang",
-      "Mulin Chen",
-      "Yi Wang",
-      "Lap-pui Chau",
-      "Chuang Yang"
+      "Yunchu Zhang",
+      "Ray Song",
+      "Junhan Jiao",
+      "Liyiming Ke",
+      "Yuchen Yang",
+      "Ruihan Gao",
+      "Emma Romig",
+      "Siddhartha Srinivasa",
+      "Yiyue Luo"
     ],
-    "abstract": "Choosing a robot action model requires evidence about task capability, adaptation cost, deployment requirements, and the reliability of reported conclusions. Success rates alone offer limited guidance to researchers with different computing budgets and goals. We propose RoboSeed, a multidimensional evaluation framework for vision-language-action (VLA) and world-action models (WAM), within a continuing program to train, evaluate, and openly release robot models with verifiable evidence for model selection.\n  The framework defines five dimensions: capability, downstream training affordability, deployment affordability, locally verified research value, and reproduction evidence. It maps empirical measurements and audit criteria to 0-100 profiles using fixed normalization anchors, with balanced, training-constrained, and deployment-constrained preference settings. Interface and protocol checks establish when comparisons are appropriate. Missing measurements remain explicit, incomplete aggregate scores are withheld, and weighted input coverage identifies evidence gaps.\n  We apply the framework to representative VLA and WAM models, drawing on local training, released-weight evaluation, task-level audits, and an evaluation-system study. The results reveal budget-dependent backbone choices, sensitivity to adaptation recipes, and differences between language and visual task interfaces. Reproducible scoring code and machine-readable evidence support extension to additional models. The study provides dimension-level assessments and priorities for further measurement, while incomplete serving traces and heterogeneous protocols preclude overall numerical rankings.",
-    "pdf_url": "https://arxiv.org/pdf/2610.40026v1",
-    "published": "2026-10-29T13:34:54Z",
-    "fetched_at": "2026-10-30T04:59:56.745235"
+    "abstract": "Robot manipulation in everyday environments inherently involves substantial tool usage. Seemingly simple household tasks, such as cooking pan-fried tofu, require forceful cutting, delicate brushing, and precise placement using different tools under contact-rich interaction. Thus, the ability to autonomously swap and use task-appropriate tools is important for tool-centric manipulation. We introduce SwapBot, a modular, tool-centric end effector system featuring low-cost adapters that quickly convert common household tools into robot end effectors. Rather than pursuing a single universal gripper, SwapBot adopts a unified design principle that combines a fixed robot-side coupling interface with low-cost, tool-side adapters, enabling compatibility with diverse tools, including articulated ones, and multiple robot platforms. Each adapter integrates compact tactile sensors, supports fast autonomous swapping, and interfaces with an intuitive teleoperation system for efficient demonstration collection. User studies show that, during teleoperation, SwapBot reduces task completion time and operator workload. Using collected demonstrations on the robot, we train imitation learning policies to successfully perform tool-centric tasks like cooking tofu, stirring salad, flipping meat. Our ablation study shows that using tactile-augmented demonstrations improves policy performance across contact-rich skills, increasing success rates by 15 to 25 percentage points over RGB-only policies. These results highlight modular, tactile-equipped tools as a practical and extensible pathway toward robust and capable robot manipulation. Project website https://personalrobotics.github.io/SwapBot.",
+    "pdf_url": "https://arxiv.org/pdf/2610.40646v1",
+    "published": "2026-10-29T17:59:20Z",
+    "fetched_at": "2026-10-31T04:48:08.322520"
   },
   {
-    "title": "One Polynomial Field for Every Euler Step and the Flow: Polynomial Dynamics for P and PSPACE",
+    "title": "Adaptive Scenario Generation for KL-DRO Around a Learned Density Model",
     "authors": [
-      "Olivier Bournez"
+      "Aron Brenner",
+      "Saurabh Amin"
     ],
-    "abstract": "We construct, for each deterministic Turing machine that halts on all inputs, one polynomial vector field with rational coefficients that performs the same logical computation at unit Euler step, at every smaller or variable step in $(0,1]$ with divergent sum, and along the flow. This unifies discrete-time and continuous-time computation by polynomial dynamics, which earlier characterizations treated separately. For a machine making $T$ transitions in space $H$, a logical scale $h=2^{-s}$ with $s=O(H)$ suffices, with physical time $O(s(T+s))$, drift disturbances up to $h^{2K}$ for a fixed exponent $K$, and $2Ks+3$ fractional bits at unit step. On a fixed compact domain, polynomial time and robust eventual decision characterize P and PSPACE, respectively, with polynomial scale thresholds and no supplied stabilization horizon in the space case. Without sign, floor or conditional primitives, margin amplification at bounded speed, overlapping polynomial gates and interval-product estimates give the common realization, from which we derive shared logical traces, fixed-field PSPACE-complete prediction and a robust safety family with polynomial certificates common to all Euler steps and the flow.",
-    "pdf_url": "https://arxiv.org/pdf/2610.40025v1",
-    "published": "2026-10-29T13:33:23Z",
-    "fetched_at": "2026-10-30T04:59:56.745243"
+    "abstract": "Distributionally robust optimization (DRO) hedges data-driven two-stage stochastic programs against error in the distribution estimated from a finite record, and standard ambiguity sets differ in how they treat realizations absent from that record. A divergence ball around the empirical distribution contains only reweightings of the record, whereas a transport ball also contains distributions supported off the record, including on realizations the data-generating process cannot produce, against which the decision is then hedged as well. We instead propose a Kullback-Leibler (KL) ball centered at a density model fitted to the record, the learned nominal, which lets the adversary up-weight costly unobserved realizations in proportion to the probability the model assigns them. Solving the resulting problem poses a second difficulty, because it can accommodate only a few scenarios, and an independent sample of that size is likely to omit the rare realizations on which the worst case concentrates. We therefore build the scenario set adaptively, alternating between solving the finite problem and drawing new realizations from the learned nominal, steered toward the worst case at the current decision, with importance weights that correct the draws back to the model. On a multi-item newsvendor problem and a capacity expansion problem on realistic grid data, centering the ball at the learned nominal rather than at the record lowers cost under distribution shift, at comparable in-distribution cost, when the record is scarce and the model class captures structure that lets it extrapolate beyond the record. The advantage fades as the record grows or as the shift departs from the structure the model has learned.",
+    "pdf_url": "https://arxiv.org/pdf/2610.40644v1",
+    "published": "2026-10-29T17:59:01Z",
+    "fetched_at": "2026-10-31T04:48:08.322533"
   }
 ]
