@@ -1,104 +1,73 @@
 [
   {
-    "title": "A Framework for Context Enrichment and Selective Robustness in LLM Social Agents",
+    "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
     "authors": [
-      "Mattia Greiche",
-      "Reihaneh Rabbany",
-      "Maximilian Puelma Touzel"
+      "Jonathan Kozaczuk",
+      "Zheng Dong",
+      "Noyan Evirgen",
+      "Keivan Majidi",
+      "Eddie K. H. Ng",
+      "Chris Porter",
+      "Qi Zhao",
+      "Jia Geng",
+      "Changmao Li",
+      "Brandon R. Feng"
     ],
-    "abstract": "Researchers use large language models as agents in social simulations, where agents are prompted with observations and background information intended to shape their actions. Yet LLM agents have been shown to substantially change their behavior under meaning-preserving prompt variations, creating a validation problem for social simulation. One plausible hypothesis is that this brittleness reflects a lack of grounding and can be reduced by enriching the context provided to the agents. Whether richer context improves robustness remains unclear, in part because context richness and robustness are rarely defined in ways that support controlled comparisons. We address the first need with controlled context enrichment, a set of prompt substitution rules that systematically enriches distinct types of context: neutral padding, generic social background, descriptive decision grounding, and normative decision grounding. We address the second by introducing selective robustness as a validation criterion: insensitivity to meaning-preserving prompt variation combined with a directional response to decision-relevant changes in the social world. We demonstrate the framework in a Prisoner's Dilemma-like game, showing how it can be used to identify which forms of context enrichment produce more desirable and robust agent behavior. We find that these forms of enrichment produce distinct behavioral patterns that vary between the two models tested.",
-    "pdf_url": "https://arxiv.org/pdf/2611.06914v1",
-    "published": "2026-11-04T18:58:23Z",
-    "fetched_at": "2026-11-05T05:52:01.972563"
+    "abstract": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we argue that user embeddings can be understood as sparse superpositions of interpretable behavioral modes. This structure is directly predicted by generative models of user behavior for linear embeddings and extends approximately to deep-learning representations by the superposition hypothesis. Superimposed modes can naturally be recovered by sparse dictionary learning methods, such as sparse autoencoders (SAEs), and recovered modes can be automatically named and queried in natural language. We validate mode recovery against known ground truth on synthetic data, where SAEs recover modes better than classical sparse baselines, including on transformer-encoded embeddings. We then apply the method to classical and transformer-based user embeddings from two real-world datasets. We also show how the corresponding natural-language labels enable zero-shot audience retrieval and characterization over embeddings never trained on text. The framework is post-hoc and model-agnostic, requiring no modification to the upstream embedding system.",
+    "pdf_url": "https://arxiv.org/pdf/2611.08487v1",
+    "published": "2026-11-05T18:59:42Z",
+    "fetched_at": "2026-11-06T05:48:00.883158"
   },
   {
-    "title": "FlowReconBench: Accuracy, calibration and cost of learned and classical flow reconstruction from sparse sensors",
+    "title": "Scientist World: Grow a Research World for AI-Scientists",
     "authors": [
-      "Nicolas Tricard",
-      "Linzheng Wang",
-      "Jason Chen",
-      "Sili Deng"
+      "Taiming Lu",
+      "Sachin Konan",
+      "Zhuang Liu"
     ],
-    "abstract": "Reconstructing full flow fields from sparse sensors requires prior assumptions about unmeasured regions and physical variables. Yet it remains unclear when learned models outperform classical estimators and which aspects of their predictions can be trusted. FlowReconBench evaluates ten learned and five classical methods on three regimes: a laminar cylinder wake across Reynolds numbers, two-dimensional Kolmogorov turbulence and a large-scale three-dimensional (3D) isotropic turbulence. Methods share leakage-controlled splits and sensor draws and are scored on per-channel error, ensemble spread, calibration, spectra and cost. The leading method changes for each regime. Classical methods perform strongly in low-order and dense-sensing regimes. On the cylinder wake, linear stochastic estimation and gappy proper orthogonal decomposition lead, including for unobserved pressure. In 3D, inverse-distance weighting matches the best learned methods on observed channels. Data-driven methods become superior at decreasing sensor density or poor sensor observability. On Kolmogorov flow, continuous ranked probability score and error yield different method rankings: generative models offer broader but underdispersed ensembles, while deterministic models prioritize pointwise error. Generative models balance this tradeoff through their sampler budget, with a larger budget improving ensemble quality at higher computational cost. In 3D, scaling tests demonstrate that queryable methods are flat in memory, while full-grid construction methods run out of memory. Observing only 2 of 4 fields leaves the problem kinematically underconstrained, yet a latent model can reproduce structural similarities to the ground truth.",
-    "pdf_url": "https://arxiv.org/pdf/2611.06912v1",
-    "published": "2026-11-04T18:57:47Z",
-    "fetched_at": "2026-11-05T05:52:01.972583"
+    "abstract": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment. Our autonomous pipeline extracts each paper's open-ended research question and reproduces its proposed method as the baseline; an AI-Scientist entering the environment is evaluated against what the human authors achieved. We release the first 1,000 verified environments. With the world as an evaluation, we found that frontier AI-Scientists can already surpass the human researchers 74% of the time. As a record of how AI does science, it contains 6,400 hours of research traces, with every idea, experiment, failure, and success. As a training ground, we are able to raise (+158%) a small model to match frontier models in research ideation. At last, AI-Scientists' own world has arrived, grown from and growing with science itself.",
+    "pdf_url": "https://arxiv.org/pdf/2611.08478v1",
+    "published": "2026-11-05T18:58:17Z",
+    "fetched_at": "2026-11-06T05:48:00.883174"
   },
   {
-    "title": "BEAKER: An Expert-Curated Benchmark for Embodied Brains in Self-Driving Chemical Laboratories",
+    "title": "EgoGeneralist: Unifying Egocentric Action-Video Tasks through Video-Native Modeling",
     "authors": [
-      "Fei Lin",
-      "Tengchao Zhang",
-      "Ziyang Gong",
-      "Xiaotong Yu",
-      "Bohan Zhang",
-      "Yifan Zhou",
-      "Qihao Yang",
-      "Ji Dai",
-      "Dong Li",
-      "Yining Jiang",
-      "Qinghua Ni",
-      "Jun Huang",
-      "Qiang Zhang",
-      "Yue Zhou",
-      "Zhihang Zhong",
-      "Yonglin Tian",
-      "Fei-Yue Wang",
-      "Xue Yang"
+      "Yanlin Jin",
+      "Bowen Yang",
+      "Cheng Zhang",
+      "Yifan Yang",
+      "Zhe Li",
+      "Jianfei Cai",
+      "Kai Zhu"
     ],
-    "abstract": "Self-Driving Chemical Laboratories (SDCLs) are moving chemical experimentation toward embodied automation, where machines must perceive laboratory scenes, reason about experimental states, and act under physical, procedural, and safety constraints. Although Multimodal Large Language Models (MLLMs) are increasingly considered as embodied brains for such systems, existing laboratory benchmarks mainly focus on safety, anomaly detection, or general scientific understanding, leaving their execution-oriented embodied capabilities underexplored. To fill this gap, we introduce BEAKER, a Benchmark for evaluating Embodied Actionability, Knowledge, Experimentation, and Reasoning in SDCLs. BEAKER contains 1,000 expert-curated question-answer samples across 11 image and video task types, covering key judgments required for chemical laboratory execution, including affordance grounding, trajectory planning, equipment, state, and safety recognition, apparatus setup, operation and step reasoning, and temporal procedure reasoning. All questions and annotations are manually created and reviewed by chemistry and embodied Artificial Intelligence (AI) experts, without AI-assisted generation or annotation. We evaluate 28 general-purpose, science-oriented, chemistry-specialized, and embodied MLLMs in an offline, single-turn setting. Results show that current models can follow coarse experimental procedures in videos, but still struggle to ground actions into operable regions and feasible trajectories, to recognize fine-grained laboratory apparatus, states, and safety norms, and to order steps in mid-length procedures. BEAKER thus reveals a clear gap between coarse procedural understanding and the precise, action-grounded perception required for laboratory execution, providing a diagnostic benchmark for future MLLMs in SDCLs.",
-    "pdf_url": "https://arxiv.org/pdf/2611.06911v1",
-    "published": "2026-11-04T18:57:17Z",
-    "fetched_at": "2026-11-05T05:52:01.972613"
+    "abstract": "Modern video models possess strong visual priors, yet do not natively represent human action in metric 3D space. We present EgoGeneralist, which adapts pretrained video generators to unify action-conditioned egocentric video generation, pose estimation, and joint action-video generation. Our role-adaptive action renderer provides video-native representations for multidirectional action-video learning, making metric motion usable as both a spatial control signal and a recoverable generation target. Cross-stream action-video coupling establishes close correspondence between metric motion and visual dynamics through lightweight adaptation while preserving the pretrained visual prior. Together, these designs establish a generalist framework spanning five action-video tasks. Despite adaptation only on controlled laboratory recordings, EgoGeneralist generalizes to diverse unseen scenes and interactions with effective action control and visual quality, bridging pretrained visual knowledge and metric 3D human motion.",
+    "pdf_url": "https://arxiv.org/pdf/2611.08477v1",
+    "published": "2026-11-05T18:58:13Z",
+    "fetched_at": "2026-11-06T05:48:00.883185"
   },
   {
-    "title": "Perceptive Humanoid Motion from Simulation",
+    "title": "XStack: A Benchmark for ML Repo Migration",
     "authors": [
-      "Siyuan Hu",
-      "Abulikemu Abuduweili",
-      "Yue Meng",
-      "Shipeng Liu",
-      "Quentin Leboutet",
-      "Chen Chen",
-      "Matthias Müller",
-      "Vladlen Koltun"
+      "Linrong Cai",
+      "Taiming Lu",
+      "Haozhe Chen",
+      "Zhuang Liu"
     ],
-    "abstract": "Humanoid robots have the potential to automate a wide range of physical tasks. Progress toward generalist humanoid autonomy, however, remains constrained by a data bottleneck: mapping pixels and free-form language to low-level joint commands requires paired supervision, and no corpus of such data exists at sufficiently large scale. Some approaches rely on human teleoperation and wearable capture devices, which require at least an hour of human time to produce an hour of data. We present HALO, a humanoid autonomy system powered by a pipeline that synthesizes vision-language-motion data across a thousand procedurally generated homes. The corpus scales with compute rather than human labor. HALO acquires a repertoire of physical skills, including sitting on chairs, navigating to named objects, stepping sideways through half-open doors, crouching and crawling beneath tables, and pushing boxes. It orchestrates these skills to solve composite, long-horizon tasks. Without ever seeing a real home during training, HALO transfers zero-shot to the physical world, achieving a 91% success rate across 360 trials in six unmapped real-world environments. See https://apple-aiml-research.github.io/ml-halo/ for code and videos.",
-    "pdf_url": "https://arxiv.org/pdf/2611.06908v1",
-    "published": "2026-11-04T18:55:33Z",
-    "fetched_at": "2026-11-05T05:52:01.972632"
+    "abstract": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable.",
+    "pdf_url": "https://arxiv.org/pdf/2611.08472v1",
+    "published": "2026-11-05T18:55:54Z",
+    "fetched_at": "2026-11-06T05:48:00.883193"
   },
   {
-    "title": "Reinforcement Learning Enables Scaling Generalist Robot Policy Improvement",
+    "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
     "authors": [
-      "Michal Korniak",
-      "Marco Bagatella",
-      "Ralf Römer",
-      "Michal Nauman",
-      "Yarden As",
-      "Pranav Vignesh",
-      "Manan Agarwal",
-      "Leander Diaz-Bone",
-      "Piotr Zalewski",
-      "Mikołaj Czarnecki",
-      "Lenart Treven",
-      "Shashwat Saxena",
-      "Sreyas Venkataraman",
-      "Sarvesh Patil",
-      "Zhiyuan Zhou",
-      "Daniel Marta",
-      "Oier Mees",
-      "Nur Muhammad Mahi Shafiullah",
-      "Carmelo Sferrazza",
-      "Bhavya Sukhija",
-      "Angela P. Schoellig",
-      "Andreas Krause",
-      "Max Simchowitz",
-      "Andrew Wagenmaker"
+      "Linqian Wu",
+      "Diaoxuan He"
     ],
-    "abstract": "The introduction of generalist robot policies has enabled a single, large model to learn to perform a variety of tasks from a vast pre-training corpus. While these models often exhibit powerful zero-shot generalization capabilities, they typically require an adaptation phase to achieve sufficient performance in deployment. Iterated self-improvement via reinforcement learning (RL) has demonstrated promise in enabling this adaptation, yet such approaches have been largely explored in single-task settings - where the goal is to simply improve on a narrow deployment task - which lies in stark contrast to the multi-task capabilities of the base policy. In this work we ask whether generalist robot policies are capable of multi-task, generalist improvement in deployment - targeting many diverse tasks simultaneously - and what algorithmic recipe enables this. To answer this question, we first develop a set of structured evaluations to test generalist improvement capabilities, and systematically evaluate algorithmic and practical design choices regarding value estimation, policy extraction and resource allocation. We show that not only can generalist policies be improved online across diverse tasks, but that the right recipe can enable generalization and increase performance on tasks not considered during online training. We characterize when this generalization occurs and show that both the training task distribution and the use of value-based RL are critical. To the best of our knowledge, this is among the first evidence for online generalist improvement for robot foundation models.",
-    "pdf_url": "https://arxiv.org/pdf/2611.06905v1",
-    "published": "2026-11-04T18:52:28Z",
-    "fetched_at": "2026-11-05T05:52:01.972667"
+    "abstract": "Interpretability, AI auditing and assessments of machine consciousness increasingly rest on mechanism-level quantities: functionals of a system's causal transition law that describe how it computes, not what it outputs. Experiments see that law only through finite, partial and noisy interventions. We ask when such a quantity is identifiable from an experiment's access, continuous in the mechanism and certifiable from finite data, and answer exactly for a deliberately demanding case - the integrated information $\\varphi$ of integrated information theory - in stochastic networks of four and five units with known ground truth. Behavior can be silent: a recurrent and a feed-forward network with identical input-output laws at their response delay carry 0.28 and 0 bits, yet internal recordings separate them within 4-53 trials. Partial access can be just as blind: in our examples, units left out of a one-step recording impose precision floors of 0.30-1.02 bits that no sample size lowers, and in all-but-self parity networks, recordings of any length see several hidden units only through the product of their fidelities - a symmetry that one intervention broke in exact checks. The measure has sharp edges: because $\\varphi$ selects a partition, and the cause and effect it specifies, by one criterion and reports another, infinitesimal changes of mechanism that cross an edge change it by 25-100% at 99% of the edges we found in random networks, and about 1% of surrogate models that fit interventional data almost perfectly misreport it by more than 20%. One-sided claims survive: the same data certify a lower bound on both sides of an edge, and we prove $\\varphi>1.004$ bits throughout a 64-dimensional region of mechanisms and certify it from about $10^7$ controlled transitions with false-certificate probability at most $α$. Measurability is thus a design question with computable answers.",
+    "pdf_url": "https://arxiv.org/pdf/2611.08469v1",
+    "published": "2026-11-05T18:55:31Z",
+    "fetched_at": "2026-11-06T05:48:00.883201"
   }
 ]
