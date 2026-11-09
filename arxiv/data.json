@@ -1,73 +1,85 @@
 [
   {
-    "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+    "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
     "authors": [
-      "Jonathan Kozaczuk",
-      "Zheng Dong",
-      "Noyan Evirgen",
-      "Keivan Majidi",
-      "Eddie K. H. Ng",
-      "Chris Porter",
-      "Qi Zhao",
-      "Jia Geng",
-      "Changmao Li",
-      "Brandon R. Feng"
+      "Chaoyang Wang",
+      "Sicheng Gao",
+      "Junan Hu",
+      "Kunyang Li",
+      "Dongyang Chen",
+      "Yiyang Zhou",
+      "Huaxiu Yao",
+      "Yong Jae Lee",
+      "Radu Timofte",
+      "Yuzhang Shang"
     ],
-    "abstract": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability. To address this gap, we argue that user embeddings can be understood as sparse superpositions of interpretable behavioral modes. This structure is directly predicted by generative models of user behavior for linear embeddings and extends approximately to deep-learning representations by the superposition hypothesis. Superimposed modes can naturally be recovered by sparse dictionary learning methods, such as sparse autoencoders (SAEs), and recovered modes can be automatically named and queried in natural language. We validate mode recovery against known ground truth on synthetic data, where SAEs recover modes better than classical sparse baselines, including on transformer-encoded embeddings. We then apply the method to classical and transformer-based user embeddings from two real-world datasets. We also show how the corresponding natural-language labels enable zero-shot audience retrieval and characterization over embeddings never trained on text. The framework is post-hoc and model-agnostic, requiring no modification to the upstream embedding system.",
-    "pdf_url": "https://arxiv.org/pdf/2611.08487v1",
-    "published": "2026-11-05T18:59:42Z",
-    "fetched_at": "2026-11-08T05:16:11.885194"
+    "abstract": "Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dynamics, and controllable scene composition remains challenging. In this paper, we introduce Video-Coder, the first attempt to train a code-driven video generation agent, which autonomously writes and executes code to construct a dynamic 3D scene (Draft Video) that provides structure and motion signals to downstream video generators. To support this paradigm, we design a dedicated data pipeline and curate two high-quality datasets, Video-Coder-SFT-6k and Video-Coder-RL-2k, which contain diverse prompts and ground-truth reference videos. We further develop the Video- Coder Harness, a unified interactive environment integrating code execution, 3D scene rendering, and execution feedback for agent training and inference. We then train Video-Coder with SFT fol- lowed by harness-native agentic reinforcement learning with dual reward feedback, which combines execution-based and video-based rewards. Additionally, we design an annealing training strategy that gradually reduces the execution reward over time, allowing the model to rely more on the video reward in the later training stages. Experiments show that Video-Coder achieves significant gains, improving Minimax-H3 by approximately 7 points on PhyGenBench and 24 points on VBench-2.0. We hope this work can serve as an open foundation for coding agents in video generation, and we fully open-source our data, models, and code",
+    "pdf_url": "https://arxiv.org/pdf/2611.09894v1",
+    "published": "2026-11-06T18:59:57Z",
+    "fetched_at": "2026-11-09T05:29:12.460557"
   },
   {
-    "title": "Scientist World: Grow a Research World for AI-Scientists",
+    "title": "On Agentic Manipulation Policies",
     "authors": [
-      "Taiming Lu",
-      "Sachin Konan",
-      "Zhuang Liu"
+      "Chen Chen",
+      "Omid Bagherieh",
+      "Naveen Nikamanth Appiah Balaji",
+      "Jesse T. Gonzalez",
+      "Negin Heravi",
+      "Fahad Islam",
+      "Xueting Li",
+      "Jean-Baptiste Regli",
+      "Kejia Ren",
+      "Petr Švec",
+      "David J. Yoon",
+      "Matthias Müller",
+      "Vladlen Koltun"
     ],
-    "abstract": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature. To AI-Scientists, that world is readable but not runnable, so we build Scientist World for them: every research paper becomes an executable environment. Our autonomous pipeline extracts each paper's open-ended research question and reproduces its proposed method as the baseline; an AI-Scientist entering the environment is evaluated against what the human authors achieved. We release the first 1,000 verified environments. With the world as an evaluation, we found that frontier AI-Scientists can already surpass the human researchers 74% of the time. As a record of how AI does science, it contains 6,400 hours of research traces, with every idea, experiment, failure, and success. As a training ground, we are able to raise (+158%) a small model to match frontier models in research ideation. At last, AI-Scientists' own world has arrived, grown from and growing with science itself.",
-    "pdf_url": "https://arxiv.org/pdf/2611.08478v1",
-    "published": "2026-11-05T18:58:17Z",
-    "fetched_at": "2026-11-08T05:16:11.885215"
+    "abstract": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
+    "pdf_url": "https://arxiv.org/pdf/2611.09892v1",
+    "published": "2026-11-06T18:59:34Z",
+    "fetched_at": "2026-11-09T05:29:12.460581"
   },
   {
-    "title": "EgoGeneralist: Unifying Egocentric Action-Video Tasks through Video-Native Modeling",
+    "title": "SciCheck: A Framework for Verifying the Integrity of Deep Learning Training",
     "authors": [
-      "Yanlin Jin",
-      "Bowen Yang",
-      "Cheng Zhang",
-      "Yifan Yang",
-      "Zhe Li",
-      "Jianfei Cai",
-      "Kai Zhu"
+      "Alexander Nguyen",
+      "Dylan Gresham",
+      "Gaby G. Dagher",
+      "Min Long"
     ],
-    "abstract": "Modern video models possess strong visual priors, yet do not natively represent human action in metric 3D space. We present EgoGeneralist, which adapts pretrained video generators to unify action-conditioned egocentric video generation, pose estimation, and joint action-video generation. Our role-adaptive action renderer provides video-native representations for multidirectional action-video learning, making metric motion usable as both a spatial control signal and a recoverable generation target. Cross-stream action-video coupling establishes close correspondence between metric motion and visual dynamics through lightweight adaptation while preserving the pretrained visual prior. Together, these designs establish a generalist framework spanning five action-video tasks. Despite adaptation only on controlled laboratory recordings, EgoGeneralist generalizes to diverse unseen scenes and interactions with effective action control and visual quality, bridging pretrained visual knowledge and metric 3D human motion.",
-    "pdf_url": "https://arxiv.org/pdf/2611.08477v1",
-    "published": "2026-11-05T18:58:13Z",
-    "fetched_at": "2026-11-08T05:16:11.885233"
+    "abstract": "Deep learning training is difficult to verify within a scientific workflow: its architecture, hyperparameters, and procedure are rarely fixed until training has been attempted, and two honest runs never produce the same weights, so recomputation cannot serve as a check. We present SciCheck, a framework in which the scientist explores training configurations freely and posts a blueprint to a provenance ledger for each candidate they want verified, and a verifying scientist judges the resulting run in two layers: a statistical judge model that compares per-step gradient statistics against the verifier's own reference run, and a spot-check that re-executes randomly chosen training segments whose checkpoints are committed to the ledger one epoch at a time. On an MLP, a CNN, and an autoencoder at 100k-500k parameters, under gradient sign flipping, label poisoning, and fabricated runs, SciCheck reaches F1 of 0.966, 0.906, and 0.976 while rejecting 0-4.4% of honest runs. For the attacks we test, the spot-check accounts for most of this accuracy, and we characterize what each layer can detect. The effective-signal statistic falls as $(1-2s)^2$ under a sign flip of severity $s$, so gradient statistics alone catch strong enough sign flips, while fabricated runs that replay genuine statistics look no more anomalous than honest runs to any statistical detector we test. The spot-check catches fully fabricated segments with probability at least $1-(1-s)^k$ for $k$ sampled segments when the draws stay hidden until the run is committed, which roughly matches our measurements and lets a verifier choose $k$ for a target soundness. Verification costs 1.5-2.3x one retraining, mostly for the verifier's reference run; each submission's spot-check takes under 1.5 s, and per-epoch commitments reduce checkpoint storage 5-17x compared with keeping every checkpoint.",
+    "pdf_url": "https://arxiv.org/pdf/2611.09889v1",
+    "published": "2026-11-06T18:58:38Z",
+    "fetched_at": "2026-11-09T05:29:12.460590"
   },
   {
-    "title": "XStack: A Benchmark for ML Repo Migration",
+    "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
     "authors": [
-      "Linrong Cai",
-      "Taiming Lu",
-      "Haozhe Chen",
-      "Zhuang Liu"
+      "Frieda Rong",
+      "Zhaoyue Wang",
+      "Veer Kapadia",
+      "Vishaka Rajani",
+      "Aren A. Babikian",
+      "Xujie Si",
+      "Mahsa Golchoubian",
+      "Raquel Urtasun",
+      "Igor Gilitschenski"
     ],
-    "abstract": "ML code should run where researchers choose, not where it was first written. Today, machine learning code mainly lives in two ecosystems, PyTorch on NVIDIA GPUs and JAX on Google TPUs. Migrating repositories between them means building and testing across frameworks and hardware. This migration is (1) a practical need, since it unlocks different hardware for researchers, and (2) a natural benchmark: it involves different frameworks and hardware, covers whole repositories, and is long-horizon and challenging. We introduce XStack, a benchmark that evaluates agents on migrating ML repositories between these two ecosystems. Each agent receives a PyTorch repository and a clean TPU machine and must deliver a JAX repository. Its output passes if it meets our grading criteria, based on the source repository's published result, authenticated and calibrated by us. Migration by agents remains unreliable: Claude Opus 5 passes 75%, GPT-5.6-sol 45%, and every other agent at most 40%. XStack is a step toward freeing ML code from its ecosystem. We release XStack to make progress toward reliable migration across frameworks and hardware measurable.",
-    "pdf_url": "https://arxiv.org/pdf/2611.08472v1",
-    "published": "2026-11-05T18:55:54Z",
-    "fetched_at": "2026-11-08T05:16:11.885248"
+    "abstract": "Scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. Scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. At each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. We further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. Experiments in the CARLA simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. These results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
+    "pdf_url": "https://arxiv.org/pdf/2611.09888v1",
+    "published": "2026-11-06T18:58:27Z",
+    "fetched_at": "2026-11-09T05:29:12.460602"
   },
   {
-    "title": "Same Behavior, Different Mechanism: What Finite Experiments Can Certify About Integrated Information",
+    "title": "On the (non-)closedness of the set of ReLU networks",
     "authors": [
-      "Linqian Wu",
-      "Diaoxuan He"
+      "Eloi Martinet",
+      "Leon Bungert"
     ],
-    "abstract": "Interpretability, AI auditing and assessments of machine consciousness increasingly rest on mechanism-level quantities: functionals of a system's causal transition law that describe how it computes, not what it outputs. Experiments see that law only through finite, partial and noisy interventions. We ask when such a quantity is identifiable from an experiment's access, continuous in the mechanism and certifiable from finite data, and answer exactly for a deliberately demanding case - the integrated information $\\varphi$ of integrated information theory - in stochastic networks of four and five units with known ground truth. Behavior can be silent: a recurrent and a feed-forward network with identical input-output laws at their response delay carry 0.28 and 0 bits, yet internal recordings separate them within 4-53 trials. Partial access can be just as blind: in our examples, units left out of a one-step recording impose precision floors of 0.30-1.02 bits that no sample size lowers, and in all-but-self parity networks, recordings of any length see several hidden units only through the product of their fidelities - a symmetry that one intervention broke in exact checks. The measure has sharp edges: because $\\varphi$ selects a partition, and the cause and effect it specifies, by one criterion and reports another, infinitesimal changes of mechanism that cross an edge change it by 25-100% at 99% of the edges we found in random networks, and about 1% of surrogate models that fit interventional data almost perfectly misreport it by more than 20%. One-sided claims survive: the same data certify a lower bound on both sides of an edge, and we prove $\\varphi>1.004$ bits throughout a 64-dimensional region of mechanisms and certify it from about $10^7$ controlled transitions with false-certificate probability at most $α$. Measurability is thus a design question with computable answers.",
-    "pdf_url": "https://arxiv.org/pdf/2611.08469v1",
-    "published": "2026-11-05T18:55:31Z",
-    "fetched_at": "2026-11-08T05:16:11.885260"
+    "abstract": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(Ω)$ or in $C(\\overlineΩ)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
+    "pdf_url": "https://arxiv.org/pdf/2611.09887v1",
+    "published": "2026-11-06T18:58:06Z",
+    "fetched_at": "2026-11-09T05:29:12.460610"
   }
 ]
