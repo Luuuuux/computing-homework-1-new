@@ -1,85 +1,67 @@
 [
   {
-    "title": "Video-Coder: Reinforcing Agentic Coding for Video Generation",
+    "title": "Leveraging High-Activity Post-Therapeutic I-131 Scans for Deep Learning Reconstruction of Extremely Sparse Planar Images in Differentiated Thyroid Cancer",
     "authors": [
-      "Chaoyang Wang",
-      "Sicheng Gao",
-      "Junan Hu",
-      "Kunyang Li",
-      "Dongyang Chen",
-      "Yiyang Zhou",
-      "Huaxiu Yao",
-      "Yong Jae Lee",
-      "Radu Timofte",
-      "Yuzhang Shang"
+      "Boyang Pan",
+      "Hang Yang",
+      "Jianchen Pan",
+      "Cui Gan",
+      "Lanxi Zhang",
+      "Hongmin Li",
+      "Nan-Jie Gong"
     ],
-    "abstract": "Recent years have witnessed remarkable progress in video generation in terms of visual quality and temporal consistency. However, generating videos with precise spatial structure, coherent motion dynamics, and controllable scene composition remains challenging. In this paper, we introduce Video-Coder, the first attempt to train a code-driven video generation agent, which autonomously writes and executes code to construct a dynamic 3D scene (Draft Video) that provides structure and motion signals to downstream video generators. To support this paradigm, we design a dedicated data pipeline and curate two high-quality datasets, Video-Coder-SFT-6k and Video-Coder-RL-2k, which contain diverse prompts and ground-truth reference videos. We further develop the Video- Coder Harness, a unified interactive environment integrating code execution, 3D scene rendering, and execution feedback for agent training and inference. We then train Video-Coder with SFT fol- lowed by harness-native agentic reinforcement learning with dual reward feedback, which combines execution-based and video-based rewards. Additionally, we design an annealing training strategy that gradually reduces the execution reward over time, allowing the model to rely more on the video reward in the later training stages. Experiments show that Video-Coder achieves significant gains, improving Minimax-H3 by approximately 7 points on PhyGenBench and 24 points on VBench-2.0. We hope this work can serve as an open foundation for coding agents in video generation, and we fully open-source our data, models, and code",
-    "pdf_url": "https://arxiv.org/pdf/2611.09894v1",
-    "published": "2026-11-06T18:59:57Z",
-    "fetched_at": "2026-11-09T05:29:12.460557"
+    "abstract": "Background: Diagnostic I-131 whole-body planar imaging in differentiated thyroid cancer (DTC) is count-limited by low administered activity, and quality worsens under rapid acquisition. Models trained on such data struggle because their targets lack photon statistics. Purpose: To test whether high-quality post-therapeutic (PT) I-131 scans can serve as superior training references for enhancing sparse diagnostic planar images, using transfer learning and input-image addition. Methods: In this single-center prospective study, 111 patients were enrolled in PT training (n = 19), diagnostic follow-up (FU) training (n = 58), and FU paired test (n = 34) cohorts. Five Restormer-based models were trained: FU_DLx2 on FU labels; PT_DLx2 transfer-learned on PT data; PT_DLx1+ and PT_DLx2+ with input-image addition; PT_DLx6 as a PT-only reference. Test-time processing used two-step denormalization and Poisson re-scaling to preserve noise statistics. Quality was assessed by PSNR, SSIM, and a blinded dual-reader evaluation of all 34 test-cohort patients. Results: PT_DLx2 achieved the highest PSNR (34.4 +/- 3.6 dB) and SSIM (0.81 +/- 0.07). PT_DLx1+ and PT_DLx2+ were comparable (33.8 and 33.3 dB; SSIM 0.80). FU_DLx2 ranked below the unprocessed fast scan (30.3 vs. 32.0 dB; 0.76 vs. 0.79). Subjectively, PT_DLx2+ scored highest in image quality (4.54 +/- 0.60) and diagnostic confidence (4.54 +/- 0.60), surpassing the reference standard (4.19 +/- 0.83 and 4.31 +/- 0.81; P = 0.005 and P = 0.008). FU_DLx2 and PT_DLx6 scored lowest. Conclusion: Count-rich PT scans provide effective training priors for reconstructing extremely sparse images. Input-image addition and cross-domain transfer learning from PT data outperformed direct training on count-limited diagnostic data, supporting 2x scan acceleration with quality matching or exceeding the unaccelerated standard scan for selected PT-derived configurations.",
+    "pdf_url": "https://arxiv.org/pdf/2611.12044v1",
+    "published": "2026-11-09T08:21:27Z",
+    "fetched_at": "2026-11-10T06:39:04.282526"
   },
   {
-    "title": "On Agentic Manipulation Policies",
+    "title": "Leveraging Complementary Event Frame and Voxel Representations for RGB-Guided Multimodal Pre-training",
     "authors": [
-      "Chen Chen",
-      "Omid Bagherieh",
-      "Naveen Nikamanth Appiah Balaji",
-      "Jesse T. Gonzalez",
-      "Negin Heravi",
-      "Fahad Islam",
-      "Xueting Li",
-      "Jean-Baptiste Regli",
-      "Kejia Ren",
-      "Petr Švec",
-      "David J. Yoon",
-      "Matthias Müller",
-      "Vladlen Koltun"
+      "Wentao Wu",
+      "Xiao Wang",
+      "Yi Wang",
+      "Chenglong Li",
+      "Yonghong Tian",
+      "Bin Luo"
     ],
-    "abstract": "Recent work on robot manipulation has focused on specialist policies trained on demonstrations. We show that generalist AI models can control manipulators more reliably than specialist policies such as vision-language-action models (VLAs) and world-action models (WAMs). We systematically analyze agentic manipulation policies (AMPs), in which a generalist AI model commands the manipulator directly, adapting its actions as the task unfolds. We present AMP1, a reference harness that runs unchanged across single-arm, bimanual, and mobile manipulation. AMP1 achieves state-of-the-art results on the RoboLab-120 and CaP-Gym benchmarks, with no demonstrations or task-specific training. On RoboLab-120, AMP1 reaches an 85.6\\% success rate zero-shot, compared to 49.2\\% and 42.9\\% for leading VLA and WAM policies. The agent succeeds zero-shot in 104 of 108 real-world trials spanning twelve tasks and three robot instances, reducing failure rates by 20x and 15x relative to strong VLA and WAM baselines. The basic harness supplies no grasping, pushing, or placing skills; the agent develops its own strategies, such as searching for hidden objects, using objects as tools, and calibrating its cameras. With the addition of a persistent memory store, the agent can also learn from experience: an augmented harness with a memory representation that is carried across episodes lowers the failure rate on RoboDojo bimanual manipulation tasks by 4.6x relative to zero-shot deployment. Our analysis suggests that AMPs are substantially more general and robust than specialist manipulation policies, providing a promising foundation for robot manipulation.",
-    "pdf_url": "https://arxiv.org/pdf/2611.09892v1",
-    "published": "2026-11-06T18:59:34Z",
-    "fetched_at": "2026-11-09T05:29:12.460581"
+    "abstract": "In this paper, we propose CM3AE 2.0, a unified RGB Frame and Event-Voxel/-Frame pre-training framework. By jointly learning multimodal spatiotemporal representations and exploiting latent cross-modal dependencies through cross-modal generation, the framework enhances multimodal information interaction and collaborative modeling capabilities. Specifically, we first propose an Event-aware Spatiotemporal Masked Reconstruction (ESMR) strategy to learn unified multimodal spatiotemporal representations. It leverages event responses to guide masking toward dynamically salient regions. Through spatiotemporal masked reconstruction, it learns spatial structures and their temporal variations from continuous RGB-Event observations. In addition, it incorporates multimodal fusion reconstruction and cross-modal contrastive learning to facilitate the modeling of cross-modal complementary information and the learning of shared representations. Building upon this, we further propose a Hierarchical Cross-modal Generation (HCG) strategy to learn latent cross-modal dependencies through visual and language generation. At the visual level, Event-conditioned RGB generation is performed using a pre-trained diffusion model to capture visual associations between the two modalities. At the language level, video-level text description generation based on joint RGB-Event representations establishes connections between multimodal visual features and linguistic semantics, further enriching the learning of cross-modal dependencies. Extensive experiments on four diverse downstream tasks demonstrate that CM3AE 2.0 consistently improves performance, validating the effectiveness and generalization capability of the proposed pre-training framework.",
+    "pdf_url": "https://arxiv.org/pdf/2611.12040v1",
+    "published": "2026-11-09T08:17:45Z",
+    "fetched_at": "2026-11-10T06:39:04.282546"
   },
   {
-    "title": "SciCheck: A Framework for Verifying the Integrity of Deep Learning Training",
+    "title": "The Power of Migration on Identical Machines is Two",
     "authors": [
-      "Alexander Nguyen",
-      "Dylan Gresham",
-      "Gaby G. Dagher",
-      "Min Long"
+      "Nicole Megow",
+      "Bart Zondervan"
     ],
-    "abstract": "Deep learning training is difficult to verify within a scientific workflow: its architecture, hyperparameters, and procedure are rarely fixed until training has been attempted, and two honest runs never produce the same weights, so recomputation cannot serve as a check. We present SciCheck, a framework in which the scientist explores training configurations freely and posts a blueprint to a provenance ledger for each candidate they want verified, and a verifying scientist judges the resulting run in two layers: a statistical judge model that compares per-step gradient statistics against the verifier's own reference run, and a spot-check that re-executes randomly chosen training segments whose checkpoints are committed to the ledger one epoch at a time. On an MLP, a CNN, and an autoencoder at 100k-500k parameters, under gradient sign flipping, label poisoning, and fabricated runs, SciCheck reaches F1 of 0.966, 0.906, and 0.976 while rejecting 0-4.4% of honest runs. For the attacks we test, the spot-check accounts for most of this accuracy, and we characterize what each layer can detect. The effective-signal statistic falls as $(1-2s)^2$ under a sign flip of severity $s$, so gradient statistics alone catch strong enough sign flips, while fabricated runs that replay genuine statistics look no more anomalous than honest runs to any statistical detector we test. The spot-check catches fully fabricated segments with probability at least $1-(1-s)^k$ for $k$ sampled segments when the draws stay hidden until the run is committed, which roughly matches our measurements and lets a verifier choose $k$ for a target soundness. Verification costs 1.5-2.3x one retraining, mostly for the verifier's reference run; each submission's spot-check takes under 1.5 s, and per-epoch commitments reduce checkpoint storage 5-17x compared with keeping every checkpoint.",
-    "pdf_url": "https://arxiv.org/pdf/2611.09889v1",
-    "published": "2026-11-06T18:58:38Z",
-    "fetched_at": "2026-11-09T05:29:12.460590"
+    "abstract": "We study the power of migration in preemptive scheduling on identical parallel machines with time windows. If an instance admits a migratory schedule on $m$ machines, how many machines are needed to schedule it without migration? Kalyanasundaram and Pruhs (2001) showed that $6m-5$ machines suffice and gave a polynomial-time construction using $12m-5$ machines, whereas $2m-1$ machines may be necessary. We close this gap, which has been open for more than 25 years: $2m-1$ machines always suffice, and a corresponding non-migratory schedule can be computed in strongly polynomial time.\n  Our proof has two main technical ingredients. First, we introduce supercanonical schedules and prove that the conflict graph of every such schedule on $m$ machines is $(2m-1)$-colorable. The key property is that whenever a job pauses, the jobs running alongside it just before and just after the pause separate the jobs processed entirely during the pause from the rest of the conflict graph. We use these separators and Kempe exchanges to compute a coloring in polynomial time. Second, we construct a supercanonical schedule with polynomially many processing blocks by shrinking job windows as far as possible while preserving feasibility and solving a min-cost flow problem.",
+    "pdf_url": "https://arxiv.org/pdf/2611.12034v1",
+    "published": "2026-11-09T08:14:20Z",
+    "fetched_at": "2026-11-10T06:39:04.282558"
   },
   {
-    "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
+    "title": "Scale-Invariant Empirical-Bayes Laplace Approximation for ReLU Networks",
     "authors": [
-      "Frieda Rong",
-      "Zhaoyue Wang",
-      "Veer Kapadia",
-      "Vishaka Rajani",
-      "Aren A. Babikian",
-      "Xujie Si",
-      "Mahsa Golchoubian",
-      "Raquel Urtasun",
-      "Igor Gilitschenski"
+      "Shivam Pal",
+      "Piyush Rai"
     ],
-    "abstract": "Scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. Scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. At each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. We further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. Experiments in the CARLA simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. These results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
-    "pdf_url": "https://arxiv.org/pdf/2611.09888v1",
-    "published": "2026-11-06T18:58:27Z",
-    "fetched_at": "2026-11-09T05:29:12.460602"
+    "abstract": "ReLU networks are well-known to have continuous scale symmetries; infinitely many reparameterized weight vectors that represent the same function. Dinh et al. (2017) have shown that, by reparameterizing, the geometry of the loss landscape (e.g., curvature) of these networks can be changed arbitrarily without affecting the underlying function. Thus, any quantity that depends on the network's geometry should be defined with care. In this paper, we show that the Empirical Bayes (EB) Laplace's approximation is not well-defined for ReLU networks, mainly due to Hessian dependence in computing the marginal likelihood, which is not invariant under ReLU scale symmetries. Thus, we can get different prior precisions, posterior covariances, and predictive uncertainties for a network having identical predictions under ReLU scaling. We define family of prior precision fields indexed by $γ$ and introduce $γ$-canonicalization, which first converts the network to its canonical representation by balancing the ratio of incoming to outgoing weights, and then fits the Empirical Bayes (EB) Laplace to the canonical representation. This procedure is equivalent to transporting the isotropic Gaussian prior from the canonical representation to the original coordinates, by producing a ReLU-scale-compatible precision field. This makes the marginal likelihood invariant under ReLU scaling, while allowing $γ$ to be selected by maximizing the marginal likelihood. The resulting EB Laplace approximation is well-defined on ReLU scale-equivalence classes and yields consistent prior precision selection and predictive uncertainties across functionally identical parameterizations.",
+    "pdf_url": "https://arxiv.org/pdf/2611.12031v1",
+    "published": "2026-11-09T08:09:21Z",
+    "fetched_at": "2026-11-10T06:39:04.282568"
   },
   {
-    "title": "On the (non-)closedness of the set of ReLU networks",
+    "title": "Parametric spatio-temporal reduced-order modelling via Spectral Proper Orthogonal Decomposition and Gaussian Process Regression",
     "authors": [
-      "Eloi Martinet",
-      "Leon Bungert"
+      "Guglielmo Padula",
+      "Antonio Colanera",
+      "Gianluigi Rozza"
     ],
-    "abstract": "We prove that the set $\\mathcal{N}_N$ of ReLU networks with one hidden layer and at most $N\\in\\mathbb N$ neurons is weakly closed in $W^{1,p}(Ω)$, for a bounded connected open set $Ω\\subset\\mathbb R^d$. Consequently, every coercive, weakly lower semicontinuous energy on this space attains its minimum over $\\mathcal{N}_N$. This covers the Deep Ritz method with convex integrands, Sobolev training and Lipschitz learning. Moreover, as the weight decay parameter tends to zero, minimizers of the regularized problem converge, up to subsequences, to minimizers with minimal parameter norm. We also prove that the set of ReLU networks with two hidden layers of bounded widths is not closed in $W^{1,p}(Ω)$ or in $C(\\overlineΩ)$. This disproves a conjecture of Petersen, Raslan and Voigtlaender.",
-    "pdf_url": "https://arxiv.org/pdf/2611.09887v1",
-    "published": "2026-11-06T18:58:06Z",
-    "fetched_at": "2026-11-09T05:29:12.460610"
+    "abstract": "We present SPOD-GPR, a non-intrusive, parametric, spatio-temporal reduced-order model (ROM) that combines Proper Orthogonal Decomposition (POD), Spectral POD (SPOD), and Gaussian Process Regression (GPR). A parametric POD first projects the high-dimensional state onto a low-dimensional subspace. The reduced trajectories are then divided into windowed sections, transformed into the frequency domain, and truncated to the most energetic frequencies. SPOD is then performed independently at each retained frequency, yielding temporally coherent modes and coefficients. The parametric dependence of the POD and SPOD bases is modelled by GPR on a local chart of the Grassmann manifold after Procrustes alignment. The SPOD modal coefficients are learned both as explicit functions of the parameters and through a parameter-conditioned autoregressive model that allows for temporal extrapolation beyond the training window. Gaussian processes are sampled jointly and pathwise via Matheron conditioning, ensuring that each predictive realization carries uncertainty quantification consistent with the posterior distribution. The method is tested on four parametric examples where the parameter values and the prediction horizon lie outside the training data: the two-dimensional anisotropic Kuramoto--Sivashinsky equation in a time-periodic and a travelling-wave regime, each parametrised by one of its two coefficients; flow past a cylinder parametrised by the Reynolds number; and flow past an elliptic obstacle parametrised by its semi-axes. In all cases, SPOD-GPR reduces the normalised mean absolute error compared to a POD-GPR baseline, and improves the calibration of the predictive uncertainty, especially in the fluid flow cases, where POD-GPR is severely overconfident. This opens the way to spectral, uncertainty-aware reduced-order models for many-query and real-time applications, such as digital twins.",
+    "pdf_url": "https://arxiv.org/pdf/2611.12028v1",
+    "published": "2026-11-09T08:05:21Z",
+    "fetched_at": "2026-11-10T06:39:04.282578"
   }
 ]
