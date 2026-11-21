@@ -10,7 +10,7 @@
     "abstract": "Diffusion distillation accelerates image and video generation by compressing a pretrained teacher's iterative sampling process into a few network evaluations. Distribution-based methods achieve this by matching the student's output distribution to the teacher's. This matching is often driven by reverse-KL objectives, whose mode-seeking bias favors dominant teacher modes at the expense of diversity across samples. We introduce Posterior Matching Distillation (PMD), a new member of the distribution-based distillation family that combines mode-covering posterior sampling with any-step generation. At zero population loss, PMD recovers the teacher's full posterior of clean images at each trained noise level. Its stochastic student supports any-step sampling budgets within the trained timestep grid without further training. To learn these posteriors, PMD matches exponentially reweighted averages of student samples conditioned on a fixed noisy state to corresponding teacher posterior means. Under Gaussian corruption, exponentially tilted posterior mean is a single teacher evaluation at a shifted input. We prove that, matching tilted means over an open neighborhood uniquely identifies the full posterior. PMD thus supervises the entire conditional distribution through a family of mean constraints, without any auxiliary student-score network. Experiments on SDXL and FLUX.2 [klein] 4B demonstrate that PMD achieves the best FID among 4-step methods on both models, while maintaining competitive or leading performance across prompt-alignment and perceptual-quality metrics.",
     "pdf_url": "https://arxiv.org/pdf/2611.26629v1",
     "published": "2026-11-19T18:59:57Z",
-    "fetched_at": "2026-11-20T06:27:52.410639"
+    "fetched_at": "2026-11-21T06:19:26.217756"
   },
   {
     "title": "RL Post-Training in Diffusion Transformers Is Activation Steering",
@@ -25,7 +25,7 @@
     "abstract": "Reinforcement learning (RL) post-training substantially improves the visual quality, text rendering, and compositional accuracy of diffusion transformers. Because capabilities such as rendering requested text or composing multiple objects are inherently prompt-dependent, a natural hypothesis is that improving them requires learning complex, input-dependent transformations. To isolate how much of these gains an input-independent shift explains, we probe each RL-tuned model with a deliberately simple parameterization: a fixed set of steering vectors added to the block outputs of the frozen base model. On SD3.5-M, these vectors hold 65x fewer parameters than the RL-tuned LoRA (0.29M against 18.8M). We fit them to match the velocity predictions of public RL-tuned checkpoints, with no reward in the objective. Although the vectors are identical for every prompt, token, and sampling seed, they recover 90.0-96.3% of the reward gains of six RL-tuned image models, and 89.8% and 111.9% on two RL-tuned video models. Initialized at zero and trained with online RL, the vectors alone exceed the reward gains of weight-based RL on text rendering (OCR) and human preference (PickScore) on SD3.5-M. A constant shift thus suffices for most of the gain of policy-gradient RL post-training: without new input-dependent transformations, it steers the pretrained generator toward what it can already compute.",
     "pdf_url": "https://arxiv.org/pdf/2611.26627v1",
     "published": "2026-11-19T18:59:53Z",
-    "fetched_at": "2026-11-20T06:27:52.410662"
+    "fetched_at": "2026-11-21T06:19:26.217782"
   },
   {
     "title": "AnyVIO: Feed-Forward Streaming Visual-Inertial Odometry Across Platforms",
@@ -38,7 +38,7 @@
     "abstract": "Geometric foundation models (GFMs) estimate camera mo- tion and scene structure from images without requiring ex- pert parameter tuning, but either lack metric scale or rely on learned priors to infer scale, which is unobservable from monocular images alone. Inertial sensing offers a way to observe metric scale, but existing methods add inertial in- formation through a filter or factor graph, which reintro- duces bespoke parameter tuning and optimization costs that can grow with the trajectory. To bridge this gap, we present AnyVIO, a real-time, feed-forward streaming model for monocular visual-inertial odometry (VIO), which combines a streaming GFM with an inertial foundation model (IFM). Both the GFM and IFM predict the metric motion between consecutive frames, and a lightweight learned fusion head quantifies the reliability of each estimate and blends them in a single forward pass. Across nine datasets recorded from cars, legged and ground robots, and handheld and head- mounted devices, AnyVIO reduces the metric position error of its visual model by 36% while publishing each pose esti- mate 70 ms after an image is received. We further deploy AnyVIO onboard two real vehicles at up to 140 km/h, where it remains accurate in poor lighting and heavy dust.",
     "pdf_url": "https://arxiv.org/pdf/2611.26625v1",
     "published": "2026-11-19T18:59:35Z",
-    "fetched_at": "2026-11-20T06:27:52.410672"
+    "fetched_at": "2026-11-21T06:19:26.217798"
   },
   {
     "title": "PlayCraft: Designing Engaging Games from Agent Play Experience",
@@ -48,7 +48,7 @@
     "abstract": "Recent AI agents can generate playable games, but these games are not necessarily engaging. Mastery is a key source of engagement, yet designing for it requires extensive human play and tuning. We propose PlayCraft, an automated framework that uses a vision-based agent to play games and draws on its detailed play experience to revise them for mastery. Starting from an initial game, PlayCraft alternates between playing and crafting. In the playing stage, a player agent watches the game screen, uses the controls, and pursues the game objective over repeated episodes while retaining memory. After each episode, it reports its progress, outcomes, decisions, and reflections. In the crafting stage, a crafter agent uses these reports to revise the game. It estimates player abilities, predicts performance at different proficiency levels, and compares those predictions with a target learning progression. It diagnoses the game and addresses the gaps by giving players meaningful opportunities to improve through better decisions and execution. We evaluate games in fresh runs with player agents across three intelligence settings, measuring learning gain and learning slope. Compared with the initial games, PlayCraft yields larger learning gains and steeper learning slopes in most games. It also outperforms the baselines on the macro-average of each metric at every intelligence setting.",
     "pdf_url": "https://arxiv.org/pdf/2611.26624v1",
     "published": "2026-11-19T18:59:34Z",
-    "fetched_at": "2026-11-20T06:27:52.410679"
+    "fetched_at": "2026-11-21T06:19:26.217810"
   },
   {
     "title": "TideCache: Efficient Hybrid LLM Serving with Transparent Cache Management and Layer-Wise Streaming",
@@ -63,6 +63,6 @@
     "abstract": "Hybrid architectures have become mainstream among open-weight language models. Their global-attention and bounded-state layers maintain heterogeneous caches whose demands vary with context length and concurrency. We present TideCache, a serving system on CPU--GPU superchips with three components for allocating GPU memory among caches and managing their residency across GPU and host memory. The Transparent Cache Pool redistributes physical pages among cache components behind fixed virtual addresses, preserving cache layouts and backend interfaces. The Cache Streamer uses computation intervals provided by bounded-state layers to prefetch the next global-attention layer's prefix into GPU slots shared across global-attention layers, reducing GPU residency while overlapping layer-wise transfers with computation. Generated KV remains resident. The Request Scheduler selects resident or streamed execution and triggers capacity adjustments according to request size and queue state. Together, they let HBM released by streaming accommodate other cache components and additional requests. Implemented in SGLang and evaluated on GB300 and GH200 across seven model/platform configurations, TideCache completes up to 2.04x as many agent turns, reduces overall P50 per-token latency by 20--59%, and improves agent P50 TTFT by 1.40--3.05x compared with SGLang with HiCache.",
     "pdf_url": "https://arxiv.org/pdf/2611.26619v1",
     "published": "2026-11-19T18:58:31Z",
-    "fetched_at": "2026-11-20T06:27:52.410689"
+    "fetched_at": "2026-11-21T06:19:26.217827"
   }
 ]
