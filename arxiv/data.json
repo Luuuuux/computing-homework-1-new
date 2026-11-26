@@ -1,95 +1,72 @@
 [
   {
-    "title": "OmniAct: One Policy, One Million Embodiments",
+    "title": "Spectrum Adaptation of AI-Native Autoencoder Communications with Transfer Learning",
     "authors": [
-      "Xiang Fan",
-      "Yuheng Wang",
-      "Jiayuan Yan",
-      "Bohan Fang",
-      "Wisdom Oluchi Ikezogwo",
-      "Ainaz Eftekhar",
-      "Max Argus",
-      "Jason Ren",
-      "Jiafei Duan",
-      "Ranjay Krishna"
+      "Yalin E. Sagduyu",
+      "Tugba Erpek"
     ],
-    "abstract": "A single policy that controls diverse robots must not only transfer task knowledge across embodiments, but also adapt its behavior to each robot's capabilities. Existing approaches facilitate transfer through shared action representations, but these representations do not necessarily capture how differences in robot morphology should shape manipulation strategies. We introduce OmniAct, a cross-embodiment manipulation policy that conditions directly on each robot's kinematics in a specific scene to produce embodiment-specific behavior. This kinematic graph represents the robot's joint positions, motion axes, and connectivity to its visual observation, allowing the policy to account for how its embodiment related to objects and surfaces in the scene. A flow-matching policy predicts relative joint motions for each node, enabling control across robots with different degrees of freedom and kinematic configurations. To learn how physical structure shapes behavior at scale, we procedurally design and filter one million physically feasible robot embodiments; next, we develop algorithms to generate robot trajectories in simulation for all embodiments; finally, we train across diverse simulated manipulation tasks. On 2,000 embodiment-scene-held-out evaluation episodes, OmniAct achieves 63.0% success, compared to 17.8% for pi 0.5 and 57.9% for the strongest baseline; on the task families GPT-6 Astra was evaluated on, it achieves 64.7% against GPT-6 Astra's 41.1%. On a previously unseen real-world robot, it achieves nearly twice the success rate of the next best method, MolmoAct2. Beyond task success, we observe that OmniAct learns distinct manipulation strategies that exploit the capabilities and accommodate the limitations of different morphologies. Project: https://omniact.github.io/",
-    "pdf_url": "https://arxiv.org/pdf/2611.33158v1",
-    "published": "2026-11-24T18:59:58Z",
-    "fetched_at": "2026-11-25T07:43:55.881745"
+    "abstract": "End-to-end physical-layer learning replaces separate modulation, coding, and detection operations with an autoencoder (AE) that consists of a jointly trained encoder-decoder pair at the transmitter and the receiver. This paper studies AI-native communications with AEs and quantifies the sensitivity to training-test mismatch in channel models. Models trained only on an AWGN channel achieve low bit error rates (BERs) under matched conditions but degrade severely on Rayleigh fading with practical front-end impairments. To reduce the time and energy required to adapt to new channel conditions, we propose a low-latency transfer-learning procedure that starts from an AWGN-pretrained system and fine-tunes only a small subset of transmitter and receiver layers while freezing the remainder. We further formulate layer selection as a budget-constrained optimization problem that identifies the most informative parameters to update during adaptation. This preserves the learned signal geometry and the deep decision structure while adapting lightweight front ends to fading- and impairment-induced mixing. For AE communications, we show that partial updates remove the mismatch-induced error floor and approach the BER of fully retrained models. We provide a layer-wise study and quantify resource-performance trade-offs, showing that modest adaptation substantially reduces BER while cutting training time, multiply-accumulate (MAC) operations, energy consumption, and the fraction of updated parameters for resource-efficient implementation.",
+    "pdf_url": "https://arxiv.org/pdf/2611.34942v1",
+    "published": "2026-11-25T18:59:57Z",
+    "fetched_at": "2026-11-26T07:34:48.283909"
   },
   {
-    "title": "DiaCap: Jointly Learning Who Speaks When for Audiovisual Dialogue Captioning",
+    "title": "Tokenisation is not in APX",
     "authors": [
-      "Binfei Ji",
-      "Zhiwen Cao",
-      "Anqi Yang",
-      "Prem Seetharaman",
-      "Shuo Yang",
-      "Ratheesh Kalarot",
-      "Yingyan Celine Lin",
-      "Mingze Xu"
+      "Violeta Kastreva",
+      "Philip Whittington",
+      "Dennis Komm",
+      "Tiago Pimentel"
     ],
-    "abstract": "We present DiaCap, an audiovisual LLM for comprehensive dialogue captioning, which produces the transcript, timestamps, and a visual description of the speaker for every utterance in a video. Considering that utterance timing and audiovisual diarization are tightly coupled, DiaCap unifies the tasks in a single model, trained in two complementary stages. First, we train DiaCap on 225K curated clips, using synthetic captions that densely label every utterance in detail. Second, we further refine the model via reinforcement learning on 2.9K human-corrected clips, using fine-grained feedback that directly evaluates utterance timing, speaker grouping, and speaker binding. On DiaDemBench, which we extend with utterance-level timestamps and subtitle redaction, both DiaCap with off-the-shelf transcripts and its end-to-end variant DiaCap-E2E achieve strong results. Specifically, DiaCap performs on par with Gemini 4 Argon in audiovisual diarization while clearly outperforming it in timestamp accuracy (76.59 vs. 42.76 TIME). It also maintains strong diarization on multilingual and minute-long videos, and transfers to audiovisual question answering.",
-    "pdf_url": "https://arxiv.org/pdf/2611.33153v1",
-    "published": "2026-11-24T18:59:08Z",
-    "fetched_at": "2026-11-25T07:43:55.881790"
+    "abstract": "In this paper, we prove that, unless P=NP, no polynomial-time algorithm can find a tokeniser whose objective is within any constant factor of the optimum, meaning that tokenisation is not in the APX complexity class. We prove this for direct and bottom-up tokenisation, under both a compression or unigram log-likelihood objectives, and for binary or larger alphabets. We further show that, even over unary alphabets, direct tokenisation is APX-hard, and thus admits no polynomial-time approximation scheme.",
+    "pdf_url": "https://arxiv.org/pdf/2611.34938v1",
+    "published": "2026-11-25T18:59:38Z",
+    "fetched_at": "2026-11-26T07:34:48.283930"
   },
   {
-    "title": "BioLoom: Scaling Biomedical Vision-Language Models by Learning from the Structure of Scientific Articles",
+    "title": "DexLink: Synthesizing Dexterous Behaviors from Chained Hand-object Poses",
     "authors": [
-      "Yuwei Yang",
-      "Xiaoxiao Sun",
-      "Alejandro Lozano",
-      "Yuan-Sen Ting",
-      "Yuhui Yuan",
-      "Liang Zheng",
-      "Serena Yeung-Levy"
+      "Meenal Parakh",
+      "Deep Patel",
+      "Beining Han",
+      "Jia Deng"
     ],
-    "abstract": "The development of biomedical vision-language models (VLMs) with contrastive image-text pretraining has been driven by scaling to increasingly large and diverse image-text datasets. Beyond scaling, further progress can come from learning richer representations from existing data. We hypothesize that the structure of scientific literature itself provides an additional source of supervision: figures, panels, captions, and accompanying article text encode rich relationships across modalities. Yet, treating these as independent image-text pairs overlooks their relationships. To address this limitation, we incorporate these structural relationships into contrastive image-text supervision. We preserve exact image-text matches while introducing weaker positive supervision for related pairs, such as a panel and the caption of a sibling panel. We upweight cross-article negatives of the same content type to encourage finer discrimination. We also enrich panel descriptions using visual content, original figure captions, and mentioning paragraphs. Pairing panels with these descriptions and whole figures with their original captions yields Loom52M, a dataset of 52.4 million image-text pairs spanning scientific charts and biomedical images. Using Loom52M, BioLoom (DFN-2B) achieves 56.82% domain-balanced mean accuracy across 67 zero-shot classification tasks from 43 datasets in 10 domains, compared with 48.77% for MedPMC-CLIP. On BioLoomBench with concise captions and BioMedFlickr, it achieves bidirectional mean Recall@1 of 63.20% and 10.59%, versus 46.37% and 7.55% for the respective strongest evaluated baselines, BiomedCLIP and MedPMC-CLIP. Code, datasets, benchmarks, and models are available at https://bioloom-clip.github.io/.",
-    "pdf_url": "https://arxiv.org/pdf/2611.33151v1",
-    "published": "2026-11-24T18:59:04Z",
-    "fetched_at": "2026-11-25T07:43:55.881824"
+    "abstract": "Synthesizing diverse dexterous manipulation policies is challenging: existing simulation-based approaches rely on human demonstrations which are difficult to scale, or use generic reward functions, which provide limited control over the hand-object interactions. We propose DexLink, which addresses these limitations by synthesizing diverse dexterous behaviors from sparse, reusable hand-object interaction templates. Given key task waypoints, DexLink retargets static interaction templates to target objects using an optimization that preserves spatial hand-object relationships. It then links the retargeted poses into an approximate reference trajectory and uses residual reinforcement learning to refine this reference into a closed-loop policy in simulation. Experiments spanning single-hand, bimanual, articulated, and dynamic tasks demonstrate that DexLink provides fine-grained control over task timing, grasp types, and high-level execution. The modular interaction templates transfer reliably across object scales, instances, and categories; without object-specific human demonstrations, the framework also matches the performance of dense reference-tracking methods. Finally, zero-shot deployment of policies trained purely in simulation shows promise for the simulation-based framework.",
+    "pdf_url": "https://arxiv.org/pdf/2611.34936v1",
+    "published": "2026-11-25T18:59:36Z",
+    "fetched_at": "2026-11-26T07:34:48.283945"
   },
   {
-    "title": "CoT-Proxy: Cross-Format Transfer for Distilling Long-Horizon Policies",
+    "title": "Can image generation help visual reasoning? An empirical study",
     "authors": [
-      "Dawid J. Kopiczko",
-      "Tijmen Blankevoort",
-      "Yuki M. Asano"
+      "Xueyang Yu",
+      "Yifan Jing",
+      "Taiming Lu",
+      "Linrong Cai",
+      "Zhipeng Cai",
+      "Yunyang Xiong",
+      "Gabriel Sarch",
+      "Zhuang Liu"
     ],
-    "abstract": "Reasoning models become long-horizon agents through reinforcement learning or, more cheaply, through fine-tuning on a stronger teacher's trajectories, which contain the teacher's chain-of-thought as well as its actions. The standard fine-tuning approach imitates both, yet the strongest teachers are closed models whose chain-of-thought is hidden behind an API. We show that the chain-of-thought can be left out altogether and that the long-horizon policy can be distilled from the teacher's actions alone. The student is trained on these trajectories with its reasoning block left empty, while a KL loss on a replay buffer of its own generations limits drift from its initial model. Surprisingly, the policy learned from these trajectories with an empty reasoning block carries over to inference with thinking enabled, where the student reasons in its own style while acting like the teacher, an effect we call cross-format transfer. Distilling the actions of Qwen3.6-27B raises the task success of Qwen3-4B on AppWorld from 7% to 18% and that of Qwen3-32B from 12% to 25%. We further introduce CoT-proxies, short summaries of the teacher's reasoning placed after the empty reasoning block, which raise Qwen3-4B further, to 35%. Since neither actions nor CoT-proxies need the hidden chain-of-thought, the recipe applies unchanged to closed teachers. Distilling GPT-5.6 Luna from its visible outputs and the reasoning summaries its API returns raises Qwen3-4B from 7% to 48% on AppWorld and from 3% to 28% on SWE-bench Verified.",
-    "pdf_url": "https://arxiv.org/pdf/2611.33148v1",
-    "published": "2026-11-24T18:58:53Z",
-    "fetched_at": "2026-11-25T07:43:55.881854"
+    "abstract": "Language models think in words; then multimodal models might think in images. We test whether a generated helper improves the answer to a visual question. A model describes the helper it needs and then answers using the original and generated images together. Across 13 vision-language model and generator pairs, generation lowers mean accuracy by 3.7 percentage points, with declines on nine of ten tasks. Two unified models, BAGEL and Janus-Pro-7B, each lose accuracy on eight tasks. On VSTAR, adding a generated image to the same planning hint lowers accuracy by 10.47 points. Repeated image edits yield different outcomes across tasks. ChartQAPro and MathVista stay below their no-generation baselines, while ERQA gains three points after ten edits.",
+    "pdf_url": "https://arxiv.org/pdf/2611.34935v1",
+    "published": "2026-11-25T18:59:31Z",
+    "fetched_at": "2026-11-26T07:34:48.283964"
   },
   {
-    "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
+    "title": "Attack Policy Selection can Mislead Monitor Evaluators",
     "authors": [
-      "Feixiang Ruan",
-      "Guodong Lv",
-      "Kewei Zhang",
-      "Wenbo Huang",
-      "Yintianrun Zhang",
-      "Qiang Wang",
-      "Ruiyang Si",
-      "Shunyu Yang",
-      "Shulong Jiang",
-      "Weicheng Duan",
-      "Rui Ni",
-      "Jianxin Bi",
-      "Lekai Wang",
-      "Yuze Fan",
-      "Haobo Li",
-      "Zeliang Fu",
-      "Jiankun Zhang",
-      "Duomin Wang",
-      "Enze Xie",
-      "Daquan Zhou"
+      "Charlie Griffin",
+      "Oliver Makins",
+      "Asa Cooper Stickland",
+      "Alessandro Abate",
+      "Yarin Gal",
+      "Abby D'Cruz",
+      "Xander Davies"
     ],
-    "abstract": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
-    "pdf_url": "https://arxiv.org/pdf/2611.33144v1",
-    "published": "2026-11-24T18:56:44Z",
-    "fetched_at": "2026-11-25T07:43:55.881919"
+    "abstract": "AI monitors, classifiers that flag dangerous behaviour by AI agents, are often evaluated against transcripts generated by attack policies acting as proxies for dangerous behaviour in deployment. We evaluate an ex-production OpenAI monitor as a case study and find that measured false negative rate is highly sensitive to both the method used to generate attack policies and the level of optimisation applied within that method. This rate ranged from 0.5\\% to 20.8\\% across optimisation levels of a single method (reinforcement learning), and from 6.4\\% to 23.0\\% across methods at their best observed optimisation level (optimised prompting vs.\\ transcript editing). Every attack policy was developed against proxy monitors only: all reported results show attacks transferring to the held-out GPT-5.4 target monitor. Our results suggest that monitor evasion evaluations can easily mislead: an evaluation using only basic attack methods may give false confidence that a monitor is strong.\n  The sensitivity to attack-policy choice raises a problem: interpreting any particular result as evidence about deployment performance requires justification. The transcripts produced by attack policies are proxies for the dangerous behaviour a monitor must flag in deployment. These proxies can introduce visible artefacts, such as reasoning about a ``side task'' absent from the instructions shown to the monitor, that affect monitor judgements. Given the sensitivity above, the choice of proxy can change an evaluation's conclusion. Reading these results as evidence about deployment therefore requires a separate legitimacy argument for why the proxies are informative, including any justification of conservativeness. Making convincing arguments remains an open problem.",
+    "pdf_url": "https://arxiv.org/pdf/2611.34934v1",
+    "published": "2026-11-25T18:59:28Z",
+    "fetched_at": "2026-11-26T07:34:48.283981"
   }
 ]
